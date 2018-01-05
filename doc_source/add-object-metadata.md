@@ -1,0 +1,72 @@
+# How Do I Add Metadata to an S3 Object?<a name="add-object-metadata"></a>
+
+Each object in Amazon Simple Storage Service \(Amazon S3\) has a set of name\-value pairs that provides metadata about the object\. *Metadata* is additional information about the object\. Some metadata is set by Amazon S3 when you upload the object, for example,`Date` and `Content-Length`\. You can also set some metadata when you upload the object, or you can add it later\. This section explains how to use the Amazon S3 console to add metadata to an S3 object\.
+
+Object metadata is a set of name\-value \(key\-value\) pairs\. For example, the metadata for content length, `Content-Length`, is the name \(key\) and the size of the object in bytes \(value\)\. For more information about object metadata, see [Object Metadata](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-metadata) in the *Amazon Simple Storage Service Developer Guide*\.
+
+There are two kinds of metadata for an S3 object, Amazon S3 system metadata and user\-defined metadata:
+
++ **System metadata**–There are two categories of system metadata\. Metadata such as the `Last-Modified` date is controlled by the system\. Only Amazon S3 can modify the value\. There is also system metadata that you control, for example, the storage class configured for the object\. 
+
++ **User\-defined metadata**–You can define your own custom metadata, called user\-defined metadata\. You can assign user\-defined metadata to an object when you upload the object or after the object has been uploaded\. User\-defined metadata is stored with the object and is returned when you download the object\. Amazon S3 does not process user\-defined metadata\. 
+
+The following topics describe how to add metadata to an object\.
+
+
+
+## Adding System\-Defined Metadata to an S3 Object<a name="add-object-metadata-system"></a>
+
+You can configure some system metadata for an S3 object\. For a list of system\-defined metadata and whether you can modify their values, see [System\-Defined Metadata](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#SysMetadata) in the *Amazon Simple Storage Service Developer Guide*\.
+
+**To add system metadata to an object**
+
+1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
+
+1. In the **Bucket name** list, choose the name of the bucket that contains the object\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-bucket-name.png)
+
+1. In the **Name** list, choose the name of the object that you want to add metadata to\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-name-select.png)
+
+1. Choose **Properties**, and then choose **Metadata**\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-properties-tab.png)
+
+1. Choose **Add Metadata**, and then choose a key from the **Select a key** menu\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/add-metadata.png)
+
+1. Depending on which key you chose, choose a value from the **Select a value** menu or type a value\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/add-metadata-value.png)
+
+1. Choose **Save**\.   
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/add-metadata-save.png)
+
+## Adding User\-Defined Metadata to an S3 Object<a name="add-object-metadata-user-defined"></a>
+
+You can assign user\-defined metadata to an object\. User\-defined metadata must begin with the prefix "`x-amz-meta-`", otherwise Amazon S3 will not set the key value pair as you define it\. You define custom metadata by adding a name that you choose to the `x-amz-meta-` key\. This creates a custom key\. For example, if you add the custom name `alt-name`, the metadata key would be `x-amz-meta-alt-name`\. 
+
+User\-defined metadata can be as large as 2 KB\. Both keys and their values must conform to US\-ASCII standards\. For more information, see [User\-Defined Metadata](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#UserMetadata) in the *Amazon Simple Storage Service Developer Guide*\.
+
+**To add user\-defined metadata to an object**
+
+1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
+
+1. In the **Bucket name** list, choose the name of the bucket that contains the object\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-bucket-name.png)
+
+1. In the **Name** list, choose the name of the object that you want to add metadata to\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-name-select.png)
+
+1. Choose **Properties**, and then choose **Metadata**\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-properties-tab.png)
+
+1. Choose **Add Metadata**, and then choose the `x-amz-meta-` key from the **Select a key** menu\. Any metadata starting with the prefix `x-amz-meta-` is user\-defined metadata\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/add-metadata-user-defined.png)
+
+1. Type a custom name following the `x-amz-meta-` key\. For example, for the custom name `alt-name`, the metadata key would be `x-amz-meta-alt-name`\. Enter a value for the custom key, and then choose **Save**\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/add-metadata-user-defined-value.png)
+
+### <a name="add-object-metadata-user-defined-moreinfo"></a>
+
++  [How Do I View the Properties of an Object?](view-object-properties.md)
+
++  [Uploading, Downloading, and Managing Objects](upload-download-objects.md)
