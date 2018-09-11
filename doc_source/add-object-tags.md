@@ -18,9 +18,6 @@ This topic explains how to use the console to add tags to an S3 object\. For inf
 1. Choose **Tags** and then choose **Add Tag**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-tags.png)
 
-1. Choose **Tags** and then choose **Add Tag**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-tags.png)
-
 1. Each tag is a key\-value pair\. Type a **Key** and a **Value**\. Then choose **Add Tag** to add another tag or choose **Save**\. 
 
    You can enter up to 10 tags for an object\.  
