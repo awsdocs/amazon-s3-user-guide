@@ -1,10 +1,10 @@
 # How Do I Upload Files and Folders to an S3 Bucket?<a name="upload-objects"></a>
 
-This topic explains how to use the AWS Management Console to upload one or more files or entire folders to an Amazon S3 bucket\. Before you can upload files and folders to an Amazon S3 bucket, you need write permissions for the bucket\. For more information about access permissions, see [Setting Bucket and Object Access Permissions](set-permissions.md)\. 
+This topic explains how to use the AWS Management Console to upload one or more files or entire folders to an Amazon S3 bucket\. Before you can upload files and folders to an Amazon S3 bucket, you need write permissions for the bucket\. For more information about access permissions, see [Setting Bucket and Object Access Permissions](set-permissions.md)\. For information about uploading files programmatically, see [Uploading Objects](http://docs.aws.amazon.com/AmazonS3/latest/dev/UploadingObjects.html) in the *Amazon Simple Storage Service Developer Guide*\. 
 
 When you upload a file to Amazon S3, it is stored as an S3 object\. Objects consist of the file data and metadata that describes the object\. You can have an unlimited number of objects in a bucket\.
 
-You can upload any file type—images, backups, data, movies, etc—into an S3 bucket\. The maximum size of a file that you can upload by using the Amazon S3 console is 78 GB\. 
+You can upload any file type—images, backups, data, movies, etc\.—into an S3 bucket\. The maximum size of a file that you can upload by using the Amazon S3 console is 78 GB\. 
 
 You can upload files by dragging and dropping or by pointing and clicking\. To upload folders, you *must* drag and drop them\. Drag and drop functionality is supported *only* for the Chrome and Firefox browsers\. For information about which Chrome and Firefox browser versions are supported, see [ Which Browsers are Supported for Use with the AWS Management Console?](https://aws.amazon.com/premiumsupport/knowledge-center/browsers-management-console/)\. 
 
@@ -16,7 +16,10 @@ If you upload individual files and you do not have a folder open in the Amazon S
 
 If you upload an object with a key name that already exists in a versioning\-enabled bucket, Amazon S3 creates another version of the object instead of replacing the existing object\. For more information about versioning, see [How Do I Enable or Suspend Versioning for an S3 Bucket?](enable-versioning.md)\.
 
-
+**Topics**
++ [Uploading Files and Folders by Using Drag and Drop](#upload-objects-by-drag-and-drop)
++ [Uploading Files by Pointing and Clicking](#upload-objects-by-file-selection)
++ [More Info](#upload-objects-moreinfo)
 
 ## Uploading Files and Folders by Using Drag and Drop<a name="upload-objects-by-drag-and-drop"></a>
 
@@ -29,7 +32,7 @@ If you are using the Chrome or Firefox browsers, you can choose the folders and 
 1. In the **Bucket name** list, choose the name of the bucket that you want to upload your folders or files to\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-bucket-name.png)
 
-1. Drag and drop your selections into the console window that lists the objects in the destination bucket\.   
+1. In a window other than the console window, select the files and folders that you want to upload\. Then drag and drop your selections into the console window that lists the objects in the destination bucket\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/upload-drag-drop.png)
 
    The files you chose are listed in the **Upload** dialog box\.
@@ -44,6 +47,8 @@ If you are using the Chrome or Firefox browsers, you can choose the folders and 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/upload-display-files-and-folders.png)
 
 1. On the **Set Permissions** page, under **Manage users** you can change the permissions for the AWS account owner\. The *owner* refers to the AWS account root user, and not an AWS Identity and Access Management \(IAM\) user\. For more information about the root user, see [The AWS Account Root User](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html)\. 
+
+   Choose **Add account** to grant access to another AWS account\. For more information about granting permissions to another AWS account, see [How Do I Set ACL Bucket Permissions?](set-bucket-permissions.md)\.
 
    Under **Manage public permissions** you can grant read access to your objects to the general public \(everyone in the world\), for all of the files that you're uploading\. Granting public read access is applicable to a small subset of use cases such as when buckets are used for websites\. We recommend that you do not change the default setting of **Do not grant public read access to this object\(s\)**\. You can always make changes to object permissions after you upload the object\. For information about object access permissions, see [How Do I Set Permissions on an Object?](set-object-permissions.md)\. 
 
@@ -67,17 +72,23 @@ To encrypt objects in a bucket, you can use only keys that are available in the 
 
          For more information about creating an AWS KMS key, see [Creating Keys](http://docs.aws.amazon.com/kms/latest/developerguide/UsingServerSideEncryption.html) in the *AWS Key Management Service Developer Guide*\. For more information about protecting data with AWS KMS, see [Protecting Data with AWS KMS–Managed Key](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
-   1. If you want to add Amazon S3 system\-defined metadata to all of the objects you are uploading, for **Header**, select a header\. You can select common HTTP headers, such as **Content\-Type** and **Content\-Disposition**\. Type a value for the header, and then choose **Save**\. For a list of system\-defined metadata and information about whether you can add the value, see [System\-Defined Metadata](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#SysMetadata) in the *Amazon Simple Storage Service Developer Guide*\.
+   1. Metadata for Amazon S3 objects is represented by a name\-value \(key\-value\) pair\. There are two kinds of metadata: system\-defined metadata and user\-defined metadata\.
 
-   1. To add user\-defined metadata to all of the objects that you are uploading, type `x-amz-meta-` plus a custom metadata name in the **Header** field\. Type a value for the header, and then choose **Save**\. For more information about user\-defined metadata, see [User\-Defined Metadata](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#UserMetadata) in the *Amazon Simple Storage Service Developer Guide*\.
+      If you want to add Amazon S3 system\-defined metadata to all of the objects you are uploading, for **Header**, select a header\. You can select common HTTP headers, such as **Content\-Type** and **Content\-Disposition**\. Type a value for the header, and then choose **Save**\. For a list of system\-defined metadata and information about whether you can add the value, see [System\-Defined Metadata](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#SysMetadata) in the *Amazon Simple Storage Service Developer Guide*\.
 
-      Metadata for Amazon S3 objects is represented by a name\-value \(key\-value\) pair\. User\-defined metadata is stored with the object, and is returned when you download the object\. User\-defined metadata can be as large as 2 KB\. Both the keys and their values must conform to US\-ASCII standards\. Any metadata starting with prefix `x-amz-meta-` is treated as user\-defined metadata\. Amazon S3 does not process user\-defined metadata\.   
+   1. Any metadata starting with prefix `x-amz-meta-` is treated as user\-defined metadata\. User\-defined metadata is stored with the object, and is returned when you download the object\. 
+
+      To add user\-defined metadata to all of the objects that you are uploading, type `x-amz-meta-` plus a custom metadata name in the **Header** field\. Type a value for the header, and then choose **Save**\. Both the keys and their values must conform to US\-ASCII standards\. User\-defined metadata can be as large as 2 KB\. For more information about user\-defined metadata, see [User\-Defined Metadata](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#UserMetadata) in the *Amazon Simple Storage Service Developer Guide*\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/upload-set-properties-metadata.png)
+
+   1. Object tagging gives you a way to categorize storage\. Each tag is a key\-value pair\. Key and tag values are case sensitive\. You can have up to 10 tags per object\. 
+
+      To add tags to all of the objects that you are uploading, type a tag name in the **Key** field\. Type a value for the tag, and then choose **Save**\. A tag key can be up to 128 Unicode characters in length and tag values can be up to 255 Unicode characters in length\. For more information about object tags, see [Object Tagging](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-tagging.html) in the *Amazon Simple Storage Service Developer Guide*\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/upload-set-object-tags.png)
 
 1. Choose **Next**\.
 
-1. On the **Upload** review page, verify that your settings are correct, and then choose **Upload**\. To make changes, choose **Previous**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/upload-review.png)
+1. On the **Upload** review page, verify that your settings are correct, and then choose **Upload**\. To make changes, choose **Previous**\.
 
 1. To see the progress of the upload, choose **In progress** at the bottom of the browser window\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/operation-bar.png)  
@@ -118,7 +129,5 @@ This procedure explains how to upload files into an S3 bucket by choosing **Uplo
 1. To set permissions and properties, start with **Step 5** of [Uploading Files and Folders by Using Drag and Drop](#upload-objects-by-drag-and-drop)\.
 
 ## More Info<a name="upload-objects-moreinfo"></a>
-
 + [How Do I Set Permissions on an Object?](set-object-permissions.md)\.
-
 +  [How Do I Download an Object from an S3 Bucket?](download-objects.md)

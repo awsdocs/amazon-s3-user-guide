@@ -3,19 +3,13 @@
 You can enable certain Amazon S3 bucket events to send a notification message to a destination whenever the events occur\. This section explains how to use the Amazon S3 console to enable event notifications\. For more information about using event notifications , see [Configuring Notifications for Amazon S3 Events](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html) in the *Amazon Simple Storage Service Developer Guide*\. 
 
 Amazon S3 can send notifications for the following events:
-
 + **An object created event** – You choose **ObjectCreated \(All\)** when configuring your events in the console to enable notifications for anytime an object is created in your bucket\. Or, you can select one or more of the specific object\-creation actions to trigger event notifications\. These actions are **Put**, **Post**, **Copy**, and **CompleteMultiPartUpload**\.
-
 + **An object delete event** – You select **ObjectDelete \(All\)** when configuring your events in the console to enable notification for anytime an object is deleted\. Or, you can select **Delete** to trigger event notifications when an unversioned object is deleted or a versioned object is permanently deleted\. You select **Delete Marker Created** to trigger event notifications when a delete marker is created for a versioned object\.  
-
 + **A Reduced Redundancy Storage \(RRS\) object lost event** – You select **RRSObjectLost** to be notified when Amazon S3 detects that an object of the RRS storage class has been lost\.
 
 Event notification messages can be sent to the following types of destinations:
-
 + **An Amazon Simple Notification Service \(Amazon SNS\) topic** – A web service that coordinates and manages the delivery or sending of messages to subscribing endpoints or clients\.
-
 + **An Amazon Simple Queue Service \(Amazon SQS\) queue** – Offers reliable and scalable hosted queues for storing messages as they travel between computer\.
-
 + **A Lambda function** – AWS Lambda is a compute service where you can upload your code and the service can run the code on your behalf using the AWS infrastructure\. You package up and upload your custom code to AWS Lambda when you create a Lambda function
 
 Before you can enable event notifications for your bucket you must set up one of these destination types\. For more information, see [How Do I Set Up a Destination to Receive Event Notifications?](setup-event-notification-destination.md)\.
@@ -40,13 +34,9 @@ Before you can enable event notifications for your bucket you must set up one of
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/events-enter-name.png)
 
 1. Under **Events**, select one or more of the type of event occurrences that you want to receive notifications for\. When the event occurs a notification is sent to a destination that you choose\. For example, you could do any of the following:
-
    + Select **ObjectCreate \(All\)** to enable event notifications for anytime an object is created in the bucket\.
-
    + Select **Put** and **Complete MultipartUpload** to trigger event notifications anytime a new object is put into a bucket and anytime a multipart upload completes\. 
-
    + Select **ObjectDelete \(All\)** to enable event notifications for anytime an object is deleted in the bucket\.
-
    + Select **Delete** or **Delete Marker Created** to trigger notifications for specific types of object deletes\. 
 
     For information about deleting versioned objects, see [Deleting Object Versions](http://docs.aws.amazon.com/AmazonS3/latest/dev/DeletingObjectVersions.html)\. For information about object versioning, see [Object Versioning](http://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html) and [Using Versioning](http://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html)\.

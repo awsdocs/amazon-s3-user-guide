@@ -22,9 +22,6 @@ When you delete an object in a versioning\-enabled bucket, all versions remain i
 1. Choose **Hide**, you'll see the undeleted object listed\.
 
 ## More Info<a name="undelete-objects-related-topics"></a>
-
 +  [How Do I See the Versions of an S3 Object?](view-object-versions.md)
-
 +  [How Do I Enable or Suspend Versioning for an S3 Bucket?](enable-versioning.md)
-
 +  [Using Versioning](http://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) in the *Amazon Simple Storage Service Developer Guide*

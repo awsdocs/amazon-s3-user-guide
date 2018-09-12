@@ -40,9 +40,6 @@ If you use the CloudTrail console or the Amazon S3 console to configure a trail 
 For information about enabling object\-level logging when you create an S3 bucket, see [How Do I Create an S3 Bucket?](create-bucket.md)\.
 
 ## More Info<a name="enable-cloudtrail-events-moreinfo"></a>
-
 + [How Do I View the Properties for an S3 Bucket?](view-bucket-properties.md)
-
 + [ Logging Amazon S3 API Calls By Using AWS CloudTrail](http://docs.aws.amazon.com/AmazonS3/latest/dev/cloudtrail-logging.html) in the *Amazon Simple Storage Service Developer Guide* 
-
 + [ Working with CloudTrail Log Files](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-working-with-log-files.html) in the *AWS CloudTrail User Guide*

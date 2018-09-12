@@ -32,7 +32,5 @@ To encrypt objects in the bucket, you can use only keys that are enabled in the 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/add-encryption-kms-custom-arn.png)
 
 ## More Info<a name="add-object-encryption-moreinfo"></a>
-
 +  [How Do I View the Properties of an Object?](view-object-properties.md)
-
 +  [Uploading, Downloading, and Managing Objects](upload-download-objects.md)

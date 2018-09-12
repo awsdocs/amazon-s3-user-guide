@@ -29,8 +29,7 @@ There are no new charges for using default encryption for S3 buckets\. Requests 
 You might need to update your bucket policy when enabling default encryption\. For more information, see [Moving to Default Encryption from Using Bucket Policies for Encryption Enforcement](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html#bucket-encryption-update-bucket-policy) in the *Amazon Simple Storage Service Developer Guide*\.
 
    1. To use keys that are managed by AWS KMS for default encryption, choose **AWS\-KMS**, and then choose a master key from the list of the AWS KMS master keys that you have created\. Type the Amazon Resource Name \(ARN\) of the AWS KMS key to use\. You can find the ARN for your AWS KMS key in the IAM console, under **Encryption keys**\. Or, you can choose a key name from the drop\-down list\.  
-![\[Default encryption screen with AWS-KMS chosen, and a drop-down list with key
-                names.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/add-default-encryption-kms-key.png)
+![\[Default encryption screen with AWS-KMS chosen, and a drop-down list with key names.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/add-default-encryption-kms-key.png)
 **Important**  
 If you use the AWS KMS option for your default encryption configuration, you are subject to the RPS \(requests per second\) limits of AWS KMS\. For more information about AWS KMS limits and how to request a limit increase, see [AWS KMS limits](http://docs.aws.amazon.com/kms/latest/developerguide/limits.html)\. 
 
@@ -39,7 +38,5 @@ If you use the AWS KMS option for your default encryption configuration, you are
 1. Choose **Save**\.
 
 ## More Info<a name="default-bucket-encryption-moreinfo"></a>
-
 + [Amazon S3 Default Encryption for S3 Buckets](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) in the *Amazon Simple Storage Service Developer Guide*
-
 + [How Do I Add Encryption to an S3 Object?](add-object-encryption.md)

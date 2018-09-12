@@ -5,14 +5,14 @@ Each object in Amazon Simple Storage Service \(Amazon S3\) has a set of name\-va
 Object metadata is a set of name\-value \(key\-value\) pairs\. For example, the metadata for content length, `Content-Length`, is the name \(key\) and the size of the object in bytes \(value\)\. For more information about object metadata, see [Object Metadata](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-metadata) in the *Amazon Simple Storage Service Developer Guide*\.
 
 There are two kinds of metadata for an S3 object, Amazon S3 system metadata and user\-defined metadata:
-
 + **System metadata**–There are two categories of system metadata\. Metadata such as the `Last-Modified` date is controlled by the system\. Only Amazon S3 can modify the value\. There is also system metadata that you control, for example, the storage class configured for the object\. 
-
 + **User\-defined metadata**–You can define your own custom metadata, called user\-defined metadata\. You can assign user\-defined metadata to an object when you upload the object or after the object has been uploaded\. User\-defined metadata is stored with the object and is returned when you download the object\. Amazon S3 does not process user\-defined metadata\. 
 
 The following topics describe how to add metadata to an object\.
 
-
+**Topics**
++ [Adding System\-Defined Metadata](#add-object-metadata-system)
++ [Adding User\-Defined Metadata](#add-object-metadata-user-defined)
 
 ## Adding System\-Defined Metadata to an S3 Object<a name="add-object-metadata-system"></a>
 
@@ -66,7 +66,5 @@ User\-defined metadata can be as large as 2 KB\. Both keys and their values must
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/add-metadata-user-defined-value.png)
 
 ### <a name="add-object-metadata-user-defined-moreinfo"></a>
-
 +  [How Do I View the Properties of an Object?](view-object-properties.md)
-
 +  [Uploading, Downloading, and Managing Objects](upload-download-objects.md)

@@ -58,7 +58,5 @@ We highly recommend that you *do not* grant the **Everyone** group write object 
 You can also set object permissions when you upload objects\. For more information about setting permissions when uploading objects, see [How Do I Upload Files and Folders to an S3 Bucket?](upload-objects.md)\. 
 
 ## More Info<a name="set-object-permissions-moreinfo"></a>
-
 +  [Setting Bucket and Object Access Permissions](set-permissions.md)
-
 + [How Do I Set ACL Bucket Permissions?](set-bucket-permissions.md)

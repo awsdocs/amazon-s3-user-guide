@@ -16,3 +16,9 @@ For more in\-depth information about managing access permissions, see [Introduct
 
 This section also explains how to use the Amazon S3 console to add a cross\-origin resource sharing \(CORS\) configuration to an S3 bucket\. CORS allows client web applications that are loaded in one domain to interact with resources in another domain\.
 
+**Topics**
++ [Bucket Permissions Check](bucket-permissions-check.md)
++ [Setting Object Permissions](set-object-permissions.md)
++ [Setting ACL Bucket Permissions](set-bucket-permissions.md)
++ [Adding a Bucket Policy](add-bucket-policy.md)
++ [Allowing Cross\-Domain Resource Sharing with CORS](add-cors-configuration.md)

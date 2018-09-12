@@ -8,20 +8,18 @@ When you restore an archive, you pay for both the archive and the restored copy\
 
 After restoring an object, you can download it from the **Overview** page\. For more information, see [How Do I See an Overview of an Object?](view-object-overview.md)\.
 
-
+**Topics**
++ [Archive Retrieval Options](#restore-archived-objects-retrieval-options)
++ [Restoring an Archived S3 Object](#restore-archived-objects-how-to)
++ [Checking Archive Restore Status and Expiration Date](#restore-archived-objects-status)
 
 ## Archive Retrieval Options<a name="restore-archived-objects-retrieval-options"></a>
 
 You restore archived objects using one of the following retrieval types: 
-
 + **Expedited retrieval** – Expedited retrievals typically retrieve objects within 1–5 minutes\. There are two types of Expedited retrievals: On\-Demand and Provisioned\. 
-
   +  **On\-Demand** – If you don't need a guarantee that your expedited retrieval requests will be immediately successful, and you don't want to purchase provisioned capacity, use On\-Demand expedited retrievals\. Amazon S3 processes On\-Demand expedited retrieval requests the vast majority of the time\. It fails to process them only in rare situations where there is an unusually high retrieval demand\. In that case, repeat the request\.
-
   +  **Provisioned** – If you need to guarantee that your expedited retrieval requests are processed immediately and you have or are willing to purchase provisioned capacity, use Provisioned expedited retrievals\. After purchasing provisioned capacity, all of your expedited retrievals are served by this capacity\. For pricing information on provisioned capacity, see [Amazon Glacier Pricing](https://aws.amazon.com/glacier/pricing/)\. 
-
-+ **Standard retrieval** – Standard retrievals allow you to access your archived objects within several hours,\. typically within 3–5 hours\.
-
++ **Standard retrieval** – Standard retrievals allow you to access your archived objects within several hours \(typically within 3–5 hours\)\.
 + **Bulk retrieval** – Bulk retrievals are Amazon Glacier’s lowest\-cost retrieval option\. With bulk retrieval, you can retrieve large amounts, even petabytes, of data inexpensively in a day\. Bulk retrievals typically are complete within 5–12 hours\.
 
 For more information about retrieval options, see [ Restoring Archived Objects](http://docs.aws.amazon.com/AmazonS3/latest/dev/restoring-objects.html) in the *Amazon Simple Storage Service Developer Guide*\.
@@ -43,20 +41,16 @@ This topic explains how to use the Amazon S3 console to restore an object that h
 1. In the **Initiate restore** dialog box, type the number of days that you want your archived data to be accessible\. 
 
 1. Choose one of the following retrieval options from the **Retrieval options** menu\.
-
    + Choose **Bulk retrieval** or **Standard retrieval**, and then choose **Restore**\. 
-
    + Choose **Expedited retrieval**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/initiate-restore.png)
 
 1. If you have provisioned capacity, choose **Restore** to start a provisioned retrieval\. If you have provisioned capacity, all of your expedited retrievals are served by your provisioned capacity\. For more information about provisioned capacity, see [Archive Retrieval Options](#restore-archived-objects-retrieval-options)\. 
-
    + If you don't have provisioned capacity and you don't want to buy it, choose **Restore** to start an On\-Demand retrieval\. 
-
    + If you don't have provisioned capacity, but you want to buy it, choose **Add capacity unit**, and then choose **Buy**\. When you get the **Purchase succeeded** message, choose **Restore** to start provisioned retrieval\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/initiate-expedited-restore.png)
 
-## Checking Archive Upload Status and Expiration Date<a name="restore-archived-objects-status"></a>
+## Checking Archive Restore Status and Expiration Date<a name="restore-archived-objects-status"></a>
 
 To check the progress of the restoration, see the object overview panel\. For information about the overview panel, see [How Do I See an Overview of an Object?](view-object-overview.md)\. 
 
@@ -77,7 +71,5 @@ After restoring an object, you can download it from the **Overview** page\. For 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-overview-download-short.png)
 
 ### More Info<a name="restore-archived-objects-status-moreinfo"></a>
-
 + [How Do I Create a Lifecycle Policy for an S3 Bucket?](create-lifecycle.md)
-
 +  [How Do I Undelete a Deleted S3 Object?](undelete-objects.md)
