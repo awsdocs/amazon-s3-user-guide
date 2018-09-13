@@ -5,9 +5,7 @@ This section explains how to use the Amazon S3 console to see the different vers
 A versioning\-enabled bucket can have many versions of the same object:, one current \(latest\) version and zero or more noncurrent \(previous\) versions\. Amazon S3 assigns each object a unique version ID\. For information about enabling versioning, see [How Do I Enable or Suspend Versioning for an S3 Bucket?](enable-versioning.md)\. 
 
 If a bucket is versioning\-enabled, Amazon S3 creates another version of an object under the following conditions: 
-
 + If you upload an object that has the same name as an object that already exists in the bucket, Amazon S3 creates another version of the object instead of replacing the existing object\. 
-
 + If you update any object properties after you upload the object to the bucket, such as changing the storage details or other metadata , Amazon S3 creates a new object version in the bucket\. 
 
 For more information about versioning support in Amazon S3, see [Object Versioning](http://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html) and [Using Versioning](http://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) in the *Amazon Simple Storage Service Developer Guide*\.
@@ -30,7 +28,5 @@ You also can view, download, and delete object versions in the object overview p
 You can undelete an object only if it was deleted as the latest \(current\) version\. You can't undelete a previous version of an object that was deleted\. For more information, see [Object Versioning](http://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html) and [Using Versioning](http://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 ## More Info<a name="view-object-versions-related-topics"></a>
-
 +  [How Do I Enable or Suspend Versioning for an S3 Bucket?](enable-versioning.md)
-
 + [How Do I Create a Lifecycle Policy for an S3 Bucket?](create-lifecycle.md)

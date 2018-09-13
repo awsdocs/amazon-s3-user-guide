@@ -12,18 +12,14 @@ For information about Amazon S3 features and pricing, see [Amazon S3](https://aw
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-bucket-name.png)
 
 1. You can delete objects from an S3 bucket in any of the following ways:
-
    + In the **Name** list, select the check box next to the objects and folders that you want to delete, choose **More**, and then choose **Delete**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/objects-delete.png)
 
      In the **Delete objects** dialog box, verify that the names of the objects and folders you selected for deletion are listed and then choose **Delete**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/objects-delete-confirm.png)
-
    + Choose the name of the object that you want to delete, choose **Latest version**, and then choose the trash can icon\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-latest-version-trash.png)
 
 ## More Info<a name="delete-objects-more-info"></a>
-
 +  [How Do I Undelete a Deleted S3 Object?](undelete-objects.md)
-
 + [How Do I Create a Lifecycle Policy for an S3 Bucket?](create-lifecycle.md)

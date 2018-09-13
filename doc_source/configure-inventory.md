@@ -16,13 +16,9 @@ Amazon S3 inventory provides a flat file list of your objects and metadata, whic
 ![\[Screenshot highlighting the add new link in inventory reports.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/inventory-add.png)
 
 1. Type a name for the inventory and set it up as follows:
-
    + Optionally, add a prefix for your filter to inventory only objects whose names begin with the same string\.
-
    + Choose the destination bucket where you want reports to be saved\. The destination bucket must be in the same AWS Region as the bucket for which you are setting up the inventory\. The destination bucket can be in a different AWS account\. 
-
    + Optionally, choose a prefix for the destination bucket\.
-
    + Choose how frequently to generate the inventory\.  
 ![\[Screenshot showing the boxes to complete when setting up a new inventory.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/inventory-enter-data.png)
 
@@ -34,27 +30,18 @@ Amazon S3 inventory provides a flat file list of your objects and metadata, whic
    1. To include all versions of the objects in the inventory, choose **Include all versions** in the **Object versions** list\. By default, the inventory includes only the current versions of the objects\.
 
    1. For **Optional fields**, select one or more of the following to add to the inventory report:
-
       + **Size** – Object size in bytes\.
-
       + **Last modified date** – Object creation date or the last modified date, whichever is the latest\.
-
       + **Storage class** – Storage class used for storing the object\. 
-
       + **ETag** – The entity tag is a hash of the object\. The ETag reflects changes only to the contents of an object, and not its metadata\. The ETag may or may not be an MD5 digest of the object data\. Whether it is depends on how the object was created and how it is encrypted\.
-
       + **Replication status** – The cross\-region replication status of the object\. For more information, see [How Do I Add a Cross\-Region Replication \(CRR\) Rule to an S3 Bucket?](enable-crr.md)
-
       + **Encryption status** – The server\-side encryption used to encrypt the object\. For more information, see [Protecting Data Using Server\-Side Encryption](http://docs.aws.amazon.com/AmazonS3/latest/dev/serv-side-encryption.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
       For more information about the contents of an inventory report, see [ What's Included in an Amazon S3 Inventory?](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html#storage-inventory-contents) in the *Amazon Simple Storage Service Developer Guide*\.
 
    1. For **Encryption**, choose a server\-side encryption option to encrypt the inventory report, or choose **None**:
-
       + **None** – Do not encrypt the inventory report\.
-
       + **AES\-256** – Encrypt the inventory report using server\-side encryption with Amazon S3\-managed keys \(SSE\-S3\)\. Amazon S3 server\-side encryption uses 256\-bit Advanced Encryption Standard \(AES\-256\)\. For more information, see [Amazon S3\-Managed Encryption Keys \(SSE\-S3\)](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html) in the *Amazon Simple Storage Service Developer Guide*\. 
-
       + **AWS\-KMS** – Encrypt the report using server\-side encryption with AWS KMS\-managed keys \(SSE\-KMS\)\. For more information, see [AWS KMS–Managed Keys \(SSE\-KMS\)](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) in the *Amazon Simple Storage Service Developer Guide*\. 
 **Note**  
 To encrypt the inventory list file with SSE\-KMS, you must grant Amazon S3 permission to use the AWS KMS key\. For instructions, see [Grant Amazon S3 Permission to Encrypt Using Your AWS KMS Key](#configure-inventory-kms-key-policy)\.
@@ -67,8 +54,7 @@ Amazon S3 creates a bucket policy on the destination bucket that grants Amazon S
 
 If an error occurs when you try to create the bucket policy, you are given instructions on how to fix it\. For example, if you choose a destination bucket in another AWS account and don't have permissions to read and write to the bucket policy, you see the following message\. 
 
-![\[A message showing that inventory is successfully saved and another showing a bucket
-          policy error.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/inventory-bucket-policy.png)
+![\[A message showing that inventory is successfully saved and another showing a bucket policy error.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/inventory-bucket-policy.png)
 
 In this case, the destination bucket owner must add the displayed bucket policy to the destination bucket\. If the policy is not added to the destination bucket, you won’t get an inventory report because Amazon S3 doesn’t have permission to write to the destination bucket\. If the source bucket is owned by a different account than that of the current user, the correct account ID of the source bucket must be substituted in the policy\.
 

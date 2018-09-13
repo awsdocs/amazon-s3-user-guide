@@ -18,5 +18,4 @@ For information about Amazon S3 features and pricing, see [Amazon S3](https://aw
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/objects-delete-confirm.png)
 
 ## Related Topics<a name="delete-folders-related-topics"></a>
-
 + [How Do I Delete Objects from an S3 Bucket?](delete-objects.md)

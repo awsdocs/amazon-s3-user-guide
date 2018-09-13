@@ -5,11 +5,8 @@ Before you can enable event notifications for your bucket you must set up one of
 **An Amazon SNS topic**  
 Amazon Simple Notification Service \(Amazon SNS\) is a web service that coordinates and manages the delivery or sending of messages to subscribing endpoints or clients\. You can use the Amazon SNS console to create an Amazon SNS topic that your notifications can be sent to\. The Amazon SNS topic must be in the same region as your Amazon S3 bucket\. For information about creating an Amazon SNS topic, see [Getting Started](http://docs.aws.amazon.com/sns/latest/dg/GettingStarted.html) in the *Amazon Simple Notification Service Developer Guide*\.  
 Before you can use the Amazon SNS topic that you create as an event notification destination, you need the following:  
-
 + The Amazon Resource Name \(ARN\) for the Amazon SNS topic
-
 + A valid Amazon SNS topic subscription \(the topic subscribers are notified when a message is published to your Amazon SNS topic\)
-
 + A permissions policy that you set up in the Amazon SNS console \(as shown in the following example\)
 
   ```
@@ -36,9 +33,7 @@ Before you can use the Amazon SNS topic that you create as an event notification
 **An Amazon SQS queue**  
 You can use the Amazon SQS console to create an Amazon SQS queue that your notifications can be sent to\. The Amazon SQS queue must be in the same region as your Amazon S3 bucket\. For information about creating an Amazon SQS queue, see [Getting Started with Amazon SQS](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-getting-started.html) in the *Amazon Simple Queue Service Developer Guide*\.   
 Before you can use the Amazon SQS queue as an event notification destination, you need the following:  
-
 + The Amazon Resource Name \(ARN\) for the Amazon SQS topic
-
 + A permissions policy that you set up in the Amazon SQS console \(as shown in the following example\)
 
   ```

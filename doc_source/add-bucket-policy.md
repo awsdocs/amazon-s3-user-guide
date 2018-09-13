@@ -23,7 +23,5 @@ Amazon S3 displays the Amazon Resource Name \(ARN\) for the bucket next to the *
 Directly below the bucket policy editor text box is a link to the **Policy Generator**, which you can use to create a bucket policy\.
 
 ## More Info<a name="add-bucket-policy-moreinfo"></a>
-
 + [Setting Bucket and Object Access Permissions](set-permissions.md)
-
 + [How Do I Set ACL Bucket Permissions?](set-bucket-permissions.md)

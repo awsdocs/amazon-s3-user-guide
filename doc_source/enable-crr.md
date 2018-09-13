@@ -17,7 +17,10 @@ If the destination bucket is in a different account from the source bucket, you 
 
 When you add a replication rule to a bucket, the rule is enabled by default, so it starts working as soon as you save it\. 
 
-
+**Topics**
++ [Adding a Cross\-Region Replication Rule to an S3 Bucket](#enable-crr-add-rule)
++ [Configuring a CRR Rule When the Destination Bucket is in a Different AWS Account](#enable-crr-cross-account-destination)
++ [More Info](#enable-crr-moreinfo)
 
 ## Adding a Cross\-Region Replication Rule to an S3 Bucket<a name="enable-crr-add-rule"></a>
 
@@ -36,12 +39,14 @@ When you add a replication rule to a bucket, the rule is enabled by default, so 
    Under **Status**, **Enabled** is selected by default\. An enabled rule starts to work as soon as you save it\. If you want to enable the rule later, select **Disabled**\.  
 ![\[Replication rule wizard step one, configure the source.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-source.png)
 
-1.  To replicate objects in the source bucket that are encrypted with AWS KMS, under **Replication criteria**, select **Replicate objects encrypted with AWS KMS**\. Under **Choose one or more keys for decrypting source objects** are the source AWS KMS key or keys that you allow cross\-region replication to use\. All source keys are included by default\. You can choose to narrow the key selection\. 
+1. To replicate objects in the source bucket that are encrypted with AWS KMS, under **Replication criteria**, select **Replicate objects encrypted with AWS KMS**\. Under **Choose one or more keys for decrypting source objects** are the source AWS KMS key or keys that you allow cross\-region replication to use\. All source keys are included by default\. You can choose to narrow the key selection\. 
 
    Objects encrypted by AWS KMS keys that you do not select are not replicated by cross\-region replication\. A key or a group of keys is chosen for you, but you can choose the keys if you want\. For information about using AWS KMS with cross\-region replication, see [CRR: Replicating Objects Created with Server\-Side Encryption \(SSE\) Using AWS KMS\-Managed Encryption Key](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.crr-replication-config-for-kms-objects.html) in the *Amazon Simple Storage Service Developer Guide*\.   
 ![\[Replication rule wizard step one, select AWS KMS.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-source-kms.png)
 **Important**  
-AWS KMS has a request rate limit\. For more information, see [AWS KMS limits](http://docs.aws.amazon.com/kms/latest/developerguide/limits.html#requests-per-second)\. AWS KMS support for cross\-region replication increases the KMS request rate for your account\. As a best practice, we recommend requesting an increase in your AWS KMS API rate limit by creating a case in the AWS Support Center\. For information about contacting AWS Support, see [Contact Us](https://aws.amazon.com/contact-us/)\. We recommend confirming the rate limit increase before enabling cross\-region replication with AWS KMS\.
+When you replicate objects that are encrypted with AWS KMS, the AWS KMS request rate doubles in the source Region and increases in the destination Region by the same amount\. These increased call rates to AWS KMS are due to the way that data is re\-encrypted using the customer master key \(CMK\) that you define for the cross\-region replication destination Region\. AWS KMS has a request rate limit that is per calling account per Region\. For information about the limit defaults, see [AWS KMS Limits \- Requests per second: varies](http://docs.aws.amazon.com/kms/latest/developerguide/limits.html#requests-per-second)\.   
+If your current Amazon S3 PUT object request rate during cross\-region replication is more than half the default AWS KMS rate limit for your account, we recommend that you request an increase to your AWS KMS request rate limit\. To request an increase, create a case in the AWS Support Center at [Contact Us](https://aws.amazon.com/contact-us/)\. For example, suppose that your current PUT object request rate is 1,000 requests per second and you use AWS KMS to encrypt your objects\. In this case, we recommend that you ask AWS Support to increase your AWS KMS rate limit to 2,500 requests per second, in both your source and destination Regions, to ensure that there is no throttling by AWS KMS\.   
+To see your PUT object request rate in the source bucket, view `PutRequests` in the Amazon CloudWatch request metrics for Amazon S3\. For information about viewing CloudWatch metrics, see [How Do I Configure Request Metrics for an S3 Bucket?](configure-metrics.md)\. 
 
    Choose **Next**\.
 
@@ -51,8 +56,7 @@ AWS KMS has a request rate limit\. For more information, see [AWS KMS limits](ht
 ![\[Destination bucket section with Buckets in this account selected\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination.png)
 
    If versioning is not enabled on the destination bucket, you get a warning message that contains an **Enable versioning** button\. Choose this button to enable versioning on the bucket\.  
-![\[Error message stating that the destination bucket doesn't have versioning
-              enabled\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-enable-versioning.png)
+![\[Error message stating that the destination bucket doesn't have versioning enabled\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-enable-versioning.png)
 
 1. If you chose to replicate objects encrypted with AWS KMS, under **Destination encryption settings**, type the Amazon Resource Name \(ARN\) of the AWS KMS key to use to encrypt the replicas in the destination bucket\. You can find the ARN for your AWS KMS key in the IAM console, under **Encryption keys**\.  Or, you can choose a key name from the drop\-down list\.
 
@@ -60,18 +64,17 @@ AWS KMS has a request rate limit\. For more information, see [AWS KMS limits](ht
 ![\[Enter a AWS KMS key to encrypt the objects in the destination bucket.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-kms-key.png)
 
 1. If you want to replicate your data into a specific storage class in the destination bucket, on the **Destination** page, under **Options**, select **Change the storage class for the replicated object\(s\)**\. Then choose the storage class that you want to use for the replicated objects in the destination bucket\. If you don't select this option, the storage class for replicated objects is the same class as the original objects\.  
-![\[Destination options with Change the storage class for replicated objects
-              selected\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-class.png)
+![\[Destination options with Change the storage class for replicated objects selected\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-class.png)
 
    Choose **Next**\.
 
 1. Set up an AWS Identity and Access Management \(IAM\) role that Amazon S3 can assume to perform cross\-region replication of objects on your behalf\.
 
    To set up an IAM role, on the **Permissions** page, under **Select role**, do one of the following:
-
    + We highly recommend that you choose **Create new role** to have Amazon S3 create a new IAM role for you\. When you save the rule, a new policy is generated for the IAM role that matches the source and destination buckets that you choose\. The name of the generated role is based on the bucket names and uses the following naming convention: **replication\_role\_for\_*source\-bucket*\_to\_*destination\-bucket***\.
-
-   + You can choose to use an existing IAM role\. If you do, you must choose a role that grants Amazon S3 the necessary permissions for replication\. Replication fails if this role does not grant Amazon S3 sufficient permissions to follow your replication rule\.   
+   + You can choose to use an existing IAM role\. If you do, you must choose a role that grants Amazon S3 the necessary permissions for replication\. Replication fails if this role does not grant Amazon S3 sufficient permissions to follow your replication rule\. 
+**Important**  
+When you add a replication rule to a bucket, you must have the `iam:PassRole` permission to be able to pass the IAM role that grants Amazon S3 replication permissions\. For more information, see [Granting a User Permissions to Pass a Role to an AWS Service](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_passrole.html) in the *IAM User Guide*\.  
 ![\[Select an IAM role for your replication\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-permissions.png)
 
    Choose **Next**\.
@@ -94,8 +97,7 @@ This section describes how to configure cross\-region replication rule when the 
 ![\[Choose a destination bucket in a different AWS account\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-bucket-cross-account.png)
 
    After you save the destination bucket name and account ID, you might get a warning message indicating that you must add a bucket policy to the destination bucket so that Amazon S3 can verify whether versioning is enabled on the bucket\. You can copy the bucket policy from the **Permissions** page, and then add the policy to the destination bucket in the other account\. For information about adding a bucket policy to an S3 bucket, see [How Do I Add an S3 Bucket Policy?](add-bucket-policy.md)\.  
-![\[Warning message stating that S3 can't detect whether versioning is enabled on
-              the destination bucket\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-x-account-error.png)
+![\[Warning message stating that S3 can't detect whether versioning is enabled on the destination bucket\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-x-account-error.png)
 
 1. If you chose to replicate objects encrypted with AWS KMS, under **Destination encryption settings**, type the Amazon Resource Name \(ARN\) AWS KMS key to use to encrypt the replicas in the destination bucket\. 
 
@@ -112,9 +114,7 @@ This section describes how to configure cross\-region replication rule when the 
 1. Set up an AWS Identity and Access Management \(IAM\) role that Amazon S3 can assume to perform cross\-region replication of objects on your behalf\.
 
    To set up an IAM role, on the **Permissions** page, under **Select role**, do one of the following:
-
    + We highly recommend that you choose **Create new role** to have Amazon S3 create a new IAM role for you\. When you save the rule, a new policy is generated for the IAM role that matches the source and destination buckets that you choose\. The name of the generated role is based on the bucket names and uses the following naming convention: **replication\_role\_for\_*source\-bucket*\_to\_*destination\-bucket***\.
-
    + You can choose to use an existing IAM role\. If you do, you must choose a role that allows Amazon S3 to replicate objects from the source bucket to the destination bucket on your behalf\.  
 ![\[Select an IAM role for your replication\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-permissions.png)
 
@@ -138,11 +138,8 @@ Cross\-region replication fails until you sign in to the destination account and
 ![\[Replication page displaying rule details and options\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-more-menu-receive-objects.png)
 
 1. From the Receive objects page, you can perform the following:
-
    + Enable versioning on the destination bucket\.
-
    + Apply the bucket policy provided by Amazon S3 to the destination bucket\.
-
    + Copy the AWS KMS key policy that you need to update the AWS KMS CMK key that is being used to encrypt the replica objects in the destination bucket\. For information about updating the key policy, see [Grant the Source Bucket Owner Permission to Encrypt Using the AWS KMS Key](#enable-crr-kms-key-policy)\.  
 ![\[Receive objects page\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-receive-objects.png)
 
@@ -167,9 +164,6 @@ You must grant permissions to the account of the source bucket owner to encrypt 
 For more information about creating and editing AWS KMS CMKs, see [Getting Started](http://docs.aws.amazon.com/kms/latest/developerguide/getting-started.html) in the *AWS Key Management Service Developer Guide*\. 
 
 ## More Info<a name="enable-crr-moreinfo"></a>
-
 + [How Do I Manage the Cross\-Region Replication Rules for an S3 Bucket?](disable-crr.md)
-
 + [How Do I Enable or Suspend Versioning for an S3 Bucket?](enable-versioning.md)
-
 + [Cross\-Region Replication](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) in the *Amazon Simple Storage Service Developer Guide*

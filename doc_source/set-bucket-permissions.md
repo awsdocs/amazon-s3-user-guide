@@ -62,9 +62,6 @@ Use caution when granting the **Everyone** group public access to your S3 bucket
 You can also set bucket permissions when you are creating a bucket\. For more information on setting permissions when creating a bucket, see [How Do I Create an S3 Bucket?](create-bucket.md)\. 
 
 ## More Info<a name="set-bucket-permissions-moreinfo"></a>
-
 +  [Setting Bucket and Object Access Permissions](set-permissions.md)
-
 + [How Do I Set Permissions on an Object?](set-object-permissions.md)
-
 + [How Do I Add an S3 Bucket Policy?](add-bucket-policy.md)

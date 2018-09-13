@@ -13,15 +13,10 @@ Bucket permissions check makes it easier to identify S3 buckets that provide pub
 ## Listing Public Buckets<a name="bucket-permissions-check-list"></a>
 
 The List buckets view now shows whether your bucket is publicly accessible\. Amazon S3 labels the permissions for a bucket as follows:
-
 + **Public** – Publicly accessible by either everyone in the world or by any authenticated AWS user\. 
-
 + **Not public\*** – The bucket is not publicly accessible\. However, objects in the bucket might be publicly accessible due to object ACLs\. 
-
 + **Access denied** – Locked out of the bucket\.
-
 + **Error** – A service\-related error occurred\.
-
 + **Undetermined**– Amazon S3 cannot determine whether the bucket is publicly accessible\.
 
 To get a list of the public buckets with public read and write access, choose the orange **Public** button next to the number of buckets\.
@@ -38,13 +33,9 @@ To change this list to show only **Read** or only **Write** access permissions, 
 
 The **Source** column shows whether the bucket is marked as public because of an **ACL** or a **Bucket policy**, or both\. **ACL** and **Bucket policy** are links—choose the link to view the permissions page, which shows why the bucket is marked public\. You can then change the permission if needed\. For more information on changing ACL and bucket policy permission, see [How Do I Set ACL Bucket Permissions?](set-bucket-permissions.md) and [How Do I Add an S3 Bucket Policy?](add-bucket-policy.md)\.
 
-![\[Bucket list showing Public:write and Public: read options, and the ACL and bucket
-          policy links.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/list-of-public-read-write.png)
+![\[Bucket list showing Public:write and Public: read options, and the ACL and bucket policy links.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/list-of-public-read-write.png)
 
 ## More Info<a name="bucket-permissions-check-moreinfo"></a>
-
 + [Setting Bucket and Object Access Permissions](set-permissions.md)
-
 + [How Do I Set ACL Bucket Permissions?](set-bucket-permissions.md)
-
 +  [How Do I Add an S3 Bucket Policy?](add-bucket-policy.md)

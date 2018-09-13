@@ -12,22 +12,17 @@ Data transfer fees apply when you download objects\. For information about Amazo
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-bucket-name.png)
 
 1. You can download an object from an S3 bucket in any of the following ways:
-
    + In the **Name** list, select the check box next to the object you want to download, and then choose **Download** on the object description page that appears\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/download-select-box.png)
-
    + Choose the name of the object that you want to download\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-name-select.png)
 
      On the **Overview** page, choose **Download**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-overview-download.png)
-
    + Choose the name of the object that you want to download and then choose **Download as** on the **Overview** page\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-download-as.png)
-
    + Choose the name of the object that you want to download\. Choose **Latest version** and then choose the download icon\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-latest-version-download.png)
 
 ## Related Topics<a name="download-objects-related-topics"></a>
-
 +  [How Do I Upload Files and Folders to an S3 Bucket?](upload-objects.md)

@@ -1,6 +1,13 @@
 # How Do I Add Tags to an S3 Object?<a name="add-object-tags"></a>
 
-This topic explains how to use the console to add tags to an S3 object\. For information about object tags, see [Object Tagging](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-tagging.html) in the *Amazon Simple Storage Service Developer Guide*
+Object tagging gives you a way to categorize storage\. This topic explains how to use the console to add tags to an S3 object after the object has been uploaded\. For information about adding tags to an object when the object is being uploaded, see [How Do I Upload Files and Folders to an S3 Bucket?](upload-objects.md)\. 
+
+Each tag is a key\-value pair that adheres to the following rules:
++ You can associate up to 10 tags with an object\. Tags associated with an object must have unique tag keys\.
++ A tag key can be up to 128 Unicode characters in length and tag values can be up to 255 Unicode characters in length\.
++ Key and tag values are case sensitive\. 
+
+ For more information about object tags, see [Object Tagging](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-tagging.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 **To add tags to an object**
 
@@ -24,7 +31,5 @@ This topic explains how to use the console to add tags to an S3 object\. For inf
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/enter-object-tags.png)
 
 ## More Info<a name="add-object-tags-moreinfo"></a>
-
 +  [How Do I View the Properties of an Object?](view-object-properties.md)
-
 +  [Uploading, Downloading, and Managing Objects](upload-download-objects.md)

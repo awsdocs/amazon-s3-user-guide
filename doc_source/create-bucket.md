@@ -14,17 +14,11 @@ Buckets have configuration properties, including their geographical region, who 
 1. On the **Name and region** page, type a name for your bucket and choose the AWS Region where you want the bucket to reside\. Complete the fields on this page as follows:
 
    1. For **Bucket name**, type a unique DNS\-compliant name for your new bucket\. Follow these naming guidelines: 
-
       + The name must be unique across all existing bucket names in Amazon S3\. 
-
       + The name must not contain uppercase characters\.
-
       + The name must start with a lowercase letter or number\.
-
       + The name must be between 3 and 63 characters long\.
-
       + After you create the bucket you cannot change the name, so choose wisely\. 
-
       + Choose a bucket name that reflects the objects in the bucket because the bucket name is visible in the URL that points to the objects that you're going to put in your bucket\.
 
       For information about naming buckets, see [Rules for Bucket Naming](http://docs.aws.amazon.com/AmazonS3/latest/dev//BucketRestrictions.html#bucketnamingrules) in the *Amazon Simple Storage Service Developer Guide*\.
@@ -36,25 +30,53 @@ Buckets have configuration properties, including their geographical region, who 
       The settings for the following bucket properties are copied: versioning, tags, and logging\.
 
    1. Do one of the following:
-
       + If you copied settings from another bucket, choose **Create**\. You're done, so skip the following steps\.
-
       + If not, choose **Next**\.  
 ![\[Name and region page in the Create bucket wizard.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/create-bucket-name-region.png)
 
-1. On the **Set properties** page, you can configure the following properties for the bucket\. Or, you can configure these properties later, after you create the bucket\.
+1. On the **Configure options** page, you can configure the following properties and Amazon CloudWatch metrics for the bucket \. Or, you can configure these properties and CloudWatch metrics later, after you create the bucket\.
 
-   1. **Versioning** – Versioning enables you to keep multiple versions of an object in one bucket\. Versioning is disabled for a new bucket by default\. For information on enabling versioning, see [How Do I Enable or Suspend Versioning for an S3 Bucket?](enable-versioning.md)\.
+   1. 
 
-   1. **Server access logging** – Server access logging provides detailed records for the requests that are made to your bucket\. By default, Amazon S3 does not collect server access logs\. For information about enabling server access logging, see [How Do I Enable Server Access Logging for an S3 Bucket?](server-access-logging.md)\.
+****Versioning****
 
-   1. **Tags** – With AWS cost allocation, you can use tags to annotate billing for your use of a bucket\. A tag is a key\-value pair that represents a label that you assign to a bucket\. To add tags, choose **Tags**, and then choose **Add tag**\. For more information, see [Using Cost Allocation Tags for S3 Buckets](http://docs.aws.amazon.com/AmazonS3/latest/dev//CostAllocTagging.html) in the *Amazon Simple Storage Service Developer Guide*\.
+      Select **Keep all versions of an object in the same bucket\.** to enable object versioning for the bucket\. For more information on enabling versioning, see [How Do I Enable or Suspend Versioning for an S3 Bucket?](enable-versioning.md)\.
 
-   1. **Object\-level logging** – Object\-level logging records object\-level API activity by using CloudTrail data events\. For information about enabling object\-level logging, see [How Do I Enable Object\-Level Logging for an S3 Bucket with AWS CloudTrail Data Events?](enable-cloudtrail-events.md)\.
+   1. 
 
-   1. **Default encryption** – Amazon S3 default encryption provides a way to set the default encryption behavior for an S3 bucket\. You can set default encryption on a bucket so that all objects are encrypted when they are stored in the bucket\. For information about enabling default encryption, see [How Do I Enable Default Encryption for an S3 Bucket?](default-bucket-encryption.md)\.  
-![\[Set properties page showing versioning, server access logging, tags, object-level
-            logging and default encryption.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/create-bucket-set-properties.png)
+****Server access logging****
+
+      Select **Log requests for access to your bucket\.** to enable server access logging on the bucket\. Server access logging provides detailed records for the requests that are made to your bucket\.  For more information about enabling server access logging, see [How Do I Enable Server Access Logging for an S3 Bucket?](server-access-logging.md)\.  
+![\[On the create bucket wizard configure options page you can enable versioning and server access logging.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/create-bucket-set-properties-1.png)
+
+   1. 
+
+****Tags****
+
+      You can use cost allocation bucket tags to annotate billing for your use of a bucket\. Each tag is a key\-value pair that represents a label that you assign to a bucket\.
+
+      To add a tag, type a *Key* and a *Value*\. Choose **Add another** to add another tag\. For more information about cost allocation tags, see [Using Cost Allocation S3 Bucket Tags](http://docs.aws.amazon.com/AmazonS3/latest/dev//CostAllocTagging.html) in the *Amazon Simple Storage Service Developer Guide*\.  
+![\[On the create bucket wizard configure options page you can add cost allocation bucket tags.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/create-bucket-set-properties-2.png)
+
+   1. 
+
+****Object\-level logging****
+
+      Select **Record object\-level API activity by using CloudTrail for an additional cost\.** to enable object\-level logging with CloudTrail\. For more information about enabling object\-level logging, see [How Do I Enable Object\-Level Logging for an S3 Bucket with AWS CloudTrail Data Events?](enable-cloudtrail-events.md)\.
+
+   1. 
+
+****Default encryption****
+
+      Select **Automatically encrypt objects when they are stored in S3\.** to enable default encryption for the bucket\. You can enable default encryption for a bucket so that all objects are encrypted when they are stored in the bucket\. For more information about enabling default encryption, see [How Do I Enable Default Encryption for an S3 Bucket?](default-bucket-encryption.md)\.  
+![\[On the create bucket wizard configure options page you can enable object-level logging and default encryption.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/create-bucket-set-properties-3.png)
+
+   1. 
+
+****CloudWatch request metrics****
+
+      Select **Monitor requests in your bucket for an additional cost\.** to configure CloudWatch request metrics for the bucket\. For more information about CloudWatch request metrics, see [How Do I Configure Request Metrics for an S3 Bucket?](configure-metrics.md)\.  
+![\[On the Configure options page you can enable CloudWatch metrics.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/create-bucket-config-management.png)
 
 1. Choose **Next**\.
 
@@ -68,7 +90,5 @@ We highly recommend that you *do not* grant public read access to the bucket tha
 1. On the **Review** page, verify the settings\. If you want to change something, choose **Edit**\. If your current settings are correct, choose **Create bucket**\.
 
 ## More Info<a name="create-bucket-moreinfo"></a>
-
 + [How Do I Delete an S3 Bucket?](delete-bucket.md)
-
 + [How Do I Set ACL Bucket Permissions?](set-bucket-permissions.md)
