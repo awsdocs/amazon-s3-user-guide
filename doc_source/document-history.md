@@ -1,11 +1,12 @@
 # Document History<a name="document-history"></a>
 
-**Latest documentation update:** June 19, 2018
+**Latest documentation update:** September 19, 2018
 
 The following table describes the important changes in each release of the *Amazon Simple Storage Service Console User Guide* from June 19, 2018, onward\. For notification about updates to this documentation, you can subscribe to an RSS feed\.
 
 | Change | Description | Date | 
 | --- |--- |--- |
+|  Filtering enhancements in cross\-region replication \(CRR\) rules  |  In a CRR rule, you can specify an object filter to choose a subset of objects to apply the rule to\. Previously, you could filter only on an object key prefix\. In this release, you can filter on an object key prefix, one or more object tags, or both\. For more information, see [How Do I Add a Cross\-Region Replication \(CRR\) Rule to an S3 Bucket?](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/enable-crr.html)\.  | September 19, 2018 | 
 | Updates now available over RSS | You can now subscribe to an RSS feed to receive notifications about updates to the Amazon Simple Storage Service Console User Guide guide\. | June 19, 2018 | 
 
 ## Earlier Updates<a name="earlier-doc-history"></a>
