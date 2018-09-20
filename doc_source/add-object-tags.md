@@ -25,9 +25,6 @@ Each tag is a key\-value pair that adheres to the following rules:
 1. Choose **Tags** and then choose **Add Tag**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-tags.png)
 
-1. Choose **Tags** and then choose **Add Tag**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-tags.png)
-
 1. Each tag is a key\-value pair\. Type a **Key** and a **Value**\. Then choose **Add Tag** to add another tag or choose **Save**\. 
 
    You can enter up to 10 tags for an object\.  
