@@ -7,7 +7,7 @@ Each tag is a key\-value pair that adheres to the following rules:
 + A tag key can be up to 128 Unicode characters in length and tag values can be up to 255 Unicode characters in length\.
 + Key and tag values are case sensitive\. 
 
- For more information about object tags, see [Object Tagging](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-tagging.html) in the *Amazon Simple Storage Service Developer Guide*\.
+ For more information about object tags, see [Object Tagging](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-tagging.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 **To add tags to an object**
 

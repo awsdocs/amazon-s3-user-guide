@@ -8,7 +8,7 @@ If a bucket is versioning\-enabled, Amazon S3 creates another version of an obje
 + If you upload an object that has the same name as an object that already exists in the bucket, Amazon S3 creates another version of the object instead of replacing the existing object\. 
 + If you update any object properties after you upload the object to the bucket, such as changing the storage details or other metadata , Amazon S3 creates a new object version in the bucket\. 
 
-For more information about versioning support in Amazon S3, see [Object Versioning](http://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html) and [Using Versioning](http://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) in the *Amazon Simple Storage Service Developer Guide*\.
+For more information about versioning support in Amazon S3, see [Object Versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html) and [Using Versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 **To see multiple versions of an object**
 
@@ -25,7 +25,7 @@ For more information about versioning support in Amazon S3, see [Object Versioni
 You also can view, download, and delete object versions in the object overview panel\. For more information, see [How Do I See an Overview of an Object?](view-object-overview.md)\.
 
 **Important**  
-You can undelete an object only if it was deleted as the latest \(current\) version\. You can't undelete a previous version of an object that was deleted\. For more information, see [Object Versioning](http://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html) and [Using Versioning](http://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) in the *Amazon Simple Storage Service Developer Guide*\.
+You can undelete an object only if it was deleted as the latest \(current\) version\. You can't undelete a previous version of an object that was deleted\. For more information, see [Object Versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html) and [Using Versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 ## More Info<a name="view-object-versions-related-topics"></a>
 +  [How Do I Enable or Suspend Versioning for an S3 Bucket?](enable-versioning.md)

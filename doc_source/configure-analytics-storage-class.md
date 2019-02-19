@@ -1,11 +1,11 @@
 # How Do I Configure Storage Class Analysis?<a name="configure-analytics-storage-class"></a>
 
-By using the Amazon S3 analytics storage class analysis tool, you can analyze storage access patterns to help you decide when to transition the right data to the right storage class\. Storage class analysis observes data access patterns to help you determine when to transition less frequently accessed STANDARD storage to the STANDARD\_IA \(IA, for infrequent access\) storage class\. For more information about STANDARD\_IA, see the [Amazon S3 FAQ](https://aws.amazon.com/s3/faqs/#sia) and [Storage Classes](http://docs.aws.amazon.com/AmazonS3/latest/dev//storage-class-intro.html) in the *Amazon Simple Storage Service Developer Guide*\.
+By using the Amazon S3 analytics storage class analysis tool, you can analyze storage access patterns to help you decide when to transition the right data to the right storage class\. Storage class analysis observes data access patterns to help you determine when to transition less frequently accessed STANDARD storage to the STANDARD\_IA \(IA, for infrequent access\) storage class\. For more information about STANDARD\_IA, see the [Amazon S3 FAQ](https://aws.amazon.com/s3/faqs/#sia) and [Storage Classes](https://docs.aws.amazon.com/AmazonS3/latest/dev//storage-class-intro.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 **Important**  
 Storage class analysis does not give recommendations for transitions to the ONEZONE\_IA or GLACIER storage classes\.
 
-For more information about analytics, see [Amazon S3 Analytics – Storage Class Analysis](http://docs.aws.amazon.com/AmazonS3/latest/dev/analytics-storage-class.html) in the *Amazon Simple Storage Service Developer Guide*\.
+For more information about analytics, see [Amazon S3 Analytics – Storage Class Analysis](https://docs.aws.amazon.com/AmazonS3/latest/dev/analytics-storage-class.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 **To configure storage class analysis**
 
@@ -40,7 +40,7 @@ For more information about analytics, see [Amazon S3 Analytics – Storage Class
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/analytics-bucket-policy.png)
 
-For information about the exported data and how the filter works, see [Amazon S3 Analytics – Storage Class Analysis](http://docs.aws.amazon.com/AmazonS3/latest/dev/analytics-storage-class.html) in the *Amazon Simple Storage Service Developer Guide*\.
+For information about the exported data and how the filter works, see [Amazon S3 Analytics – Storage Class Analysis](https://docs.aws.amazon.com/AmazonS3/latest/dev/analytics-storage-class.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 **More Info**  
  [Storage Management](storage-management.md)

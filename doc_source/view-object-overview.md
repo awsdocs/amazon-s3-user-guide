@@ -18,7 +18,7 @@ This section explains how to use the Amazon S3 console to view the object overvi
 1. If versioning is enabled on the bucket, choose **Latest versions** to list the versions of the object\. You can then choose the download icon to download an object version, or choose the trash can icon to delete an object version\.   
 ![\[List of object versions that you can download or delete.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-overview-versions.png)
 **Important**  
-You can undelete an object only if it was deleted as the latest \(current\) version\. You can't undelete a previous version of an object that was deleted\. For more information, see [Object Versioning](http://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html) and [Using Versioning](http://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) in the *Amazon Simple Storage Service Developer Guide*\.
+You can undelete an object only if it was deleted as the latest \(current\) version\. You can't undelete a previous version of an object that was deleted\. For more information, see [Object Versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html) and [Using Versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 ## More Info<a name="view-object-overview-related-topics"></a>
 +  [How Do I See the Versions of an S3 Object?](view-object-versions.md)

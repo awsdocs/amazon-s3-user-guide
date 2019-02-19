@@ -18,7 +18,7 @@ You can redirect all requests to your S3 bucket hosted static website to another
 1. Choose **Redirect requests**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/static-website-hosting-redirect-requests.png)
 
-   1. For **Target bucket or domain**, type the name of the bucket or the domain name where you want requests to be redirected\. To redirect requests to another bucket, type the name of the target bucket\. For example, if you are redirecting to a root domain address, you would type **www\.example\.com**\. For more information, see [Configure a Bucket for Website Hosting](http://docs.aws.amazon.com/AmazonS3/latest/dev/HowDoIWebsiteConfiguration.html) in the *Amazon Simple Storage Service Developer Guide*\.
+   1. For **Target bucket or domain**, type the name of the bucket or the domain name where you want requests to be redirected\. To redirect requests to another bucket, type the name of the target bucket\. For example, if you are redirecting to a root domain address, you would type **www\.example\.com**\. For more information, see [Configure a Bucket for Website Hosting](https://docs.aws.amazon.com/AmazonS3/latest/dev/HowDoIWebsiteConfiguration.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
    1. For **Protocol**, type the protocol \(http, https\) for the redirected requests\. If no protocol is specified, the protocol of the original request is used\. If you redirect all requests, any request made to the bucket's website endpoint will be redirected to the specified host name\. 
 

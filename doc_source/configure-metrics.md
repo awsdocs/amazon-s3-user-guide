@@ -2,7 +2,7 @@
 
 There are two types of Amazon CloudWatch \(CloudWatch\) metrics for Amazon S3: storage metrics and request metrics\. Storage metrics are reported once per day and are provided to all customers at no additional cost\. Request metrics are available at 1\-minute intervals after some latency to process, and metrics are billed at the standard CloudWatch rate\. To get request metrics, you must opt into them by configuring them in the console or with the Amazon S3 API\.
 
-For more conceptual information about CloudWatch metrics for Amazon S3, see [Monitoring Metrics with Amazon CloudWatch](http://docs.aws.amazon.com/AmazonS3/latest/dev/cloudwatch-monitoring.html) in the *Amazon Simple Storage Service Developer Guide*\.
+For more conceptual information about CloudWatch metrics for Amazon S3, see [Monitoring Metrics with Amazon CloudWatch](https://docs.aws.amazon.com/AmazonS3/latest/dev/cloudwatch-monitoring.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 **To configure request metrics on a bucket**
 

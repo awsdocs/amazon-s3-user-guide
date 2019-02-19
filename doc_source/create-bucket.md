@@ -21,9 +21,9 @@ Buckets have configuration properties, including their geographical region, who 
       + After you create the bucket you cannot change the name, so choose wisely\. 
       + Choose a bucket name that reflects the objects in the bucket because the bucket name is visible in the URL that points to the objects that you're going to put in your bucket\.
 
-      For information about naming buckets, see [Rules for Bucket Naming](http://docs.aws.amazon.com/AmazonS3/latest/dev//BucketRestrictions.html#bucketnamingrules) in the *Amazon Simple Storage Service Developer Guide*\.
+      For information about naming buckets, see [Rules for Bucket Naming](https://docs.aws.amazon.com/AmazonS3/latest/dev//BucketRestrictions.html#bucketnamingrules) in the *Amazon Simple Storage Service Developer Guide*\.
 
-   1. For **Region**, choose the AWS Region where you want the bucket to reside\. Choose a Region close to you to minimize latency and costs, or to address regulatory requirements\. Objects stored in a Region never leave that Region unless you explicitly transfer them to another Region\. For a list of Amazon S3 AWS Regions, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) in the *Amazon Web Services General Reference*\.
+   1. For **Region**, choose the AWS Region where you want the bucket to reside\. Choose a Region close to you to minimize latency and costs, or to address regulatory requirements\. Objects stored in a Region never leave that Region unless you explicitly transfer them to another Region\. For a list of Amazon S3 AWS Regions, see [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) in the *Amazon Web Services General Reference*\.
 
    1. \(Optional\) If you have already set up a bucket that has the same settings that you want to use for the new bucket that you want to create, you can set it up quickly by choosing **Copy settings from an existing bucket**, and then choosing the bucket whose settings you want to copy\.
 
@@ -34,7 +34,7 @@ Buckets have configuration properties, including their geographical region, who 
       + If not, choose **Next**\.  
 ![\[Name and region page in the Create bucket wizard.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/create-bucket-name-region.png)
 
-1. On the **Configure options** page, you can configure the following properties and Amazon CloudWatch metrics for the bucket \. Or, you can configure these properties and CloudWatch metrics later, after you create the bucket\.
+1. On the **Configure options** page, you can configure the following properties and Amazon CloudWatch metrics for the bucket\. Or, you can configure these properties and CloudWatch metrics later, after you create the bucket\.
 
    1. 
 
@@ -55,7 +55,7 @@ Buckets have configuration properties, including their geographical region, who 
 
       You can use cost allocation bucket tags to annotate billing for your use of a bucket\. Each tag is a key\-value pair that represents a label that you assign to a bucket\.
 
-      To add a tag, type a *Key* and a *Value*\. Choose **Add another** to add another tag\. For more information about cost allocation tags, see [Using Cost Allocation S3 Bucket Tags](http://docs.aws.amazon.com/AmazonS3/latest/dev//CostAllocTagging.html) in the *Amazon Simple Storage Service Developer Guide*\.  
+      To add a tag, type a *Key* and a *Value*\. Choose **Add another** to add another tag\. For more information about cost allocation tags, see [Using Cost Allocation S3 Bucket Tags](https://docs.aws.amazon.com/AmazonS3/latest/dev//CostAllocTagging.html) in the *Amazon Simple Storage Service Developer Guide*\.  
 ![\[On the create bucket wizard configure options page you can add cost allocation bucket tags.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/create-bucket-set-properties-2.png)
 
    1. 
@@ -73,6 +73,13 @@ Buckets have configuration properties, including their geographical region, who 
 
    1. 
 
+****Object lock****
+
+      Select **Permanently allow objects in this bucket to be locked** if you want to be able to lock objects in the bucket\. Object lock requires that versioning be enabled on the bucket\. For more information about object locking, see [Introduction to Amazon S3 Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html)\. in the *Amazon Simple Storage Service Developer Guide*  
+![\[On the Configure options page you can enable object locking.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/create-bucket-object-lock.png)
+
+   1. 
+
 ****CloudWatch request metrics****
 
       Select **Monitor requests in your bucket for an additional cost\.** to configure CloudWatch request metrics for the bucket\. For more information about CloudWatch request metrics, see [How Do I Configure Request Metrics for an S3 Bucket?](configure-metrics.md)\.  
@@ -80,12 +87,16 @@ Buckets have configuration properties, including their geographical region, who 
 
 1. Choose **Next**\.
 
-1. On the **Set permissions** page, you manage the permissions that are set on the bucket that you are creating\. You can grant read access to your bucket to the general public \(everyone in the world\)\. Granting public read access is applicable to a small subset of use cases such as when buckets are used for websites\. We recommend that you do not change the default setting of **Do not grant public read access to this bucket**\. You can change permissions after you create the bucket\. For more information about setting bucket permissions, see [How Do I Set ACL Bucket Permissions?](set-bucket-permissions.md) 
-**Warning**  
-We highly recommend that you *do not* grant public read access to the bucket that you are creating\. Granting public read access permissions means that anyone in the world can access the objects in the bucket\. 
+1. On the **Set permissions** page, you manage the permissions that are set on the bucket that you are creating\. 
 
-   When you're done configuring permissions on the bucket, choose **Next**\.  
+   Under **Public access settings for this bucket**, we recommend that you do not change the default settings that are listed under **Manage public access control lists \(ACLs\) for this bucket** or **Manage public bucket policies for this bucket**\. You can change the permissions after you create the bucket\. For more information about setting bucket permissions, see [How Do I Set ACL Bucket Permissions?](set-bucket-permissions.md)\. 
+**Warning**  
+We highly recommend that you keep the default access settings for blocking public access to the bucket that you are creating\. Public access means that anyone in the world can access the objects in the bucket\. 
+
+   If you intend to use the bucket to store Amazon S3 server access logs, in the drop\-down list under **Manage system permissions**, choose **Grant Amazon S3 Log Delivery group write access to this bucket** \. For more information about server access logs, see [How Do I Enable Server Access Logging for an S3 Bucket?](server-access-logging.md)\.   
 ![\[Set permissions page with default settings.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/create-bucket-set-permissions.png)
+
+   When you're done configuring permissions on the bucket, choose **Next**\.
 
 1. On the **Review** page, verify the settings\. If you want to change something, choose **Edit**\. If your current settings are correct, choose **Create bucket**\.
 

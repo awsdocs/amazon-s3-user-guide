@@ -1,7 +1,7 @@
 # Amazon Simple Storage Service Console User Guide
 
 -----
-*****Copyright &copy; 2018 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -15,6 +15,7 @@ Amazon's trademarks and trade dress may not be used in
 -----
 ## Contents
 + [Welcome to the Amazon S3 Console User Guide](what-is-s3.md)
++ [How Do I Change the Language of the Amazon S3 Console?](change-ui-language.md)
 + [Creating and Configuring an S3 Bucket](create-configure-bucket.md)
    + [How Do I Create an S3 Bucket?](create-bucket.md)
    + [How Do I Delete an S3 Bucket?](delete-bucket.md)
@@ -35,7 +36,8 @@ Amazon's trademarks and trade dress may not be used in
    + [How Do I Download an Object from an S3 Bucket?](download-objects.md)
    + [How Do I Delete Objects from an S3 Bucket?](delete-objects.md)
    + [How Do I Undelete a Deleted S3 Object?](undelete-objects.md)
-   + [How Do I Restore an S3 Object That Has Been Archived to Amazon Glacier?](restore-archived-objects.md)
+   + [How Do I Restore an S3 Object That Has Been Archived to Glacier?](restore-archived-objects.md)
+   + [How Do I Lock an S3 Object?](object-lock.md)
    + [How Do I See an Overview of an Object?](view-object-overview.md)
    + [How Do I See the Versions of an S3 Object?](view-object-versions.md)
    + [How Do I View the Properties of an Object?](view-object-properties.md)
@@ -46,6 +48,8 @@ Amazon's trademarks and trade dress may not be used in
       + [Creating a Folder](create-folder.md)
       + [How Do I Delete Folders from an S3 Bucket?](delete-folders.md)
       + [Making Folders Public](public-folders.md)
++ [Introduction to Amazon S3 Batch Operations](batch-ops.md)
+   + [Creating a Batch Operations Job](batch-ops-create-job.md)
 + [Storage Management](storage-management.md)
    + [How Do I Create a Lifecycle Policy for an S3 Bucket?](create-lifecycle.md)
    + [How Do I Add a Cross-Region Replication (CRR) Rule to an S3 Bucket?](enable-crr.md)
@@ -55,7 +59,9 @@ Amazon's trademarks and trade dress may not be used in
    + [How Do I Configure Request Metrics for an S3 Bucket?](configure-metrics.md)
    + [How Do I Configure a Request Metrics Filter?](configure-metrics-filter.md)
 + [Setting Bucket and Object Access Permissions](set-permissions.md)
-   + [Identifying Public Buckets Using Bucket Permissions Check](bucket-permissions-check.md)
+   + [How Do I Block Public Access to S3 Buckets?](block-public-access.md)
+   + [How Do I Edit Public Access Settings for S3 Buckets?](block-public-access-bucket.md)
+   + [How Do I Edit Public Access Settings for All the S3 Buckets in an AWS Account?](block-public-access-account.md)
    + [How Do I Set Permissions on an Object?](set-object-permissions.md)
    + [How Do I Set ACL Bucket Permissions?](set-bucket-permissions.md)
    + [How Do I Add an S3 Bucket Policy?](add-bucket-policy.md)

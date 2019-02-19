@@ -5,7 +5,7 @@ This section describes how to enable an AWS CloudTrail trail to log data events 
 **Important**  
 Additional charges apply for data events\. For more information, see [AWS CloudTrail Pricing](https://aws.amazon.com/cloudtrail/pricing/)\. 
 
-To configure a trail to log data events for an S3 bucket, you can use either the AWS CloudTrail console or the Amazon S3 console\. If you are configuring a trail to log data events for all the Amazon S3 buckets in your AWS account, it's easier to use the CloudTrail console\. For information about using the CloudTrail console to configure a trail to log S3 data events, see [ Data Events](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-data-events) in the *AWS CloudTrail User Guide*\. 
+To configure a trail to log data events for an S3 bucket, you can use either the AWS CloudTrail console or the Amazon S3 console\. If you are configuring a trail to log data events for all the Amazon S3 buckets in your AWS account, it's easier to use the CloudTrail console\. For information about using the CloudTrail console to configure a trail to log S3 data events, see [ Data Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-data-events) in the *AWS CloudTrail User Guide*\. 
 
 The following procedure shows how to use the Amazon S3 console to enable a CloudTrail trail to log data events for an S3 bucket\.
 
@@ -24,10 +24,10 @@ The following procedure shows how to use the Amazon S3 console to enable a Cloud
 
 1. Choose an existing CloudTrail trail in the drop\-down menu\. The trail you select must be in the same AWS Region as your bucket, so the drop\-down list contains only trails that are in the same Region as the bucket or trails that were created for all Regions\. 
 
-   If you need to create a trail, choose the **CloudTrail console** link to go to the CloudTrail console\. For information about how to create trails in the CloudTrail console, see [ Creating a Trail with the Console](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-and-update-a-trail-by-using-the-console.html) in the *AWS CloudTrail User Guide*\.   
+   If you need to create a trail, choose the **CloudTrail console** link to go to the CloudTrail console\. For information about how to create trails in the CloudTrail console, see [ Creating a Trail with the Console](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-and-update-a-trail-by-using-the-console.html) in the *AWS CloudTrail User Guide*\.   
 ![\[Choosing a CloudTrail trail in the Object level logging dialog box.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/add-cloudtrail.png)
 
-1. Under **Events**, select **Read** to specify that you want CloudTrail to log Amazon S3 read APIs such as `GetObject`\. Select **Write** to log Amazon S3 write APIs such as `PutObject`\. Select both **Read** and **Write** to log both read and write object APIs\. For a list of supported data events that CloudTrail logs for Amazon S3 objects, see [ Amazon S3 Object\-Level Actions Tracked by CloudTrail Logging](http://docs.aws.amazon.com/AmazonS3/latest/dev/cloudtrail-logging.html#cloudtrail-object-level-tracking) in the *Amazon Simple Storage Service Developer Guide*\.   
+1. Under **Events**, select **Read** to specify that you want CloudTrail to log Amazon S3 read APIs such as `GetObject`\. Select **Write** to log Amazon S3 write APIs such as `PutObject`\. Select both **Read** and **Write** to log both read and write object APIs\. For a list of supported data events that CloudTrail logs for Amazon S3 objects, see [ Amazon S3 Object\-Level Actions Tracked by CloudTrail Logging](https://docs.aws.amazon.com/AmazonS3/latest/dev/cloudtrail-logging.html#cloudtrail-object-level-tracking) in the *Amazon Simple Storage Service Developer Guide*\.   
 ![\[Object-level logging dialog box with read and write selected.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/select-cloudtrail-events.png)
 
 1. Choose **Create** to enable object\-level logging for the bucket\.  
@@ -41,5 +41,5 @@ For information about enabling object\-level logging when you create an S3 bucke
 
 ## More Info<a name="enable-cloudtrail-events-moreinfo"></a>
 + [How Do I View the Properties for an S3 Bucket?](view-bucket-properties.md)
-+ [ Logging Amazon S3 API Calls By Using AWS CloudTrail](http://docs.aws.amazon.com/AmazonS3/latest/dev/cloudtrail-logging.html) in the *Amazon Simple Storage Service Developer Guide* 
-+ [ Working with CloudTrail Log Files](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-working-with-log-files.html) in the *AWS CloudTrail User Guide*
++ [ Logging Amazon S3 API Calls By Using AWS CloudTrail](https://docs.aws.amazon.com/AmazonS3/latest/dev/cloudtrail-logging.html) in the *Amazon Simple Storage Service Developer Guide* 
++ [ Working with CloudTrail Log Files](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-working-with-log-files.html) in the *AWS CloudTrail User Guide*

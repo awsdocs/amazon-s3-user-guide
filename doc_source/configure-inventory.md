@@ -1,6 +1,6 @@
 # How Do I Configure Amazon S3 Inventory?<a name="configure-inventory"></a>
 
-Amazon S3 inventory provides a flat file list of your objects and metadata, which is a scheduled alternative to the Amazon S3 synchronous `List` API operation\. Amazon S3 inventory provides comma\-separated values \(CSV\) or [Apache optimized row columnar \(ORC\)](https://orc.apache.org/) output files that list your objects and their corresponding metadata on a daily or weekly basis for an S3 bucket or for objects that share a prefix \(objects that have names that begin with the same string\)\. For more information, see [Amazon S3 Inventory](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html) in the *Amazon Simple Storage Service Developer Guide*\.
+Amazon S3 inventory provides a flat file list of your objects and metadata, which is a scheduled alternative to the Amazon S3 synchronous `List` API operation\. Amazon S3 inventory provides comma\-separated values \(CSV\) or [Apache optimized row columnar \(ORC\)](https://orc.apache.org/) or[ Apache Parquet \(Parquet\) ](https://parquet.apache.org/)output files that list your objects and their corresponding metadata on a daily or weekly basis for an S3 bucket or for objects that share a prefix \(objects that have names that begin with the same string\)\. For more information, see [Amazon S3 Inventory](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 **To configure inventory**
 
@@ -24,7 +24,7 @@ Amazon S3 inventory provides a flat file list of your objects and metadata, whic
 
 1. Under **Advanced settings**, you can set the following:
 
-   1.  Choose either the CSV or ORC output file format for your inventory\. For more information about these formats, see [Amazon S3 Inventory](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html) in the *Amazon Simple Storage Service Developer Guide*\.   
+   1.  Choose either the CSV or ORC output file format for your inventory\. For more information about these formats, see [Amazon S3 Inventory](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html) in the *Amazon Simple Storage Service Developer Guide*\.   
 ![\[Advanced settings screen with include only current versions selected\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/inventory-enter-data-advanced.png)
 
    1. To include all versions of the objects in the inventory, choose **Include all versions** in the **Object versions** list\. By default, the inventory includes only the current versions of the objects\.
@@ -34,15 +34,22 @@ Amazon S3 inventory provides a flat file list of your objects and metadata, whic
       + **Last modified date** – Object creation date or the last modified date, whichever is the latest\.
       + **Storage class** – Storage class used for storing the object\. 
       + **ETag** – The entity tag is a hash of the object\. The ETag reflects changes only to the contents of an object, and not its metadata\. The ETag may or may not be an MD5 digest of the object data\. Whether it is depends on how the object was created and how it is encrypted\.
+      +  **Multipart upload** – Specifies that the object was uploaded as a multipart upload\. For more information, see [Multipart Upload Overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html) in the *Amazon Simple Storage Service Developer Guide*\.
       + **Replication status** – The cross\-region replication status of the object\. For more information, see [How Do I Add a Cross\-Region Replication \(CRR\) Rule to an S3 Bucket?](enable-crr.md)
-      + **Encryption status** – The server\-side encryption used to encrypt the object\. For more information, see [Protecting Data Using Server\-Side Encryption](http://docs.aws.amazon.com/AmazonS3/latest/dev/serv-side-encryption.html) in the *Amazon Simple Storage Service Developer Guide*\.
+      + **Encryption status** – The server\-side encryption used to encrypt the object\. For more information, see [Protecting Data Using Server\-Side Encryption](https://docs.aws.amazon.com/AmazonS3/latest/dev/serv-side-encryption.html) in the *Amazon Simple Storage Service Developer Guide*\.
+      + **Object lock configurations** – The object lock status of the object, including the following settings: 
+        + **Retention mode** – The level of protection applied to the object, either *Governance* or *Compliance*\.
+        + **Retain until date** – The date until which the locked object cannot be deleted\.
+        + **Legal hold status** – The Legal hold status of the locked object\. 
 
-      For more information about the contents of an inventory report, see [ What's Included in an Amazon S3 Inventory?](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html#storage-inventory-contents) in the *Amazon Simple Storage Service Developer Guide*\.
+        For information about object lock, see [Amazon S3 Object Lock Overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html) in the *Amazon Simple Storage Service Developer Guide*\.
+
+      For more information about the contents of an inventory report, see [ What's Included in an Amazon S3 Inventory?](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html#storage-inventory-contents) in the *Amazon Simple Storage Service Developer Guide*\.
 
    1. For **Encryption**, choose a server\-side encryption option to encrypt the inventory report, or choose **None**:
       + **None** – Do not encrypt the inventory report\.
-      + **AES\-256** – Encrypt the inventory report using server\-side encryption with Amazon S3\-managed keys \(SSE\-S3\)\. Amazon S3 server\-side encryption uses 256\-bit Advanced Encryption Standard \(AES\-256\)\. For more information, see [Amazon S3\-Managed Encryption Keys \(SSE\-S3\)](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html) in the *Amazon Simple Storage Service Developer Guide*\. 
-      + **AWS\-KMS** – Encrypt the report using server\-side encryption with AWS KMS\-managed keys \(SSE\-KMS\)\. For more information, see [AWS KMS–Managed Keys \(SSE\-KMS\)](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) in the *Amazon Simple Storage Service Developer Guide*\. 
+      + **AES\-256** – Encrypt the inventory report using server\-side encryption with Amazon S3\-managed keys \(SSE\-S3\)\. Amazon S3 server\-side encryption uses 256\-bit Advanced Encryption Standard \(AES\-256\)\. For more information, see [Amazon S3\-Managed Encryption Keys \(SSE\-S3\)](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html) in the *Amazon Simple Storage Service Developer Guide*\. 
+      + **AWS\-KMS** – Encrypt the report using server\-side encryption with AWS KMS\-managed keys \(SSE\-KMS\)\. For more information, see [AWS KMS–Managed Keys \(SSE\-KMS\)](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) in the *Amazon Simple Storage Service Developer Guide*\. 
 **Note**  
 To encrypt the inventory list file with SSE\-KMS, you must grant Amazon S3 permission to use the AWS KMS key\. For instructions, see [Grant Amazon S3 Permission to Encrypt Using Your AWS KMS Key](#configure-inventory-kms-key-policy)\.
 
@@ -58,7 +65,7 @@ If an error occurs when you try to create the bucket policy, you are given instr
 
 In this case, the destination bucket owner must add the displayed bucket policy to the destination bucket\. If the policy is not added to the destination bucket, you won’t get an inventory report because Amazon S3 doesn’t have permission to write to the destination bucket\. If the source bucket is owned by a different account than that of the current user, the correct account ID of the source bucket must be substituted in the policy\.
 
-For more information, see [Amazon S3 Inventory](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html) in the *Amazon Simple Storage Service Developer Guide*\.
+For more information, see [Amazon S3 Inventory](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 ## Grant Amazon S3 Permission to Encrypt Using Your AWS KMS Key<a name="configure-inventory-kms-key-policy"></a>
 
@@ -92,7 +99,7 @@ You must grant Amazon S3 permission to encrypt using your AWS KMS key with a key
    }
    ```
 
-For more information about creating and editing AWS KMS CMKs, see [Getting Started](http://docs.aws.amazon.com/kms/latest/developerguide/getting-started.html) in the *AWS Key Management Service Developer Guide*\. 
+For more information about creating and editing AWS KMS CMKs, see [Getting Started](https://docs.aws.amazon.com/kms/latest/developerguide/getting-started.html) in the *AWS Key Management Service Developer Guide*\. 
 
 **More Info**  
  [Storage Management](storage-management.md)

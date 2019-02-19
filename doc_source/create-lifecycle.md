@@ -4,7 +4,7 @@ You can use lifecycle policies to define actions you want Amazon S3 to take duri
 
 You can define a lifecycle policy for all objects or a subset of objects in the bucket by using a shared prefix \(that is, objects that have names that begin with a common string\)\. 
 
-A versioning\-enabled bucket can have many versions of the same object, one current version and zero or more noncurrent \(previous\) versions\.  Using a lifecycle policy, you can define actions specific to current and noncurrent object versions\. For more information, see [Object Lifecycle Management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) and [Object Versioning](http://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html) and [Using Versioning](http://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) in the *Amazon Simple Storage Service Developer Guide*\.
+A versioning\-enabled bucket can have many versions of the same object, one current version and zero or more noncurrent \(previous\) versions\.  Using a lifecycle policy, you can define actions specific to current and noncurrent object versions\. For more information, see [Object Lifecycle Management](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) and [Object Versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html) and [Using Versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 **To create a lifecycle policy**
 
@@ -17,12 +17,12 @@ A versioning\-enabled bucket can have many versions of the same object, one curr
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-lifecycle-tab.png)
 
 1. In the **Lifecycle rule** dialog box, type a name for your rule to help identify the rule later\. The name must be unique within the bucket\. Configure the rule as follows: 
-   + To apply this lifecycle rule to all objects with a specified name prefix \(that is, objects with names that begin with a common string\), type a prefix in the box, choose the prefix from the drop\-down list, and then press **Enter**\.  For more information about object name prefixes, see [Object Keys](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys) in the *Amazon Simple Storage Service Developer Guide*\. 
-   + To apply this lifecycle rule to all objects with one or more object tags, type a tag in the box, choose the tag from the drop\-down list, and then press **Enter**\. Repeat the procedure to add another tag\. You can combine a prefix and tags\. For more information about object tags, see [Object Tagging](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-tagging.html) in the *Amazon Simple Storage Service Developer Guide*\.
+   + To apply this lifecycle rule to all objects with a specified name prefix \(that is, objects with names that begin with a common string\), type a prefix in the box, choose the prefix from the drop\-down list, and then press **Enter**\.  For more information about object name prefixes, see [Object Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys) in the *Amazon Simple Storage Service Developer Guide*\. 
+   + To apply this lifecycle rule to all objects with one or more object tags, type a tag in the box, choose the tag from the drop\-down list, and then press **Enter**\. Repeat the procedure to add another tag\. You can combine a prefix and tags\. For more information about object tags, see [Object Tagging](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-tagging.html) in the *Amazon Simple Storage Service Developer Guide*\.
    + To apply this lifecycle rule to all objects in the bucket, choose **Next**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/lifecycle-name-scope.png)
 
-1. You configure lifecycle rules by defining rules to transition objects to the Standard\-IA, One Zone\-IA, and Amazon Glacier storage classes\. For more information, see [Storage Classes](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) in the *Amazon Simple Storage Service Developer Guide*\.
+1. You configure lifecycle rules by defining rules to transition objects to the Standard\-IA, One Zone\-IA, and Glacier storage classes\. For more information, see [Storage Classes](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
    You can define transitions for current or previous object versions, or for both current and previous versions\. Versioning enables you to keep multiple versions of an object in one bucket\. For more information about versioning, see [How Do I Enable or Suspend Versioning for an S3 Bucket?](enable-versioning.md)\.
 
@@ -34,9 +34,9 @@ A versioning\-enabled bucket can have many versions of the same object, one curr
    1. Choose **Add transitions** and specify one of the following transitions:
       + Choose **Transition to Standard\-IA after**, and then type the number of days after the creation of an object that you want the transition to be applied \(for example, 30 days\)\. 
       + Choose **Transition to One Zone\-IA after**, and then type the number of days after the creation of an object that you want the transition to be applied \(for example, 30 days\)\. 
-      + Choose **Transition to Amazon Glacier after**, and then type the number of days after the creation of an object that you want the transition to be applied \(for example, 100 days\)\.
+      + Choose **Transition to Glacier after**, and then type the number of days after the creation of an object that you want the transition to be applied \(for example, 100 days\)\.
 **Important**  
- Amazon S3 stores the archived objects in Amazon Glacier\. However, these are Amazon S3 objects, and you can access them only by using the Amazon S3 console or the Amazon S3 API\. You cannot access the archived objects through the Amazon Glacier console or the Amazon Glacier API\. For more information, see [Transitioning Objects: General Considerations](http://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-considerations.html)\.   
+ Amazon S3 stores the archived objects in Glacier\. However, these are Amazon S3 objects, and you can access them only by using the Amazon S3 console or the Amazon S3 API\. You cannot access the archived objects through the Glacier console or the Glacier API\. For more information, see [Transitioning Objects: General Considerations](https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-considerations.html)\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/lifecycle-add-transition.png)
 
 1. When you are done configuring transitions, choose **Next**\.  
@@ -48,7 +48,7 @@ A versioning\-enabled bucket can have many versions of the same object, one curr
 
 1. Select **Permanently delete previous versions**, and then enter the number of days after an object becomes a previous version to permanently delete the object \(for example, 465 days\)\.
 
-1. It is a recommended best practice to always select **Clean up incomplete multipart uploads**\. For example, type **7** for the number of days after the multipart upload initiation date that you want to end and clean up any multipart uploads that have not completed\. For more information about multipart uploads, see [Multipart Upload Overview](http://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html) in the Amazon Simple Storage Service Developer Guide\.
+1. It is a recommended best practice to always select **Clean up incomplete multipart uploads**\. For example, type **7** for the number of days after the multipart upload initiation date that you want to end and clean up any multipart uploads that have not completed\. For more information about multipart uploads, see [Multipart Upload Overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html) in the Amazon Simple Storage Service Developer Guide\.
 
 1. Choose **Next**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/lifecycle-expirations.png)

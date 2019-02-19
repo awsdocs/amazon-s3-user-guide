@@ -17,7 +17,7 @@ This section explains how to use the console to view the properties of an object
 
 1. On the **Properties** page, you can configure the following properties for the object\.
 
-   1. **Storage class** – Each object in Amazon S3 has a storage class associated with it\. The storage class that you choose to use depends on how frequently you access the object\. The default storage class for S3 objects is STANDARD\. You choose which storage class to use when you upload an object\. For more information about storage classes, see [Storage Classes](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) in the *Amazon Simple Storage Service Developer Guide*\.
+   1. **Storage class** – Each object in Amazon S3 has a storage class associated with it\. The storage class that you choose to use depends on how frequently you access the object\. The default storage class for S3 objects is STANDARD\. You choose which storage class to use when you upload an object\. For more information about storage classes, see [Storage Classes](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
       To change the storage class after you upload an object, choose **Storage class**\. Choose the storage class that you want, and then choose **Save**\.
 

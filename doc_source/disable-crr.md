@@ -2,7 +2,7 @@
 
 Cross\-region replication is the automatic, asynchronous copying of objects across buckets in different AWS Regions\. It replicates newly created objects and object updates from a source bucket to a destination bucket in a different Region\. 
 
-You use the Amazon S3 console to add replication rules to the source bucket\. Replication rules define the source bucket objects to replicate and the destination bucket where the replicated objects are stored\. For more information about cross\-region replication, see [Cross\-Region Replication](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.htm) in the *Amazon Simple Storage Service Developer Guide*\.
+You use the Amazon S3 console to add replication rules to the source bucket\. Replication rules define the source bucket objects to replicate and the destination bucket where the replicated objects are stored\. For more information about cross\-region replication, see [Cross\-Region Replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/crr.htm) in the *Amazon Simple Storage Service Developer Guide*\.
 
 You can manage replication rules on the **Replication** page\. You can add, view, enable, disable, delete, and change the priority of the replication rules\. For information about adding replication rules to a bucket, see [How Do I Add a Cross\-Region Replication \(CRR\) Rule to an S3 Bucket?](enable-crr.md)\.
 
@@ -28,9 +28,9 @@ You can manage replication rules on the **Replication** page\. You can add, view
 ![\[More drop-down list with Disable rule selected\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-rules-page-rule-disable.png)
    + To change the rule priorities, choose **Edit priorities**\. You can then change the priority for each rule under the **Priority** column heading\. Choose **Save **to save your changes\.
 
-     You set rule priorities to avoid conflicts caused by objects that are included in the scope of more than one rule\. In the case of overlapping rules, Amazon S3 uses the rule priority to determine which rule to apply\. The higher the number, the higher the priority\. For more information about rule priority, see [Replication Configuration Overview](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr-add-config.html) in the *Amazon Simple Storage Service Developer Guide*\.  
+     You set rule priorities to avoid conflicts caused by objects that are included in the scope of more than one rule\. In the case of overlapping rules, Amazon S3 uses the rule priority to determine which rule to apply\. The higher the number, the higher the priority\. For more information about rule priority, see [Replication Configuration Overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/crr-add-config.html) in the *Amazon Simple Storage Service Developer Guide*\.  
 ![\[More drop-down list with Disable rule selected\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-rules-page-rule-priority.png)
 
 ## More Info<a name="disable-crr-moreinfo"></a>
 + [How Do I Add a Cross\-Region Replication \(CRR\) Rule to an S3 Bucket?](enable-crr.md)
-+ [Cross\-Region Replication](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) in the *Amazon Simple Storage Service Developer Guide*
++ [Cross\-Region Replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) in the *Amazon Simple Storage Service Developer Guide*

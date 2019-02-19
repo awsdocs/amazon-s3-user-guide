@@ -1,10 +1,10 @@
 # How Do I Set ACL Bucket Permissions?<a name="set-bucket-permissions"></a>
 
-This section explains how to use the Amazon Simple Storage Service \(Amazon S3\) console to manage access permissions for S3 buckets by using access control lists \(ACLs\)\. ACLs are resource\-based access policies that grant access permissions to buckets and objects\. For more information about managing access permissions with resource\-based policies, see [Overview of Managing Access](http://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-overview.html) in the *Amazon Simple Storage Service Developer Guide*\.
+This section explains how to use the Amazon Simple Storage Service \(Amazon S3\) console to manage access permissions for S3 buckets by using access control lists \(ACLs\)\. ACLs are resource\-based access policies that grant access permissions to buckets and objects\. For more information about managing access permissions with resource\-based policies, see [Overview of Managing Access](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-overview.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 You can grant permissions to other AWS account users or to predefined groups\. The user or group that you are granting permissions to is called the grantee\. By default, the owner, which is the AWS account that created the bucket, has full permissions\.
 
-Each permission you grant for a user or group adds an entry in the ACL associated with the bucket\. The ACL lists grants, which identify the grantee and the permission granted\. For more information about ACLs, see [Managing Access with ACLs](http://docs.aws.amazon.com/AmazonS3/latest/dev/S3_ACLs_UsingACLs.html) in the *Amazon Simple Storage Service Developer Guide*\.
+Each permission you grant for a user or group adds an entry in the ACL associated with the bucket\. The ACL lists grants, which identify the grantee and the permission granted\. For more information about ACLs, see [Managing Access with ACLs](https://docs.aws.amazon.com/AmazonS3/latest/dev/S3_ACLs_UsingACLs.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 **To set ACL access permissions for an S3 bucket**
 
@@ -22,7 +22,7 @@ Each permission you grant for a user or group adds an entry in the ACL associate
 
 **Owner access**
 
-      The *owner* refers to the AWS account root user, and not an AWS Identity and Access Management \(IAM\) user\. For more information about the root user, see [The AWS Account Root User](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html)\.
+      The *owner* refers to the AWS account root user, and not an AWS Identity and Access Management \(IAM\) user\. For more information about the root user, see [The AWS Account Root User](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html)\.
 
       To make changes to the owner's bucket access permissions, under **Owner access**, choose the account name, which is the name of the AWS account root user\.
 
@@ -33,12 +33,12 @@ Each permission you grant for a user or group adds an entry in the ACL associate
 
 **Access for other AWS accounts**
 
-      To grant permissions to an AWS user from a different AWS account, under **Access for other AWS accounts**, choose **Add account**\. In the **Enter an ID** field, type the canonical ID of the AWS user that you want to grant bucket permissions to\. For information about finding a canonical ID, see [AWS Account Identifiers](http://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html) in the *Amazon Web Services General Reference*\. You can add as many as 99 users\.
+      To grant permissions to an AWS user from a different AWS account, under **Access for other AWS accounts**, choose **Add account**\. In the **Enter an ID** field, type the canonical ID of the AWS user that you want to grant bucket permissions to\. For information about finding a canonical ID, see [AWS Account Identifiers](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html) in the *Amazon Web Services General Reference*\. You can add as many as 99 users\.
 
       Select the check boxes next to the permissions that you want to grant to the user, and then choose **Save**\. To display information about the permissions, choose the Help icons\.   
 ![\[Help icons\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/bucket-permissions-add-user.png)
 **Warning**  
-When you grant other AWS accounts access to your resources, be aware that the AWS accounts can delegate their permissions to users under their accounts\. This is known as *cross\-account access*\. For information about using cross\-account access, see [ Creating a Role to Delegate Permissions to an IAM User](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html) in the *IAM User Guide*\. 
+When you grant other AWS accounts access to your resources, be aware that the AWS accounts can delegate their permissions to users under their accounts\. This is known as *cross\-account access*\. For information about using cross\-account access, see [ Creating a Role to Delegate Permissions to an IAM User](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html) in the *IAM User Guide*\. 
 
    1. 
 
