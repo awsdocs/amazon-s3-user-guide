@@ -8,7 +8,7 @@ Objects stored in a region never leave the region unless you explicitly transfer
 
 Before you can upload an object into Amazon S3, you must have write permissions to a bucket\.
 
-Objects can be any file type: images, backups, data, movies, etc\. You can have an unlimited number of objects in a bucket\. The maximum size of file you can upload by using the Amazon S3 console is 80 GB\. To upload a file larger than 80 GB, use the AWS CLI, AWS SDK, or Amazon S3 REST API\. For more information, see [Uploading Objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/UploadingObjects.html) in the *Amazon Simple Storage Service Developer Guide*\. 
+Objects can be any file type: images, backups, data, movies, etc\. You can have an unlimited number of objects in a bucket\. The maximum size of file you can upload by using the Amazon S3 console is 78 GB\. To upload a file larger than 78 GB, use the AWS CLI, AWS SDK, or Amazon S3 REST API\. For more information, see [Uploading Objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/UploadingObjects.html) in the *Amazon Simple Storage Service Developer Guide*\. 
 
 The following topics explain how to use the Amazon S3 console to upload, delete, and manage objects\.
 
