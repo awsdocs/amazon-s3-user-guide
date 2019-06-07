@@ -2,7 +2,7 @@
 
 This topic describes how to enable server access logging for an Amazon S3 bucket using the AWS Management Console\. For information about how to enable logging programmatically and details about how logs are delivered, see [Server Access Logging](https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
-By default, Amazon Simple Storage Service \(Amazon S3\) doesn't collect server access logs\. When you enable logging, Amazon S3 delivers access logs for a source bucket to a target bucket that you choose\. The target bucket must be in the same AWS Region as the source bucket\. 
+By default, Amazon Simple Storage Service \(Amazon S3\) doesn't collect server access logs\. When you enable logging, Amazon S3 delivers access logs for a source bucket to a target bucket that you choose\. The target bucket must be in the same AWS Region as the source bucket and must not have a default retention period configuration\. 
 
 Server access logging provides detailed records for the requests that are made to an S3 bucket\. Server access logs are useful for many applications\. For example, access log information can be useful in security and access audits\. It can also help you learn about your customer base and understand your Amazon S3 bill\. 
 
@@ -24,7 +24,7 @@ There is no extra charge for enabling server access logging on an Amazon S3 buck
 1. Choose **Server access logging**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/bucket-logging-box.png)
 
-1. Choose **Enable Logging**\. For **Target**, choose the name of the bucket that you want to receive the log record objects\. The target bucket must be in the same Region as the source bucket\.  
+1. Choose **Enable Logging**\. For **Target**, choose the name of the bucket that you want to receive the log record objects\.  The target bucket must be in the same Region as the source bucket and must not have a default retention period configuration\.  
 ![\[Create bucket wizard set permissions options page.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/enable-bucket-logging.png)
 
 1. \(Optional\) For **Target prefix**, type a key name prefix for log objects, so that all of the log object names begin with the same string\.

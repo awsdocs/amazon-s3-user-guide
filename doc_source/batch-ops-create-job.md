@@ -1,4 +1,4 @@
-# Creating a Batch Operations Job<a name="batch-ops-create-job"></a>
+# Creating an Amazon S3 Batch Operations Job<a name="batch-ops-create-job"></a>
 
 This section describes how to create a Amazon S3 batch operations job\. For information about performing batch operations using the AWS CLI, AWS SDKs, and the Amazon S3 REST APIs, see [Performing Batch Operations](https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops.html) in the *Amazon Simple Storage Service Developer Guide*\.
 

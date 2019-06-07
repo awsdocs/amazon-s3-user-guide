@@ -1,6 +1,6 @@
 # How Do I Enable and Configure Event Notifications for an S3 Bucket?<a name="enable-event-notifications"></a>
 
-You can enable certain Amazon S3 bucket events to send a notification message to a destination whenever the events occur\. This section explains how to use the Amazon S3 console to enable event notifications\. For information about using event notifications with the the AWS SDKs, and the Amazon S3 REST APIs, see [Configuring Notifications for Amazon S3 Events](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html) in the *Amazon Simple Storage Service Developer Guide*\. 
+You can enable certain Amazon S3 bucket events to send a notification message to a destination whenever the events occur\. This section explains how to use the Amazon S3 console to enable event notifications\. For information about using event notifications with the AWS SDKs, and the Amazon S3 REST APIs, see [Configuring Notifications for Amazon S3 Events](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html) in the *Amazon Simple Storage Service Developer Guide*\. 
 
 **Topics**
 + [Amazon S3 Event Notification Types and Destinations](#enable-event-notifications-types)
@@ -97,4 +97,4 @@ When you delete the last object from a folder Amazon S3 can generate an object c
 1. Choose **Save**\. Amazon S3 will send a test message to the event notification destination\.
 
 ## More Info<a name="enable-event-notifications-moreinfo"></a>
-+ [How Do I Restore an S3 Object That Has Been Archived to Glacier?](restore-archived-objects.md)
++ [How Do I Restore an S3 Object That Has Been Archived?](restore-archived-objects.md)

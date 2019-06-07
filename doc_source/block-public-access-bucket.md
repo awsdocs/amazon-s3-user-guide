@@ -18,16 +18,12 @@ Follow these steps if you need to change the public access settings for a single
 1. In the **Bucket name** list, choose the name of the bucket that you want\.  
 ![\[Console screenshot showing the chosen bucket in the bucket name list.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-bucket-name.png)
 
-1. Choose **Permissions**\.  
-![\[Console screenshot showing the permissions tab and the public access settings button.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-public-access.png)
+1. Choose **Permissions**\.
 
 1. Choose **Edit** to change the public access settings for the bucket\.  
 ![\[Console screenshot showing the edit link in the upper right corner.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/public-access-bucket-edit.png)
 
-1. Choose the setting that you want to change, and then choose **Save**\. For details about each setting, pause on the **i** icons\.   
-![\[Console screenshot showing all the public access settings and the save button.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/public-access-bucket-edit-2.png)
-
-   Before you save your changes, you can choose **Refresh** to restore the settings to what they were before you started making changes\. 
+1. Choose the setting that you want to change, and then choose **Save**\.
 
 1. When you're asked for confirmation, enter **confirm**\. Then choose **Confirm** to save your changes\.
 
@@ -42,7 +38,7 @@ Follow these steps if you need to change the public access settings for more tha
 1. In the **Bucket name** list, choose the buckets that you want, and then choose **Edit public access settings**\.  
 ![\[Console screenshot showing multiple buckets selected and the edit public access settings button.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-edit-public-access-2.png)
 
-1. Choose the setting that you want to change, and then choose **Save**\. For details about each block public access setting, pause on the **i** icons\.   
+1. Choose the setting that you want to change, and then choose **Save**\.   
 ![\[Console screenshot showing the public access settings for multiple buckets.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/edit-public-access-multiple.png)
 
 1. When you're asked for confirmation, enter **confirm**\. Then choose **Confirm** to save your changes\.

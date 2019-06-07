@@ -3,17 +3,17 @@
 Amazon S3 inventory provides a flat file list of your objects and metadata, which is a scheduled alternative to the Amazon S3 synchronous `List` API operation\. Amazon S3 inventory provides comma\-separated values \(CSV\) or [Apache optimized row columnar \(ORC\)](https://orc.apache.org/) or[ Apache Parquet \(Parquet\) ](https://parquet.apache.org/)output files that list your objects and their corresponding metadata on a daily or weekly basis for an S3 bucket or for objects that share a prefix \(objects that have names that begin with the same string\)\. For more information, see [Amazon S3 Inventory](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 **To configure inventory**
+**Note**  
+It may take up to 48 hours to deliver the first report\.
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
 1. In the **Bucket name** list, choose the name of the bucket for which you want to configure Amazon S3 inventory\.  
 ![\[Screenshot of the bucket name list with a bucket name highlighted.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-bucket-name.png)
 
-1. Choose the **Management** tab, and then choose **Inventory**\.  
-![\[Screenshot of the inventory button on the management tab.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-management-tab-inventory.png)
+1. Choose the **Management** tab, and then choose **Inventory**\.
 
-1. Choose **Add new** if you do not have any inventory reports enabled\.  
-![\[Screenshot highlighting the add new link in inventory reports.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/inventory-add.png)
+1. Choose **Add new**\.
 
 1. Type a name for the inventory and set it up as follows:
    + Optionally, add a prefix for your filter to inventory only objects whose names begin with the same string\.
@@ -24,7 +24,7 @@ Amazon S3 inventory provides a flat file list of your objects and metadata, whic
 
 1. Under **Advanced settings**, you can set the following:
 
-   1.  Choose either the CSV or ORC output file format for your inventory\. For more information about these formats, see [Amazon S3 Inventory](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html) in the *Amazon Simple Storage Service Developer Guide*\.   
+   1.  Choose either the CSV, ORC, or Parquet output file format for your inventory\. For more information about these formats, see [Amazon S3 Inventory](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html) in the *Amazon Simple Storage Service Developer Guide*\.   
 ![\[Advanced settings screen with include only current versions selected\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/inventory-enter-data-advanced.png)
 
    1. To include all versions of the objects in the inventory, choose **Include all versions** in the **Object versions** list\. By default, the inventory includes only the current versions of the objects\.

@@ -4,6 +4,9 @@ This section explains how to use the Amazon S3 console to download objects from 
 
 Data transfer fees apply when you download objects\. For information about Amazon S3 features, and pricing, see [Amazon S3](https://aws.amazon.com/s3/)\.
 
+**Important**  
+If an object key name consists of a single period \(\.\), or two periods \(\.\.\), you can’t download the object using the Amazon S3 console\. To download an object with a key name of “\.” or “\.\.”, you must use the AWS CLI, AWS SDKs, or REST API\. For more information about naming objects, see [Object Key Naming Guidelines](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-key-guidelines) in the *Amazon Simple Storage Service Developer Guide*\.
+
 **To download an object from an S3 bucket**
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.

@@ -5,9 +5,5 @@ Amazon S3 batch operations performs large\-scale batch operations on Amazon S3 o
 The following topics explain how to use the Amazon S3 console to configure and run batch operations\.
 
 **Topics**
-+ [Creating a Batch Operations Job](batch-ops-create-job.md)
-+ [Managing Batch Operations Jobs](#batch-ops-manage-jobs)
-
-## Managing Batch Operations Jobs<a name="batch-ops-manage-jobs"></a>
-
-Amazon S3 provides a set of tools to help you manage your batch operations jobs after you create them\. For more information about managing batch operations, see [Managing Batch Operations Jobs](https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-managing-jobs.html) in the *Amazon Simple Storage Service Developer Guide*\. 
++ [Creating an Amazon S3 Batch Operations Job](batch-ops-create-job.md)
++ [Managing Batch Operations Jobs](batch-ops-manage-jobs.md)

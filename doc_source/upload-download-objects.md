@@ -18,7 +18,7 @@ The following topics explain how to use the Amazon S3 console to upload, delete,
 + [Deleting Objects](delete-objects.md)
 + [Undeleting Objects](undelete-objects.md)
 + [Restoring Archived S3 Objects](restore-archived-objects.md)
-+ [Locking S3 Objects](object-lock.md)
++ [Locking Amazon S3 Objects](object-lock.md)
 + [Viewing an Overview of an Object](view-object-overview.md)
 + [Viewing Object Versions](view-object-versions.md)
 + [Viewing Object Properties](view-object-properties.md)

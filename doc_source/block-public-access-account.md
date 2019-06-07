@@ -6,16 +6,13 @@ Amazon S3 block public access prevents the application of any settings that allo
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
-1. Choose **Public access settings for this account**\.  
+1. Choose **Block public access \(account settings\)**\.  
 ![\[Console screenshot showing the public access settings located under buckets.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-public-access-account.png)
 
 1. Choose **Edit** to change the block public access settings for all the buckets in your AWS account\.  
 ![\[Console screenshot showing the edit link in upper right corner.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/block-public-access-account-edit.png)
 
-1. Choose the settings you want to change, and then choose **Save**\. For details about each setting, pause on the **i** icons\.   
-![\[Console screenshot showing the information icons next to each public access setting.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/block-public-access-account-edit-2.png)
-
-   Before you save your changes, you can choose **Refresh** to restore the settings to what they were before you started making changes\. 
+1. Choose the settings that you want to change, and then choose **Save**\.
 
 1. When you're asked for confirmation, enter **confirm**\. Then choose **Confirm** to save your changes\.
 

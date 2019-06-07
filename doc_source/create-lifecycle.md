@@ -22,7 +22,7 @@ A versioning\-enabled bucket can have many versions of the same object, one curr
    + To apply this lifecycle rule to all objects in the bucket, choose **Next**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/lifecycle-name-scope.png)
 
-1. You configure lifecycle rules by defining rules to transition objects to the Standard\-IA, One Zone\-IA, and Glacier storage classes\. For more information, see [Storage Classes](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) in the *Amazon Simple Storage Service Developer Guide*\.
+1. You configure lifecycle rules by defining rules to transition objects to the Standard\-IA, One Zone\-IA, Glacier, and Deep Archive storage classes\. For more information, see [Storage Classes](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
    You can define transitions for current or previous object versions, or for both current and previous versions\. Versioning enables you to keep multiple versions of an object in one bucket\. For more information about versioning, see [How Do I Enable or Suspend Versioning for an S3 Bucket?](enable-versioning.md)\.
 
@@ -35,8 +35,9 @@ A versioning\-enabled bucket can have many versions of the same object, one curr
       + Choose **Transition to Standard\-IA after**, and then type the number of days after the creation of an object that you want the transition to be applied \(for example, 30 days\)\. 
       + Choose **Transition to One Zone\-IA after**, and then type the number of days after the creation of an object that you want the transition to be applied \(for example, 30 days\)\. 
       + Choose **Transition to Glacier after**, and then type the number of days after the creation of an object that you want the transition to be applied \(for example, 100 days\)\.
+      + Choose **Transition to Glacier Deep Archive after**, and then type the number of days after the creation of an object that you want the transition to be applied \(for example, 100 days\)\.
 **Important**  
- Amazon S3 stores the archived objects in Glacier\. However, these are Amazon S3 objects, and you can access them only by using the Amazon S3 console or the Amazon S3 API\. You cannot access the archived objects through the Glacier console or the Glacier API\. For more information, see [Transitioning Objects: General Considerations](https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-considerations.html)\.   
+When you choose the Glacier or Glacier Deep Archive storage class, your objects remain in Amazon S3\. You cannot access them directly through the separate Amazon S3 Glacier service\. For more information, see [Transitioning Objects Using Amazon S3 Lifecycle](https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-considerations.html)\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/lifecycle-add-transition.png)
 
 1. When you are done configuring transitions, choose **Next**\.  
