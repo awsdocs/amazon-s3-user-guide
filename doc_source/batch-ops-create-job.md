@@ -14,7 +14,7 @@ This section describes how to create a Amazon S3 batch operations job\. For info
 1. Choose the **Region** where you want to create your job\.
 
 1. Under **Manifest format** choose the type of manifest object to use\.
-   + If you choose **S3 Inventory report**, enter the path to the manifest\.json object that Amazon S3 generated as part of the inventory report, and optionally the version ID for the manifest object if you want to use a version other than the most recent\.
+   + If you choose **S3 Inventory report**, enter the path to the manifest\.json object that Amazon S3 generated as part of the CSV\-formatted Inventory report, and optionally the version ID for the manifest object if you want to use a version other than the most recent\.
    + If you choose **CSV**, enter the path to a CSV\-formatted manifest object\. The manifest object must follow the format described in the console\. You can optionally include the version ID for the manifest object if you want to use a version other than the most recent\.
 
 1. Under **Operation** choose the operation that you want to perform on all objects listed in the manifest\. Fill out the information for the operation you chose and then choose **Next**\.

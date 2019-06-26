@@ -77,8 +77,7 @@ Buckets have configuration properties, including their geographical region, who 
 
 ****Object lock****
 
-      Select **Permanently allow objects in this bucket to be locked** if you want to be able to lock objects in the bucket\. Object lock requires that you enable versioning on the bucket\. For more information about object locking, see [Introduction to Amazon S3 Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) in the *Amazon Simple Storage Service Developer Guide*  
-![\[Configure options page showing the object locking check box.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/create-bucket-object-lock.png)
+      Select **Permanently allow objects in this bucket to be locked** if you want to be able to lock objects in the bucket\. Object lock requires that you enable versioning on the bucket\. For more information about object locking, see [Introduction to Amazon S3 Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
    1. 
 

@@ -4,7 +4,7 @@ This topic explains how to use the AWS Management Console to upload one or more 
 
 When you upload a file to Amazon S3, it is stored as an S3 object\. Objects consist of the file data and metadata that describes the object\. You can have an unlimited number of objects in a bucket\.
 
-You can upload any file type—images, backups, data, movies, etc\.—into an S3 bucket\. The maximum size of a file that you can upload by using the Amazon S3 console is 80 GB\. To upload a file larger than 80 GB, use the AWS CLI, AWS SDK, or Amazon S3 REST API\. For more information, see [Uploading Objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/UploadingObjects.html) in the *Amazon Simple Storage Service Developer Guide*\. 
+You can upload any file type—images, backups, data, movies, etc\.—into an S3 bucket\. The maximum size of a file that you can upload by using the Amazon S3 console is 160 GB\. To upload a file larger than 160 GB, use the AWS CLI, AWS SDK, or Amazon S3 REST API\. For more information, see [Uploading Objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/UploadingObjects.html) in the *Amazon Simple Storage Service Developer Guide*\. 
 
 You can upload files by dragging and dropping or by pointing and clicking\. To upload folders, you *must* drag and drop them\. Drag and drop functionality is supported *only* for the Chrome and Firefox browsers\. For information about which Chrome and Firefox browser versions are supported, see [ Which Browsers are Supported for Use with the AWS Management Console?](https://aws.amazon.com/premiumsupport/knowledge-center/browsers-management-console/)\. 
 

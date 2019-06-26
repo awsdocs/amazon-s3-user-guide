@@ -1,6 +1,6 @@
 # Creating and Configuring an S3 Bucket<a name="create-configure-bucket"></a>
 
-Amazon S3 is cloud storage for the Internet\. To upload your data \(photos, videos, documents etc\.\), you first create a bucket in one of the AWS Regions\. You can then upload your data objects to the bucket\.
+To upload your data \(photos, videos, documents etc\.\) to Amazon S3, you must first create an S3 bucket in one of the AWS Regions\. You can then upload your data objects to the bucket\.
 
 Every object you store in Amazon S3 resides in a bucket\. You can use buckets to group related objects in the same way that you use a directory to group files in a file system\. 
 
