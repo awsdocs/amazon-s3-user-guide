@@ -101,9 +101,15 @@ When you add a replication rule to a bucket, you must have the `iam:PassRole` pe
 
 Follow these steps to configure a cross\-region replication rule when the destination bucket is in a different AWS account than the source bucket\.
 
-1. If you have never created a cross\-region replication rule before, start with [Adding a CRR Rule When the Destination Bucket Is in the Same AWS Account](#enable-crr-add-rule)\.
+1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
-   On the **Replication rule** wizard **Set destination** page, under **Destination bucket**, choose **Buckets in another account**\. Then type the name of the destination bucket and the account ID from a different AWS account\. Choose **Save**\.   
+1. In the **Bucket name** list, choose the name of the bucket that you want\.  
+![\[Bucket name list with bucket name selected\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-bucket-name.png)
+
+1. Choose **Management**, choose **Replication**, and then choose **Add rule**\.  
+![\[Management tab with Replication and Add rule selected\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-management-tab-replication.png)
+
+1. On the **Replication rule** wizard **Set destination** page, under **Destination bucket**, choose **Buckets in another account**\. Then type the name of the destination bucket and the account ID from a different AWS account\. Choose **Save**\.   
 ![\[Choose a destination bucket in a different AWS account\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-bucket-cross-account.png)
 
    After you save the destination bucket name and account ID, you might get a warning message indicating that you must add a bucket policy to the destination bucket so that Amazon S3 can verify whether versioning is enabled on the bucket\. You can copy the bucket policy from the **Permissions** page, and then add the policy to the destination bucket in the other account\. For information about adding a bucket policy to an S3 bucket, see [How Do I Add an S3 Bucket Policy?](add-bucket-policy.md)\.  
