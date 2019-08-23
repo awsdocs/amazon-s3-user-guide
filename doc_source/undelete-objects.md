@@ -10,16 +10,13 @@ When you delete an object in a versioning\-enabled bucket, all versions remain i
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
-1. In the **Bucket name** list, choose the name of the bucket that you want\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-bucket-name.png)
+1. In the **Bucket name** list, choose the name of the bucket that you want\.
 
-1. To see a list of the versions of the objects in the bucket, choose **Show**\. You'll be able to see the delete markers for deleted objects\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-show-versions.png)
+1. To see a list of the **versions** of the objects in the bucket, select **Show**\. You'll be able to see the delete markers for deleted objects\. 
 
-1. To undelete an object, you must delete the delete marker\. Select the check box next to the delete marker of the object to recover, and then choose **delete** from the **More** menu\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/select-delete-marker.png)
+1. To undelete an object, you must delete the delete marker\. Select the check box next to the **delete marker** of the object to recover, and then choose **delete** from the **Actions** menu\.
 
-1. Choose **Hide**, you'll see the undeleted object listed\.
+1. Then, choose **Hide** and you'll see the undeleted object listed\.
 
 ## More Info<a name="undelete-objects-related-topics"></a>
 +  [How Do I See the Versions of an S3 Object?](view-object-versions.md)
