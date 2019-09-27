@@ -16,8 +16,7 @@ When you enable CORS on the bucket, the access control lists \(ACLs\) and other 
 1. Choose **Permissions**, and then choose **CORS configuration**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-bucket-permissions-cors.png)
 
-1. In the **CORS configuration editor** text box, type or copy and paste a new CORS configuration, or edit an existing configuration\. The CORS configuration is an XML file\. The text that you type in the editor must be valid XML\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/cors-editor.png)
+1. In the **CORS configuration editor** text box, type or copy and paste a new CORS configuration, or edit an existing configuration\. The CORS configuration is an XML file\. The text that you type in the editor must be valid XML\.
 
 1. Choose **Save**\.
 **Note**  

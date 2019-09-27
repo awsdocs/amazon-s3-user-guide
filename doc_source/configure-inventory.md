@@ -31,16 +31,16 @@ It may take up to 48 hours to deliver the first report\.
 
    1. For **Optional fields**, select one or more of the following to add to the inventory report:
       + **Size** – Object size in bytes\.
-      + **Last modified date** – Object creation date or the last modified date, whichever is the latest\.
-      + **Storage class** – Storage class used for storing the object\. 
+      + **Last modified date** – The object creation date or the last modified date, whichever is the latest\.
+      + **Storage class** – The storage class used for storing the object\. 
       + **ETag** – The entity tag is a hash of the object\. The ETag reflects changes only to the contents of an object, and not its metadata\. The ETag may or may not be an MD5 digest of the object data\. Whether it is depends on how the object was created and how it is encrypted\.
       +  **Multipart upload** – Specifies that the object was uploaded as a multipart upload\. For more information, see [Multipart Upload Overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html) in the *Amazon Simple Storage Service Developer Guide*\.
-      + **Replication status** – The cross\-region replication status of the object\. For more information, see [How Do I Add a Cross\-Region Replication \(CRR\) Rule to an S3 Bucket?](enable-crr.md)
+      + **Replication status** – The replication status of the object\. For more information, see [How Do I Add a Replication Rule to an S3 Bucket?](enable-replication.md)\.
       + **Encryption status** – The server\-side encryption used to encrypt the object\. For more information, see [Protecting Data Using Server\-Side Encryption](https://docs.aws.amazon.com/AmazonS3/latest/dev/serv-side-encryption.html) in the *Amazon Simple Storage Service Developer Guide*\.
       + **Object lock configurations** – The object lock status of the object, including the following settings: 
         + **Retention mode** – The level of protection applied to the object, either *Governance* or *Compliance*\.
         + **Retain until date** – The date until which the locked object cannot be deleted\.
-        + **Legal hold status** – The Legal hold status of the locked object\. 
+        + **Legal hold status** – The legal hold status of the locked object\. 
 
         For information about object lock, see [Amazon S3 Object Lock Overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
