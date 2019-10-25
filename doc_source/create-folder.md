@@ -12,5 +12,5 @@ This section describes how to use the Amazon S3 console to create a folder\.
 1. Choose **Create folder**\.  
 ![\[Choose Create folder button in the Amazon S3 console.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/create-folder.png)
 
-1. Type a name for the folder, for example, favorite\-pics\. Choose the encryption setting for the folder object and then choose **Save**\.  
+1. Enter a name for the folder \(for example, **favorite\-pics**\)\. Choose the encryption setting for the folder object, and then choose **Save**\.  
 ![\[Type the name of the folder in the Amazon S3 console.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/type-folder-name.png)

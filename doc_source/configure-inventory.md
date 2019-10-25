@@ -1,6 +1,6 @@
 # How Do I Configure Amazon S3 Inventory?<a name="configure-inventory"></a>
 
-Amazon S3 inventory provides a flat file list of your objects and metadata, which is a scheduled alternative to the Amazon S3 synchronous `List` API operation\. Amazon S3 inventory provides comma\-separated values \(CSV\) or [Apache optimized row columnar \(ORC\)](https://orc.apache.org/) or[ Apache Parquet \(Parquet\) ](https://parquet.apache.org/)output files that list your objects and their corresponding metadata on a daily or weekly basis for an S3 bucket or for objects that share a prefix \(objects that have names that begin with the same string\)\. For more information, see [Amazon S3 Inventory](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html) in the *Amazon Simple Storage Service Developer Guide*\.
+Amazon S3 inventory provides a flat file list of your objects and metadata, which is a scheduled alternative to the Amazon S3 synchronous `List` API operation\. Amazon S3 inventory provides comma\-separated values \(CSV\) or [Apache optimized row columnar \(ORC\)](https://orc.apache.org/) or [Apache Parquet \(Parquet\)](https://parquet.apache.org/) output files that list your objects and their corresponding metadata on a daily or weekly basis for an S3 bucket or for objects that share a prefix \(objects that have names that begin with the same string\)\. For more information, see [Amazon S3 Inventory](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 **To configure inventory**
 **Note**  
@@ -49,9 +49,9 @@ It may take up to 48 hours to deliver the first report\.
    1. For **Encryption**, choose a server\-side encryption option to encrypt the inventory report, or choose **None**:
       + **None** – Do not encrypt the inventory report\.
       + **AES\-256** – Encrypt the inventory report using server\-side encryption with Amazon S3\-managed keys \(SSE\-S3\)\. Amazon S3 server\-side encryption uses 256\-bit Advanced Encryption Standard \(AES\-256\)\. For more information, see [Amazon S3\-Managed Encryption Keys \(SSE\-S3\)](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html) in the *Amazon Simple Storage Service Developer Guide*\. 
-      + **AWS\-KMS** – Encrypt the report using server\-side encryption with AWS KMS\-managed keys \(SSE\-KMS\)\. For more information, see [AWS KMS–Managed Keys \(SSE\-KMS\)](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) in the *Amazon Simple Storage Service Developer Guide*\. 
+      + **AWS\-KMS** – Encrypt the report using server\-side encryption with AWS Key Management Service \(AWS KMS\) customer master keys \(CMKs\)\. For more information, see [AWS KMS CMKs](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) in the *Amazon Simple Storage Service Developer Guide*\. 
 **Note**  
-To encrypt the inventory list file with SSE\-KMS, you must grant Amazon S3 permission to use the AWS KMS key\. For instructions, see [Grant Amazon S3 Permission to Encrypt Using Your AWS KMS Key](#configure-inventory-kms-key-policy)\.
+To encrypt the inventory list file with SSE\-KMS, you must grant Amazon S3 permission to use the AWS KMS CMK\. For instructions, see [Grant Amazon S3 Permission to Encrypt Using Your AWS KMS CMK](#configure-inventory-kms-key-policy) \.
 
 1. Choose **Save**\.
 
@@ -67,11 +67,11 @@ In this case, the destination bucket owner must add the displayed bucket policy 
 
 For more information, see [Amazon S3 Inventory](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
-## Grant Amazon S3 Permission to Encrypt Using Your AWS KMS Key<a name="configure-inventory-kms-key-policy"></a>
+## Grant Amazon S3 Permission to Encrypt Using Your AWS KMS CMK<a name="configure-inventory-kms-key-policy"></a>
 
-You must grant Amazon S3 permission to encrypt using your AWS KMS key with a key policy\. The following procedure describes how to use the AWS Identity and Access Management \(IAM\) console to modify the key policy for the AWS KMS customer master key \(CMK\) that is being used to encrypt the inventory file\.
+You must grant Amazon S3 permission to encrypt using your AWS KMS CMK with a key policy\. The following procedure describes how to use the AWS Identity and Access Management \(IAM\) console to modify the key policy for the AWS KMS CMK that is being used to encrypt the inventory file\.
 
-**To grant permissions to encrypt using your AWS KMS key**
+**To grant permissions to encrypt using your AWS KMS CMK**
 
 1. Sign in to the AWS Management Console using the AWS account that owns the AWS KMS CMK\. Open the IAM console at [https://console\.aws\.amazon\.com/iam/](https://console.aws.amazon.com/iam/)\.
 

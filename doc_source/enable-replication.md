@@ -42,9 +42,13 @@ Follow these steps to configure a replication rule when the destination bucket i
 
    The new schema supports prefix and tag filtering and the prioritization of rules\. For more information about the new schema\. see [ Replication Configuration Backward Compatibility](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-add-config.html#replication-backward-compat-considerations) in the *Amazon Simple Storage Service Developer Guide*\. The developer guide describes the XML used with the Amazon S3 API that works behind the user interface\. In the developer guide, the new schema is described as *replication configuration XML V2*\.
 
-1. To replicate objects in the source bucket that are encrypted with AWS KMS, under **Replication criteria**, select **Replicate objects encrypted with AWS KMS**\. Under **Choose one or more keys for decrypting source objects** are the source AWS KMS key or keys that you allow replication to use\. All source keys are included by default\. You can choose to narrow the key selection\. 
+1. To replicate objects in the source bucket that are encrypted with AWS Key Management Service \(AWS KMS\), under **Replication criteria**, select **Replicate objects encrypted with AWS KMS**\. Under **Choose one or more keys for decrypting source objects** are the source AWS KMS customer master keys \(CMKs\) that you allow cross\-region replication to use\. All source CMKs are included by default\. You can choose to narrow the CMK selection\. 
 
-   Objects encrypted by AWS KMS keys that you do not select are not replicated\. A key or a group of keys is chosen for you, but you can choose the keys if you want\. For information about using AWS KMS with replication, see [Replication: Replicating Objects Created with Server\-Side Encryption \(SSE\) Using AWS KMS\-Managed Encryption Key](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-replication-config-for-kms-objects.html) in the *Amazon Simple Storage Service Developer Guide*\.  
+   Objects encrypted by AWS KMS CMKs that you do not select are not replicated by cross\-region replication\. A CMK or a group of CMKs is chosen for you, but you can choose the CMKs if you want\. For information about using AWS KMS with cross\-region replication, see [CRR: Replicating Objects Created with Server\-Side Encryption \(SSE\) Using AWS KMS CMKs ](https://docs.aws.amazon.com/AmazonS3/latest/dev/crr-replication-config-for-kms-objects.html) in the *Amazon Simple Storage Service Developer Guide*\.
+
+   To replicate objects in the source bucket that are encrypted with AWS KMS, under **Replication criteria**, select **Replicate objects encrypted with AWS KMS**\. Under **Choose one or more keys for decrypting source objects** are the source AWS KMS customer master key or customer master keys that you allow replication to use\. All source CMKs are included by default\. You can choose to narrow the CMK selection\. 
+
+   Objects encrypted by AWS KMS CMKs that you do not select are not replicated\. A CMK or a group of CMKs is chosen for you, but you can choose the CMKs if you want\. For information about using AWS KMS with replication, see [Replication: Replicating Objects Created with Server\-Side Encryption \(SSE\) Using AWS KMS CMKs](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-replication-config-for-kms-objects.html) in the *Amazon Simple Storage Service Developer Guide*\.  
 ![\[Replication rule wizard step one, select AWS KMS.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-source-kms.png)
 **Important**  
 When you replicate objects that are encrypted with AWS KMS, the AWS KMS request rate doubles in the source Region and increases in the destination Region by the same amount\. These increased call rates to AWS KMS are due to the way that data is re\-encrypted using the customer master key \(CMK\) that you define for the replication destination Region\. AWS KMS has a request rate limit that is per calling account per Region\. For information about the limit defaults, see [AWS KMS Limits \- Requests per second: varies](https://docs.aws.amazon.com/kms/latest/developerguide/limits.html#requests-per-second)\.   
@@ -60,10 +64,10 @@ To see your PUT object request rate in the source bucket, view `PutRequests` in 
 
    If versioning is not enabled on the destination bucket, you get a warning message that contains an **Enable versioning** button\. Choose this button to enable versioning on the bucket\.
 
-1. If you chose to replicate objects encrypted with AWS KMS, under **Destination encryption settings**, type the Amazon Resource Name \(ARN\) of the AWS KMS key to use to encrypt the replicas in the destination bucket\. You can find the ARN for your AWS KMS key in the IAM console, under **Encryption keys**\.  Or, you can choose a key name from the drop\-down list\.
+1. If you chose to replicate objects encrypted with AWS KMS, under **Destination encryption settings**, type the Amazon Resource Name \(ARN\) of the AWS KMS CMK to use to encrypt the replicas in the destination bucket\. You can find the ARN for your AWS KMS CMK in the IAM console, under **Encryption keys**\.  Or, you can choose a CMK name from the drop\-down list\.
 
-   For more information about creating an AWS KMS key, see [Creating Keys](https://docs.aws.amazon.com/kms/latest/developerguide/UsingServerSideEncryption.html) in the *AWS Key Management Service Developer Guide*\.  
-![\[Enter a AWS KMS key to encrypt the objects in the destination bucket.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-kms-key.png)
+   For more information about creating an AWS KMS CMK, see [Creating Keys](https://docs.aws.amazon.com/kms/latest/developerguide/UsingServerSideEncryption.html) in the *AWS Key Management Service Developer Guide*\.  
+![\[Enter a AWS KMS CMK to encrypt the objects in the destination bucket.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-kms-key.png)
 
 1. If you want to replicate your data into a specific storage class in the destination bucket, on the **Set destination** page, under **Options**, select **Change the storage class for the replicated object\(s\)**\. Then choose the storage class that you want to use for the replicated objects in the destination bucket\. If you don't select this option, the storage class for replicated objects is the same class as the original objects\.
 
@@ -114,17 +118,17 @@ Follow these steps to configure a replication rule when the destination bucket i
    After you save the destination bucket name and account ID, you might get a warning message indicating that you must add a bucket policy to the destination bucket so that Amazon S3 can verify whether versioning is enabled on the bucket\. If versioning is enabled on your source bucket you can copy the bucket policy from the **Permissions** page, and then add the policy to the destination bucket in the other account\. For information about adding a bucket policy to an S3 bucket and versioning, see [How Do I Add an S3 Bucket Policy?](add-bucket-policy.md) and [How Do I Enable or Suspend Versioning for an S3 Bucket?](enable-versioning.md)\.  
 ![\[Warning message stating that S3 can't detect whether versioning is enabled on the destination bucket\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-x-account-error.png)
 
-1. If you chose to replicate objects encrypted with AWS KMS, under **Destination encryption settings**, type the Amazon Resource Name \(ARN\) AWS KMS key to use to encrypt the replicas in the destination bucket\. 
+1. If you chose to replicate objects encrypted with AWS KMS, under **Destination encryption settings**, type the Amazon Resource Name \(ARN\) AWS KMS CMK to use to encrypt the replicas in the destination bucket\. 
 
-   For more information about creating an AWS KMS key, see [Creating Keys](https://docs.aws.amazon.com/kms/latest/developerguide/UsingServerSideEncryption.html) in the *AWS Key Management Service Developer Guide*\.  
-![\[Enter an AWS KMS key to encrypt the objects in the destination bucket.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-kms-key-only.png)
+   For more information about creating an AWS KMS CMK, see [Creating Keys](https://docs.aws.amazon.com/kms/latest/developerguide/UsingServerSideEncryption.html) in the *AWS Key Management Service Developer Guide*\.  
+![\[Enter an AWS KMS CMK to encrypt the objects in the destination bucket.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-kms-key-only.png)
 
 1. On the **Set destination** page, under **Options**:
    + To replicate your data into a specific storage class in the destination bucket, select **Change the storage class for the replicated object\(s\)**\. Then choose the storage class that you want to use for the replicated objects in the destination bucket\. If you don't select this option, the storage class for replicated objects is the same class as the original objects\.
    + To change the object ownership of the replica objects to the destination bucket owner, select **Change object ownership to destination owner**\. This option enables you to separate object ownership of the replicated data from the source\. If asked, type the account ID of the destination bucket\.
 
      When you select this option, regardless of who owns the source bucket or the source object, the AWS account that owns the destination bucket is granted full permission to replica objects\. For more information, see [Replication: Change Replica Owner](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-change-owner.html) in the *Amazon Simple Storage Service Developer Guide*\.  
-![\[Enter an AWS KMS key to encrypt the objects in the destination bucket.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-change-object-owner.png)
+![\[Enter an AWS KMS CMK to encrypt the objects in the destination bucket.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-change-object-owner.png)
 
    Choose **Next**\.
 
@@ -138,7 +142,7 @@ Follow these steps to configure a replication rule when the destination bucket i
 1. A bucket policy is provided on the **Configure options** page that you can copy and add to the destination bucket in the other account\. For information about adding a bucket policy to an S3 bucket, see [How Do I Add an S3 Bucket Policy?](add-bucket-policy.md)\.  
 ![\[Example bucket policy for the destination bucket\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-permissions-policy.png)
 
-1. If you chose to replicate objects encrypted with AWS KMS, an AWS KMS key policy is provided on the **Configure options** page\. You can copy this policy to add to the key policy for the AWS KMS key customer master key \(CMK\) that you are using\. The key policy grants the source bucket owner permission to use the key\. For information about updating the key policy, see [Grant the Source Bucket Owner Permission to Encrypt Using the AWS KMS Key](#enable-replication-kms-key-policy)\.   
+1. If you chose to replicate objects encrypted with AWS KMS, a AWS KMS key policy is provided on the **Configure options** page\. You can copy this policy to add to the key policy for the AWS KMS CMK that you are using\. The key policy grants the source bucket owner permission to use the CMK\. For information about updating the key policy, see [Grant the Source Bucket Owner Permission to Encrypt Using the AWS KMS CMK](#enable-replication-kms-key-policy)\.   
 ![\[Destination bucket AWS KMS key policy\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-kms-key-policy.png)
 
 1. On the **Review** page, review your replication rule\. If it looks correct, choose **Save**\. Otherwise, choose **Previous** to edit the rule before saving it\. 
@@ -155,14 +159,14 @@ Replication fails until you sign in to the destination account and complete the 
 1. From the Receive objects page, you can perform the following:
    + Enable versioning on the destination bucket\.
    + Apply the bucket policy provided by Amazon S3 to the destination bucket\.
-   + Copy the AWS KMS key policy that you need to update the AWS KMS CMK key that is being used to encrypt the replica objects in the destination bucket\. For information about updating the key policy, see [Grant the Source Bucket Owner Permission to Encrypt Using the AWS KMS Key](#enable-replication-kms-key-policy)\.  
+   + Copy the AWS KMS key policy that you need to update the AWS KMS CMK that is being used to encrypt the replica objects in the destination bucket\. For information about updating the key policy, see [Grant the Source Bucket Owner Permission to Encrypt Using the AWS KMS CMK](#enable-replication-kms-key-policy)\.  
 ![\[Receive objects page\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-receive-objects.png)
 
-### Grant the Source Bucket Owner Permission to Encrypt Using the AWS KMS Key<a name="enable-replication-kms-key-policy"></a>
+### Grant the Source Bucket Owner Permission to Encrypt Using the AWS KMS CMK<a name="enable-replication-kms-key-policy"></a>
 
-You must grant permissions to the account of the source bucket owner to encrypt using your AWS KMS key with a key policy\. The following procedure describes how to use the AWS Identity and Access Management \(IAM\) console to modify the key policy for the AWS KMS customer master key \(CMK\) that is being used to encrypt the replica objects in the destination bucket\.
+You must grant permissions to the account of the source bucket owner to encrypt using your AWS KMS CMK with a key policy\. The following procedure describes how to use the AWS Identity and Access Management \(IAM\) console to modify the key policy for the AWS KMS CMK that is being used to encrypt the replica objects in the destination bucket\.
 
-**To grant permissions to encrypt using your AWS KMS key**
+**To grant permissions to encrypt using your AWS KMS CMK**
 
 1. Sign in to the AWS Management Console using the AWS account that owns the AWS KMS CMK\. Open the IAM console at [https://console\.aws\.amazon\.com/iam/](https://console.aws.amazon.com/iam/)\.
 
@@ -179,6 +183,6 @@ You must grant permissions to the account of the source bucket owner to encrypt 
 For more information about creating and editing AWS KMS CMKs, see [Getting Started](https://docs.aws.amazon.com/kms/latest/developerguide/getting-started.html) in the *AWS Key Management Service Developer Guide*\. 
 
 ## More Info<a name="enable-replication-moreinfo"></a>
-+ [](disable-replication.md)
++ [How Do I Manage the Replication Rules for an S3 Bucket?](disable-replication.md)
 + [How Do I Enable or Suspend Versioning for an S3 Bucket?](enable-versioning.md)
 + [Replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.html) in the *Amazon Simple Storage Service Developer Guide*

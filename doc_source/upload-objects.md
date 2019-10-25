@@ -64,13 +64,13 @@ If you are using the Chrome or Firefox browsers, you can choose the folders and 
 
       1. To encrypt the uploaded files using keys that are managed by Amazon S3, choose **Amazon S3 master\-key**\. For more information, see [Protecting Data with Amazon S3\-Managed Encryption Keys Classes](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
-      1. To encrypt the uploaded files using the AWS Key Management Service \(AWS KMS\), choose **AWS KMS master\-key**\. Then choose a master key from the list of AWS KMS master keys\.
+      1. To encrypt the uploaded files using the AWS Key Management Service \(AWS KMS\), choose **AWS KMS master\-key**\. Then choose a customer master key \(CMK\) from the list of AWS KMS CMKs\.
 **Note**  
-To encrypt objects in a bucket, you can use only keys that are available in the same AWS Region as the bucket\. 
+To encrypt objects in a bucket, you can use only CMKs that are available in the same AWS Region as the bucket\. 
 
-         You can give an external account the ability to use an object that is protected by an AWS KMS key\. To do this, select **Custom KMS ARN** from the list and enter the Amazon Resource Name \(ARN\) for the external account\. Administrators of an external account that have usage permissions to an object protected by your AWS KMS key can further restrict access by creating a resource\-level IAM policy\. 
+         You can give an external account the ability to use an object that is protected by an AWS KMS CMK\. To do this, select **Custom KMS ARN** from the list and enter the Amazon Resource Name \(ARN\) for the external account\. Administrators of an external account that have usage permissions to an object protected by your AWS KMS CMK can further restrict access by creating a resource\-level IAM policy\. 
 
-         For more information about creating an AWS KMS key, see [Creating Keys](https://docs.aws.amazon.com/kms/latest/developerguide/UsingServerSideEncryption.html) in the *AWS Key Management Service Developer Guide*\. For more information about protecting data with AWS KMS, see [Protecting Data with AWS KMS–Managed Key](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html) in the *Amazon Simple Storage Service Developer Guide*\.
+         For more information about creating an AWS KMS CMK, see [Creating Keys](https://docs.aws.amazon.com/kms/latest/developerguide/UsingServerSideEncryption.html) in the *AWS Key Management Service Developer Guide*\. For more information about protecting data with AWS KMS, see [Protecting Data Using Keys Stored in AWS KMS \(SSE\-KMS\)](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
    1. Metadata for Amazon S3 objects is represented by a name\-value \(key\-value\) pair\. There are two kinds of metadata: system\-defined metadata and user\-defined metadata\.
 
