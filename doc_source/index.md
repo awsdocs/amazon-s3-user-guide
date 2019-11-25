@@ -59,6 +59,7 @@ Amazon's trademarks and trade dress may not be used in
    + [How Do I Configure Amazon S3 Inventory?](configure-inventory.md)
    + [How Do I Configure Request Metrics for an S3 Bucket?](configure-metrics.md)
    + [How Do I Configure a Request Metrics Filter?](configure-metrics-filter.md)
+   + [Viewing Replication Metrics](viewing-replication-metrics.md)
 + [Setting Bucket and Object Access Permissions](set-permissions.md)
    + [How Do I Block Public Access to S3 Buckets?](block-public-access.md)
    + [How Do I Edit Public Access Settings for S3 Buckets?](block-public-access-bucket.md)

@@ -10,3 +10,4 @@ This section explains how to configure Amazon S3 storage management tools\.
 + [Configuring Amazon S3 Inventory](configure-inventory.md)
 + [Configuring Request Metrics](configure-metrics.md)
 + [Configuring a Request Metrics Filter](configure-metrics-filter.md)
++ [Viewing Replication Metrics](viewing-replication-metrics.md)

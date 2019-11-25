@@ -23,6 +23,11 @@ Amazon S3 can send notifications for the following types of events:
    
 + **A Reduced Redundancy Storage \(RRS\) object lost event** – You select **RRSObjectLost** to be notified when Amazon S3 detects that an object of the RRS storage class has been lost\.
 
+   
++ **Replication events ** – You can choose to receive replication event notifications if you have replication with S3 Replication Time Control \(S3 RTC\) enabled\. For more information, see all the replication events and their descriptions in the [ Supported Event Types](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) section in the *Amazon Simple Storage Service Developer Guide*\.
+
+   
+
 Event notification messages can be sent to the following types of destinations:
 + **An Amazon Simple Notification Service \(Amazon SNS\) topic** – A web service that coordinates and manages the delivery or sending of messages to subscribing endpoints or clients\.
 

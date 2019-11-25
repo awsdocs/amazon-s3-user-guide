@@ -6,7 +6,7 @@ Replication requires versioning to be enabled on both the source and destination
 
 The object replicas in the destination bucket are exact replicas of the objects in the source bucket\. They have the same key names and the same metadata—for example, creation time, owner, user\-defined metadata, version ID, access control list \(ACL\), and storage class\. Optionally, you can explicitly specify a different storage class for object replicas\. And regardless of who owns the source bucket or the source object, you can choose to change replica ownership to the AWS account that owns the destination bucket\. For more information, see [Replication: Change Replica Owner](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-change-owner.html) in the *Amazon Simple Storage Service Developer Guide*\. 
 
-The time it takes for Amazon S3 to replicate an object depends on the object size\. It can take up to several hours to replicate a large\-sized object\.
+You can use S3 Replication Time Control \(S3 RTC\) to replicate your data in the same AWS Region or across different AWS Regions in a predictable time frame\. S3 RTC replicates 99\.99 percent of new objects stored in Amazon S3 within 15 minutes and most objects within seconds\. For more information, see  in the *Amazon Simple Storage Service Developer Guide*\.
 
 **Note about replication and lifecycle rules**  
 Metadata for an object remains identical between original objects and replica objects\. Lifecycle rules abide by the creation time of the original object, and not by when the replicated object becomes available in the destination bucket\. However, lifecycle does not act on objects that are pending replication until replication is complete\.
@@ -69,9 +69,12 @@ To see your PUT object request rate in the source bucket, view `PutRequests` in 
    For more information about creating an AWS KMS CMK, see [Creating Keys](https://docs.aws.amazon.com/kms/latest/developerguide/UsingServerSideEncryption.html) in the *AWS Key Management Service Developer Guide*\.  
 ![\[Enter a AWS KMS CMK to encrypt the objects in the destination bucket.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-kms-key.png)
 
-1. If you want to replicate your data into a specific storage class in the destination bucket, on the **Set destination** page, under **Options**, select **Change the storage class for the replicated object\(s\)**\. Then choose the storage class that you want to use for the replicated objects in the destination bucket\. If you don't select this option, the storage class for replicated objects is the same class as the original objects\.
+1. If you want to replicate your data into a specific storage class in the destination bucket, on the **Set destination** page, under **Destination Options**, select **Change the storage class for the replicated object\(s\)**\. Then choose the storage class that you want to use for the replicated objects in the destination bucket\. If you don't select this option, the storage class for replicated objects is the same class as the original objects\. Similarly, if you want to change **Object Ownership** in the destination bucket, choose, **Change object ownership to destination bucket owner**\.
 
-   For information about **Change object ownership to the destination bucket owner**, see [Adding a Replication Rule When the Destination Bucket Is in a Different AWS Account](#enable-replication-cross-account-destination)\. 
+   For information about **Change object ownership to the destination bucket owner**, see [Adding a Replication Rule When the Destination Bucket Is in a Different AWS Account](#enable-replication-cross-account-destination)\. If you want to enable S3 Replication Time Control \(S3 RTC\) to your replication configuration\. Select **Replication time control**
+**Note**  
+When you use replication time control additional per\-GB data transfer fees and CloudWatch Metrics fees apply\.  
+![\[Select an Destination options for your replication\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/enable-replication-time-control.png)
 
    Choose **Next**\.
 
@@ -123,12 +126,15 @@ Follow these steps to configure a replication rule when the destination bucket i
    For more information about creating an AWS KMS CMK, see [Creating Keys](https://docs.aws.amazon.com/kms/latest/developerguide/UsingServerSideEncryption.html) in the *AWS Key Management Service Developer Guide*\.  
 ![\[Enter an AWS KMS CMK to encrypt the objects in the destination bucket.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-kms-key-only.png)
 
-1. On the **Set destination** page, under **Options**:
+1. On the **Set destination** page, under **Destination Options**:
    + To replicate your data into a specific storage class in the destination bucket, select **Change the storage class for the replicated object\(s\)**\. Then choose the storage class that you want to use for the replicated objects in the destination bucket\. If you don't select this option, the storage class for replicated objects is the same class as the original objects\.
    + To change the object ownership of the replica objects to the destination bucket owner, select **Change object ownership to destination owner**\. This option enables you to separate object ownership of the replicated data from the source\. If asked, type the account ID of the destination bucket\.
 
-     When you select this option, regardless of who owns the source bucket or the source object, the AWS account that owns the destination bucket is granted full permission to replica objects\. For more information, see [Replication: Change Replica Owner](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-change-owner.html) in the *Amazon Simple Storage Service Developer Guide*\.  
-![\[Enter an AWS KMS CMK to encrypt the objects in the destination bucket.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-change-object-owner.png)
+     When you select this option, regardless of who owns the source bucket or the source object, the AWS account that owns the destination bucket is granted full permission to replica objects\. For more information, see [Replication: Change Replica Owner](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-change-owner.html) in the *Amazon Simple Storage Service Developer Guide*\.
+   + If you want to add S3 Replication Time Control \(S3 RTC\) to your replication configuration\. Select **Replication time control**\.
+**Note**  
+When you use S3 Replication Time Control \(S3 RTC\) additional per\-GB data transfer fees and CloudWatch Metrics fees apply\.  
+![\[Select an Destination options for your replication\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/enable-replication-time-control.png)
 
    Choose **Next**\.
 
