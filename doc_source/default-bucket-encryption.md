@@ -21,19 +21,27 @@ There are no new charges for using default encryption for S3 buckets\. Requests 
 1. Choose **Default encryption**\.  
 ![\[Screenshot of the default encryption option.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-properties-default-encryption.png)
 
-1. Choose **AES\-256** or **AWS\-KMS**\.
+1. If you want to use keys that are managed by Amazon S3 for default encryption, choose **AES\-256**, and choose **Save**\. 
 
-   1. To use keys that are managed by Amazon S3 for default encryption, choose **AES\-256**\. For more information about using Amazon S3 server\-side encryption to encrypt your data, see [Protecting Data with Amazon S3\-Managed Encryption Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html) in the *Amazon Simple Storage Service Developer Guide*\.  
+   For more information about using Amazon S3 server\-side encryption to encrypt your data, see [Protecting Data with Amazon S3\-Managed Encryption Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html) in the *Amazon Simple Storage Service Developer Guide*\.  
 ![\[Default encryption screen with AES-256 chosen.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/add-default-encryption-aes256.png)
 **Important**  
 You might need to update your bucket policy when enabling default encryption\. For more information, see [Moving to Default Encryption from Using Bucket Policies for Encryption Enforcement](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html#bucket-encryption-update-bucket-policy) in the *Amazon Simple Storage Service Developer Guide*\.
 
-   1. To use CMKs that are stored in AWS KMS for default encryption, choose **AWS\-KMS**, and then choose a CMK from the list of the AWS KMS CMKs that you have created\. Enter the Amazon Resource Name \(ARN\) of the AWS KMS CMK to use\. You can find the ARN for your AWS KMS CMK in the IAM console, under **Encryption keys**\. Or, you can choose a CMK name from the drop\-down list\.  
+1. If you want to use CMKs that are stored in AWS KMS for default encryption, follow these steps:
+
+   1. Choose **AWS\-KMS**\.
+
+   1. To choose a customer\-managed AWS KMS CMK that you have created, use one of these methods:
+      + In the list that appears, choose the AWS KMS CMK\.
+      + In the list that appears, choose **Custom KMS ARN**, and then enter the Amazon Resource Name of the AWS KMS CMK\.
+**Important**  
+When you use an AWS KMS CMK for server\-side encryption in Amazon S3, you must choose a symmetric CMK\. Amazon S3 only supports symmetric CMKs and not asymmetric CMKs\. For more information, see [Using Symmetric and Asymmetric Keys](https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html) in the *AWS Key Management Service Developer Guide*\.  
 ![\[Default encryption screen with AWS KMS chosen, and a drop-down list with CMK names.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/add-default-encryption-kms-key.png)
 **Important**  
 If you use the AWS KMS option for your default encryption configuration, you are subject to the RPS \(requests per second\) limits of AWS KMS\. For more information about AWS KMS limits and how to request a limit increase, see [AWS KMS limits](https://docs.aws.amazon.com/kms/latest/developerguide/limits.html)\. 
 
-      For more information about creating an AWS KMS CMK, see [Creating Keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) in the *AWS Key Management Service Developer Guide*\. For more information about using AWS KMS with Amazon S3, see [Protecting Data with Keys Stored in AWS KMS](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) in the *Amazon Simple Storage Service Developer Guide*\.
+   For more information about creating an AWS KMS CMK, see [Creating Keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) in the *AWS Key Management Service Developer Guide*\. For more information about using AWS KMS with Amazon S3, see [Protecting Data with Keys Stored in AWS KMS](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 1. Choose **Save**\.
 

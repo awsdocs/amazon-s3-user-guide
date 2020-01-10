@@ -1,7 +1,7 @@
 # Amazon Simple Storage Service Console User Guide
 
 -----
-*****Copyright &copy; 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -70,7 +70,7 @@ Amazon's trademarks and trade dress may not be used in
    + [How Do I Set Permissions on an Object?](set-object-permissions.md)
    + [How Do I Set ACL Bucket Permissions?](set-bucket-permissions.md)
    + [How Do I Add an S3 Bucket Policy?](add-bucket-policy.md)
-   + [How Do I Allow Cross-Domain Resource Sharing with CORS?](add-cors-configuration.md)
+   + [How Do I Add Cross-Domain Resource Sharing with CORS?](add-cors-configuration.md)
    + [Using Access Analyzer for S3](access-analyzer.md)
 + [Document History](document-history.md)
 + [AWS Glossary](glossary.md)

@@ -2,7 +2,7 @@
 
 There are three types of Amazon CloudWatch metrics for Amazon S3:
 + *Storage metrics* are reported once per day and are provided to all customers at no additional cost\.
-+ *[Replication metrics](https://docs.aws.amazon.com/replication-metrics.xml)* are available 15 minutes after enabling a replication rule with S3 Replication Time Control \(S3 RTC\)\.
++ *Replication metrics* are available 15 minutes after enabling a replication rule with S3 Replication Time Control \(S3 RTC\)\. For more information, see [How Do I View Replication Metrics?](viewing-replication-metrics.md)
 + *Request metrics* are available at 1\-minute intervals after some latency to process, and the metrics are billed at the standard CloudWatch rate\. 
 
 For more information about CloudWatch metrics for Amazon S3, see [Monitoring Metrics with Amazon CloudWatch](https://docs.aws.amazon.com/AmazonS3/latest/dev/cloudwatch-monitoring.html) in the *Amazon Simple Storage Service Developer Guide*\.

@@ -1,4 +1,4 @@
-# How Do I Allow Cross\-Domain Resource Sharing with CORS?<a name="add-cors-configuration"></a>
+# How Do I Add Cross\-Domain Resource Sharing with CORS?<a name="add-cors-configuration"></a>
 
 This section explains how to use the Amazon S3 console to add a cross\-origin resource sharing \(CORS\) configuration to an S3 bucket\. CORS allows client web applications that are loaded in one domain to interact with resources in another domain\. 
 

@@ -8,8 +8,7 @@ This section describes how to create a Amazon S3 batch operations job\. For info
 
 1. Choose **Batch Operations** on the navigation pane of the Amazon S3 console\.
 
-1. Choose **Create job**\.  
-![\[Console screen shot of batch operations view showing Create job button.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/batch-ops-front-page.png)
+1. Choose **Create job**\.
 
 1. Choose the **Region** where you want to create your job\.
 

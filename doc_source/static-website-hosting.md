@@ -48,28 +48,34 @@ The following is a quick procedure to configure an Amazon S3 bucket for static w
    1. To confirm your changes, enter **confirm**, and then choose **Confirm**\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/edit-public-access-confirm.png)
 
-1. Add a bucket policy to the website bucket that grants everyone access to the objects in the bucket\. 
+1. To grant public read access for your website, add a bucket policy to the website bucket that grants public read access to the bucket\.
 
-   When you configure a bucket as a website, you must make the objects that you want to serve publicly readable\. To do so, you write a bucket policy that grants everyone `s3:GetObject` permission\. The following example bucket policy grants everyone access to the objects in the `example-bucket` bucket\.
+   1. Copy the following bucket policy, and paste it in the **Bucket policy editor**\.
 
-   ```
-   {
-       "Version": "2012-10-17",
-       "Statement": [
-           {
-               "Sid": "PublicReadGetObject",
-               "Effect": "Allow",
-               "Principal": "*",
-               "Action": [
-                   "s3:GetObject"
-               ],
-               "Resource": [
-                   "arn:aws:s3:::example-bucket/*"
-               ]
-           }
-       ]
-   }
-   ```
+   1. Update the Resource to include your bucket name\.
+
+      In the example below, *example\-bucket* is the bucket\. To use this bucket policy with your own bucket, you must update this name to match your bucket\.
+
+      ```
+      {
+          "Version": "2012-10-17",
+          "Statement": [
+              {
+                  "Sid": "PublicReadGetObject",
+                  "Effect": "Allow",
+                  "Principal": "*",
+                  "Action": [
+                      "s3:GetObject"
+                  ],
+                  "Resource": [
+                      "arn:aws:s3:::example-bucket/*"
+                  ]
+              }
+          ]
+      }
+      ```
+
+   1. Choose **Save**\.
 
    For information about adding a bucket policy, see [How Do I Add an S3 Bucket Policy?](add-bucket-policy.md) For more information about website permissions, see [Permissions Required for Website Access](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteAccessPermissionsReqd.html) in the *Amazon Simple Storage Service Developer Guide*\. 
 
