@@ -4,7 +4,7 @@ To upload your data \(photos, videos, documents etc\.\) to Amazon S3, you must f
 
 Every object you store in Amazon S3 resides in a bucket\. You can use buckets to group related objects in the same way that you use a directory to group files in a file system\. 
 
-Amazon S3 creates buckets in the AWS Region that you specify\. You can choose any AWS Region that is geographically close to you to optimize latency, minimize costs, or address regulatory requirements\. For example, if you reside in Europe, you might find it advantageous to create buckets in the EU \(Ireland\) or EU \(Frankfurt\) regions\. For a list of Amazon S3 AWS Regions, see [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) in the *Amazon Web Services General Reference*\.
+Amazon S3 creates buckets in the AWS Region that you specify\. You can choose any AWS Region that is geographically close to you to optimize latency, minimize costs, or address regulatory requirements\. For example, if you reside in Europe, you might find it advantageous to create buckets in the Europe \(Ireland\) or Europe \(Frankfurt\) regions\. For a list of Amazon S3 AWS Regions, see [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) in the *Amazon Web Services General Reference*\.
 
 You are not charged for creating a bucket\. You are only charged for storing objects in the bucket and for transferring objects out of the bucket\. For more information about pricing, see [Amazon Simple Storage Service \(S3\) FAQs](https://aws.amazon.com/s3/faqs/)\.
 

@@ -4,7 +4,7 @@ To upload your data \(photos, videos, documents etc\.\) to Amazon S3, you must f
 
 The data that you store in Amazon S3 consists of objects\. Every object resides within a bucket that you create in a specific AWS Region\. Every object that you store in Amazon S3 resides in a bucket\. 
 
-Objects stored in a region never leave the region unless you explicitly transfer them to another region\. For example, objects stored in the EU \(Ireland\) region never leave it\. The objects stored in an AWS region physically remain in that region\. Amazon S3 does not keep copies of objects or move them to any other region\. However, you can access the objects from anywhere, as long as you have necessary permissions to do so\.
+Objects stored in a region never leave the region unless you explicitly transfer them to another region\. For example, objects stored in the Europe \(Ireland\) region never leave it\. The objects stored in an AWS region physically remain in that region\. Amazon S3 does not keep copies of objects or move them to any other region\. However, you can access the objects from anywhere, as long as you have necessary permissions to do so\.
 
 Before you can upload an object into Amazon S3, you must have write permissions to a bucket\.
 
