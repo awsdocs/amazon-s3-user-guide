@@ -19,7 +19,9 @@ A versioning\-enabled bucket can have many versions of the same object, one curr
 1. In the **Lifecycle rule** dialog box, type a name for your rule to help identify the rule later\. The name must be unique within the bucket\. Configure the rule as follows: 
    + To apply this lifecycle rule to all objects with a specified name prefix \(that is, objects with names that begin with a common string\), type a prefix in the box, choose the prefix from the drop\-down list, and then press **Enter**\.  For more information about object name prefixes, see [Object Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys) in the *Amazon Simple Storage Service Developer Guide*\. 
    + To apply this lifecycle rule to all objects with one or more object tags, type a tag in the box, choose the tag from the drop\-down list, and then press **Enter**\. Repeat the procedure to add another tag\. You can combine a prefix and tags\. For more information about object tags, see [Object Tagging](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-tagging.html) in the *Amazon Simple Storage Service Developer Guide*\.
-   + To apply this lifecycle rule to all objects in the bucket, choose **Next**\.  
+**Warning**  
+If you do not enter a prefix or tag to limit the scope of your lifecycle rule, it will apply to **all** objects in your bucket\.
+   + Choose **Next**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/lifecycle-name-scope.png)
 
 1. You configure lifecycle rules by defining rules to transition objects to the Standard\-IA, One Zone\-IA, Glacier, and Deep Archive storage classes\. For more information, see [Storage Classes](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) in the *Amazon Simple Storage Service Developer Guide*\.

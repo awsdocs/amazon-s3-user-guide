@@ -15,7 +15,7 @@ Amazon's trademarks and trade dress may not be used in
 -----
 ## Contents
 + [Welcome to the Amazon S3 Console User Guide](what-is-s3.md)
-+ [How Do I Change the Language of the Amazon S3 Console?](change-ui-language.md)
++ [How Do I Change the Language of the AWS Management Console?](change-ui-language.md)
 + [Creating and Configuring an S3 Bucket](create-configure-bucket.md)
    + [How Do I Create an S3 Bucket?](create-bucket.md)
    + [How Do I Delete an S3 Bucket?](delete-bucket.md)

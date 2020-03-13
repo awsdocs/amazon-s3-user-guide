@@ -67,39 +67,47 @@ In this case, the destination bucket owner must add the displayed bucket policy 
 
 For more information, see [Amazon S3 Inventory](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
-## Grant Amazon S3 Permission to Encrypt Using Your AWS KMS CMK<a name="configure-inventory-kms-key-policy"></a>
+## Granting Amazon S3 Permission to Use Your AWS KMS CMK for Encryption<a name="configure-inventory-kms-key-policy"></a>
 
-You must grant Amazon S3 permission to encrypt using your AWS KMS CMK with a key policy\. The following procedure describes how to use the AWS Identity and Access Management \(IAM\) console to modify the key policy for the AWS KMS CMK that is being used to encrypt the inventory file\.
+To grant Amazon S3 permission to encrypt using a customer managed AWS Key Management Service \(AWS KMS\) customer master key \(CMK\), you must use a key policy\. To update your key policy so that you can use an AWS KMS customer managed CMK to encrypt the inventory file, follow the steps below\.
 
 **To grant permissions to encrypt using your AWS KMS CMK**
 
-1. Sign in to the AWS Management Console using the AWS account that owns the AWS KMS CMK\. Open the IAM console at [https://console\.aws\.amazon\.com/iam/](https://console.aws.amazon.com/iam/)\.
+1. Using the AWS account that owns the customer managed CMK, sign into the AWS Management Console\.
 
-1. In the left navigation pane, choose **Encryption keys**\.
+1. Open the AWS KMS console at [https://console\.aws\.amazon\.com/kms](https://console.aws.amazon.com/kms)\.
 
-1. For **Region**, choose the appropriate AWS Region\. Do not use the region selector in the navigation bar \(upper\-right corner\)\.
+1. To change the AWS Region, use the Region selector in the upper\-right corner of the page\.
 
-1. Choose the alias of the CMK that you want to encrypt inventory with\.
+1. In the left navigation pane, choose **Customer managed keys**\.
 
-1. In the **Key Policy** section of the page, choose **Switch to policy view**\.
+1. Under **Customer managed keys**, choose the customer managed CMK that you want to use to encrypt the inventory file\.
 
-1. Using the **Key Policy** editor, insert following key policy into the existing policy and then choose **Save Changes**\. You might want to copy the policy to the end of the existing policy\. 
+1. Under **Key policy**, choose **Switch to policy view**\.
+
+1. To update the key policy, choose **Edit**\.
+
+1. Under **Edit key policy**, add the following key policy to the existing key policy\.
 
    ```
    {
-       "Sid": "Allow Amazon S3 use of the key",
+       "Sid": "Allow Amazon S3 use of the CMK",
        "Effect": "Allow",
        "Principal": {
            "Service": "s3.amazonaws.com"
        },
        "Action": [
-           "kms:GenerateDataKey*"
+           "kms:GenerateDataKey"
        ],
        "Resource": "*"
    }
    ```
 
-For more information about creating and editing AWS KMS CMKs, see [Getting Started](https://docs.aws.amazon.com/kms/latest/developerguide/getting-started.html) in the *AWS Key Management Service Developer Guide*\. 
+1. Choose **Save changes**\.
+
+   For more information about creating customer managed CMKs AWS KMS and using key policies, see the following links in the *AWS Key Management Service Developer Guide*:
+   + [Getting Started](https://docs.aws.amazon.com/kms/latest/developerguide/getting-started.html)
+   + [Using Key Policies in AWS KMS](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html)
 
 **More Info**  
  [Storage Management](storage-management.md)
