@@ -11,6 +11,7 @@ Access Analyzer for S3 is available at no extra cost on the Amazon S3 console\. 
 For more information about IAM Access Analyzer, see [What is Access Analyzer?](https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html) in the *IAM User Guide*\. For more information about Access Analyzer for S3, review the following sections\.
 
 **Important**  
+Access Analyzer for S3 requires an account\-level analyzer\. To use Access Analyzer for S3, you must visit IAM Access Analyzer and create an analyzer that has an account as the zone of trust\. For more information, see [Enabling Access Analyzer](https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-getting-started.html#access-analyzer-enabling) in *IAM User Guide*\.
 When a bucket policy or bucket ACL is added or modified, Access Analyzer generates and updates findings based on the change within 30 minutes\. Findings related to account level block public access settings may not be generated or updated for up to 6 hours after you change the settings\.
 
 ****Topics****
@@ -44,11 +45,9 @@ For each bucket, Access Analyzer for S3 provides the following information:
 
 ## Enabling Access Analyzer for S3<a name="enabling-access-analyzer"></a>
 
-To use Access Analyzer for S3 in the Amazon S3 console, you must visit the IAM console and do the following:
-+ Set permissions\.
-+ Enable IAM Access Analyzer for each Region where you want to use it\.
-
-For more information, see [Getting Started with Access Analyzer](https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-getting-started.html) in the *IAM User Guide*\.
+To use Access Analyzer for S3, you must do the following:
++ Grant the required permissions\. For more information, see [Permissions Required to use Access Analyzer](https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-getting-started.html#access-analyzer-permissions) in the *IAM User Guide*\.
++ Visit IAM to enable Access Analyzer for each Region where you want to use it\. Access Analyzer for S3 requires an account\-level analyzer\. To use Access Analyzer for S3, you must visit IAM Access Analyzer and create an analyzer that has an account as the zone of trust\. For more information, see [Enabling Access Analyzer](https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-getting-started.html#access-analyzer-enabling) in *IAM User Guide*\.
 
 ## Blocking All Public Access<a name="blocking-public-access-access-analyzer"></a>
 

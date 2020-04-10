@@ -6,7 +6,8 @@ You can use the following quick procedures to configure an S3 bucket for static 
 
 **Topics**
 + [Step One: Configure a Amazon S3 Bucket for Static Website Hosting](#configure-bucket-website-hosting)
-+ [Step Two: Set Permissions for Static Website Access](#set-permissions-static-website-access)
++ [Step Two: Editing Block Public Access Settings](#set-permissions-static-website-access)
++ [Step Three: Adding a Bucket Policy](#add-bucket-policy-public-access)
 + [Step Three: Test Your Website Endpoint](#test-your-website-endpoint)
 
 ## Step One: Configure a Amazon S3 Bucket for Static Website Hosting<a name="configure-bucket-website-hosting"></a>
@@ -48,34 +49,39 @@ You can use the following quick procedures to configure an S3 bucket for static 
 
 In the next section, you set the permissions required to access your bucket as a static website\.\.
 
-## Step Two: Set Permissions for Static Website Access<a name="set-permissions-static-website-access"></a>
+## Step Two: Editing Block Public Access Settings<a name="set-permissions-static-website-access"></a>
 
-After you enable website access for your bucket, you must set permissions for static website access, which involves editing your Amazon S3 Block Public Access settings and adding a bucket policy that grants pubic read access\. For more information, see [Permissions Required for Website Access](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteAccessPermissionsReqd.html) in the *Amazon Simple Storage Service Developer Guide*\.
+By default, Amazon S3 blocks public access to your account and buckets\. If you want to use a bucket to host a static website, you can use these steps to edit your block public access settings\. 
 
-By default, Amazon S3 does not allow public access to your account or buckets\. Before you edit S3 Block Public Access settings, confirm that you want anyone on the internet to be able to access your bucket\. For more information, see [Using Amazon S3 Block Public Access](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html) in the *Amazon Simple Storage Service Developer Guide*\.
+**Warning**  
+Before you complete this step, review [Using Amazon S3 Block Public Access](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html) to ensure that you understand and accept the risks involved with allowing public access\. When you turn off block public access settings to make your bucket public, anyone on the internet can access your bucket\. We recommend that you block all public access to your buckets\.
 
-**To set permissions required for website access**
+1. Open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
-1. Select the bucket, and choose **Edit public access settings**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/edit-public-access-settings.png)
+1. Choose the name of the bucket that you have configured as a static website\.
 
-1. Clear **Block *all* public access**, and choose **Save**\.  
+1. Choose **Permissions**\.
+
+1. Choose **Edit**\.
+
+1. Clear **Block *all* public access**, and choose **Save**\.
+**Warning**  
+Before you complete this step, review [Using Amazon S3 Block Public Access](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html) to ensure you understand and accept the risks involved with allowing public access\. When you turn off block public access settings to make your bucket public, anyone on the internet can access your bucket\. We recommend that you block all public access to your buckets\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/edit-public-access-clear.png)
 
-1. To confirm your changes, enter **confirm**, and then choose **Confirm**\.   
+1. In the confirmation box, enter **confirm**, and then choose **Confirm**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/edit-public-access-confirm.png)
 
-1. To confirm that objects in the bucket can now be publicly readable, do the following:
+   Under **S3 buckets**, the **Access** for your bucket updates to **Objects can be public**\. You can now add a bucket policy to make the objects in the bucket publicly readable\. If the **Access** still displays as **Bucket and objects not public**, you might have to [edit the block public access settings](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/block-public-access-account.html) for your account before adding a bucket policy\.
 
-   1. Expand the side navigation pane, and choose **Buckets**\.
+## Step Three: Adding a Bucket Policy<a name="add-bucket-policy-public-access"></a>
 
-   1. Under **S3 buckets**, find your bucket and look under **Access**\.
+After you edit S3 Block Public Access settings, you can add a bucket policy to grant public read access to your bucket\. When you grant public read access, anyone on the internet can access your bucket\.
 
-      Under **Access**, you see **Objects can be public**\. 
+**Important**  
+The following policy is an example only and allows full access to the contents of your bucket\. Before you proceed with this step, review [How can I secure the files in my Amazon S3 bucket?](https://aws.amazon.com/premiumsupport/knowledge-center/secure-s3-resources/) to ensure that you understand the best practices for securing the files in your S3 bucket and risks involved in granting public access\.
 
-      If the **Access** is **Bucket and objects not public**, you might have to edit your account\-level S3 Block Public Access settings before you can add the bucket policy\. For more information, see [How Do I Edit Public Access Settings for All the S3 Buckets in an AWS Account?](block-public-access-account.md)
-
-1. Under **S3 buckets**, choose your bucket name\.
+1. Under **Buckets**, choose the name of your bucket\.
 
 1. Choose **Permissions**\.
 
@@ -95,7 +101,7 @@ By default, Amazon S3 does not allow public access to your account or buckets\. 
                    "s3:GetObject"
                ],
                "Resource": [
-                   "arn:aws:s3:::example-bucket/*"
+                   "arn:aws:s3:::example.com/*"
                ]
            }
        ]
@@ -104,34 +110,15 @@ By default, Amazon S3 does not allow public access to your account or buckets\. 
 
 1. Update the `Resource` to include your bucket name\.
 
-   In the above example bucket policy, *example\-bucket* is the bucket name\. To use this bucket policy with your own bucket, you must update this name to match your bucket name\. For example, if your bucket name is `my-example-bucket`, the bucket policy would look like this:
-
-   ```
-   {
-       "Version": "2012-10-17",
-       "Statement": [
-           {
-               "Sid": "PublicReadGetObject",
-               "Effect": "Allow",
-               "Principal": "*",
-               "Action": [
-                   "s3:GetObject"
-               ],
-               "Resource": [
-                   "arn:aws:s3:::my-example-bucket/*"
-               ]
-           }
-       ]
-   }
-   ```
+   In the preceding example bucket policy, *example\.com* is the bucket name\. To use this bucket policy with your own bucket, you must update this name to match your bucket name\.
 
 1. Choose **Save**\.
 
-   A warning appears indicating that the bucket has public access\. On **Bucket Policy**, you see a **Public** label\.
+   A warning appears indicating that the bucket has public access\. In **Bucket Policy**, a **Public** label appears\.
 
-   If you see an error that says `Policy has invalid resource`, confirm the bucket name in the bucket policy matches your bucket name\. For information about adding a bucket policy, see [How Do I Add an S3 Bucket Policy?](add-bucket-policy.md)
+   If you see an error that says `Policy has invalid resource`, confirm that the bucket name in the bucket policy matches your bucket name\. For information about adding a bucket policy, see [How Do I Add an S3 Bucket Policy?](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/add-bucket-policy.html)
 
-   If the **Bucket policy editor** does not allow you to save the bucket policy, check your account\-level and bucket\-level block public access settings\. For more information about website permissions, see [Permissions Required for Website Access](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteAccessPermissionsReqd.html) in the *Amazon Simple Storage Service Developer Guide*\.
+   If you get an **Error \- Access denied** warning and the **Bucket policy editor** does not allow you to save the bucket policy, check your account\-level and bucket\-level block public access settings to confirm that you allow public access to the bucket\. For more information about website permissions, see [Permissions Required for Website Access](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteAccessPermissionsReqd.html)\.
 
 ## Step Three: Test Your Website Endpoint<a name="test-your-website-endpoint"></a>
 

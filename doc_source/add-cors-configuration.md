@@ -2,7 +2,7 @@
 
 This section explains how to use the Amazon S3 console to add a cross\-origin resource sharing \(CORS\) configuration to an S3 bucket\. CORS allows client web applications that are loaded in one domain to interact with resources in another domain\. 
 
-To configure your bucket to allow cross\-origin requests, you add CORS configuration to the bucket\. A CORS configuration is an XML document that defines rules that identify the origins that you will allow to access your bucket, the operations \(HTTP methods\) supported for each origin, and other operation\-specific information\. For more information about CORS, see [Cross\-Origin Resource Sharing \(CORS\)](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) in the *Amazon Simple Storage Service Developer Guide*\.
+To configure your bucket to allow cross\-origin requests, you add CORS configuration to the bucket\. A CORS configuration is an XML document that defines rules that identify the origins that you will allow to access your bucket, the operations \(HTTP methods\) supported for each origin, and other operation\-specific information\. For more information about CORS and examples, see [Cross\-Origin Resource Sharing \(CORS\)](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 When you enable CORS on the bucket, the access control lists \(ACLs\) and other access permission policies continue to apply\.
 

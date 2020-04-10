@@ -6,8 +6,8 @@ You can empty a bucket, which deletes all of the objects in the bucket without d
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
-1. In the **Bucket name** list, choose the name of the bucket that you want to empty and then choose **Empty**\.  
-![\[Empty bucket highlighted.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/empty-bucket.png)
+1. In the **Bucket name** list, select the option next to the name of the bucket that you want to empty and then choose **Empty**\.
 
-1. In the **Empty bucket** dialog box, type the name of the bucket you want to empty for confirmation and then choose **Confirm**\.  
-![\[Confirm empty bucket by typing bucket name.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/empty-bucket-confirm.png)
+1. On the **Empty bucket** page, confirm that you want to empty the bucket by entering the bucket name into the text field, and then choose **Empty**\.
+
+1. \(Optional\) Monitor the progress of the bucket emptying process on the **Empty bucket: Status** page\.

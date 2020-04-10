@@ -6,6 +6,7 @@ Data transfer fees apply when you download objects\. For information about Amazo
 
 **Important**  
 If an object key name consists of a single period \(\.\), or two periods \(\.\.\), you can’t download the object using the Amazon S3 console\. To download an object with a key name of “\.” or “\.\.”, you must use the AWS CLI, AWS SDKs, or REST API\. For more information about naming objects, see [Object Key Naming Guidelines](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-key-guidelines) in the *Amazon Simple Storage Service Developer Guide*\.
+You can't download multiple objects in a single request using the Amazon S3 console\. To download multiple objects, use the AWS CLI, AWS SDKs, or REST API\.
 
 **To download an object from an S3 bucket**
 

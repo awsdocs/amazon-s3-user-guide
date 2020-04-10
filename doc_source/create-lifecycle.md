@@ -35,6 +35,7 @@ If you do not enter a prefix or tag to limit the scope of your lifecycle rule, i
 
    1. Choose **Add transitions** and specify one of the following transitions:
       + Choose **Transition to Standard\-IA after**, and then type the number of days after the creation of an object that you want the transition to be applied \(for example, 30 days\)\. 
+      + Choose **Transition to Intelligent\-Tiering after**, and then type the number of days after the creation of an object that you want the transition to be applied \(for example, 30 days\)\. 
       + Choose **Transition to One Zone\-IA after**, and then type the number of days after the creation of an object that you want the transition to be applied \(for example, 30 days\)\. 
       + Choose **Transition to Glacier after**, and then type the number of days after the creation of an object that you want the transition to be applied \(for example, 100 days\)\.
       + Choose **Transition to Glacier Deep Archive after**, and then type the number of days after the creation of an object that you want the transition to be applied \(for example, 100 days\)\.
