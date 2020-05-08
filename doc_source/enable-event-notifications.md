@@ -1,14 +1,14 @@
-# How Do I Enable and Configure Event Notifications for an S3 Bucket?<a name="enable-event-notifications"></a>
+# How do I enable and configure event notifications for an S3 Bucket?<a name="enable-event-notifications"></a>
 
 You can enable certain Amazon S3 bucket events to send a notification message to a destination whenever the events occur\. This section explains how to use the Amazon S3 console to enable event notifications\. For information about using event notifications with the AWS SDKs and the Amazon S3 REST APIs, see [Configuring Amazon S3 Event Notifications](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html) in the *Amazon Simple Storage Service Developer Guide*\. 
 
 **Topics**
-+ [Event Notification Types](#enable-event-notifications-types)
-+ [Event Notification Destinations](#s3-event-notification-destinations)
-+ [Enabling and Configuring Event Notifications](#enable-event-notifications-how-to)
-+ [More Info](#enable-event-notifications-moreinfo)
++ [Event notification types](#enable-event-notifications-types)
++ [Event notification destinations](#s3-event-notification-destinations)
++ [Enabling and configuring event notifications](#enable-event-notifications-how-to)
++ [More info](#enable-event-notifications-moreinfo)
 
-## Event Notification Types<a name="enable-event-notifications-types"></a>
+## Event notification types<a name="enable-event-notifications-types"></a>
 
 When you configure event notifications for a bucket, you must specify the type of events for which you want to receive notifications\. For a complete list of event types, see [Supported Event Types](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#supported-notification-event-types) section in the *Amazon Simple Storage Service Developer Guide*\. 
 
@@ -39,7 +39,7 @@ The Amazon S3 console displays a folder under the following circumstances:
 When a zero\-byte object has a trailing slash \(/\) in its name\. In this case, there is an actual Amazon S3 object of 0 bytes that represents a folder\.
 If the object has a slash \(/\) within its name\. In this case, there isn't an actual object representing the folder\.
 
-## Event Notification Destinations<a name="s3-event-notification-destinations"></a>
+## Event notification destinations<a name="s3-event-notification-destinations"></a>
 
 When you configure event notifications for a bucket, you also choose the notification destination\. Event notification messages can be sent to the following destinations:
 + **Amazon Simple Notification Service \(Amazon SNS\) topic** – Coordinates and manages the delivery or sending of messages to subscribing endpoints or clients\. For information about the Amazon SNS topic format, see [SNS FAQ](https://aws.amazon.com/sns/faqs/#10)\.
@@ -52,9 +52,9 @@ For more information about granting the Amazon S3 service principal the permissi
 If your notification ends up writing to the bucket that triggers the notification, this could cause an execution loop\. For example, if the bucket triggers a Lambda function each time an object is uploaded, and the function uploads an object to the bucket, then the function indirectly triggers itself\. To avoid this, use two buckets, or configure the trigger to only apply to a prefix used for incoming objects\.  
 For more information and an example of using Amazon S3 notifications with AWS Lambda, see [Using AWS Lambda with Amazon S3](https://docs.aws.amazon.com/lambda/latest/dg/with-s3.html) in the *AWS Lambda Developer Guide*\. 
 
-## Enabling and Configuring Event Notifications<a name="enable-event-notifications-how-to"></a>
+## Enabling and configuring event notifications<a name="enable-event-notifications-how-to"></a>
 
-Before you can enable event notifications for your bucket, you must set up one of the destination types\. For more information, see [How Do I Set Up a Destination to Receive Event Notifications?](setup-event-notification-destination.md)
+Before you can enable event notifications for your bucket, you must set up one of the destination types\. For more information, see [How do I set up a destination to receive event notifications?](setup-event-notification-destination.md)
 
 **To enable and configure event notifications for an S3 bucket**
 
@@ -79,7 +79,7 @@ Before you can enable event notifications for your bucket, you must set up one o
 
 1. Under **Events**, select one or more events\. 
 
-   For a listing of the event types, see [Event Notification Types](#enable-event-notifications-types)\.  
+   For a listing of the event types, see [Event notification types](#enable-event-notifications-types)\.  
 ![\[Console screenshot showing the list of available events.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/events-add-event-types.png)
 
 1. To filter event notifications by a prefix or suffix, enter a **Prefix** or a **Suffix**\. 
@@ -89,7 +89,7 @@ Before you can enable event notifications for your bucket, you must set up one o
 
 1. Choose the event notification destination: **SNS Topic**, **SQS Queue**, or **Lambda Function**\. 
 
-   For a description of the destinations, see [Event Notification Destinations](#s3-event-notification-destinations)\.  
+   For a description of the destinations, see [Event notification destinations](#s3-event-notification-destinations)\.  
 ![\[Console screenshot showing the Send to destination list for the notification.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/s3-bucket-properties-events-destination.png)![\[Console screenshot showing the Send to destination list for the notification.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/)![\[Console screenshot showing the Send to destination list for the notification.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/)
 
    When you choose your **Send to** destination, a box appears for you to enter your specific SNS, SQS, or Lambda function destination\. In the example image below, the **Send To** location is **SNS Topic**, and you can see a **SNS** box for the SNS topic name\.  
@@ -107,5 +107,5 @@ Before you can enable event notifications for your bucket, you must set up one o
 
    Amazon S3 sends a test message to the event notification destination\.
 
-## More Info<a name="enable-event-notifications-moreinfo"></a>
-+ [How Do I Restore an S3 Object That Has Been Archived?](restore-archived-objects.md)
+## More info<a name="enable-event-notifications-moreinfo"></a>
++ [How do I restore an S3 object that has been archived?](restore-archived-objects.md)

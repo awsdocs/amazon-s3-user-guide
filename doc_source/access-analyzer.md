@@ -1,6 +1,6 @@
 # Using Access Analyzer for S3<a name="access-analyzer"></a>
 
-Access Analyzer for Amazon S3 alerts you to S3 buckets that are configured to allow access to anyone on the internet or other AWS accounts, including AWS accounts outside of your organization\. For each public or shared bucket, you receive findings into the source and level of public or shared access\. For example, Access Analyzer for S3 might show that a bucket has read or write access provided through bucket access control lists \(ACLs\), bucket policies, or both\. Armed with this knowledge, you can take immediate and precise corrective action to restore your bucket access to what you intended\. 
+Access Analyzer for S3 alerts you to S3 buckets that are configured to allow access to anyone on the internet or other AWS accounts, including AWS accounts outside of your organization\. For each public or shared bucket, you receive findings into the source and level of public or shared access\. For example, Access Analyzer for S3 might show that a bucket has read or write access provided through a bucket access control list \(ACL\), a bucket policy, or an access point policy\. Armed with this knowledge, you can take immediate and precise corrective action to restore your bucket access to what you intended\. 
 
 When reviewing an at\-risk bucket in Access Analyzer for S3, you can block all public access to the bucket with a single click\. We recommend that you block all access to your buckets unless you require public access to support a specific use case\. Before you block all public access, ensure that your applications will continue to work correctly without public access\. For more information, see [Using Amazon S3 Block Public Access](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
@@ -15,23 +15,23 @@ Access Analyzer for S3 requires an account\-level analyzer\. To use Access Analy
 When a bucket policy or bucket ACL is added or modified, Access Analyzer generates and updates findings based on the change within 30 minutes\. Findings related to account level block public access settings may not be generated or updated for up to 6 hours after you change the settings\.
 
 ****Topics****
-+ [What Information Does Access Analyzer for S3 Provide?](#access-analyzer-information-s3)
++ [What information does Access Analyzer for S3 provide?](#access-analyzer-information-s3)
 + [Enabling Access Analyzer for S3](#enabling-access-analyzer)
-+ [Blocking All Public Access](#blocking-public-access-access-analyzer)
-+ [Reviewing and Changing a Bucket Policy or a Bucket ACL](#changing-bucket-access)
-+ [Archiving Bucket Findings](#archiving-buckets)
-+ [Activating an Archived Bucket Finding](#activating-buckets)
-+ [Viewing Finding Details](#viewing-finding-details)
-+ [Downloading an Access Analyzer for S3 Report](#downloading-bucket-report-s3)
++ [Blocking all public access](#blocking-public-access-access-analyzer)
++ [Reviewing and changing bucket access](#changing-bucket-access)
++ [Archiving bucket findings](#archiving-buckets)
++ [Activating an archived bucket finding](#activating-buckets)
++ [Viewing finding details](#viewing-finding-details)
++ [Downloading an Access Analyzer for S3 report](#downloading-bucket-report-s3)
 
-## What Information Does Access Analyzer for S3 Provide?<a name="access-analyzer-information-s3"></a>
+## What information does Access Analyzer for S3 provide?<a name="access-analyzer-information-s3"></a>
 
 Access Analyzer for S3 provides findings for buckets that can be accessed outside your AWS account\. Buckets that are listed under **Buckets with public access** can be accessed by anyone on the internet\. If Access Analyzer for S3 identifies public buckets, you also see a warning at the top of the page that shows you the number of public buckets in your Region\. Buckets listed under **Buckets with access from other AWS accounts — including third\-party AWS accounts** are shared conditionally with other AWS accounts, including accounts outside of your organization\. 
 
 For each bucket, Access Analyzer for S3 provides the following information:
 + **Bucket name**
 + **Discovered by Access analyzer** ‐ When Access Analyzer for S3 discovered the public or shared bucket access\.
-+ **Shared through** ‐ How the bucket is shared—through a bucket policy, a bucket ACL, or both\. If you want to find and review the source for your bucket access, you can use the information in this column as a starting point for taking immediate and precise corrective action\. 
++ **Shared through** ‐ How the bucket is shared—through a bucket policy, a bucket ACL, or an access point policy\. A bucket can be shared through both policies and ACLs\. If you want to find and review the source for your bucket access, you can use the information in this column as a starting point for taking immediate and precise corrective action\. 
 + **Status** ‐ The status of the bucket finding\. Access Analyzer for S3 displays findings for all public and shared buckets\. 
   + **Active **‐ Finding has not been reviewed\. 
   + **Archived** ‐ Finding has been reviewed and confirmed as intended\. 
@@ -45,11 +45,17 @@ For each bucket, Access Analyzer for S3 provides the following information:
 
 ## Enabling Access Analyzer for S3<a name="enabling-access-analyzer"></a>
 
-To use Access Analyzer for S3, you must do the following:
-+ Grant the required permissions\. For more information, see [Permissions Required to use Access Analyzer](https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-getting-started.html#access-analyzer-permissions) in the *IAM User Guide*\.
-+ Visit IAM to enable Access Analyzer for each Region where you want to use it\. Access Analyzer for S3 requires an account\-level analyzer\. To use Access Analyzer for S3, you must visit IAM Access Analyzer and create an analyzer that has an account as the zone of trust\. For more information, see [Enabling Access Analyzer](https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-getting-started.html#access-analyzer-enabling) in *IAM User Guide*\.
+To use Access Analyzer for S3, you must complete the following prerequisite steps\.
 
-## Blocking All Public Access<a name="blocking-public-access-access-analyzer"></a>
+1. Grant the required permissions\.
+
+   For more information, see [Permissions Required to use Access Analyzer](https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-getting-started.html#access-analyzer-permissions) in the *IAM User Guide*\.
+
+1. Visit IAM to create an account\-level analyzer for each Region where you want to use Access Analyzer\.
+
+   Access Analyzer for S3 requires an account\-level analyzer\. To use Access Analyzer for S3, you must create an analyzer that has an account as the zone of trust\. For more information, see [Enabling Access Analyzer](https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-getting-started.html#access-analyzer-enabling) in *IAM User Guide*\.
+
+## Blocking all public access<a name="blocking-public-access-access-analyzer"></a>
 
 If you want to block all access to a bucket in a single click, you can use the **Block all public access** button in Access Analyzer for S3\. When you block all public access to a bucket, no public access is granted\. We recommend that you block all public access to your buckets unless you require public access to support a specific and verified use case\. Before you block all public access, ensure that your applications will continue to work correctly without public access\.
 
@@ -71,29 +77,53 @@ In rare events, Access Analyzer for S3 might report no findings for a bucket tha
 
    Amazon S3 blocks all public access to your bucket\. The status of the bucket finding updates to **resolved**, and the bucket disappears from the Access Analyzer for S3 listing\. If you want to review resolved buckets, open IAM Access Analyzer on the IAM console\.
 
-## Reviewing and Changing a Bucket Policy or a Bucket ACL<a name="changing-bucket-access"></a>
+## Reviewing and changing bucket access<a name="changing-bucket-access"></a>
 
-If you did not intend to grant access to the public or other AWS accounts, including accounts outside of your organization, you can modify the bucket ACL, bucket policy, or both to remove the access to the bucket\. 
+If you did not intend to grant access to the public or other AWS accounts, including accounts outside of your organization, you can modify the bucket ACL, bucket policy, or access point policy to remove the access to the bucket\. The **Shared through** column shows all sources of bucket access: bucket policy, bucket ACL, and/or access point policy\.
 
-**To change a bucket policy or Bucket ACL from Access Analyzer for S3**
+**To review and change a bucket policy, a bucket ACL, or an access point policy**
 
 1. Open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
 1. In the navigation pane, choose **Access analyzer for S3**\.
 
-1. To see whether public access or shared access is granted through a bucket policy, a bucket ACL, or both, look in the **Shared through** column\.
+1. To see whether public access or shared access is granted through a bucket policy, a bucket ACL, or an access point policy, look in the **Shared through** column\.
 
-1. Under **Bucket name**, choose the name for the bucket with bucket policy or bucket ACL that you want to change or review\.
+1. Under **Bucket name**, choose the name of the bucket with the bucket policy, bucket ACL, or access point policy that you want to change or review\.
 
-1. Choose **Permissions**\.
+1. If you want to change or view a bucket ACL:
 
-1. If you want to change or view a bucket ACL, choose **Access Control List**\.
+   1. Choose **Permissions**\.
 
-1. If you want to change or view a bucket policy, choose **Bucket Policy**\.
+   1. Choose **Access Control List**\.
 
-   If you edit or remove a bucket ACL or bucket policy to remove public or shared access, the status for the bucket findings updates to resolved\. The resolved bucket findings disappear from the Access Analyzer for S3 listing, but you can view them in IAM Access Analyzer\.
+   1. Review your bucket ACL, and make changes as required\.
 
-## Archiving Bucket Findings<a name="archiving-buckets"></a>
+      For more information, see [How do I set ACL bucket permissions?](set-bucket-permissions.md)
+
+1. If you want to change or review a bucket policy:
+
+   1. Choose **Permissions**\.
+
+   1. Choose **Bucket Policy**\.
+
+   1. Review or change your bucket policy as required\.
+
+      For more information, see [How do I add an S3 Bucket policy?](add-bucket-policy.md)
+
+1. If you want to review or change an access point policy:
+
+   1. Choose **Access points**\.
+
+   1. Choose the access point name\.
+
+   1. Review or change access as required\. 
+
+      For more information, see [Managing and using Amazon S3 access points](access-points-manage.md)\.
+
+   If you edit or remove a bucket ACL, a bucket policy, or an access point policy to remove public or shared access, the status for the bucket findings updates to resolved\. The resolved bucket findings disappear from the Access Analyzer for S3 listing, but you can view them in IAM Access Analyzer\.
+
+## Archiving bucket findings<a name="archiving-buckets"></a>
 
 If a bucket grants access to the public or other AWS accounts, including accounts outside of your organization, to support a specific use case \(for example, a static website, public downloads, or cross\-account sharing\), you can archive the finding for the bucket\. When you archive bucket findings, you acknowledge and record your intent for the bucket to remain public or shared\. Archived bucket findings remain in your Access Analyzer for S3 listing so that you always know which buckets are public or shared\.
 
@@ -110,7 +140,7 @@ If a bucket grants access to the public or other AWS accounts, including account
 1. Enter **confirm**, and choose **Archive**\.  
 ![\[Console screenshot of the allow public access for selected bucket dialog box.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/archive-public-bucket-findings-access-analyzer.png)
 
-## Activating an Archived Bucket Finding<a name="activating-buckets"></a>
+## Activating an archived bucket finding<a name="activating-buckets"></a>
 
 After you archive findings, you can always revisit them and change their status back to active, indicating that the bucket requires another review\. 
 
@@ -124,7 +154,7 @@ After you archive findings, you can always revisit them and change their status 
 
 1. Choose **Mark as active**\.
 
-## Viewing Finding Details<a name="viewing-finding-details"></a>
+## Viewing finding details<a name="viewing-finding-details"></a>
 
 If you need to see more information about a bucket, you can open the bucket finding details in IAM Access Analyzer on the IAM console\.
 
@@ -140,7 +170,7 @@ If you need to see more information about a bucket, you can open the bucket find
 
    The finding details open in IAM Access Analyzer on the IAM console\. 
 
-## Downloading an Access Analyzer for S3 Report<a name="downloading-bucket-report-s3"></a>
+## Downloading an Access Analyzer for S3 report<a name="downloading-bucket-report-s3"></a>
 
 You can download your bucket findings as a CSV report that you can use for auditing purposes\. The report includes the same information that you see in Access Analyzer for S3 on the Amazon S3 console\.
 

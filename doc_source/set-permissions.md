@@ -1,4 +1,4 @@
-# Setting Bucket and Object Access Permissions<a name="set-permissions"></a>
+# Setting bucket and object access permissions<a name="set-permissions"></a>
 
 This section explains how to use the Amazon Simple Storage Service \(Amazon S3\) console to grant access permissions to your buckets and objects\. It also explains how to use Amazon S3 block public access to prevent the application of any settings that allow public access to data within S3 buckets\. 
 
@@ -17,11 +17,11 @@ For more in\-depth information about managing access permissions, see [Introduct
 This section also explains how to use the Amazon S3 console to add a cross\-origin resource sharing \(CORS\) configuration to an S3 bucket\. CORS allows client web applications that are loaded in one domain to interact with resources in another domain\.
 
 **Topics**
-+ [Blocking Public Access](block-public-access.md)
-+ [Editing Bucket Public Access Settings](block-public-access-bucket.md)
-+ [Editing Account Public Access Settings](block-public-access-account.md)
-+ [Setting Object Permissions](set-object-permissions.md)
-+ [Setting ACL Bucket Permissions](set-bucket-permissions.md)
-+ [Adding a Bucket Policy](add-bucket-policy.md)
-+ [Adding Cross\-Domain Resource Sharing with CORS](add-cors-configuration.md)
++ [Blocking public access](block-public-access.md)
++ [Editing bucket public access settings](block-public-access-bucket.md)
++ [Editing account public access settings](block-public-access-account.md)
++ [Setting object permissions](set-object-permissions.md)
++ [Setting ACL bucket permissions](set-bucket-permissions.md)
++ [Adding a bucket policy](add-bucket-policy.md)
++ [Adding cross\-domain resource sharing with CORS](add-cors-configuration.md)
 + [Using Access Analyzer for S3](access-analyzer.md)

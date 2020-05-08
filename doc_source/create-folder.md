@@ -1,4 +1,4 @@
-# Creating a Folder<a name="create-folder"></a>
+# Creating a folder<a name="create-folder"></a>
 
 This section describes how to use the Amazon S3 console to create a folder\.
 

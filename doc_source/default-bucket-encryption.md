@@ -1,4 +1,4 @@
-# How Do I Enable Default Encryption for an Amazon S3 Bucket?<a name="default-bucket-encryption"></a>
+# How do I enable default encryption for an Amazon S3 bucket?<a name="default-bucket-encryption"></a>
 
 Amazon S3 default encryption provides a way to set the default encryption behavior for an Amazon S3 bucket\. You can set default encryption on a bucket so that all objects are encrypted when they are stored in the bucket\. The objects are encrypted using server\-side encryption with either Amazon S3\-managed keys \(SSE\-S3\) or AWS Key Management Service \(AWS KMS\) customer master keys \(CMKs\)\. 
 
@@ -45,6 +45,6 @@ If you use the AWS KMS option for your default encryption configuration, you are
 
 1. Choose **Save**\.
 
-## More Info<a name="default-bucket-encryption-moreinfo"></a>
+## More info<a name="default-bucket-encryption-moreinfo"></a>
 + [Amazon S3 Default Encryption for S3 Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) in the *Amazon Simple Storage Service Developer Guide*
-+ [How Do I Add Encryption to an S3 Object?](add-object-encryption.md)
++ [How do I add encryption to an S3 object?](add-object-encryption.md)

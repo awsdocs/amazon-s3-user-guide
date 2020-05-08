@@ -1,4 +1,4 @@
-# How Do I Use Folders in an S3 Bucket?<a name="using-folders"></a>
+# How do I use folders in an S3 Bucket?<a name="using-folders"></a>
 
 In Amazon S3, buckets and objects are the primary resources, and objects are stored in buckets\. Amazon S3 has a flat structure instead of a hierarchy like you would see in a file system\. However, for the sake of organizational simplicity, the Amazon S3 console supports the folder concept as a means of grouping objects\. Amazon S3 does this by using a shared name prefix for objects \(that is, objects have names that begin with a common string\)\. Object names are also referred to as *key names*\.
 
@@ -9,9 +9,9 @@ Here are two more examples:
 + If you have an object named `photos/2017/example.jpg`, the console will show you a folder named `photos` containing the folder `2017` and the object `example.jpg`\.
 
 **Topics**
-+ [Creating a Folder](create-folder.md)
-+ [How Do I Delete Folders from an S3 Bucket?](delete-folders.md)
-+ [Making Folders Public](public-folders.md)
++ [Creating a folder](create-folder.md)
++ [How do I delete folders from an S3 Bucket?](delete-folders.md)
++ [Making folders public](public-folders.md)
 
 You can have folders within folders, but not buckets within buckets\. You can upload and copy objects directly into a folder\. Folders can be created, deleted, and made public, but they cannot be renamed\. Objects can be copied from one folder to another\. 
 

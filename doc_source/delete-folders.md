@@ -1,4 +1,4 @@
-# How Do I Delete Folders from an S3 Bucket?<a name="delete-folders"></a>
+# How do I delete folders from an S3 Bucket?<a name="delete-folders"></a>
 
 This section explains how to use the Amazon S3 console to delete folders from an S3 bucket\. 
 
@@ -17,5 +17,5 @@ For information about Amazon S3 features and pricing, see [Amazon S3](https://aw
    In the **Delete objects** dialog box, verify that the names of the folders you selected for deletion are listed and then choose **Delete**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/objects-delete-confirm.png)
 
-## Related Topics<a name="delete-folders-related-topics"></a>
-+ [How Do I Delete Objects from an S3 Bucket?](delete-objects.md)
+## Related topics<a name="delete-folders-related-topics"></a>
++ [How do I delete objects from an S3 bucket?](delete-objects.md)

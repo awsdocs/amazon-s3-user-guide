@@ -1,4 +1,4 @@
-# Uploading, Downloading, and Managing Objects<a name="upload-download-objects"></a>
+# Uploading, downloading, and managing objects<a name="upload-download-objects"></a>
 
 To upload your data \(photos, videos, documents etc\.\) to Amazon S3, you must first create an S3 bucket in one of the AWS Regions\. You can then upload an unlimited number of data objects to the bucket\.
 
@@ -13,16 +13,16 @@ Objects can be any file type: images, backups, data, movies, etc\. You can have 
 The following topics explain how to use the Amazon S3 console to upload, delete, and manage objects\.
 
 **Topics**
-+ [Uploading S3 Objects](upload-objects.md)
++ [Uploading S3 objects](upload-objects.md)
 + [Downloading S3 Objects](download-objects.md)
-+ [Deleting Objects](delete-objects.md)
-+ [Undeleting Objects](undelete-objects.md)
++ [Deleting objects](delete-objects.md)
++ [Undeleting objects](undelete-objects.md)
 + [Restoring Archived S3 Objects](restore-archived-objects.md)
-+ [Locking Amazon S3 Objects](object-lock.md)
-+ [Viewing an Overview of an Object](view-object-overview.md)
-+ [Viewing Object Versions](view-object-versions.md)
-+ [Viewing Object Properties](view-object-properties.md)
-+ [Adding Encryption to an Object](add-object-encryption.md)
-+ [Adding Metadata to an Object](add-object-metadata.md)
-+ [Adding Tags to an Object](add-object-tags.md)
-+ [Using Folders](using-folders.md)
++ [Locking Amazon S3 objects](object-lock.md)
++ [Viewing an overview of an object](view-object-overview.md)
++ [Viewing object versions](view-object-versions.md)
++ [Viewing object properties](view-object-properties.md)
++ [Adding encryption to an object](add-object-encryption.md)
++ [Adding metadata to an object](add-object-metadata.md)
++ [Adding tags to an object](add-object-tags.md)
++ [Using folders](using-folders.md)

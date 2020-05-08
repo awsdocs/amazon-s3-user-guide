@@ -6,7 +6,7 @@ Data transfer fees apply when you download objects\. For information about Amazo
 
 **Important**  
 If an object key name consists of a single period \(\.\), or two periods \(\.\.\), you can’t download the object using the Amazon S3 console\. To download an object with a key name of “\.” or “\.\.”, you must use the AWS CLI, AWS SDKs, or REST API\. For more information about naming objects, see [Object Key Naming Guidelines](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-key-guidelines) in the *Amazon Simple Storage Service Developer Guide*\.
-You can't download multiple objects in a single request using the Amazon S3 console\. To download multiple objects, use the AWS CLI, AWS SDKs, or REST API\.
+You can download a single object per request using the Amazon S3 console\. To [download multiple objects, use the AWS CLI, AWS SDKs, or REST API](https://docs.aws.amazon.com/AmazonS3/latest/dev/GettingObjectsUsingAPIs.html)\.
 
 **To download an object from an S3 bucket**
 
@@ -29,4 +29,4 @@ You can't download multiple objects in a single request using the Amazon S3 cons
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-latest-version-download.png)
 
 ## Related Topics<a name="download-objects-related-topics"></a>
-+  [How Do I Upload Files and Folders to an S3 Bucket?](upload-objects.md)
++  [How do I upload files and folders to an S3 bucket?](upload-objects.md)

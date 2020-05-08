@@ -1,4 +1,4 @@
-# How Do I Change the Language of the AWS Management Console?<a name="change-ui-language"></a>
+# How do I change the language of the AWS Management Console?<a name="change-ui-language"></a>
 
 You can change the display language of the AWS Management Console\. Several languages are supported\.
 

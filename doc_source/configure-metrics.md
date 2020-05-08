@@ -1,8 +1,8 @@
-# How Do I Configure Request Metrics for an S3 Bucket?<a name="configure-metrics"></a>
+# How do I configure request metrics for an S3 Bucket?<a name="configure-metrics"></a>
 
 There are three types of Amazon CloudWatch metrics for Amazon S3:
 + *Storage metrics* are reported once per day and are provided to all customers at no additional cost\.
-+ *Replication metrics* are available 15 minutes after enabling a replication rule with S3 Replication Time Control \(S3 RTC\)\. For more information, see [How Do I View Replication Metrics?](viewing-replication-metrics.md)
++ *Replication metrics* are available 15 minutes after enabling a replication rule with S3 Replication Time Control \(S3 RTC\)\. For more information, see [How do I view replication metrics?](viewing-replication-metrics.md)
 + *Request metrics* are available at 1\-minute intervals after some latency to process, and the metrics are billed at the standard CloudWatch rate\. 
 
 For more information about CloudWatch metrics for Amazon S3, see [Monitoring Metrics with Amazon CloudWatch](https://docs.aws.amazon.com/AmazonS3/latest/dev/cloudwatch-monitoring.html) in the *Amazon Simple Storage Service Developer Guide*\.
@@ -32,4 +32,4 @@ To get request metrics, you must opt into them by configuring them on the AWS Ma
 
 You have now created a metrics configuration for all the objects in an Amazon S3 bucket\. About 15 minutes after CloudWatch begins tracking these request metrics, you can see graphs for the metrics on the Amazon S3 or CloudWatch console\. 
 
-You can also define a filter so that the metrics are only collected and reported on a subset of objects in the bucket\. For more information, see [How Do I Configure a Request Metrics Filter?](configure-metrics-filter.md)
+You can also define a filter so that the metrics are only collected and reported on a subset of objects in the bucket\. For more information, see [How do I configure a request metrics filter?](configure-metrics-filter.md)

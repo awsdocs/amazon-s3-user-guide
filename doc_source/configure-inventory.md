@@ -37,12 +37,12 @@ It may take up to 48 hours to deliver the first report\.
       +  **Multipart upload** – Specifies that the object was uploaded as a multipart upload\. For more information, see [Multipart Upload Overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html) in the *Amazon Simple Storage Service Developer Guide*\.
       + **Replication status** – The replication status of the object\. For more information, see [How Do I Add a Replication Rule to an S3 Bucket?](enable-replication.md)\.
       + **Encryption status** – The server\-side encryption used to encrypt the object\. For more information, see [Protecting Data Using Server\-Side Encryption](https://docs.aws.amazon.com/AmazonS3/latest/dev/serv-side-encryption.html) in the *Amazon Simple Storage Service Developer Guide*\.
-      + **Object lock configurations** – The object lock status of the object, including the following settings: 
+      + **S3 Object Lock configurations** – The Object Lock status of the object, including the following settings: 
         + **Retention mode** – The level of protection applied to the object, either *Governance* or *Compliance*\.
         + **Retain until date** – The date until which the locked object cannot be deleted\.
         + **Legal hold status** – The legal hold status of the locked object\. 
 
-        For information about object lock, see [Amazon S3 Object Lock Overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html) in the *Amazon Simple Storage Service Developer Guide*\.
+        For information about S3 Object Lock, see [S3 Object Lock Overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
       For more information about the contents of an inventory report, see [ What's Included in an Amazon S3 Inventory?](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html#storage-inventory-contents) in the *Amazon Simple Storage Service Developer Guide*\.
 
@@ -63,7 +63,7 @@ If an error occurs when you try to create the bucket policy, you are given instr
 
 ![\[A message showing that inventory is successfully saved and another showing a bucket policy error.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/inventory-bucket-policy.png)
 
-In this case, the destination bucket owner must add the displayed bucket policy to the destination bucket\. If the policy is not added to the destination bucket, you won’t get an inventory report because Amazon S3 doesn’t have permission to write to the destination bucket\. If the source bucket is owned by a different account than that of the current user, the correct account ID of the source bucket must be substituted in the policy\.
+In this case, the destination bucket owner must add the displayed bucket policy to the destination bucket\. If the policy is not added to the destination bucket, you won't get an inventory report because Amazon S3 doesn’t have permission to write to the destination bucket\. If the source bucket is owned by a different account than that of the current user, the correct account ID of the source bucket must be substituted in the policy\.
 
 For more information, see [Amazon S3 Inventory](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
@@ -110,4 +110,4 @@ To grant Amazon S3 permission to encrypt using a customer managed AWS Key Manage
    + [Using Key Policies in AWS KMS](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html)
 
 **More Info**  
- [Storage Management](storage-management.md)
+ [Storage management](storage-management.md)

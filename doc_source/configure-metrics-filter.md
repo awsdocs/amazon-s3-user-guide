@@ -1,4 +1,4 @@
-# How Do I Configure a Request Metrics Filter?<a name="configure-metrics-filter"></a>
+# How do I configure a request metrics filter?<a name="configure-metrics-filter"></a>
 
 There are three types of Amazon CloudWatch metrics for Amazon S3: storage metrics, request metrics and replication\. Storage metrics are reported once per day and are provided to all customers at no additional cost\. Request metrics are available at 1 minute intervals after some latency to process, and metrics are billed at the standard CloudWatch rate\. To get request metrics, you must opt into them by configuring them in the console or with the Amazon S3 API\.
 
@@ -28,4 +28,4 @@ For more conceptual information about CloudWatch metrics for Amazon S3, see [Mon
 
 1. Choose **Save**\.
 
-You have now created a metrics configuration for request metrics on a subset of the objects in an Amazon S3 bucket\. About 15 minutes after CloudWatch begins tracking these request metrics, you can see graphs for the metrics in both the Amazon S3 or CloudWatch consoles\. You can also request metrics at the bucket level\. For information, see [How Do I Configure Request Metrics for an S3 Bucket?](configure-metrics.md)
+You have now created a metrics configuration for request metrics on a subset of the objects in an Amazon S3 bucket\. About 15 minutes after CloudWatch begins tracking these request metrics, you can see graphs for the metrics in both the Amazon S3 or CloudWatch consoles\. You can also request metrics at the bucket level\. For information, see [How do I configure request metrics for an S3 Bucket?](configure-metrics.md)

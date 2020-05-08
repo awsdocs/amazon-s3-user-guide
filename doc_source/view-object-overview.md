@@ -1,4 +1,4 @@
-# How Do I See an Overview of an Object?<a name="view-object-overview"></a>
+# How do I see an overview of an object?<a name="view-object-overview"></a>
 
 This section explains how to use the Amazon S3 console to view the object overview panel\. This panel provides an overview of all the essential information for an object in one place\.
 
@@ -20,5 +20,5 @@ This section explains how to use the Amazon S3 console to view the object overvi
 **Important**  
 You can undelete an object only if it was deleted as the latest \(current\) version\. You can't undelete a previous version of an object that was deleted\. For more information, see [Object Versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html) and [Using Versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
-## More Info<a name="view-object-overview-related-topics"></a>
-+  [How Do I See the Versions of an S3 Object?](view-object-versions.md)
+## More info<a name="view-object-overview-related-topics"></a>
++  [How do I see the versions of an S3 object?](view-object-versions.md)

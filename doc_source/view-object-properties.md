@@ -1,4 +1,4 @@
-# How Do I View the Properties of an Object?<a name="view-object-properties"></a>
+# How do I view the properties of an object?<a name="view-object-properties"></a>
 
 This section explains how to use the console to view the properties of an object\.
 
@@ -21,10 +21,10 @@ This section explains how to use the console to view the properties of an object
 
       To change the storage class after you upload an object, choose **Storage class**\. Choose the storage class that you want, and then choose **Save**\.
 
-   1. **Encryption** – You can encrypt your S3 objects\. For more information, see [How Do I Add Encryption to an S3 Object?](add-object-encryption.md)\. 
+   1. **Encryption** – You can encrypt your S3 objects\. For more information, see [How do I add encryption to an S3 object?](add-object-encryption.md)\. 
 
-   1. **Metadata** – Each object in Amazon S3 has a set of name\-value pairs that represents its metadata\. For information on adding metadata to an S3 object, see [How Do I Add Metadata to an S3 Object?](add-object-metadata.md)\.
+   1. **Metadata** – Each object in Amazon S3 has a set of name\-value pairs that represents its metadata\. For information on adding metadata to an S3 object, see [How do I add metadata to an S3 object?](add-object-metadata.md)\.
 **Note**  
  If you change the above properties, a new object will be created and will replace the old one or, turn it into the latest version of the object if versioning is enabled\. The role responseible for this change will also become the owner of the new object or the latest \(object\) version\. 
 
-   1. **Tags** – You can add tags to an S3 object\. For more information, see [How Do I Add Tags to an S3 Object?](add-object-tags.md)\.
+   1. **Tags** – You can add tags to an S3 object\. For more information, see [How do I add tags to an S3 object?](add-object-tags.md)\.

@@ -1,8 +1,8 @@
-# Advanced Settings for S3 Bucket Properties<a name="setup-advanced-bucket-properties"></a>
+# Advanced settings for S3 Bucket properties<a name="setup-advanced-bucket-properties"></a>
 
 This section describes how to configure advanced S3 bucket property settings for object replication, event notification, and transfer acceleration\.
 
 **Topics**
-+ [Setting Up a Destination for Event Notifications](setup-event-notification-destination.md)
-+ [Enabling and Configuring Event Notifications](enable-event-notifications.md)
-+ [Enabling Transfer Acceleration](enable-transfer-acceleration.md)
++ [Setting up a destination for event notifications](setup-event-notification-destination.md)
++ [Enabling and configuring event notifications](enable-event-notifications.md)
++ [Enabling transfer acceleration](enable-transfer-acceleration.md)

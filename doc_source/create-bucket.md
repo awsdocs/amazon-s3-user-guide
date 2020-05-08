@@ -1,4 +1,4 @@
-# How Do I Create an S3 Bucket?<a name="create-bucket"></a>
+# How do I create an S3 Bucket?<a name="create-bucket"></a>
 
 Before you can upload data to Amazon S3, you must create a bucket in one of the AWS Regions to store your data\. After you create a bucket, you can upload an unlimited number of data objects to the bucket\. 
 
@@ -34,18 +34,18 @@ Avoid including sensitive information, such as account numbers, in the bucket na
 
    We recommend that you leave all settings enabled unless you know you need to turn one or more of them off for your use case, such as to host a public website\. Block public access settings that you enable for the bucket will also be enabled for all access points that you create on the bucket\. For more information about blocking public access, see [Using Amazon S3 Block Public Access](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
-1. \(Optional\) If you want to enable Amazon S3 Object Lock:
+1. \(Optional\) If you want to enable :
 
    1. Choose **Advanced settings**, and read the message that appears\.
 **Important**  
-You can only enable object lock for a bucket when you create it\. If you enable object lock for the bucket, you can't disable it later\. Enabling object lock also enables versioning for the bucket\. After you enable object lock for the bucket, you must configure the object lock settings before any objects in the bucket will be protected\. For more information about configuring protection for objects, see [How Do I Lock an Amazon S3 Object?](object-lock.md)\.
+You can only enable S3 Object Lock for a bucket when you create it\. If you enable Object Lock for the bucket, you can't disable it later\. Enabling Object Lock also enables versioning for the bucket\. After you enable Object Lock for the bucket, you must configure the Object Lock settings before any objects in the bucket will be protected\. For more information about configuring protection for objects, see [How do I lock an Amazon S3 object?](object-lock.md)\.
 
-   1. If you want to enable object lock, enter *enable* in the text box and choose **Confirm**\.
+   1. If you want to enable Object Lock, enter *enable* in the text box and choose **Confirm**\.
 
-   For more information about the Amazon S3 Object Lock feature, see [Locking Objects Using Amazon S3 Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) in the *Amazon Simple Storage Service Developer Guide*\.
+   For more information about the S3 Object Lock feature, see [Locking Objects Using Amazon S3 Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 1. Choose **Create bucket**\.
 
-## More Info<a name="create-bucket-moreinfo"></a>
-+ [How Do I Delete an S3 Bucket?](delete-bucket.md)
-+ [How Do I Set ACL Bucket Permissions?](set-bucket-permissions.md)
+## More info<a name="create-bucket-moreinfo"></a>
++ [How do I delete an S3 Bucket?](delete-bucket.md)
++ [How do I set ACL bucket permissions?](set-bucket-permissions.md)

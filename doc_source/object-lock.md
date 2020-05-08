@@ -1,10 +1,10 @@
-# How Do I Lock an Amazon S3 Object?<a name="object-lock"></a>
+# How do I lock an Amazon S3 object?<a name="object-lock"></a>
 
-With Amazon S3 object lock, you can store objects in Amazon S3 using a *write\-once\-read\-many* \(WORM\) model\. You can use Amazon S3 object lock to prevent an object from being deleted or overwritten for a fixed amount of time or indefinitely\. For information about object locking using the AWS CLI, AWS SDKs, and the Amazon S3 REST APIs, see [Locking Objects Using Amazon S3 Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) in the *Amazon Simple Storage Service Developer Guide*\.
+With S3 Object Lock, you can store objects in Amazon S3 using a *write\-once\-read\-many* \(WORM\) model\. You can use S3 Object Lock to prevent an object from being deleted or overwritten for a fixed amount of time or indefinitely\. For information about object locking using the AWS CLI, AWS SDKs, and the Amazon S3 REST APIs, see [Locking Objects Using Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
-Before you lock any objects, you have to enable a bucket to use Amazon S3 object lock\. You enable object lock when you create a bucket\. After you enable Amazon S3 object lock on a bucket, you can lock objects in that bucket\. When you create a bucket with object lock enabled, you can't disable object lock or suspend versioning for that bucket\. 
+Before you lock any objects, you have to enable a bucket to use S3 Object Lock\. You enable Object Lock when you create a bucket\. After you enable Object Lock on a bucket, you can lock objects in that bucket\. When you create a bucket with Object Lock enabled, you can't disable Object Lock or suspend versioning for that bucket\. 
 
-For information about creating a bucket with Amazon S3 object lock enabled, see [How Do I Create an S3 Bucket?](create-bucket.md)\.
+For information about creating a bucket with S3 Object Lock enabled, see [How do I create an S3 Bucket?](create-bucket.md)\.
 
 **To lock an Amazon S3 object**
 
@@ -19,13 +19,13 @@ For information about creating a bucket with Amazon S3 object lock enabled, see 
 1. Choose **Properties**\.  
 ![\[Console screenshot showing the properties tab.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-properties.png)
 
-1. Choose **Object lock**\.   
-![\[Console screenshot showing the object lock property box.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-lock-box.png)
+1. Choose **Object Lock**\.   
+![\[Console screenshot showing the S3 Object Lock property box.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-lock-box.png)
 
-1. Choose a retention mode\. You can change the **Retain until date**\. You can also choose to enable a legal hold\. For more information, see [Amazon S3 Object Lock Overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html) in the *Amazon Simple Storage Service Developer Guide*\.  
-![\[Console screenshot showing the object lock dialog box.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/enable-lock-on-object.png)
+1. Choose a retention mode\. You can change the **Retain until date**\. You can also choose to enable a legal hold\. For more information, see [S3 Object Lock Overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html) in the *Amazon Simple Storage Service Developer Guide*\.  
+![\[Console screenshot showing the Object Lock dialog box.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/enable-lock-on-object.png)
 
 1. Choose **Save**\.
 
-## More Info<a name="object-lock-moreinfo"></a>
-+  [Setting Bucket and Object Access Permissions](set-permissions.md)
+## More info<a name="object-lock-moreinfo"></a>
++  [Setting bucket and object access permissions](set-permissions.md)

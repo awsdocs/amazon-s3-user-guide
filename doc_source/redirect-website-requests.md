@@ -1,4 +1,4 @@
-# How Do I Redirect Requests to an S3 Bucket Hosted Website to Another Host?<a name="redirect-website-requests"></a>
+# How do I redirect requests to an S3 Bucket hosted website to another host?<a name="redirect-website-requests"></a>
 
 You can redirect all requests for a website endpoint for a bucket to another host\. If you redirect all requests, any request made to the website endpoint is redirected to the specified host name\. 
 

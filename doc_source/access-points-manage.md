@@ -1,4 +1,4 @@
-# Managing and Using Amazon S3 Access Points<a name="access-points-manage"></a>
+# Managing and using Amazon S3 access points<a name="access-points-manage"></a>
 
 This section explains how to manage and use your Amazon S3 access points using the AWS Management Console\. Each access point is associated with a single Amazon S3 bucket\. Before you begin, navigate to the list of your access points for a bucket as described in the following procedure\.
 

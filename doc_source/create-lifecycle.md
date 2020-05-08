@@ -1,4 +1,4 @@
-# How Do I Create a Lifecycle Policy for an S3 Bucket?<a name="create-lifecycle"></a>
+# How do I create a lifecycle policy for an S3 Bucket?<a name="create-lifecycle"></a>
 
 You can use lifecycle policies to define actions you want Amazon S3 to take during an object's lifetime \(for example, transition objects to another storage class, archive them, or delete them after a specified period of time\)\.
 
@@ -26,7 +26,7 @@ If you do not enter a prefix or tag to limit the scope of your lifecycle rule, i
 
 1. You configure lifecycle rules by defining rules to transition objects to the Standard\-IA, One Zone\-IA, Glacier, and Deep Archive storage classes\. For more information, see [Storage Classes](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
-   You can define transitions for current or previous object versions, or for both current and previous versions\. Versioning enables you to keep multiple versions of an object in one bucket\. For more information about versioning, see [How Do I Enable or Suspend Versioning for an S3 Bucket?](enable-versioning.md)\.
+   You can define transitions for current or previous object versions, or for both current and previous versions\. Versioning enables you to keep multiple versions of an object in one bucket\. For more information about versioning, see [How do I enable or suspend versioning for an S3 Bucket?](enable-versioning.md)\.
 
    1. Select **Current version** to define transitions that are applied to the current version of the object\. 
 

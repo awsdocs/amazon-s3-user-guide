@@ -1,4 +1,4 @@
-# How Do I Add Cross\-Domain Resource Sharing with CORS?<a name="add-cors-configuration"></a>
+# How do I add cross\-domain resource sharing with CORS?<a name="add-cors-configuration"></a>
 
 This section explains how to use the Amazon S3 console to add a cross\-origin resource sharing \(CORS\) configuration to an S3 bucket\. CORS allows client web applications that are loaded in one domain to interact with resources in another domain\. 
 
@@ -22,7 +22,7 @@ When you enable CORS on the bucket, the access control lists \(ACLs\) and other 
 **Note**  
 Amazon S3 displays the Amazon Resource Name \(ARN\) for the bucket next to the **CORS configuration editor** title\. For more information about ARNs, see [Amazon Resource Names \(ARNs\) and AWS Service Namespaces](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the *Amazon Web Services General Reference*\.
 
-## More Info<a name="add-cors-configuration-moreinfo"></a>
-+  [Setting Bucket and Object Access Permissions](set-permissions.md)
-+ [How Do I Set ACL Bucket Permissions?](set-bucket-permissions.md)
-+ [How Do I Add an S3 Bucket Policy?](add-bucket-policy.md)
+## More info<a name="add-cors-configuration-moreinfo"></a>
++  [Setting bucket and object access permissions](set-permissions.md)
++ [How do I set ACL bucket permissions?](set-bucket-permissions.md)
++ [How do I add an S3 Bucket policy?](add-bucket-policy.md)

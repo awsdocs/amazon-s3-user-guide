@@ -1,4 +1,4 @@
-# How Do I Set ACL Bucket Permissions?<a name="set-bucket-permissions"></a>
+# How do I set ACL bucket permissions?<a name="set-bucket-permissions"></a>
 
 This section explains how to use the Amazon Simple Storage Service \(Amazon S3\) console to manage access permissions for S3 buckets by using access control lists \(ACLs\)\. ACLs are resource\-based access policies that grant access permissions to buckets and objects\. For more information about managing access permissions with resource\-based policies, see [Overview of Managing Access](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-overview.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
@@ -56,11 +56,11 @@ Use caution when granting the **Everyone** group public access to your S3 bucket
 
       To grant access to Amazon S3 to write server access logs to the bucket, under **S3 log delivery group**, choose **Log Delivery**\.
 
-      If a bucket is set up as the target bucket to receive access logs, the bucket permissions must allow the **Log Delivery** group write access to the bucket\. When you enable server access logging on a bucket, the Amazon S3 console grants write access to the **Log Delivery** group for the target bucket that you choose to receive the logs\. For more information about server access logging, see [How Do I Enable Server Access Logging for an S3 Bucket?](server-access-logging.md)\.
+      If a bucket is set up as the target bucket to receive access logs, the bucket permissions must allow the **Log Delivery** group write access to the bucket\. When you enable server access logging on a bucket, the Amazon S3 console grants write access to the **Log Delivery** group for the target bucket that you choose to receive the logs\. For more information about server access logging, see [How do I enable server access logging for an S3 bucket?](server-access-logging.md)\.
 
-You can also set bucket permissions when you are creating a bucket\. For more information about setting permissions when creating a bucket, see [How Do I Create an S3 Bucket?](create-bucket.md)\. 
+You can also set bucket permissions when you are creating a bucket\. For more information about setting permissions when creating a bucket, see [How do I create an S3 Bucket?](create-bucket.md)\. 
 
-## More Info<a name="set-bucket-permissions-moreinfo"></a>
-+  [Setting Bucket and Object Access Permissions](set-permissions.md)
-+ [How Do I Set Permissions on an Object?](set-object-permissions.md)
-+ [How Do I Add an S3 Bucket Policy?](add-bucket-policy.md)
+## More info<a name="set-bucket-permissions-moreinfo"></a>
++  [Setting bucket and object access permissions](set-permissions.md)
++ [How do I set permissions on an object?](set-object-permissions.md)
++ [How do I add an S3 Bucket policy?](add-bucket-policy.md)

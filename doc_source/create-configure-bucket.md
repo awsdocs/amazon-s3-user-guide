@@ -1,4 +1,4 @@
-# Creating and Configuring an S3 Bucket<a name="create-configure-bucket"></a>
+# Creating and configuring an S3 bucket<a name="create-configure-bucket"></a>
 
 To upload your data \(photos, videos, documents etc\.\) to Amazon S3, you must first create an S3 bucket in one of the AWS Regions\. You can then upload your data objects to the bucket\.
 
@@ -13,14 +13,14 @@ Amazon S3 bucket names are globally unique, regardless of the AWS Region in whic
 The following topics explain how to use the Amazon S3 console to create, delete, and manage buckets\.
 
 **Topics**
-+ [Creating a Bucket](create-bucket.md)
-+ [Deleting a Bucket](delete-bucket.md)
-+ [Emptying a Bucket](empty-bucket.md)
-+ [Viewing Bucket Properties](view-bucket-properties.md)
-+ [Enabling or Disabling Versioning](enable-versioning.md)
-+ [Enabling Default Encryption](default-bucket-encryption.md)
-+ [Enabling Server Access Logging](server-access-logging.md)
-+ [Enabling Object\-Level Logging](enable-cloudtrail-events.md)
-+ [Configuring Static Website Hosting](static-website-hosting.md)
-+ [Redirecting Website Requests](redirect-website-requests.md)
-+ [Advanced Settings](setup-advanced-bucket-properties.md)
++ [Creating a bucket](create-bucket.md)
++ [Deleting a bucket](delete-bucket.md)
++ [Emptying a bucket](empty-bucket.md)
++ [Viewing bucket properties](view-bucket-properties.md)
++ [Enabling or disabling versioning](enable-versioning.md)
++ [Enabling default encryption](default-bucket-encryption.md)
++ [Enabling server access logging](server-access-logging.md)
++ [Enabling object\-level logging](enable-cloudtrail-events.md)
++ [Configuring static website hosting](static-website-hosting.md)
++ [Redirecting website requests](redirect-website-requests.md)
++ [Advanced settings](setup-advanced-bucket-properties.md)

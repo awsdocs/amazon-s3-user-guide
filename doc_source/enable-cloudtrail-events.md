@@ -1,4 +1,4 @@
-# How Do I Enable Object\-Level Logging for an S3 Bucket with AWS CloudTrail Data Events?<a name="enable-cloudtrail-events"></a>
+# How do I enable object\-level logging for an S3 Bucket with AWS CloudTrail data events?<a name="enable-cloudtrail-events"></a>
 
 This section describes how to enable an AWS CloudTrail trail to log data events for objects in an S3 bucket by using the Amazon S3 console\. CloudTrail supports logging Amazon S3 object\-level API operations such as `GetObject`, `DeleteObject`, and `PutObject`\. These events are called data events\. By default, CloudTrail trails don't log data events, but you can configure trails to log data events for S3 buckets that you specify, or to log data events for all the Amazon S3 buckets in your AWS account\. For more information, see [ Logging Amazon S3 API Calls Using AWS CloudTrail](https://docs.aws.amazon.com/AmazonS3/latest/dev/cloudtrail-logging)\. CloudTrail does not populate data events in the CloudTrail event history\. Additionally, not all bucket\-level actions are populated in the CloudTrail event history\. For more information, see [Using Amazon CloudWatch Logs filter patterns and Amazon Athena to query CloudTrail logs\. ](https://aws.amazon.com/premiumsupport/knowledge-center/find-cloudtrail-object-level-events/)
 
@@ -44,9 +44,9 @@ The following procedure shows how to use the Amazon S3 console to enable a Cloud
 **Note**  
 If you use the CloudTrail console or the Amazon S3 console to configure a trail to log data events for an S3 bucket, the Amazon S3 console shows that object\-level logging is enabled for the bucket\. 
 
-For information about enabling object\-level logging when you create an S3 bucket, see [How Do I Create an S3 Bucket?](create-bucket.md)\.
+For information about enabling object\-level logging when you create an S3 bucket, see [How do I create an S3 Bucket?](create-bucket.md)\.
 
-## More Info<a name="enable-cloudtrail-events-moreinfo"></a>
-+ [How Do I View the Properties for an S3 Bucket?](view-bucket-properties.md)
+## More info<a name="enable-cloudtrail-events-moreinfo"></a>
++ [How do I view the properties for an S3 Bucket?](view-bucket-properties.md)
 + [ Logging Amazon S3 API Calls By Using AWS CloudTrail](https://docs.aws.amazon.com/AmazonS3/latest/dev/cloudtrail-logging.html) in the *Amazon Simple Storage Service Developer Guide* 
 + [ Working with CloudTrail Log Files](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-working-with-log-files.html) in the *AWS CloudTrail User Guide*

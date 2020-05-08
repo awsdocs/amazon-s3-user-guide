@@ -1,4 +1,4 @@
-# How Do I Edit Public Access Settings for All the S3 Buckets in an AWS Account?<a name="block-public-access-account"></a>
+# How do I edit public access settings for all the S3 buckets in an AWS account?<a name="block-public-access-account"></a>
 
 Amazon S3 block public access prevents the application of any settings that allow public access to data within S3 buckets\. This section describes how to edit block public access settings for all the S3 buckets in your AWS account\. For information about blocking public using the AWS CLI, AWS SDKs, and the Amazon S3 REST APIs, see [Using Amazon S3 Block Public Access](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
@@ -16,7 +16,7 @@ Amazon S3 block public access prevents the application of any settings that allo
 
 1. When you're asked for confirmation, enter **confirm**\. Then choose **Confirm** to save your changes\.
 
-## More Info<a name="block-public-access-account-moreinfo"></a>
-+ [How Do I Block Public Access to S3 Buckets?](block-public-access.md)
-+ [How Do I Edit Public Access Settings for S3 Buckets?](block-public-access-bucket.md)
-+ [Setting Bucket and Object Access Permissions](set-permissions.md)
+## More info<a name="block-public-access-account-moreinfo"></a>
++ [How do I block public access to S3 buckets?](block-public-access.md)
++ [How do I edit public access settings for S3 buckets?](block-public-access-bucket.md)
++ [Setting bucket and object access permissions](set-permissions.md)

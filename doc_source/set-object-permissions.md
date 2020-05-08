@@ -1,4 +1,4 @@
-# How Do I Set Permissions on an Object?<a name="set-object-permissions"></a>
+# How do I set permissions on an object?<a name="set-object-permissions"></a>
 
 This section explains how to use the Amazon Simple Storage Service \(Amazon S3\) console to manage access permissions for an Amazon S3 object by using access control lists \(ACLs\)\. ACLs are resource\-based access policies that grant access permissions to buckets and objects\. For more information about managing access permissions with resource\-based policies, see [Overview of Managing Access](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-overview.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
@@ -54,8 +54,8 @@ Each permission you grant for a user or a group adds an entry in the ACL that is
 Use caution when granting the **Everyone** group anonymous access to your Amazon S3 objects\. When you grant access to this group, anyone in the world can access your object\. If you need to grant access to everyone, we highly recommend that you only grant permissions to **Read objects**\.  
 We highly recommend that you *do not* grant the **Everyone** group write object permissions\. Doing so allows anyone to overwrite the ACL permissions for the object\.
 
-You can also set object permissions when you upload objects\. For more information about setting permissions when uploading objects, see [How Do I Upload Files and Folders to an S3 Bucket?](upload-objects.md)\. 
+You can also set object permissions when you upload objects\. For more information about setting permissions when uploading objects, see [How do I upload files and folders to an S3 bucket?](upload-objects.md)\. 
 
 ## More Info<a name="set-object-permissions-moreinfo"></a>
-+  [Setting Bucket and Object Access Permissions](set-permissions.md)
-+ [How Do I Set ACL Bucket Permissions?](set-bucket-permissions.md)
++  [Setting bucket and object access permissions](set-permissions.md)
++ [How do I set ACL bucket permissions?](set-bucket-permissions.md)

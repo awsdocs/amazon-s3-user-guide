@@ -2,7 +2,7 @@
 
 Replication is the automatic, asynchronous copying of objects across buckets in the same or different AWS Regions\. Replication copies newly created objects and object updates from a source bucket to a destination bucket\. For more information about replication concepts and how to use replication with the AWS CLI, AWS SDKs, and the Amazon S3 REST APIs, see [Replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.html) in the *Amazon Simple Storage Service Developer Guide*\. 
 
-Replication requires versioning to be enabled on both the source and destination buckets\. To review the full list of requirements, see [Requirements for Replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.html#replication-requirements) in the *Amazon Simple Storage Service Developer Guide*\. For more information about versioning, see [How Do I Enable or Suspend Versioning for an S3 Bucket?](enable-versioning.md)
+Replication requires versioning to be enabled on both the source and destination buckets\. To review the full list of requirements, see [Requirements for Replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.html#replication-requirements) in the *Amazon Simple Storage Service Developer Guide*\. For more information about versioning, see [How do I enable or suspend versioning for an S3 Bucket?](enable-versioning.md)
 
 The object replicas in the destination bucket are exact replicas of the objects in the source bucket\. They have the same key names and the same metadata—for example, creation time, owner, user\-defined metadata, version ID, access control list \(ACL\), and storage class\. Optionally, you can explicitly specify a different storage class for object replicas\. And regardless of who owns the source bucket or the source object, you can choose to change replica ownership to the AWS account that owns the destination bucket\. For more information, see [Changing the Replica Owner](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-change-owner.html) in the *Amazon Simple Storage Service Developer Guide*\. 
 
@@ -12,6 +12,8 @@ You can use S3 Replication Time Control \(S3 RTC\) to replicate your data in the
 Metadata for an object remains identical between original objects and replica objects\. Lifecycle rules abide by the creation time of the original object, and not by when the replicated object becomes available in the destination bucket\. However, lifecycle does not act on objects that are pending replication until replication is complete\.
 
 You use the Amazon S3 console to add replication rules to the source bucket\. Replication rules define which source bucket objects to replicate and the destination bucket where the replicated objects are stored\. You can create a rule to replicate all the objects in a bucket or a subset of objects with a specific key name prefix, one or more object tags, or both\. A destination bucket can be in the same AWS account as the source bucket, or it can be in a different account\.
+
+If you specify an object version ID to delete, Amazon S3 deletes that object version in the source bucket\. But it doesn't replicate the deletion in the destination bucket\. In other words, it doesn't delete the same object version from the destination bucket\. This protects data from malicious deletions\.
 
 If the destination bucket is in a different account from the source bucket, you must add a bucket policy to the destination bucket to grant the owner of the source bucket account permission to replicate objects in the destination bucket\. The Amazon S3 console builds this required bucket policy for you to copy and add to the destination bucket in the other account\. 
 
@@ -49,7 +51,7 @@ Follow these steps to configure a replication rule when the destination bucket i
 **Important**  
 When you replicate objects that are encrypted with AWS KMS, the AWS KMS request rate doubles in the source Region and increases in the destination Region by the same amount\. These increased call rates to AWS KMS are due to the way that data is re\-encrypted using the customer master key \(CMK\) that you define for the replication destination Region\. AWS KMS has a request rate limit that is per calling account per Region\. For information about the limit defaults, see [AWS KMS Limits \- Requests per Second: Varies](https://docs.aws.amazon.com/kms/latest/developerguide/limits.html#requests-per-second) in the *AWS Key Management Service Developer Guide*\.   
 If your current Amazon S3 PUT object request rate during replication is more than half the default AWS KMS rate limit for your account, we recommend that you request an increase to your AWS KMS request rate limit\. To request an increase, create a case in the AWS Support Center at [Contact Us](https://aws.amazon.com/contact-us/)\. For example, suppose that your current PUT object request rate is 1,000 requests per second and you use AWS KMS to encrypt your objects\. In this case, we recommend that you ask AWS Support to increase your AWS KMS rate limit to 2,500 requests per second, in both your source and destination Regions \(if different\), to ensure that there is no throttling by AWS KMS\.   
-To see your PUT object request rate in the source bucket, view `PutRequests` in the Amazon CloudWatch request metrics for Amazon S3\. For information about viewing CloudWatch metrics, see [How Do I Configure Request Metrics for an S3 Bucket?](configure-metrics.md)
+To see your PUT object request rate in the source bucket, view `PutRequests` in the Amazon CloudWatch request metrics for Amazon S3\. For information about viewing CloudWatch metrics, see [How do I configure request metrics for an S3 Bucket?](configure-metrics.md)
 
    Choose **Next**\.
 
@@ -116,7 +118,7 @@ Follow these steps to configure a replication rule when the destination bucket i
    On the **Replication rule** wizard **Set destination** page, under **Destination bucket**, choose **Buckets in another account**\. Then enter the name of the destination bucket and the account ID from a different AWS account\. Choose **Save**\.   
 ![\[Console screenshot showing choosing a destination bucket in a different AWS account.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-bucket-cross-account.png)
 
-   After you save the destination bucket name and account ID, you might get a warning message telling you to add a bucket policy to the destination bucket so that Amazon S3 can verify whether versioning is enabled on the bucket\. You'll be presented with a bucket policy in a few steps which you can copy and add to the destination bucket in the other account\. For information about adding a bucket policy to an S3 bucket and versioning, see [How Do I Add an S3 Bucket Policy?](add-bucket-policy.md) and [How Do I Enable or Suspend Versioning for an S3 Bucket?](enable-versioning.md)  
+   After you save the destination bucket name and account ID, you might get a warning message telling you to add a bucket policy to the destination bucket so that Amazon S3 can verify whether versioning is enabled on the bucket\. You'll be presented with a bucket policy in a few steps which you can copy and add to the destination bucket in the other account\. For information about adding a bucket policy to an S3 bucket and versioning, see [How do I add an S3 Bucket policy?](add-bucket-policy.md) and [How do I enable or suspend versioning for an S3 Bucket?](enable-versioning.md)  
 ![\[Warning message stating that S3 can't detect whether versioning is enabled on the destination bucket.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-x-account-error.png)
 
 1. If you chose to replicate objects encrypted with AWS KMS, under **Destination encryption settings**, enter the Amazon Resource Name \(ARN\) AWS KMS CMK to use to encrypt the replicas in the destination bucket\. 
@@ -143,7 +145,7 @@ When you use S3 RTC, additional per\-GB data transfer fees and CloudWatch metric
    + You can choose to use an existing IAM role\. If you do, you must choose a role that allows Amazon S3 to replicate objects from the source bucket to the destination bucket on your behalf\.  
 ![\[Console screenshot showing where you select an IAM role for your replication.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-permissions.png)
 
-1. A bucket policy is provided on the **Configure options** page that you can copy and add to the destination bucket in the other account\. For information about adding a bucket policy to an S3 bucket, see [How Do I Add an S3 Bucket Policy?](add-bucket-policy.md)  
+1. A bucket policy is provided on the **Configure options** page that you can copy and add to the destination bucket in the other account\. For information about adding a bucket policy to an S3 bucket, see [How do I add an S3 Bucket policy?](add-bucket-policy.md)  
 ![\[Console screenshot showing an example bucket policy for the destination bucket.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/crr-wizard-destination-permissions-policy.png)
 
 1. If you chose to replicate objects encrypted with AWS KMS, an AWS KMS key policy is provided on the **Configure options** page\. You can copy this policy to add to the key policy for the AWS KMS CMK that you are using\. The key policy grants the source bucket owner permission to use the CMK\. For information about updating the key policy, see [Grant the Source Bucket Owner Permission to Encrypt Using the AWS KMS CMK](#enable-replication-kms-key-policy)\.   
@@ -187,6 +189,6 @@ You must grant permissions to the account of the source bucket owner to encrypt 
 For more information about creating and editing AWS KMS CMKs, see [Getting Started](https://docs.aws.amazon.com/kms/latest/developerguide/getting-started.html) in the *AWS Key Management Service Developer Guide*\. 
 
 ## More Info<a name="enable-replication-moreinfo"></a>
-+ [How Do I Manage the Replication Rules for an S3 Bucket?](disable-replication.md)
-+ [How Do I Enable or Suspend Versioning for an S3 Bucket?](enable-versioning.md)
++ [How do I manage the replication rules for an S3 Bucket?](disable-replication.md)
++ [How do I enable or suspend versioning for an S3 Bucket?](enable-versioning.md)
 + [Replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.html) in the *Amazon Simple Storage Service Developer Guide*

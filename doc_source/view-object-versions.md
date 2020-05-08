@@ -1,8 +1,8 @@
-# How Do I See the Versions of an S3 Object?<a name="view-object-versions"></a>
+# How do I see the versions of an S3 object?<a name="view-object-versions"></a>
 
 This section explains how to use the Amazon S3 console to see the different versions of an object\.
 
-A versioning\-enabled bucket can have many versions of the same object:, one current \(latest\) version and zero or more noncurrent \(previous\) versions\. Amazon S3 assigns each object a unique version ID\. For information about enabling versioning, see [How Do I Enable or Suspend Versioning for an S3 Bucket?](enable-versioning.md)\. 
+A versioning\-enabled bucket can have many versions of the same object:, one current \(latest\) version and zero or more noncurrent \(previous\) versions\. Amazon S3 assigns each object a unique version ID\. For information about enabling versioning, see [How do I enable or suspend versioning for an S3 Bucket?](enable-versioning.md)\. 
 
 If a bucket is versioning\-enabled, Amazon S3 creates another version of an object under the following conditions: 
 + If you upload an object that has the same name as an object that already exists in the bucket, Amazon S3 creates another version of the object instead of replacing the existing object\. 
@@ -22,11 +22,11 @@ For more information about versioning support in Amazon S3, see [Object Versioni
     To list the objects without the versions, choose **Hide**\.  
 ![\[Hide and Show version buttons and list of object versions\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-show-versions-list.png)
 
-You also can view, download, and delete object versions in the object overview panel\. For more information, see [How Do I See an Overview of an Object?](view-object-overview.md)\.
+You also can view, download, and delete object versions in the object overview panel\. For more information, see [How do I see an overview of an object?](view-object-overview.md)\.
 
 **Important**  
 You can undelete an object only if it was deleted as the latest \(current\) version\. You can't undelete a previous version of an object that was deleted\. For more information, see [Object Versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html) and [Using Versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
-## More Info<a name="view-object-versions-related-topics"></a>
-+  [How Do I Enable or Suspend Versioning for an S3 Bucket?](enable-versioning.md)
-+ [How Do I Create a Lifecycle Policy for an S3 Bucket?](create-lifecycle.md)
+## More info<a name="view-object-versions-related-topics"></a>
++  [How do I enable or suspend versioning for an S3 Bucket?](enable-versioning.md)
++ [How do I create a lifecycle policy for an S3 Bucket?](create-lifecycle.md)

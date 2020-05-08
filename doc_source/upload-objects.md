@@ -1,6 +1,6 @@
-# How Do I Upload Files and Folders to an S3 Bucket?<a name="upload-objects"></a>
+# How do I upload files and folders to an S3 bucket?<a name="upload-objects"></a>
 
-This topic explains how to use the AWS Management Console to upload one or more files or entire folders to an Amazon S3 bucket\. Before you can upload files and folders to an Amazon S3 bucket, you need write permissions for the bucket\. For more information about access permissions, see [Setting Bucket and Object Access Permissions](set-permissions.md)\. For information about uploading files programmatically, see [Uploading Objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/UploadingObjects.html) in the *Amazon Simple Storage Service Developer Guide*\. 
+This topic explains how to use the AWS Management Console to upload one or more files or entire folders to an Amazon S3 bucket\. Before you can upload files and folders to an Amazon S3 bucket, you need write permissions for the bucket\. For more information about access permissions, see [Setting bucket and object access permissions](set-permissions.md)\. For information about uploading files programmatically, see [Uploading Objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/UploadingObjects.html) in the *Amazon Simple Storage Service Developer Guide*\. 
 
 When you upload a file to Amazon S3, it is stored as an S3 object\. Objects consist of the file data and metadata that describes the object\. You can have an unlimited number of objects in a bucket\.
 
@@ -14,7 +14,7 @@ If you upload individual files and you have a folder open in the Amazon S3 conso
 
 If you upload individual files and you do not have a folder open in the Amazon S3 console, when Amazon S3 uploads the files, it assigns only the file name as the key name\. For example, if you upload a file named `sample1.jpg`, the key name is `sample1.jpg`\. For more information on key names, see [Object Key and Metadata](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
-If you upload an object with a key name that already exists in a versioning\-enabled bucket, Amazon S3 creates another version of the object instead of replacing the existing object\. For more information about versioning, see [How Do I Enable or Suspend Versioning for an S3 Bucket?](enable-versioning.md)\.
+If you upload an object with a key name that already exists in a versioning\-enabled bucket, Amazon S3 creates another version of the object instead of replacing the existing object\. For more information about versioning, see [How do I enable or suspend versioning for an S3 Bucket?](enable-versioning.md)\.
 
 **Topics**
 + [Uploading Files and Folders by Using Drag and Drop](#upload-objects-by-drag-and-drop)
@@ -41,16 +41,16 @@ If you are using the Chrome or Firefox browsers, you can choose the folders and 
 
    1. Drag and drop more files and folders to the console window that displays the **Upload** dialog box\. To add more files, you can also choose **Add more files**\. This option works *only* for files, not folders\.
 
-   1. To immediately upload the listed files and folders without granting or removing permissions for specific users or setting public permissions for all of the files that you're uploading, choose **Upload**\. For information about object access permissions, see [How Do I Set Permissions on an Object?](set-object-permissions.md)\. 
+   1. To immediately upload the listed files and folders without granting or removing permissions for specific users or setting public permissions for all of the files that you're uploading, choose **Upload**\. For information about object access permissions, see [How do I set permissions on an object?](set-object-permissions.md)\. 
 
    1. To set permissions or properties for the files that you are uploading, choose **Next**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/upload-display-files-and-folders.png)
 
 1. On the **Set Permissions** page, under **Manage users** you can change the permissions for the AWS account owner\. The *owner* refers to the AWS account root user, and not an AWS Identity and Access Management \(IAM\) user\. For more information about the root user, see [The AWS Account Root User](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html)\. 
 
-   Choose **Add account** to grant access to another AWS account\. For more information about granting permissions to another AWS account, see [How Do I Set ACL Bucket Permissions?](set-bucket-permissions.md)\.
+   Choose **Add account** to grant access to another AWS account\. For more information about granting permissions to another AWS account, see [How do I set ACL bucket permissions?](set-bucket-permissions.md)\.
 
-   Under **Manage public permissions** you can grant read access to your objects to the general public \(everyone in the world\), for all of the files that you're uploading\. Granting public read access is applicable to a small subset of use cases such as when buckets are used for websites\. We recommend that you do not change the default setting of **Do not grant public read access to this object\(s\)**\. You can always make changes to object permissions after you upload the object\. For information about object access permissions, see [How Do I Set Permissions on an Object?](set-object-permissions.md)\. 
+   Under **Manage public permissions** you can grant read access to your objects to the general public \(everyone in the world\), for all of the files that you're uploading\. Granting public read access is applicable to a small subset of use cases such as when buckets are used for websites\. We recommend that you do not change the default setting of **Do not grant public read access to this object\(s\)**\. You can always make changes to object permissions after you upload the object\. For information about object access permissions, see [How do I set permissions on an object?](set-object-permissions.md)\. 
 
    When you're done configuring permissions, choose **Next**\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/upload-set-permissions.png)
@@ -129,5 +129,5 @@ This procedure explains how to upload files into an S3 bucket by choosing **Uplo
 1. To set permissions and properties, start with **Step 5** of [Uploading Files and Folders by Using Drag and Drop](#upload-objects-by-drag-and-drop)\.
 
 ## More Info<a name="upload-objects-moreinfo"></a>
-+ [How Do I Set Permissions on an Object?](set-object-permissions.md)\.
++ [How do I set permissions on an object?](set-object-permissions.md)\.
 +  [How Do I Download an Object from an S3 Bucket?](download-objects.md)

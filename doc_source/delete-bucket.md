@@ -1,4 +1,4 @@
-# How Do I Delete an S3 Bucket?<a name="delete-bucket"></a>
+# How do I delete an S3 Bucket?<a name="delete-bucket"></a>
 
 You can delete an empty bucket, and when you're using the AWS Management Console, you can delete a bucket that contains objects\. If you delete a bucket that contains objects, all the objects in the bucket are permanently deleted\. 
 
@@ -23,6 +23,6 @@ If you want to continue to use the same bucket name, don't delete the bucket\. W
 **Note**  
 If the bucket contains any objects, empty the bucket before deleting it by selecting the *empty bucket configuration* link in the **This bucket is not empty** error alert and following the instructions on the **Empty bucket** page\. Then return to the **Delete bucket** page and delete the bucket\.
 
-## More Info<a name="delete-bucket-moreinfo"></a>
-+ [How Do I Empty an S3 Bucket?](empty-bucket.md)
-+ [How Do I Delete Objects from an S3 Bucket?](delete-objects.md)
+## More info<a name="delete-bucket-moreinfo"></a>
++ [How do I empty an S3 Bucket?](empty-bucket.md)
++ [How do I delete objects from an S3 bucket?](delete-objects.md)

@@ -1,4 +1,4 @@
-# How Do I Enable Server Access Logging for an S3 Bucket?<a name="server-access-logging"></a>
+# How do I enable server access logging for an S3 bucket?<a name="server-access-logging"></a>
 
 This topic describes how to enable server access logging for an Amazon S3 bucket using the AWS Management Console\. For information about how to enable logging programmatically and details about how logs are delivered, see [Server Access Logging](https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
@@ -31,7 +31,7 @@ There is no extra charge for enabling server access logging on an Amazon S3 buck
 
 1. Choose **Save**\.
 
-   You can view the logs in the target bucket\. If you specified a prefix, the prefix shows as a folder in the target bucket in the console\. After you enable server access logging, it might take a few hours before the logs are delivered to the target bucket\. For more information about how and when logs are delivered, see [Server Access Logging](https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html) in the *Amazon Simple Storage Service Developer Guide*\.
+   You can view the logs in the target bucket\. If you specified a prefix, the prefix shows as a folder in the target bucket in the console\. After you enable server access logging, it might take a few hours before the logs are delivered to the target bucket\. For more information about how and when logs are delivered, see [Server Access Logging](https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html#how-logs-delivered) in the *Amazon Simple Storage Service Developer Guide*\.
 
 **More Info**  
- [How Do I View the Properties for an S3 Bucket?](view-bucket-properties.md)
+ [How do I view the properties for an S3 Bucket?](view-bucket-properties.md)

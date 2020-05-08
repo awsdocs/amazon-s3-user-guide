@@ -1,17 +1,17 @@
-# How Do I Edit Public Access Settings for S3 Buckets?<a name="block-public-access-bucket"></a>
+# How do I edit public access settings for S3 buckets?<a name="block-public-access-bucket"></a>
 
 Amazon S3 Block Public Access prevents the application of any settings that allow public access to data within S3 buckets\. This section describes how to edit Block Public Access settings for one or more S3 buckets\. For information about blocking public access using the AWS CLI, AWS SDKs, and the Amazon S3 REST APIs, see [Using Amazon S3 Block Public Access](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 **Topics**
-+ [Editing Public Access Settings for an S3 Bucket](#block-public-access-bucket-one)
-+ [Editing Public Access Settings for Multiple S3 Buckets](#block-public-access-bucket-multiple)
-+ [More Info](#block-public-access-bucket-moreinfo)
++ [Editing public access settings for an S3 bucket](#block-public-access-bucket-one)
++ [Editing public access settings for multiple S3 buckets](#block-public-access-bucket-multiple)
++ [More info](#block-public-access-bucket-moreinfo)
 
-## Editing Public Access Settings for an S3 Bucket<a name="block-public-access-bucket-one"></a>
+## Editing public access settings for an S3 bucket<a name="block-public-access-bucket-one"></a>
 
 Follow these steps if you need to change the public access settings for a single S3 bucket\.
 
-**To edit the Amazon S3 Block Public Access settings for an S3 bucket**
+**To edit the Amazon S3 block public access settings for an S3 bucket**
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
@@ -27,11 +27,11 @@ Follow these steps if you need to change the public access settings for a single
 
 1. When you're asked for confirmation, enter **confirm**\. Then choose **Confirm** to save your changes\.
 
-## Editing Public Access Settings for Multiple S3 Buckets<a name="block-public-access-bucket-multiple"></a>
+## Editing public access settings for multiple S3 buckets<a name="block-public-access-bucket-multiple"></a>
 
 Follow these steps if you need to change the public access settings for more than one S3 bucket\.
 
-**To edit the Amazon S3 Block Public Access settings for multiple S3 buckets**
+**To edit the Amazon S3 block public access settings for multiple S3 buckets**
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
@@ -43,9 +43,9 @@ Follow these steps if you need to change the public access settings for more tha
 
 1. When you're asked for confirmation, enter **confirm**\. Then choose **Confirm** to save your changes\.
 
-You can change Amazon S3 Block Public Access settings when you create a bucket\. For more information, see [How Do I Create an S3 Bucket?](create-bucket.md)\. 
+You can change Amazon S3 Block Public Access settings when you create a bucket\. For more information, see [How do I create an S3 Bucket?](create-bucket.md)\. 
 
-## More Info<a name="block-public-access-bucket-moreinfo"></a>
-+ [How Do I Block Public Access to S3 Buckets?](block-public-access.md)
-+ [How Do I Edit Public Access Settings for All the S3 Buckets in an AWS Account?](block-public-access-account.md)
-+  [Setting Bucket and Object Access Permissions](set-permissions.md)
+## More info<a name="block-public-access-bucket-moreinfo"></a>
++ [How do I block public access to S3 buckets?](block-public-access.md)
++ [How do I edit public access settings for all the S3 buckets in an AWS account?](block-public-access-account.md)
++  [Setting bucket and object access permissions](set-permissions.md)

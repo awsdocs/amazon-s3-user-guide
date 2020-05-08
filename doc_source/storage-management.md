@@ -1,13 +1,13 @@
-# Storage Management<a name="storage-management"></a>
+# Storage management<a name="storage-management"></a>
 
 This section explains how to configure Amazon S3 storage management tools\.
 
 **Topics**
-+ [Creating a Lifecycle Policy](create-lifecycle.md)
++ [Creating a lifecycle policy](create-lifecycle.md)
 + [Creating Replication Rules](enable-replication.md)
-+ [Managing Replication Rules](disable-replication.md)
++ [Managing replication rules](disable-replication.md)
 + [Configuring Storage Class Analysis](configure-analytics-storage-class.md)
 + [Configuring Amazon S3 Inventory](configure-inventory.md)
-+ [Configuring Request Metrics](configure-metrics.md)
-+ [Configuring a Request Metrics Filter](configure-metrics-filter.md)
-+ [Viewing Replication Metrics](viewing-replication-metrics.md)
++ [Configuring request metrics](configure-metrics.md)
++ [Configuring a request metrics filter](configure-metrics-filter.md)
++ [Viewing replication metrics](viewing-replication-metrics.md)

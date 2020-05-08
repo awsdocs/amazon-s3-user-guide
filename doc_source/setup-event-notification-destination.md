@@ -1,4 +1,4 @@
-# How Do I Set Up a Destination to Receive Event Notifications?<a name="setup-event-notification-destination"></a>
+# How do I set up a destination to receive event notifications?<a name="setup-event-notification-destination"></a>
 
 Before you can enable event notifications for your bucket you must set up one of the following destination types:
 

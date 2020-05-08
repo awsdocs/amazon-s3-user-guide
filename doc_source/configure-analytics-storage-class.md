@@ -43,4 +43,4 @@ For more information about analytics, see [Amazon S3 Analytics – Storage Class
 For information about the exported data and how the filter works, see [Amazon S3 Analytics – Storage Class Analysis](https://docs.aws.amazon.com/AmazonS3/latest/dev/analytics-storage-class.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 **More Info**  
- [Storage Management](storage-management.md)
+ [Storage management](storage-management.md)

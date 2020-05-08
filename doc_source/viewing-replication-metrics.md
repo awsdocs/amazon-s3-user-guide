@@ -1,4 +1,4 @@
-# How Do I View Replication Metrics?<a name="viewing-replication-metrics"></a>
+# How do I view replication metrics?<a name="viewing-replication-metrics"></a>
 
 There are three types of Amazon CloudWatch metrics for Amazon S3: storage metrics, request metrics, and replication metrics\. *Replication* metrics are available 15 minutes after a replication rule with S3 Replication Time Control \(S3 RTC\) has been enabled\. Replication metrics are billed at the standard Amazon CloudWatch rate\. They are turned on automatically when you enable replication with S3 RTC using the AWS Management Console or the Amazon S3 API\.
 

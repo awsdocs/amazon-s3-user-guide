@@ -1,10 +1,10 @@
-# How Do I Restore an S3 Object That Has Been Archived?<a name="restore-archived-objects"></a>
+# How do I restore an S3 object that has been archived?<a name="restore-archived-objects"></a>
 
 This section explains how to use the Amazon S3 console to restore an object that has been archived to the S3 Glacier or S3 Glacier Deep Archive storage classes\. Objects stored in the S3 Glacier or S3 Glacier Deep Archive are not immediately accessible\. To access an object in this class, you must restore a temporary copy of it to its S3 bucket for the duration \(number of days\) that you specify\. For information about the S3 Glacier or S3 Glacier Deep Archive storage classes, see [Storage Classes](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) in the *Amazon Simple Storage Service Developer Guide*\. 
 
 When you restore an archive, you pay for both the archive and the restored copy\. Because there is a storage cost for the copy, restore objects only for the duration you need them\. If you want a permanent copy of the object, create a copy of it in your S3 bucket\. For information about Amazon S3 features and pricing, see [Amazon S3](https://aws.amazon.com/s3/)\.
 
-After restoring an object, you can download it from the **Overview** page\. For more information, see [How Do I See an Overview of an Object?](view-object-overview.md)\.
+After restoring an object, you can download it from the **Overview** page\. For more information, see [How do I see an overview of an object?](view-object-overview.md)\.
 
 **Topics**
 + [Archive Retrieval Options](#restore-archived-objects-retrieval-options)
@@ -42,7 +42,7 @@ This topic explains how to use the Amazon S3 console to restore an object that h
    + Choose **Expedited retrieval** \(available only for the Glacier storage class\)\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/initiate-restore.png)
 
-1. Provisioned capacity is only available only for the Glacier storage class\. If you have provisioned capacity, choose **Restore** to start a provisioned retrieval\. If you have provisioned capacity, all of your expedited retrievals are served by your provisioned capacity\. For more information about provisioned capacity, see [ Provisioned Capacity](https://docs.aws.amazon.com/AmazonS3/latest/dev/restoring-objects.html#restoring-objects-expedited-capacity)\. 
+1. Provisioned capacity is only available for the Glacier storage class\. If you have provisioned capacity, choose **Restore** to start a provisioned retrieval\. If you have provisioned capacity, all of your expedited retrievals are served by your provisioned capacity\. For more information about provisioned capacity, see [ Provisioned Capacity](https://docs.aws.amazon.com/AmazonS3/latest/dev/restoring-objects.html#restoring-objects-expedited-capacity)\. 
    + If you don't have provisioned capacity and you don't want to buy it, choose **Restore**\. 
    + If you don't have provisioned capacity, but you want to buy it, choose **Add capacity unit**, and then choose **Buy**\. When you get the **Purchase succeeded** message, choose **Restore** to start provisioned retrieval\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/initiate-expedited-restore.png)
@@ -60,7 +60,7 @@ You can upgrade the speed of your restoration while it is in progress\.
 
 ## Checking Archive Restore Status and Expiration Date<a name="restore-archived-objects-status"></a>
 
-To check the progress of the restoration, see the object overview panel\. For information about the overview panel, see [How Do I See an Overview of an Object?](view-object-overview.md)\. 
+To check the progress of the restoration, see the object overview panel\. For information about the overview panel, see [How do I see an overview of an object?](view-object-overview.md)\. 
 
 The **Overview** section shows that restoration is **In progress**\. 
 
@@ -72,10 +72,10 @@ Restored objects are stored only for the number of days that you specify\. If yo
 
 Amazon S3 calculates the expiry date by adding the number of days that you specify to the time you request to restore the object, and then rounding to the next day at midnight UTC\. This calculation applies to the initial restoration of the object and to any extensions to availability that you request\. For example, if an object was restored on 10/15/2012 10:30 AM UTC and the number of days that you specified is 3, then the object is available until 10/19/2012 00:00 UTC\. If, on 10/16/2012 11:00 AM UTC you change the number of days that you want it to be accessible to 1, then Amazon S3 makes the restored object available until 10/18/2012 00:00 UTC\.
 
-After restoring an object, you can download it from the **Overview** page\. For more information, see [How Do I See an Overview of an Object?](view-object-overview.md)\.
+After restoring an object, you can download it from the **Overview** page\. For more information, see [How do I see an overview of an object?](view-object-overview.md)\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-overview-download-short.png)
 
 ### More Info<a name="restore-archived-objects-status-moreinfo"></a>
-+ [How Do I Create a Lifecycle Policy for an S3 Bucket?](create-lifecycle.md)
-+  [How Do I Undelete a Deleted S3 Object?](undelete-objects.md)
++ [How do I create a lifecycle policy for an S3 Bucket?](create-lifecycle.md)
++  [How do I undelete a deleted S3 object?](undelete-objects.md)

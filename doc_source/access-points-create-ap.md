@@ -1,8 +1,8 @@
-# Creating an Amazon S3 Access Point<a name="access-points-create-ap"></a>
+# Creating an Amazon S3 access point<a name="access-points-create-ap"></a>
 
 This section explains how to create an Amazon S3 access point using the AWS Management Console\. For information about creating access points using the AWS CLI, AWS SDKs, and the Amazon S3 REST APIs, see [Managing Data Access with Amazon S3 Access Points](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-points.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
-An access point is associated with exactly one Amazon S3 bucket\. Before you begin, make sure that you have created a bucket that you want to use with this access point\. For more information about creating buckets, see [Creating and Configuring an S3 Bucket](create-configure-bucket.md)\.
+An access point is associated with exactly one Amazon S3 bucket\. Before you begin, make sure that you have created a bucket that you want to use with this access point\. For more information about creating buckets, see [Creating and configuring an S3 bucket](create-configure-bucket.md)\.
 
 **To create an access point**
 

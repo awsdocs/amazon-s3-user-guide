@@ -1,4 +1,4 @@
-# How Do I Add Encryption to an S3 Object?<a name="add-object-encryption"></a>
+# How do I add encryption to an S3 object?<a name="add-object-encryption"></a>
 
 This topic describes how to set or change the type of encryption an object is using\. 
 
@@ -53,8 +53,8 @@ To encrypt objects in the bucket, you can use only CMKs that are enabled in the 
       Administrators of an external account that have usage permissions to an object protected by your AWS KMS CMK can further restrict access by creating a resource\-level AWS Identity and Access Management \(IAM\) policy\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/add-encryption-kms-select-custom-arn.png)
 
-## More Info<a name="add-object-encryption-moreinfo"></a>
-+  [How Do I Enable Default Encryption for an Amazon S3 Bucket?](default-bucket-encryption.md)
+## More info<a name="add-object-encryption-moreinfo"></a>
++  [How do I enable default encryption for an Amazon S3 bucket?](default-bucket-encryption.md)
 + [Amazon S3 Default Encryption for S3 Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) in the *Amazon Simple Storage Service Developer Guide*
-+  [How Do I View the Properties of an Object?](view-object-properties.md)
-+  [Uploading, Downloading, and Managing Objects](upload-download-objects.md)
++  [How do I view the properties of an object?](view-object-properties.md)
++  [Uploading, downloading, and managing objects](upload-download-objects.md)
