@@ -19,11 +19,11 @@ Each permission you grant for a user or group adds an entry in the ACL that is a
 
    1. 
 
-**Access for your AWS accounted root user**
+**Access for your AWS account root user**
 
       The *owner* refers to the AWS account root user, and not an AWS Identity and Access Management \(IAM\) user\. For more information about the root user, see [The AWS Account Root User](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html) in the *IAM User Guide*\.
 
-      To change the owner's bucket access permissions, under **Access for your AWS accounted root user**, choose **Your AWS Account \(owner\)**\.
+      To change the owner's bucket access permissions, under **Access for your AWS account root user**, choose **Your AWS Account \(owner\)**\.
 
       Select the check boxes for the permissions that you want to change, and then choose **Save**\.  
 ![\[Screenshot showing permissions check boxes for account owner.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/bucket-permissions-owner.png)

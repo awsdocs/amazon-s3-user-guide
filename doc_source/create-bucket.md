@@ -34,7 +34,7 @@ Avoid including sensitive information, such as account numbers, in the bucket na
 
    We recommend that you leave all settings enabled unless you know you need to turn one or more of them off for your use case, such as to host a public website\. Block public access settings that you enable for the bucket will also be enabled for all access points that you create on the bucket\. For more information about blocking public access, see [Using Amazon S3 Block Public Access](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
-1. \(Optional\) If you want to enable :
+1. \(Optional\) If you want to enable S3 Object Lock:
 
    1. Choose **Advanced settings**, and read the message that appears\.
 **Important**  
