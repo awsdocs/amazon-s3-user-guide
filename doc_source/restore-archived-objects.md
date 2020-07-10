@@ -23,7 +23,7 @@ For more information about retrieval options, see [Restoring Archived Objects](h
 
 ## Restoring an Archived S3 Object<a name="restore-archived-objects-how-to"></a>
 
-This topic explains how to use the Amazon S3 console to restore an object that has been archived to the S3 Glacier or S3 Glacier Deep Archive storage classes\.  \(The console uses the names Glacier and Glacier Deep Archive for these storage classes\.\)
+This topic explains how to use the Amazon S3 console to restore an object that has been archived to the S3 Glacier or S3 Glacier Deep Archive storage classes\. \(The console uses the names Glacier and Glacier Deep Archive for these storage classes\.\)
 
 **To restore archived S3 objects**
 
@@ -77,5 +77,7 @@ After restoring an object, you can download it from the **Overview** page\. For 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-overview-download-short.png)
 
 ### More Info<a name="restore-archived-objects-status-moreinfo"></a>
++ [ Restoring Archived Objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/restoring-objects.html) in the Amazon S3 Developer Guide\.
++ [ restore\-object](https://docs.aws.amazon.com/cli/latest/reference/s3api/restore-object.html) in the AWS CLI Command Reference\.
 + [How do I create a lifecycle policy for an S3 Bucket?](create-lifecycle.md)
 +  [How do I undelete a deleted S3 object?](undelete-objects.md)

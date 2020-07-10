@@ -1,4 +1,4 @@
-# How do I redirect requests to an S3 Bucket hosted website to another host?<a name="redirect-website-requests"></a>
+# How do I redirect requests to an S3 bucket hosted website to another host?<a name="redirect-website-requests"></a>
 
 For more detailed information about configuring a redirect in Amazon S3, see [Configuring a webpage redirect](https://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html) in the *Amazon Simple Storage Service Developer Guide*\.
 

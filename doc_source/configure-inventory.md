@@ -35,7 +35,7 @@ It may take up to 48 hours to deliver the first report\.
       + **Storage class** – The storage class used for storing the object\. 
       + **ETag** – The entity tag is a hash of the object\. The ETag reflects changes only to the contents of an object, and not its metadata\. The ETag may or may not be an MD5 digest of the object data\. Whether it is depends on how the object was created and how it is encrypted\.
       +  **Multipart upload** – Specifies that the object was uploaded as a multipart upload\. For more information, see [Multipart Upload Overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html) in the *Amazon Simple Storage Service Developer Guide*\.
-      + **Replication status** – The replication status of the object\. For more information, see [How Do I Add a Replication Rule to an S3 Bucket?](enable-replication.md)\.
+      + **Replication status** – The replication status of the object\. For more information, see [How do I add a replication rule to an S3 bucket?](enable-replication.md)\.
       + **Encryption status** – The server\-side encryption used to encrypt the object\. For more information, see [Protecting Data Using Server\-Side Encryption](https://docs.aws.amazon.com/AmazonS3/latest/dev/serv-side-encryption.html) in the *Amazon Simple Storage Service Developer Guide*\.
       + **S3 Object Lock configurations** – The Object Lock status of the object, including the following settings: 
         + **Retention mode** – The level of protection applied to the object, either *Governance* or *Compliance*\.

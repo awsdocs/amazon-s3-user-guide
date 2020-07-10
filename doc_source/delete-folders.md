@@ -1,4 +1,4 @@
-# How do I delete folders from an S3 Bucket?<a name="delete-folders"></a>
+# How do I delete folders from an S3 bucket?<a name="delete-folders"></a>
 
 This section explains how to use the Amazon S3 console to delete folders from an S3 bucket\. 
 

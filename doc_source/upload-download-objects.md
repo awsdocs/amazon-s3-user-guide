@@ -12,12 +12,17 @@ Objects can be any file type: images, backups, data, movies, etc\. You can have 
 
 The following topics explain how to use the Amazon S3 console to upload, delete, and manage objects\.
 
+**Note**  
+If you rename an object, or change any of the properties; **Storage Class**, ** Enryption**, **Metadata**, a new object is created to replace the old one\. If S3 Versioning is enabled, a new version of the object is created, and the existing object becomes an older version\. The role that changes the property also becomes the owner of the new object or \(object version\)\.
+
 **Topics**
 + [Uploading S3 objects](upload-objects.md)
-+ [Downloading S3 Objects](download-objects.md)
++ [Copying an object](copy-object.md)
++ [Moving an object](move-object.md)
++ [Downloading S3 objects](download-objects.md)
 + [Deleting objects](delete-objects.md)
 + [Undeleting objects](undelete-objects.md)
-+ [Restoring Archived S3 Objects](restore-archived-objects.md)
++ [Restoring archived S3 objects](restore-archived-objects.md)
 + [Locking Amazon S3 objects](object-lock.md)
 + [Viewing an overview of an object](view-object-overview.md)
 + [Viewing object versions](view-object-versions.md)

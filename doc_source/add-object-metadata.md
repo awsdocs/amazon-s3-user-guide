@@ -8,7 +8,10 @@ There are two kinds of metadata for an S3 object, Amazon S3 system metadata and 
 + **System metadata**–There are two categories of system metadata\. Metadata such as the `Last-Modified` date is controlled by the system\. Only Amazon S3 can modify the value\. There is also system metadata that you control, for example, the storage class configured for the object\. 
 + **User\-defined metadata**–You can define your own custom metadata, called user\-defined metadata\. You can assign user\-defined metadata to an object when you upload the object or after the object has been uploaded\. User\-defined metadata is stored with the object and is returned when you download the object\. Amazon S3 does not process user\-defined metadata\. 
 
-The following topics describe how to add metadata to an object\.
+The following topics describe how to add metadata to an object using the Amazon S3 console\.
+
+**Note**  
+If you change an object's metadata, a new object will be created and will replace the old one\. If S3 Versioning is enabled, a new version of the object is created, and the existing object becomes an older version\. The role that changes the property also becomes the owner of the new object or \(object version\)\.
 
 **Topics**
 + [Adding system\-defined metadata](#add-object-metadata-system)

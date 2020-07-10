@@ -1,4 +1,4 @@
-# How do I enable or suspend versioning for an S3 Bucket?<a name="enable-versioning"></a>
+# How do I enable or suspend versioning for an S3 bucket?<a name="enable-versioning"></a>
 
 Versioning enables you to keep multiple versions of an object in one bucket\. This section describes how to enable object versioning on a bucket\. For more information about versioning support in Amazon S3, see [Object Versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html) and [Using Versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) in the *Amazon Simple Storage Service Developer Guide*\.
 

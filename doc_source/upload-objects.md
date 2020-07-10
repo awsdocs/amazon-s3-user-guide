@@ -14,7 +14,7 @@ If you upload individual files and you have a folder open in the Amazon S3 conso
 
 If you upload individual files and you do not have a folder open in the Amazon S3 console, when Amazon S3 uploads the files, it assigns only the file name as the key name\. For example, if you upload a file named `sample1.jpg`, the key name is `sample1.jpg`\. For more information on key names, see [Object Key and Metadata](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
-If you upload an object with a key name that already exists in a versioning\-enabled bucket, Amazon S3 creates another version of the object instead of replacing the existing object\. For more information about versioning, see [How do I enable or suspend versioning for an S3 Bucket?](enable-versioning.md)\.
+If you upload an object with a key name that already exists in a versioning\-enabled bucket, Amazon S3 creates another version of the object instead of replacing the existing object\. For more information about versioning, see [How do I enable or suspend versioning for an S3 bucket?](enable-versioning.md)\.
 
 **Topics**
 + [Uploading Files and Folders by Using Drag and Drop](#upload-objects-by-drag-and-drop)
@@ -130,4 +130,4 @@ This procedure explains how to upload files into an S3 bucket by choosing **Uplo
 
 ## More Info<a name="upload-objects-moreinfo"></a>
 + [How do I set permissions on an object?](set-object-permissions.md)\.
-+  [How Do I Download an Object from an S3 Bucket?](download-objects.md)
++  [How do I download an object from an S3 bucket?](download-objects.md)

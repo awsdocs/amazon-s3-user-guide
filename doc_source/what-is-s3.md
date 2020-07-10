@@ -1,4 +1,4 @@
-# Welcome to the Amazon S3 console User Guide<a name="what-is-s3"></a>
+# Welcome to the Amazon S3 Console User Guide<a name="what-is-s3"></a>
 
 Welcome to the *Amazon Simple Storage Service Console User Guide* for the Amazon Simple Storage Service \(Amazon S3\) console\. 
 

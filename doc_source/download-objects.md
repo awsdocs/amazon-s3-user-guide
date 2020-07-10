@@ -1,4 +1,4 @@
-# How Do I Download an Object from an S3 Bucket?<a name="download-objects"></a>
+# How do I download an object from an S3 bucket?<a name="download-objects"></a>
 
 This section explains how to use the Amazon S3 console to download objects from an S3 bucket\.
 
@@ -28,5 +28,5 @@ You can download a single object per request using the Amazon S3 console\. To [d
    + Choose the name of the object that you want to download\. Choose **Latest version** and then choose the download icon\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-latest-version-download.png)
 
-## Related Topics<a name="download-objects-related-topics"></a>
+## Related topics<a name="download-objects-related-topics"></a>
 +  [How do I upload files and folders to an S3 bucket?](upload-objects.md)

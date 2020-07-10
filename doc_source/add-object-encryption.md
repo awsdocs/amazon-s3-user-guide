@@ -1,6 +1,9 @@
 # How do I add encryption to an S3 object?<a name="add-object-encryption"></a>
 
-This topic describes how to set or change the type of encryption an object is using\. 
+This topic describes how to set or change the type of encryption an object using the Amazon S3 console\.
+
+**Note**  
+If you change an object's encryption, a new object is created to replace the old one\. If S3 Versioning is enabled, a new version of the object is created, and the existing object becomes an older version\. The role that changes the property also becomes the owner of the new object or \(object version\)\. 
 
 **To add or change encryption for an object**
 
@@ -12,13 +15,13 @@ This topic describes how to set or change the type of encryption an object is us
 
 1. Choose **Properties**, and then choose **Encryption**\.
 
-   The **Encryption** dialog opens, giving you three choices for object encryption:
+   The **Encryption** dialog box opens, giving you three choices for object encryption:
    + **None**‐ No object encryption\.
-   + **AES\-256** ‐ Server\-side encryption with Amazon S3‐managed keys \(SSE\-S3\)\.
+   + **AES\-256** ‐ Server\-side encryption with Amazon S3 managed keys \(SSE\-S3\)\.
    + **AWS‐KMS** ‐ Server\-side encryption with AWS Key Management Service \(AWS KMS\) customer master keys \(SSE\-KMS\)\.
 
-1. If you want to remove encryption from an object that already has encryption settings, choose **None** and **Save**\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/remove-encryption-none.png)
+1. If you want to remove encryption from an object that already has encryption settings, choose **None** and then choose **Save**\.   
+![\[Console screenshot of the encryption dialog box with the none option selected.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/remove-encryption-none.png)
 
 1. If you want to encrypt your object using keys that are managed by Amazon S3, follow these steps:
 
@@ -27,15 +30,17 @@ This topic describes how to set or change the type of encryption an object is us
       For more information about using Amazon S3 server\-side encryption to encrypt your data, see [Protecting Data with Amazon S3\-Managed Encryption Keys Classes](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
    1. Choose **Save**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/add-encryption-aes256.png)
+![\[Console screenshot of the encryption dialog box with the AES-256 option selected.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/add-encryption-aes256.png)
 
 1. If you want to encrypt your object using AWS KMS, follow these steps:
 
    1. Choose **AWS\-KMS**\.
 
-   1. Choose an AWS KMS CMK\.
+   1. Choose an AWS KMS customer master key \(CMK\)\.
 
-      The list shows [Customer managed CMKs](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#customer-cmk) that you have created and your AWS managed CMK for Amazon S3\. For more information about creating a customer managed AWS KMS CMK, see [Creating Keys](https://docs.aws.amazon.com/kms/latest/developerguide/UsingServerSideEncryption.html) in the *AWS Key Management Service Developer Guide*\. 
+      The list shows [customer managed CMKs](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#customer-cmk) that you have created and your AWS managed CMK for Amazon S3\. For more information about creating a customer managed AWS KMS CMK, see [Creating Keys](https://docs.aws.amazon.com/kms/latest/developerguide/UsingServerSideEncryption.html) in the *AWS Key Management Service Developer Guide*\. 
+**Important**  
+The Amazon S3 console lists only 100 AWS KMS CMKs per AWS Region\. If you have more than 100 CMKs in the same Region, you can see only the first 100 CMKs in the S3 console\. To use a KMS CMK that is not listed in the console, choose **Custom KMS ARN**, and enter the KMS CMK ARN\.
 
    1. Choose **Save**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/add-encryption-kms-key.png)
@@ -46,7 +51,7 @@ To encrypt objects in the bucket, you can use only CMKs that are enabled in the 
 
    1. Choose **AWS\-KMS**\.
 
-   1. Type the Amazon Resource Name \(ARN\) for the external account\.
+   1. Enter the Amazon Resource Name \(ARN\) for the external account\.
 
    1. Choose **Save**\.
 
@@ -55,6 +60,6 @@ To encrypt objects in the bucket, you can use only CMKs that are enabled in the 
 
 ## More info<a name="add-object-encryption-moreinfo"></a>
 +  [How do I enable default encryption for an Amazon S3 bucket?](default-bucket-encryption.md)
-+ [Amazon S3 Default Encryption for S3 Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) in the *Amazon Simple Storage Service Developer Guide*
++ [Amazon S3 default encryption for S3 buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) in the *Amazon Simple Storage Service Developer Guide*
 +  [How do I view the properties of an object?](view-object-properties.md)
 +  [Uploading, downloading, and managing objects](upload-download-objects.md)

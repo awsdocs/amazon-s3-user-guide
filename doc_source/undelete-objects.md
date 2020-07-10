@@ -2,7 +2,7 @@
 
 This section explains how to use the Amazon S3 console to recover \(undelete\) deleted objects\.
 
-To be able to undelete a deleted object, you must have had versioning enabled on the bucket that contains the object before the object was deleted\. For information about enabling versioning, see [How do I enable or suspend versioning for an S3 Bucket?](enable-versioning.md)\.
+To be able to undelete a deleted object, you must have had versioning enabled on the bucket that contains the object before the object was deleted\. For information about enabling versioning, see [How do I enable or suspend versioning for an S3 bucket?](enable-versioning.md)\.
 
 When you delete an object in a versioning\-enabled bucket, all versions remain in the bucket and Amazon S3 creates a delete marker for the object\. To undelete the object, you must delete this delete marker\. For more information about versioning and delete markers, see [Object Versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
@@ -20,5 +20,5 @@ When you delete an object in a versioning\-enabled bucket, all versions remain i
 
 ## More info<a name="undelete-objects-related-topics"></a>
 +  [How do I see the versions of an S3 object?](view-object-versions.md)
-+  [How do I enable or suspend versioning for an S3 Bucket?](enable-versioning.md)
++  [How do I enable or suspend versioning for an S3 bucket?](enable-versioning.md)
 +  [Using Versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) in the *Amazon Simple Storage Service Developer Guide*

@@ -1,16 +1,16 @@
-# How do I configure an S3 Bucket for static website hosting?<a name="static-website-hosting"></a>
+# How do I configure an S3 bucket for static website hosting?<a name="static-website-hosting"></a>
 
 You can host a static website on Amazon S3\. On a static website, individual webpages include static content\. A static website might also contain client\-side scripts\. By contrast, a dynamic website relies on server\-side processing, including server\-side scripts such as PHP, JSP, or ASP\.NET\. Amazon S3 does not support server\-side scripting\.
 
 You can use the following quick procedures to configure an S3 bucket for static website hosting in the Amazon S3 console\. For more information and detailed walkthroughs, see [Hosting a Static Website on Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 **Topics**
-+ [Step one: Configure a Amazon S3 bucket for static website hosting](#configure-bucket-website-hosting)
-+ [Step two: Editing block public access settings](#set-permissions-static-website-access)
-+ [Step three: Adding a bucket policy](#add-bucket-policy-public-access)
-+ [Step three: Test your website endpoint](#test-your-website-endpoint)
++ [Step 1: Configure an Amazon S3 bucket for static website hosting](#configure-bucket-website-hosting)
++ [Step 2: Editing block public access settings](#set-permissions-static-website-access)
++ [Step 3: Adding a bucket policy](#add-bucket-policy-public-access)
++ [Step 4: Test your website endpoint](#test-your-website-endpoint)
 
-## Step one: Configure a Amazon S3 bucket for static website hosting<a name="configure-bucket-website-hosting"></a>
+## Step 1: Configure an Amazon S3 bucket for static website hosting<a name="configure-bucket-website-hosting"></a>
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
@@ -49,7 +49,7 @@ You can use the following quick procedures to configure an S3 bucket for static 
 
 In the next section, you set the permissions required to access your bucket as a static website\.\.
 
-## Step two: Editing block public access settings<a name="set-permissions-static-website-access"></a>
+## Step 2: Editing block public access settings<a name="set-permissions-static-website-access"></a>
 
 By default, Amazon S3 blocks public access to your account and buckets\. If you want to use a bucket to host a static website, you can use these steps to edit your block public access settings\. 
 
@@ -74,7 +74,7 @@ Before you complete this step, review [Using Amazon S3 Block Public Access](http
 
    Under **S3 buckets**, the **Access** for your bucket updates to **Objects can be public**\. You can now add a bucket policy to make the objects in the bucket publicly readable\. If the **Access** still displays as **Bucket and objects not public**, you might have to [edit the block public access settings](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/block-public-access-account.html) for your account before adding a bucket policy\.
 
-## Step three: Adding a bucket policy<a name="add-bucket-policy-public-access"></a>
+## Step 3: Adding a bucket policy<a name="add-bucket-policy-public-access"></a>
 
 After you edit S3 Block Public Access settings, you can add a bucket policy to grant public read access to your bucket\. When you grant public read access, anyone on the internet can access your bucket\.
 
@@ -120,6 +120,6 @@ The following policy is an example only and allows full access to the contents o
 
    If you get an **Error \- Access denied** warning and the **Bucket policy editor** does not allow you to save the bucket policy, check your account\-level and bucket\-level block public access settings to confirm that you allow public access to the bucket\.
 
-## Step three: Test your website endpoint<a name="test-your-website-endpoint"></a>
+## Step 4: Test your website endpoint<a name="test-your-website-endpoint"></a>
 
 Once you configure your bucket as a static website and set permissions, you can access your website through an Amazon S3 website endpoint\. For more information, see [Website Endpoints](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteEndpoints.html) in the *Amazon Simple Storage Service Developer Guide*\. For a complete list of Amazon S3 website endpoints, see [Amazon S3 Website Endpoints](https://docs.aws.amazon.com/general/latest/gr/s3.html#s3_website_region_endpoints) in the *Amazon Web Services General Reference*\.

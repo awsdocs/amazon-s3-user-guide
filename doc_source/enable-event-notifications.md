@@ -14,23 +14,23 @@ When you configure event notifications for a bucket, you must specify the type o
 
 In the Amazon S3 console, you have the following options for configuring event notifications\. You can choose a single option or multiple options\.
 + **Object creation**
-  + **ObjectCreated \(All\)** – Notification anytime an object is created in your bucket
-  +  **Put**, **Post**, **Copy**, and **Multipart upload completed** – Notification for specific object creation actions
+  + **ObjectCreated \(All\)** – Receive a notification when an object is created in your bucket for any of the following object creation actions: **Put**, **Post**, **Copy**, and **Multipart upload completed**\.
+  +  **Put**, **Post**, **Copy**, and **Multipart upload completed** – Receive a notification for one of these specific object creation actions\.
 + **Object deletion**
-  + **ObjectDelete \(All\)** – Notification anytime an object in your bucket is deleted
-  + **Delete marker created** – Notification when a delete marker is created for a versioned object
+  + **ObjectDelete \(All\)** – Receive a notification any time an object in your bucket is deleted\.
+  + **Delete marker created** – Receive a notification when a delete marker is created for a versioned object\.
 
      For information about deleting versioned objects, see [Deleting Object Versions](https://docs.aws.amazon.com/AmazonS3/latest/dev/DeletingObjectVersions.html)\. For information about object versioning, see [Object Versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html) and [Using Versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html)\.
 + **Object restoration from the S3 Glacier storage class** 
-  + **Restore initiated** – Notification for *Initiation* of object restoration
-  + **Restore completed** – Notification for *Completion* of object restoration
+  + **Restore initiated** – Receive a notification for *Initiation* of object restoration\.
+  + **Restore completed** – Receive a notification for *Completion* of object restoration\.
 + **Reduced Redundancy Storage \(RRS\) object lost events**
-  + **Object in RSS Lost** – Notification that an object of the RRS storage class has been lost
+  + **Object in RSS Lost** – Receive a notification that an object of the RRS storage class has been lost
 + **Objects eligible for replication using Amazon S3 Replication Time Control**
-  + **Replication time missed threshold** – Notification that an object failed to replicate
-  + **Replication time completed after threshold** – Notification that an object exceeded the 15\-minute threshold for replication
-  + **Replication time not tracked** – Notification that an object replicated after the 15\-minute threshold
-  + **Replication time failed** – Notification that an object that was eligible for replication is no longer being tracked by replication metrics
+  + **Replication time missed threshold** – Receive a notification that an object failed to replicate\.
+  + **Replication time completed after threshold** – Receive a notification that an object exceeded the 15\-minute threshold for replication\.
+  + **Replication time not tracked** – Receive a notification that an object replicated after the 15\-minute threshold\.
+  + **Replication time failed** – Receive a notification that an object that was eligible for replication is no longer being tracked by replication metrics\.
 
 **Note**  
 When you delete the last object from a folder, Amazon S3 can generate an object creation event\. When there are multiple objects with the same prefix with a trailing slash \(/\) as part of their names, those objects are shown as being part of a folder in the Amazon S3 console\. The name of the folder is formed from the characters preceding the trailing slash \(/\)\.   

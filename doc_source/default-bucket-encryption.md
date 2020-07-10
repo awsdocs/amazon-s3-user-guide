@@ -36,6 +36,7 @@ You might need to update your bucket policy when enabling default encryption\. F
       + In the list that appears, choose the AWS KMS CMK\.
       + In the list that appears, choose **Custom KMS ARN**, and then enter the Amazon Resource Name of the AWS KMS CMK\.
 **Important**  
+You can use only KMS CMKs that are enabled in the same AWS Region as the bucket\. The S3 console only lists 100 KMS CMKs per Region\. If you have more than 100 CMKs in the same Region, you can only see the first 100 CMKs in the S3 console\. To use a KMS CMK that is not listed in the console, choose **Custom KMS ARN**, and enter the KMS CMK ARN\.  
 When you use an AWS KMS CMK for server\-side encryption in Amazon S3, you must choose a symmetric CMK\. Amazon S3 only supports symmetric CMKs and not asymmetric CMKs\. For more information, see [Using Symmetric and Asymmetric Keys](https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html) in the *AWS Key Management Service Developer Guide*\.  
 ![\[Default encryption screen with AWS KMS chosen, and a drop-down list with CMK names.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/add-default-encryption-kms-key.png)
 **Important**  

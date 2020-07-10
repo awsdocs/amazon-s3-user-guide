@@ -1,4 +1,4 @@
-# Advanced settings for S3 Bucket properties<a name="setup-advanced-bucket-properties"></a>
+# Advanced settings for S3 bucket properties<a name="setup-advanced-bucket-properties"></a>
 
 This section describes how to configure advanced S3 bucket property settings for object replication, event notification, and transfer acceleration\.
 

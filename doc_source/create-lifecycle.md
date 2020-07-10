@@ -26,7 +26,7 @@ Using a lifecycle policy, you can define actions specific to current and noncurr
 
 1. Choose **Next**\.
 
-   The **Storage class transition** page opens\. When you configure your storage class transitions, you define the rules to transition objects to the Standard\-IA, One Zone\-IA, Glacier, and Deep Archive storage classes\. For more information, see [Storage Classes](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) in the *Amazon Simple Storage Service Developer Guide*\. You can define transitions for current or previous object versions or for both current and previous versions\. Versioning enables you to keep multiple versions of an object in one bucket\. For more information about versioning, see [How do I enable or suspend versioning for an S3 Bucket?](enable-versioning.md)\.
+   The **Storage class transition** page opens\. When you configure your storage class transitions, you define the rules to transition objects to the Standard\-IA, One Zone\-IA, Glacier, and Deep Archive storage classes\. For more information, see [Storage Classes](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) in the *Amazon Simple Storage Service Developer Guide*\. You can define transitions for current or previous object versions or for both current and previous versions\. Versioning enables you to keep multiple versions of an object in one bucket\. For more information about versioning, see [How do I enable or suspend versioning for an S3 bucket?](enable-versioning.md)\.
 
 1. Choose the versions for which you want to define transitions, current or noncurrent:
    + To define transitions that are applied to the current verion of the object, choose **Current version**\. 
