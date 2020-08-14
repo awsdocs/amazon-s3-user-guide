@@ -8,6 +8,8 @@ When you delete an object in a versioning\-enabled bucket, all versions remain i
 
 **To recover deleted objects from an S3 bucket**
 
+The following steps describe how to recover deleted objects that are not folders from your S3 bucket including objects that are within those folders\. 
+
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
 1. In the **Bucket name** list, choose the name of the bucket that you want\.
@@ -17,6 +19,9 @@ When you delete an object in a versioning\-enabled bucket, all versions remain i
 1. To undelete an object, you must delete the delete marker\. Select the check box next to the **delete marker** of the object to recover, and then choose **delete** from the **Actions** menu\.
 
 1. Then, choose **Hide** and you'll see the undeleted object listed\.
+
+**Note**  
+You can't use the Amazon S3 console to undelete folders\. You must use the AWS CLI or SDK\. For examples, see [ How can I retrieve an Amazon S3 object that was deleted in a versioning\-enabled bucket?](http://aws.amazon.com/premiumsupport/knowledge-center/s3-undelete-configuration/) 
 
 ## More info<a name="undelete-objects-related-topics"></a>
 +  [How do I see the versions of an S3 object?](view-object-versions.md)

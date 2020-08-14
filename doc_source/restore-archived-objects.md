@@ -79,5 +79,6 @@ After restoring an object, you can download it from the **Overview** page\. For 
 ### More Info<a name="restore-archived-objects-status-moreinfo"></a>
 + [ Restoring Archived Objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/restoring-objects.html) in the Amazon S3 Developer Guide\.
 + [ restore\-object](https://docs.aws.amazon.com/cli/latest/reference/s3api/restore-object.html) in the AWS CLI Command Reference\.
++ [Identity and Access Management in Amazon S3 Glacier](https://docs.aws.amazon.com/amazonglacier/latest/dev/auth-and-access-control.html) in the S3 Glacier Developer Guide\.
 + [How do I create a lifecycle policy for an S3 Bucket?](create-lifecycle.md)
 +  [How do I undelete a deleted S3 object?](undelete-objects.md)

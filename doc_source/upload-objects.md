@@ -6,7 +6,10 @@ When you upload a file to Amazon S3, it is stored as an S3 object\. Objects cons
 
 You can upload any file type—images, backups, data, movies, etc\.—into an S3 bucket\. The maximum size of a file that you can upload by using the Amazon S3 console is 160 GB\. To upload a file larger than 160 GB, use the AWS CLI, AWS SDK, or Amazon S3 REST API\. For more information, see [Uploading Objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/UploadingObjects.html) in the *Amazon Simple Storage Service Developer Guide*\. 
 
-You can upload files by dragging and dropping or by pointing and clicking\. To upload folders, you *must* drag and drop them\. Drag and drop functionality is supported *only* for the Chrome and Firefox browsers\. For information about which Chrome and Firefox browser versions are supported, see [ Which Browsers are Supported for Use with the AWS Management Console?](https://aws.amazon.com/premiumsupport/knowledge-center/browsers-management-console/)\. 
+**Note**  
+To upload *folders*, you must drag and drop them\. To upload *files*, you can drag and drop or point and click\. Drag and drop functionality is supported only for Chrome and Firefox browsers\. 
+
+For information about which Chrome and Firefox browser versions are supported, see [What browsers are supported for use with the AWS Management Console?](https://aws.amazon.com/premiumsupport/knowledge-center/browsers-management-console/)\. 
 
 When you upload a folder, Amazon S3 uploads all of the files and subfolders from the specified folder to your bucket\. It then assigns an object key name that is a combination of the uploaded file name and the folder name\. For example, if you upload a folder called `/images` that contains two files, `sample1.jpg` and `sample2.jpg`, Amazon S3 uploads the files and then assigns the corresponding key names, `images/sample1.jpg` and `images/sample2.jpg`\. The key names include the folder name as a prefix\. The Amazon S3 console displays only the part of the key name that follows the last “/”\. For example, within an images folder the `images/sample1.jpg` and `images/sample2.jpg` objects are displayed as `sample1.jpg` and a `sample2.jpg`\.
 
