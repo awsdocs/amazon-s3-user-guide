@@ -6,7 +6,10 @@ This section explains how to use the Amazon Simple Storage Service \(Amazon S3\)
 
 *Bucket access permissions* specify which users are allowed access to the objects in a bucket and which types of access they have\. *Object access permissions* specify which users are allowed access to the object and which types of access they have\. For example, one user might have only read permission, while another might have read and write permissions\.
 
-Bucket and object permissions are independent of each other\. An object does not inherit the permissions from its bucket\. For example, if you create a bucket and grant write access to a user, you can't access that user’s objects unless the user explicitly grants you access\.
+Bucket and object permissions are independent of each other\. An object does not inherit the permissions from its bucket\. For example, if you create a bucket and grant write access to a user, you can't access that user’s objects unless the user explicitly grants you access\. Bucket permissions generally allow a user to list information about a bucket and add and delete objects from a bucket\. Object permissions generally allow a user to download, replace or delete objects\.
+
+**Note**  
+You do not necessarily need to grant bucket permissions in order to grant object permissions, and vice versa\. For example, you can use the AWS console to grant a user update permissions on an object without granting that user permissions to the bucket containing that object\. However, if you were to grant permissions only to the object, and not the bucket, the grantee would not be able to use the AWS console to access the object\. \(They would not be able to view the object in the console because they would not be able to view the bucket containing the object\.\) The grantee instead would have to access the object programmatically, such as with the AWS CLI\.
 
  To grant access to your buckets and objects to other AWS accounts and to the general public, you use resource\-based access policies known as *access control lists* \(ACLs\)\. 
 
