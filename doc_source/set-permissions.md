@@ -27,4 +27,5 @@ This section also explains how to use the Amazon S3 console to add a cross\-orig
 + [Setting ACL bucket permissions](set-bucket-permissions.md)
 + [Adding a bucket policy](add-bucket-policy.md)
 + [Adding cross\-domain resource sharing with CORS](add-cors-configuration.md)
++ [Setting Object Ownership to bucket owner preferred](add-object-ownership.md)
 + [Using Access Analyzer for S3](access-analyzer.md)

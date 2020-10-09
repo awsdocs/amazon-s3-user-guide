@@ -6,6 +6,9 @@ You can grant permissions to other AWS account users or to predefined groups\. T
 
 Each permission you grant for a user or group adds an entry in the ACL that is associated with the bucket\. The ACL lists grants, which identify the grantee and the permission granted\. For more information about ACLs, see [Managing Access with ACLs](https://docs.aws.amazon.com/AmazonS3/latest/dev/S3_ACLs_UsingACLs.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
+**Warning**  
+We highly recommend that you avoid granting write access to the **Everyone \(public access\)** or **Authenticated Users group \(all AWS authenticated users\)** groups\. For more information about the effects of granting write access to these groups, see [Amazon S3 Predefined Groups](https://docs.aws.amazon.com/https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#specifying-grantee-predefined-groups) in the *Amazon Simple Storage Service Developer Guide*\.
+
 **To set ACL access permissions for an S3 bucket**
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.

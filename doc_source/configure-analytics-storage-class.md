@@ -34,7 +34,10 @@ For more information about analytics, see [Amazon S3 Analytics – Storage Class
 
 1. Choose **Save**\.
 
- Amazon S3 creates a bucket policy on the destination bucket that grants Amazon S3 write permission\. This allow it to write the export data to the bucket\. 
+    Amazon S3 creates a bucket policy on the destination bucket that grants Amazon S3 write permission\. This allows it to write the export data to the bucket\. 
+
+**Note**  
+This action configures storage class analysis for all specified buckets\.
 
  If an error occurs when you try to create the bucket policy, you'll be given instructions on how to fix it\. For example, if you chose a destination bucket in another AWS account and do not have permissions to read and write to the bucket policy, you'll see the following message\. You must have the destination bucket owner add the displayed bucket policy to the destination bucket\. If the policy is not added to the destination bucket you won’t get the export data because Amazon S3 doesn’t have permission to write to the destination bucket\. If the source bucket is owned by a different account than that of the current user, then the correct account ID of the source bucket must be substituted in the policy\.
 

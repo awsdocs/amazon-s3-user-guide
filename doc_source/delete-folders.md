@@ -17,5 +17,8 @@ For information about Amazon S3 features and pricing, see [Amazon S3](https://aw
    In the **Delete objects** dialog box, verify that the names of the folders you selected for deletion are listed and then choose **Delete**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/objects-delete-confirm.png)
 
+**Warning**  
+This action deletes all specified objects\. When deleting folders, wait for the delete action to finish before adding new objects to the folder\. Otherwise, new objects might be deleted as well\.
+
 ## Related topics<a name="delete-folders-related-topics"></a>
 + [How do I delete objects from an S3 bucket?](delete-objects.md)

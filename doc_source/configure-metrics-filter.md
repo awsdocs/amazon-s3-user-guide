@@ -1,31 +1,70 @@
-# How do I configure a request metrics filter?<a name="configure-metrics-filter"></a>
+# How do I create a request metrics filter that limits scope by object tag or prefix?<a name="configure-metrics-filter"></a>
 
-There are three types of Amazon CloudWatch metrics for Amazon S3: storage metrics, request metrics and replication\. Storage metrics are reported once per day and are provided to all customers at no additional cost\. Request metrics are available at 1 minute intervals after some latency to process, and metrics are billed at the standard CloudWatch rate\. To get request metrics, you must opt into them by configuring them in the console or with the Amazon S3 API\.
+There are three types of Amazon CloudWatch metrics for Amazon S3: storage metrics, request metrics, and replication metrics\. Storage metrics are reported once per day and are provided to all customers at no additional cost\. Request metrics are available at one\-minute intervals after some latency to process\. Request metrics are billed at the standard CloudWatch rate\. You must opt into request metrics by configuring them in the console or using the Amazon S3 API\.
 
-For more conceptual information about CloudWatch metrics for Amazon S3, see [Monitoring Metrics with Amazon CloudWatch](https://docs.aws.amazon.com/AmazonS3/latest/dev/cloudwatch-monitoring.html) in the *Amazon Simple Storage Service Developer Guide*\.
+For more information about CloudWatch metrics for Amazon S3, see [Monitoring metrics with Amazon CloudWatch](https://docs.aws.amazon.com/AmazonS3/latest/dev/cloudwatch-monitoring.html) in the *Amazon Simple Storage Service Developer Guide*\. 
+
+## Creating a request metrics filter that limits scope by object tag or prefix \(legacy Amazon S3 console experience\)<a name="filter-request-metrics"></a>
 
 **To filter request metrics on a subset of objects in a bucket**
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
-1. In the **Bucket name** list, choose the name of the bucket that has the objects you want to get request metrics for\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-bucket-name.png)
+1. In the **Bucket name** list, choose the name of the bucket that contains the objects you want request metrics for\.
 
-1. Choose the **Management** tab\. and then choose **Metrics**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-management-tab-metrics.png)
+1. Choose the **Management** tab, and then choose **Metrics**\.
 
-1. Choose **Requests**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-requests.png)
+1. Choose **Requests**\.
 
-1. From **Filters** in the left\-side pane, choose **Add**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-filter-add.png)
+1. In the left pane, beside **Filters**, choose **Add**\.
 
-1. Provide a name for this metrics configuration\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-filter-name.png)
+1. In **Filter name**, enter a name for your request metrics filter\.
 
-1. Provide one or more prefixes or tags, separated by commas, in **Prefix /tags that you want to monitor**\. From the drop down, select whether the value you provided is a tag or a prefix\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-filter-prefixtag.png)
+1. In **Prefix/tags that you want to monitor**, enter a prefix or tag, and choose the prefix or tag from the dropdown list that appears\.
+
+1. To add additional tags or filters, repeat the previous step\.
 
 1. Choose **Save**\.
 
-You have now created a metrics configuration for request metrics on a subset of the objects in an Amazon S3 bucket\. About 15 minutes after CloudWatch begins tracking these request metrics, you can see graphs for the metrics in both the Amazon S3 or CloudWatch consoles\. You can also request metrics at the bucket level\. For information, see [How do I configure request metrics for an S3 Bucket?](configure-metrics.md)
+   You have now created a filter that limits the request metrics scope by object tags and prefixes\. About 15 minutes after CloudWatch begins tracking these request metrics, you can see charts for the metrics on both the Amazon S3 and CloudWatch consoles\. Request metrics are billed at the standard CloudWatch rate\. For more information, see [Amazon CloudWatch pricing](http://aws.amazon.com/cloudwatch/pricing/)\. 
+
+   You can also configure request metrics at the bucket level\. For information, see [How do I create a request metrics filter for all the objects in my S3 bucket?](configure-metrics.md)
+
+## Creating a request metrics filter that limits scope by object tag or prefix \(new Amazon S3 console experience\)<a name="filter-request-metrics-new"></a>
+
+**Note**  
+We are in the process of releasing a new Amazon S3 console experience to customers\. These instructions describe the new experience\. If you don't see the new console now, don't worry\. It will soon be available to all customers\. For instructions using the previous console experience, expand **Creating a request metrics filter that limits scope by object tag or prefix \(legacy Amazon S3 console experience\)** on this page\.
+
+**To filter request metrics on a subset of objects in a bucket**
+
+1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
+
+1. In the **Buckets** list, choose the name of the bucket that contains the objects you want request metrics for\.
+
+1. Choose the **Metrics** tab\.
+
+1. Under **Bucket metrics**, choose **View additional charts**\.
+
+1. Choose the **Request metrics** tab\.
+
+1. Choose **Create filter**\.
+
+1. In the **Filter name** box, enter your filter name\. 
+
+   Names can only contain letters, numbers, periods, dashes, and underscores\.
+
+1. Under **Choose a filter scope**, choose **Limit the scope of this filter using prefix and tags**\.
+
+1. \(Optional\) In the **Prefix** box, enter a prefix to limit the scope of the filter to a single path\.
+
+1. \(Optional\) Under **Tags**, enter a tag **Key** and **Value**\.
+
+1. Choose **Create filter**\.
+
+   Amazon S3 creates a filter that uses the tags or prefixes you specified\.
+
+1. On the **Request metrics** tab, under **Filters**, choose the filter that you just created\.
+
+   You have now created a filter that limits the request metrics scope by object tags and prefixes\. About 15 minutes after CloudWatch begins tracking these request metrics, you can see charts for the metrics on both the Amazon S3 and CloudWatch consoles\. Request metrics are billed at the standard CloudWatch rate\. For more information, see [Amazon CloudWatch pricing](http://aws.amazon.com/cloudwatch/pricing/)\. 
+
+   You can also configure request metrics at the bucket level\. For information, see [How do I create a request metrics filter for all the objects in my S3 bucket?](configure-metrics.md)

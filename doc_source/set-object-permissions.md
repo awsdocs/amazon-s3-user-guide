@@ -50,9 +50,13 @@ Each permission you grant for a user or a group adds an entry in the ACL that is
 
       Select the check boxes for the permissions that you want to grant, and then choose **Save**\.   
 ![\[Screenshot showing that everyone will have access to the object.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-permissions-public.png)
+
 **Warning**  
-Use caution when granting the **Everyone** group anonymous access to your Amazon S3 objects\. When you grant access to this group, anyone in the world can access your object\. If you need to grant access to everyone, we highly recommend that you only grant permissions to **Read objects**\.  
+Use caution when granting the **Everyone** group anonymous access to your Amazon S3 objects\. When you grant access to this group, anyone in the world can access your object\. If you need to grant access to everyone, we highly recommend that you only grant permissions to **Read objects**\.
 We highly recommend that you *do not* grant the **Everyone** group write object permissions\. Doing so allows anyone to overwrite the ACL permissions for the object\.
+
+**Note**  
+This action applies permissions to all specified objects\. When applying permissions to folders, wait for the save operation to finish before adding new objects\.
 
 You can also set object permissions when you upload objects\. For more information about setting permissions when uploading objects, see [How do I upload files and folders to an S3 bucket?](upload-objects.md)\. 
 

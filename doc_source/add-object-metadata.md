@@ -43,6 +43,9 @@ You can configure some system metadata for an S3 object\. For a list of system\-
 1. Choose **Save**\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/add-metadata-save.png)
 
+**Note**  
+This action adds metadata to all specified objects\. When adding metadata to folders, wait for the save operation to finish before adding new objects to the folder\.
+
 ## Adding user\-defined metadata to an S3 object<a name="add-object-metadata-user-defined"></a>
 
 You can assign user\-defined metadata to an object\. User\-defined metadata must begin with the prefix "`x-amz-meta-`", otherwise Amazon S3 will not set the key value pair as you define it\. You define custom metadata by adding a name that you choose to the `x-amz-meta-` key\. This creates a custom key\. For example, if you add the custom name `alt-name`, the metadata key would be `x-amz-meta-alt-name`\. 
@@ -68,6 +71,9 @@ User\-defined metadata can be as large as 2 KB\. Both keys and their values must
 1. Type a custom name following the `x-amz-meta-` key\. For example, for the custom name `alt-name`, the metadata key would be `x-amz-meta-alt-name`\. Enter a value for the custom key, and then choose **Save**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/add-metadata-user-defined-value.png)
 
-### <a name="add-object-metadata-user-defined-moreinfo"></a>
+**Note**  
+When adding metadata to folders, wait for the save to complete before adding new objects\. Otherwise, new objects might be edited as well\.
+
+### More info<a name="add-object-metadata-user-defined-moreinfo"></a>
 +  [How do I view the properties of an object?](view-object-properties.md)
 +  [Uploading, downloading, and managing objects](upload-download-objects.md)

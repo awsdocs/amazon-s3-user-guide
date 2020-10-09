@@ -58,6 +58,9 @@ To encrypt objects in the bucket, you can use only CMKs that are enabled in the 
       Administrators of an external account that have usage permissions to an object protected by your AWS KMS CMK can further restrict access by creating a resource\-level AWS Identity and Access Management \(IAM\) policy\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/add-encryption-kms-select-custom-arn.png)
 
+**Note**  
+This action applies encryption to all specified objects\. When encrypting folders, wait for the save operation to finish before adding new objects to the folder\.
+
 ## More info<a name="add-object-encryption-moreinfo"></a>
 +  [How do I enable default encryption for an Amazon S3 bucket?](default-bucket-encryption.md)
 + [Amazon S3 default encryption for S3 buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) in the *Amazon Simple Storage Service Developer Guide*

@@ -11,3 +11,6 @@ You can empty a bucket, which deletes all of the objects in the bucket without d
 1. On the **Empty bucket** page, confirm that you want to empty the bucket by entering the bucket name into the text field, and then choose **Empty**\.
 
 1. \(Optional\) Monitor the progress of the bucket emptying process on the **Empty bucket: Status** page\.
+
+**Warning**  
+This action deletes all objects in the bucket\. Wait for the empty bucket action to finish before adding new objects\. New objects might be deleted if they are added while the empty bucket action is in progress\. 

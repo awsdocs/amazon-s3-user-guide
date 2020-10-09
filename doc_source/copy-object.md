@@ -19,3 +19,6 @@ In the Amazon S3 console, you can copy an object to a bucket or a folder\. For m
 1. Under **Review**, confirm the copy details, and choose **Copy**\.
 
    Amazon S3 copies your object to the destination\.
+
+**Note**  
+This action copies all specified objects\. When copying folders, wait for the copy action to finish before making additional changes in the folders\. 

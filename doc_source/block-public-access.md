@@ -28,3 +28,5 @@ You can also filter bucket searches by access type\. Choose an access type from 
 +  [How do I edit public access settings for S3 buckets?](block-public-access-bucket.md)
 + [How do I edit public access settings for all the S3 buckets in an AWS account?](block-public-access-account.md)
 + [Setting bucket and object access permissions](set-permissions.md)
++ [Restricting Access Using an Origin Access Identity ](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html) in the *Amazon Simple Storage Service Developer Guide*
++ [Accessing Private Content in Amazon CloudFront](http://aws.amazon.com/blogs/developer/accessing-private-content-in-amazon-cloudfront/) in the *AWS Developer Blog*

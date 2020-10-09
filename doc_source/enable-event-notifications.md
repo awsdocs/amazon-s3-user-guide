@@ -1,6 +1,6 @@
 # How do I enable and configure event notifications for an S3 Bucket?<a name="enable-event-notifications"></a>
 
-You can enable certain Amazon S3 bucket events to send a notification message to a destination whenever the events occur\. This section explains how to use the Amazon S3 console to enable event notifications\. For information about using event notifications with the AWS SDKs and the Amazon S3 REST APIs, see [Configuring Amazon S3 Event Notifications](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html) in the *Amazon Simple Storage Service Developer Guide*\. 
+You can enable certain Amazon S3 events to send a notification message to a destination whenever the events occur\. This section explains how to use the Amazon S3 console to enable event notifications\. For information about using event notifications with the AWS SDKs and the Amazon S3 REST APIs, see [Configuring Amazon S3 Event Notifications](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html) in the *Amazon Simple Storage Service Developer Guide*\. 
 
 **Topics**
 + [Event notification types](#enable-event-notifications-types)
@@ -14,7 +14,7 @@ When you configure event notifications for a bucket, you must specify the type o
 
 In the Amazon S3 console, you have the following options for configuring event notifications\. You can choose a single option or multiple options\.
 + **Object creation**
-  + **ObjectCreated \(All\)** – Receive a notification when an object is created in your bucket for any of the following object creation actions: **Put**, **Post**, **Copy**, and **Multipart upload completed**\.
+  + **ObjectCreated \(All\)** – Receive a notification when an object is created in your bucket by any of the following object creation actions: **Put**, **Post**, **Copy**, and **Multipart upload completed**\.
   +  **Put**, **Post**, **Copy**, and **Multipart upload completed** – Receive a notification for one of these specific object creation actions\.
 + **Object deletion**
   + **ObjectDelete \(All\)** – Receive a notification any time an object in your bucket is deleted\.
@@ -27,10 +27,10 @@ In the Amazon S3 console, you have the following options for configuring event n
 + **Reduced Redundancy Storage \(RRS\) object lost events**
   + **Object in RSS Lost** – Receive a notification that an object of the RRS storage class has been lost
 + **Objects eligible for replication using Amazon S3 Replication Time Control**
-  + **Replication time missed threshold** – Receive a notification that an object failed to replicate\.
-  + **Replication time completed after threshold** – Receive a notification that an object exceeded the 15\-minute threshold for replication\.
-  + **Replication time not tracked** – Receive a notification that an object replicated after the 15\-minute threshold\.
-  + **Replication time failed** – Receive a notification that an object that was eligible for replication is no longer being tracked by replication metrics\.
+  + **Replication time missed threshold** – Receive a notification that an object exceeded the 15\-minute threshold for replication\.
+  + **Replication time completed after threshold** – Receive a notification that an object replicated after the 15\-minute threshold\.
+  + **Replication time not tracked** – Receive a notification that an object that was eligible for replication is no longer being tracked by replication metrics\.
+  + **Replication time failed** – Receive a notification that an object failed to replicate\.
 
 **Note**  
 When you delete the last object from a folder, Amazon S3 can generate an object creation event\. When there are multiple objects with the same prefix with a trailing slash \(/\) as part of their names, those objects are shown as being part of a folder in the Amazon S3 console\. The name of the folder is formed from the characters preceding the trailing slash \(/\)\.   

@@ -12,8 +12,6 @@ Buckets have configuration properties, including geographical Region, access set
 
 1. Choose **Create bucket**\.
 
-   The **Create bucket** wizard opens\.
-
 1. In **Bucket name**, enter a DNS\-compliant name for your bucket\.
 
    The bucket name must:
@@ -22,13 +20,13 @@ Buckets have configuration properties, including geographical Region, access set
    + Not contain uppercase characters\.
    + Start with a lowercase letter or number\.
 
-   After you create the bucket, you can't change its name\. For information about naming buckets, see [Rules for Bucket Naming](https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html#bucketnamingrules) in the *Amazon Simple Storage Service Developer Guide*\.
+   After you create the bucket, you can't change its name\. For information about naming buckets, see [Rules for bucket naming](https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html#bucketnamingrules) in the *Amazon Simple Storage Service Developer Guide*\.
 **Important**  
 Avoid including sensitive information, such as account numbers, in the bucket name\. The bucket name is visible in the URLs that point to the objects in the bucket\.
 
 1. In **Region**, choose the AWS Region where you want the bucket to reside\. 
 
-   Choose a Region close to you to minimize latency and costs and address regulatory requirements\. Objects stored in a Region never leave that Region unless you explicitly transfer them to another Region\. For a list of Amazon S3 AWS Regions, see [AWS Service Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) in the *Amazon Web Services General Reference*\.
+   Choose a Region close to you to minimize latency and costs and address regulatory requirements\. Objects stored in a Region never leave that Region unless you explicitly transfer them to another Region\. For a list of Amazon S3 AWS Regions, see [AWS service endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) in the *Amazon Web Services General Reference*\.
 
 1. In **Bucket settings for Block Public Access**, choose the Block Public Access settings that you want to apply to the bucket\. 
 

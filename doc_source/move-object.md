@@ -19,3 +19,6 @@ In the Amazon S3 console, you can move an object to a bucket or a folder\.
 1. Under **Review**, confirm the move details, and choose **Move**\.
 
    Amazon S3 moves your object to the destination\.
+
+**Note**  
+This action moves all specified objects\. When moving folders, wait for the move action to finish before making additional changes in the folders\. 
