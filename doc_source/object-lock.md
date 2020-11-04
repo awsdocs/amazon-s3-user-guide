@@ -10,20 +10,15 @@ For information about creating a bucket with S3 Object Lock enabled, see [How do
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
-1. In the **Bucket name** list, choose the name of the bucket that you want\.  
-![\[Console screenshot showing the chosen bucket in the bucket name list.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-bucket-name.png)
+1. In the **Buckets** list, choose the name of the bucket that you want\.
 
-1. In the **Name** list, choose the name of the object that you want to lock\.  
-![\[Console screenshot showing the chosen object in the name list.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-name-select.png)
+1. In the **Objects** list, choose the name of the object that you want to lock\.
 
-1. Choose **Properties**\.  
-![\[Console screenshot showing the properties tab.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-properties.png)
+1. Choose **Properties**\.
 
-1. Choose **Object Lock**\.   
-![\[Console screenshot showing the S3 Object Lock property box.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-lock-box.png)
+1. Choose **Object Lock**\. 
 
-1. Choose a retention mode\. You can change the **Retain until date**\. You can also choose to enable a legal hold\. For more information, see [S3 Object Lock Overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html) in the *Amazon Simple Storage Service Developer Guide*\.  
-![\[Console screenshot showing the Object Lock dialog box.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/enable-lock-on-object.png)
+1. Choose a retention mode\. You can change the **Retain until date**\. You can also choose to enable a **Legal hold**\. For more information, see [S3 Object Lock Overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 1. Choose **Save**\.
 

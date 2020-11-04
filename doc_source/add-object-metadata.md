@@ -1,78 +1,75 @@
-# How do I add metadata to an S3 object?<a name="add-object-metadata"></a>
+# Editing object metadata<a name="add-object-metadata"></a>
 
-Each object in Amazon Simple Storage Service \(Amazon S3\) has a set of name\-value pairs that provides metadata about the object\. *Metadata* is additional information about the object\. Some metadata is set by Amazon S3 when you upload the object, for example,`Date` and `Content-Length`\. You can also set some metadata when you upload the object, or you can add it later\. This section explains how to use the Amazon S3 console to add metadata to an S3 object\.
+This section explains how to use the Amazon S3 console to edit metadata of existing S3 objects\. Each object in Amazon S3 can have a set of key\-value pairs that provides *metadata*, which is additional information about the object\. Some metadata is set by Amazon S3 when you upload the object\. For example, `Content-Length` is the *key* \(name\) and the *value* is the size of the object in bytes\. 
 
-Object metadata is a set of name\-value \(key\-value\) pairs\. For example, the metadata for content length, `Content-Length`, is the name \(key\) and the size of the object in bytes \(value\)\. For more information about object metadata, see [Object Metadata](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-metadata) in the *Amazon Simple Storage Service Developer Guide*\.
+You can also set some metadata when you upload the object and later edit it as your needs change\. For example, you may have a set of objects that you initially store in the `STANDARD` storage class\. Over time you may no longer need this data to be highly available and change the storage class to `GLACIER` by editing the value of the `x-amz-storage-class` key from `STANDARD` to `GLACIER`\.
 
-There are two kinds of metadata for an S3 object, Amazon S3 system metadata and user\-defined metadata:
-+ **System metadata**–There are two categories of system metadata\. Metadata such as the `Last-Modified` date is controlled by the system\. Only Amazon S3 can modify the value\. There is also system metadata that you control, for example, the storage class configured for the object\. 
-+ **User\-defined metadata**–You can define your own custom metadata, called user\-defined metadata\. You can assign user\-defined metadata to an object when you upload the object or after the object has been uploaded\. User\-defined metadata is stored with the object and is returned when you download the object\. Amazon S3 does not process user\-defined metadata\. 
+There are two kinds of metadata for an S3 object, Amazon S3 *system\-defined* metadata and *user\-defined *metadata:
++ **System\-defined metadata**–Within system metadata, there are two categories\. 
+  + Metadata such as the `Last-Modified` date is controlled by the system and only Amazon S3 can modify the value\.
+  + There is also system metadata that you can modify, for example, the storage class for the object or the encryption type\.
++ **User\-defined metadata**–You can define your own custom metadata, called user\-defined metadata, that you assign to an object when you upload the object or after the object has been uploaded\. User\-defined metadata is stored with the object and is returned when you download the object\. Amazon S3 does not process user\-defined metadata\. 
 
-The following topics describe how to add metadata to an object using the Amazon S3 console\.
-
-**Note**  
-If you change an object's metadata, a new object will be created and will replace the old one\. If S3 Versioning is enabled, a new version of the object is created, and the existing object becomes an older version\. The role that changes the property also becomes the owner of the new object or \(object version\)\.
+The following topics describe how to edit metadata of an object using the Amazon S3 console\.
 
 **Topics**
-+ [Adding system\-defined metadata](#add-object-metadata-system)
-+ [Adding user\-defined metadata](#add-object-metadata-user-defined)
++ [Editing system\-defined metadata](#add-object-metadata-system)
++ [Editing user\-defined metadata](#add-object-metadata-user-defined)
 
-## Adding system\-defined metadata to an S3 object<a name="add-object-metadata-system"></a>
+**Note**  
+This action creates a *copy* of the object with updated settings and the last\-modified date\. If S3 Versioning is enabled, a new version of the object is created, and the existing object becomes an older version\. The IAM role that changes the property also becomes the owner of the new object or \(object version\)\.
+Editing metadata updates values for existing key names\.
+Objects encrypted with customer\-provided encryption keys \(SSE\-C\) cannot be copied using the console and must use the AWS CLI, AWS SDK, or the Amazon S3 REST API,
 
-You can configure some system metadata for an S3 object\. For a list of system\-defined metadata and whether you can modify their values, see [System\-Defined Metadata](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#SysMetadata) in the *Amazon Simple Storage Service Developer Guide*\.
+**Warning**  
+When editing metadata of folders, wait for the Edit metadata operation to finish before adding new objects to the folder\. Otherwise, new objects might be edited as well\.
+Objects encrypted with customer\-provided encryption keys \(SSE\-C\) cannot be copied using the console and must use the AWS CLI, AWS SDK, or the Amazon S3 REST API,
 
-**To add system metadata to an object**
+For more information about object metadata including naming guidelines and limits, see [Object Metadata](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-metadata) in the *Amazon Simple Storage Service Developer Guide*\.
+
+## Editing system\-defined metadata<a name="add-object-metadata-system"></a>
+
+You can configure some, but not all, system metadata for an S3 object\. For a list of system\-defined metadata and whether you can modify their values, see [System\-Defined Metadata](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#SysMetadata) in the *Amazon Simple Storage Service Developer Guide*\.
+
+**To edit system\-defined metadata of an object**
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
-1. In the **Bucket name** list, choose the name of the bucket that contains the object\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-bucket-name.png)
+1. Navigate to your Amazon S3 bucket or folder and select the check box to the left of the names of the objects with metadata you want to edit\.
 
-1. In the **Name** list, choose the name of the object that you want to add metadata to\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-name-select.png)
+1. Open the **Action** menu, go to the **Edit actions** section, and choose **Edit metadata**\.
 
-1. Choose **Properties**, and then choose **Metadata**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-properties-tab.png)
+1. Review the objects listed and choose **Add metadata**\.
 
-1. Choose **Add Metadata**, and then choose a key from the **Select a key** menu\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/add-metadata.png)
+1. For metadata **Type**, select **System\-defined**\.
 
-1. Depending on which key you chose, choose a value from the **Select a value** menu or type a value\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/add-metadata-value.png)
+1. Specify a unique **Key** and the metadata **Value**\.
 
-1. Choose **Save**\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/add-metadata-save.png)
+1. To edit additional metadata, choose **Add metadata**\. You can also choose **Remove** to remove a set of Type\-Key\-Values\.
 
-**Note**  
-This action adds metadata to all specified objects\. When adding metadata to folders, wait for the save operation to finish before adding new objects to the folder\.
+1. When you are done, choose **Save changes** and Amazon S3 edits the metadata of the specified objects\.
 
-## Adding user\-defined metadata to an S3 object<a name="add-object-metadata-user-defined"></a>
+## Editing user\-defined metadata<a name="add-object-metadata-user-defined"></a>
 
-You can assign user\-defined metadata to an object\. User\-defined metadata must begin with the prefix "`x-amz-meta-`", otherwise Amazon S3 will not set the key value pair as you define it\. You define custom metadata by adding a name that you choose to the `x-amz-meta-` key\. This creates a custom key\. For example, if you add the custom name `alt-name`, the metadata key would be `x-amz-meta-alt-name`\. 
+You can edit user\-defined metadata of an object by combining the metadata prefix, `x-amz-meta-`, and a name you choose to create a custom key\. For example, if you add the custom name `alt-name`, the metadata key would be `x-amz-meta-alt-name`\. User\-defined metadata can be as large as 2 KB\. Both keys and their values must conform to US\-ASCII standards\. For more information, see [User\-Defined Metadata](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#UserMetadata) in the *Amazon Simple Storage Service Developer Guide*\.
 
-User\-defined metadata can be as large as 2 KB\. Both keys and their values must conform to US\-ASCII standards\. For more information, see [User\-Defined Metadata](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#UserMetadata) in the *Amazon Simple Storage Service Developer Guide*\.
-
-**To add user\-defined metadata to an object**
+**To edit user\-defined metadata of an object**
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
-1. In the **Bucket name** list, choose the name of the bucket that contains the object\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-bucket-name.png)
+1. Navigate to your Amazon S3 bucket or folder and select the check box to the left of the names of the objects with metadata you want to edit\.
 
-1. In the **Name** list, choose the name of the object that you want to add metadata to\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-name-select.png)
+1. Open the **Action** menu, go to the **Edit actions** section, and choose **Edit metadata**\.
 
-1. Choose **Properties**, and then choose **Metadata**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-properties-tab.png)
+1. Review the objects listed and choose **Add metadata**\.
 
-1. Choose **Add Metadata**, and then choose the `x-amz-meta-` key from the **Select a key** menu\. Any metadata starting with the prefix `x-amz-meta-` is user\-defined metadata\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/add-metadata-user-defined.png)
+1. For metadata **Type**, select **User\-defined**\.
 
-1. Type a custom name following the `x-amz-meta-` key\. For example, for the custom name `alt-name`, the metadata key would be `x-amz-meta-alt-name`\. Enter a value for the custom key, and then choose **Save**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/add-metadata-user-defined-value.png)
+1. Enter a unique, custom **Key** following `x-amz-meta-`\. Also enter a metadata **Value**\.
 
-**Note**  
-When adding metadata to folders, wait for the save to complete before adding new objects\. Otherwise, new objects might be edited as well\.
+1. To add additional metadata, choose **Add metadata**\. You can also choose **Remove** to remove a set of Type\-Key\-Values\. 
+
+1. When you are done, choose **Save changes** and Amazon S3 edits the metadata of the specified objects\.
 
 ### More info<a name="add-object-metadata-user-defined-moreinfo"></a>
 +  [How do I view the properties of an object?](view-object-properties.md)

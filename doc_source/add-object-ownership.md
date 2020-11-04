@@ -9,11 +9,11 @@ S3 Object Ownership enables you to take ownership of new objects that other AWS 
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
-1. In the **Bucket name** list, choose the name of the bucket that you want to enable S3 Object Ownership for\.
+1. In the **Buckets** list, choose the name of the bucket that you want to enable S3 Object Ownership for\.
 
 1. Choose the **Permissions** tab\.
 
-1. Choose **S3 Object Ownership**\.
+1. Choose **Edit** under **Object Ownership**\.
 
 1. Choose **Bucket owner preferred**, and then choose **Save**\.
 

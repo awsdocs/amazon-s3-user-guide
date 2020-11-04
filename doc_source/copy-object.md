@@ -1,24 +1,29 @@
-# Copying an object<a name="copy-object"></a>
+# Copying objects<a name="copy-object"></a>
 
-In the Amazon S3 console, you can copy an object to a bucket or a folder\. For more information, see [Copying objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/CopyingObjectsExamples.html) in the *Amazon Simple Storage Service Developer Guide*\.
+In the Amazon S3 console, you can copy objects to a bucket or to an access point within the same AWS Region\. For more information, see [Copying objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/CopyingObjectsExamples.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 **To copy an object**
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
-1. In the **Buckets** list, choose your bucket name\.
+1. Navigate to the Amazon S3 bucket or folder that contains the objects that you want to copy\.
 
-1. On the **Overview** tab, select the check box beside the object that you want to copy\.
+1. Select the check box to the left of the names of the objects that you want to copy\.
 
-1. Choose **Actions**, and choose **Copy**\.
+1. Choose **Actions** and choose **Copy** from the list of options that appears\.
 
-1. Choose the copy destination:
-   + If you want to copy your object to a bucket, select the bucket\.
-   + If you want to copy your object to a folder in a bucket, choose the bucket name, and then choose the folder\.
+   Alternatively, choose **Copy** from the options in the upper right\. 
 
-1. Under **Review**, confirm the copy details, and choose **Copy**\.
+1. Select the destination type and destination account\. To specify the destination path, choose **Browse S3**, navigate to the destination, and select the check box to the left of the destination\. Choose **Choose destination** in the lower right\. 
 
-   Amazon S3 copies your object to the destination\.
+   Alternatively, enter the destination path\. 
+
+1. If you do *not* have bucket versioning enabled, you might be asked to acknowledge that existing objects with the same name are overwritten\. If this is OK, select the check box and proceed\. If you want to keep all versions of objects in this bucket, select **Enable Bucket Versioning**\. You can also update default encryption and Object Lock properties\.
+
+1. Choose **Copy** in the bottom right and Amazon S3 moves your objects to the destination\.
 
 **Note**  
-This action copies all specified objects\. When copying folders, wait for the copy action to finish before making additional changes in the folders\. 
+This action creates a copy of all specified objects with updated settings, updates the last\-modified date in the specified location, and adds a delete marker to the original object\. 
+When moving folders, wait for the move action to finish before making additional changes in the folders\. 
+Objects encrypted with customer\-provided encryption keys \(SSE\-C\) cannot be copied using the S3 console\. To copy objects encrypted with SSE\-C, use the AWS CLI, AWS SDK, or the Amazon S3 REST API\. 
+This action updates metadata for bucket versioning, encryption, Object Lock features, and archived objects\. 

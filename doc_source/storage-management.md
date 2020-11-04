@@ -3,7 +3,7 @@
 This section explains how to configure Amazon S3 storage management tools\.
 
 **Topics**
-+ [Creating a lifecycle policy](create-lifecycle.md)
++ [Creating a lifecycle rule](create-lifecycle.md)
 + [Creating replication rules](enable-replication.md)
 + [Managing replication rules](disable-replication.md)
 + [Configuring Storage Class Analysis](configure-analytics-storage-class.md)

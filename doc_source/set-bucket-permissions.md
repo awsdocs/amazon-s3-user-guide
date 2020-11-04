@@ -7,16 +7,15 @@ You can grant permissions to other AWS account users or to predefined groups\. T
 Each permission you grant for a user or group adds an entry in the ACL that is associated with the bucket\. The ACL lists grants, which identify the grantee and the permission granted\. For more information about ACLs, see [Managing Access with ACLs](https://docs.aws.amazon.com/AmazonS3/latest/dev/S3_ACLs_UsingACLs.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 **Warning**  
-We highly recommend that you avoid granting write access to the **Everyone \(public access\)** or **Authenticated Users group \(all AWS authenticated users\)** groups\. For more information about the effects of granting write access to these groups, see [Amazon S3 Predefined Groups](https://docs.aws.amazon.com/https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#specifying-grantee-predefined-groups) in the *Amazon Simple Storage Service Developer Guide*\.
+We highly recommend that you avoid granting write access to the **Everyone \(public access\)** or **Authenticated Users group \(all AWS authenticated users\)** groups\. For more information about the effects of granting write access to these groups, see [Amazon S3 Predefined Groups](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#specifying-grantee-predefined-groups) in the *Amazon Simple Storage Service Developer Guide*\.
 
 **To set ACL access permissions for an S3 bucket**
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
-1. In the **Bucket name** list, choose the name of the bucket that you want to set permissions for\.  
-![\[Bucket name list with "admin-created" bucket highlighted.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-bucket-name.png)
+1. In the **Buckets** list, choose the name of the bucket that you want to set permissions for\.
 
-1. Choose **Permissions**, and then choose **Access Control List**\.
+1. Choose **Permissions**, and then choose **Edit** within **Access Control List \(ACL\)**\.
 
 1. You can manage bucket access permissions for the following: 
 
@@ -26,19 +25,15 @@ We highly recommend that you avoid granting write access to the **Everyone \(pub
 
       The *owner* refers to the AWS account root user, and not an AWS Identity and Access Management \(IAM\) user\. For more information about the root user, see [The AWS Account Root User](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html) in the *IAM User Guide*\.
 
-      To change the owner's bucket access permissions, under **Access for your AWS account root user**, choose **Your AWS Account \(owner\)**\.
-
-      Select the check boxes for the permissions that you want to change, and then choose **Save**\.  
-![\[Screenshot showing permissions check boxes for account owner.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/bucket-permissions-owner.png)
+      To change the owner's bucket access permissions, select the checkboxes for the permissions under **Bucket owner \(your AWS account\)**\.
 
    1. 
 
 **Access for other AWS accounts**
 
-      To grant permissions to an AWS user from a different AWS account, under **Access for other AWS accounts**, choose **Add account**\. In the **Enter an ID** field, enter the canonical ID of the AWS user that you want to grant bucket permissions to\. For information about finding a canonical ID, see [AWS Account Identifiers](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html) in the *Amazon Web Services General Reference*\. You can add as many as 99 users\.
+      To grant permissions to an AWS user from a different AWS account, choose **Add grantee**\. In the **Enter a canonical ID** field, enter the canonical ID or email of the AWS user that you want to grant bucket permissions to\. For information about finding a canonical ID, see [AWS Account Identifiers](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html) in the *Amazon Web Services General Reference*\. You can add as many as 99 users\.
 
-      Select the check boxes next to the permissions that you want to grant to the user, and then choose **Save**\. To display information about the permissions, choose the Help icons\.   
-![\[Console screenshot showing Help icon and tooltip.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/bucket-permissions-add-user.png)
+      Select the check boxes next to the permissions that you want to grant to the user, and then choose **Save changes**\.
 **Warning**  
 When you grant other AWS accounts access to your resources, be aware that the AWS accounts can delegate their permissions to users under their accounts\. This is known as *cross\-account access*\. For information about using cross\-account access, see [ Creating a Role to Delegate Permissions to an IAM User](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html) in the *IAM User Guide*\. 
 
@@ -48,8 +43,7 @@ When you grant other AWS accounts access to your resources, be aware that the AW
 
       To grant access to your bucket to the general public \(everyone in the world\), under **Public access**, choose **Everyone**\. Granting public access permissions means that anyone in the world can access the bucket\. Select the check boxes for the permissions that you want to grant, and then choose **Save**\. 
 
-      To undo public access to your bucket, under **Public access**, choose **Everyone**\. Clear all the permissions check boxes, and then choose **Save**\.  
-![\[Screenshot showing that everyone will have access to the bucket.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/bucket-permissions-public.png)
+      To undo public access to your bucket, under **Public access**, choose **Everyone**\. Clear all the permissions check boxes, and then choose **Save**\.
 **Warning**  
 Use caution when granting the **Everyone** group public access to your S3 bucket\. When you grant access to this group, anyone in the world can access your bucket\. We highly recommend that you never grant any kind of public write access to your S3 bucket\.
 

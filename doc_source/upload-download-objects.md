@@ -17,8 +17,8 @@ If you rename an object, or change any of the properties; **Storage Class**, ** 
 
 **Topics**
 + [Uploading S3 objects](upload-objects.md)
-+ [Copying an object](copy-object.md)
-+ [Moving an object](move-object.md)
++ [Copying objects](copy-object.md)
++ [Moving objects](move-object.md)
 + [Downloading S3 objects](download-objects.md)
 + [Deleting objects](delete-objects.md)
 + [Undeleting objects](undelete-objects.md)
@@ -28,6 +28,6 @@ If you rename an object, or change any of the properties; **Storage Class**, ** 
 + [Viewing object versions](view-object-versions.md)
 + [Viewing object properties](view-object-properties.md)
 + [Adding encryption to an object](add-object-encryption.md)
-+ [Adding metadata to an object](add-object-metadata.md)
-+ [Adding tags to an object](add-object-tags.md)
++ [Editing object metadata](add-object-metadata.md)
++ [Editing object tags](add-object-tags.md)
 + [Using folders](using-folders.md)

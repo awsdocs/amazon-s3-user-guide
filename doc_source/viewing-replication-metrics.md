@@ -6,32 +6,6 @@ Replication metrics track the rule IDs of the replication configuration\. A repl
 
 For more information about CloudWatch metrics for Amazon S3, see [Monitoring Metrics with Amazon CloudWatch](https://docs.aws.amazon.com/AmazonS3/latest/dev/cloudwatch-monitoring.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
-## Viewing replication metrics \(legacy Amazon S3 console experience\)<a name="replication-metrics"></a>
-
-**Prerequisites**  
-Enable a replication rule that has S3 RTC\.
-
-**To view replication metrics**
-
-1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
-
-1. In the **Bucket name** list, choose the name of the bucket that contains the objects you want replication metrics for\.
-
-1. Choose the **Management** tab, and then choose **Metrics**\.
-
-1. Choose **Replication**\.
-
-1. In the **Rule IDs** list in the left pane, select the rule IDs that you want\. If you have several rule IDs to choose from, you can search for the IDs that you want\.
-
-1. After choosing the rule IDs that you want, choose **Display graphs** below the **Rule IDs** selection box\.
-
-You can then view the replication metrics **Replication Latency \(in seconds\)**, **Operations pending replication**, and **Bytes pending replication** for the rules that you selected\. Amazon CloudWatch begins reporting replication metrics 15 minutes after you enable S3 RTC on the respective replication rule\. You can view replication metrics on the Amazon S3 or CloudWatch console\. For information, see [Replication metrics overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-time-control.html#using-replication-metrics) in the *Amazon Simple Storage Service Developer Guide*\.
-
-## Viewing replication metrics \(new Amazon S3 console experience\)<a name="replication-metrics-new"></a>
-
-**Note**  
-We are in the process of releasing a new Amazon S3 console experience to customers\. These instructions describe the new experience\. If you don't see the new console now, don't worry\. It will soon be available to all customers\. For instructions using the previous console experience, expand **Viewing replication metrics \(legacy Amazon S3 console experience\)** on this page\.
-
 **Prerequisites**  
 Enable a replication rule that has S3 RTC\.
 

@@ -10,20 +10,20 @@ For example, if your root domain is `example.com`, and you want to serve request
 
 1. Open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
-1. Choose the name of the bucket that you have configured as a static website \(for example, `example.com`\)\.
+1. Under **Buckets**, choose the name of the bucket that you want to redirect requests from \(for example, `www.example.com`\)\.
 
 1. Choose **Properties**\.
 
-1. Choose **Static website hosting**\.
+1. Under **Static website hosting**, choose **Edit**\.
 
-1. Choose **Redirect requests**\. 
+1. Choose **Redirect requests for an object**\. 
 
-1. In the **Target bucket or domain** box, enter the bucket or domain that you want to redirect to\.
+1. In the **Host name** box, enter the website endpoint for your bucket or your custom domain\.
 
    For example, if you are redirecting to a root domain address, you would enter **example\.com**\.
 
-1. In the **Protocol** box, enter the protocol for the redirected requests \(**http** or **https**\)\.
+1. For **Protocol**, choose the protocol for the redirected requests \(**none**,**http**, or **https**\)\.
 
-   If you do not specify a protocol, the protocol of the original request is used\.
+   If you do not specify a protocol, the default option is **none**\.
 
-1. Choose **Save**\.
+1. Choose **Save changes**\.

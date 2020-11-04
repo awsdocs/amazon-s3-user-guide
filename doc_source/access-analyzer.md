@@ -89,7 +89,7 @@ If you did not intend to grant access to the public or other AWS accounts, inclu
 
 1. To see whether public access or shared access is granted through a bucket policy, a bucket ACL, or an access point policy, look in the **Shared through** column\.
 
-1. Under **Bucket name**, choose the name of the bucket with the bucket policy, bucket ACL, or access point policy that you want to change or review\.
+1. Under **Buckets**, choose the name of the bucket with the bucket policy, bucket ACL, or access point policy that you want to change or review\.
 
 1. If you want to change or view a bucket ACL:
 

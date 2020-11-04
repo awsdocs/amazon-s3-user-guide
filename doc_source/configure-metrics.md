@@ -4,33 +4,6 @@ There are three types of Amazon CloudWatch metrics for Amazon S3: storage metric
 
 For more information about CloudWatch metrics for Amazon S3, see [Monitoring metrics with Amazon CloudWatch](https://docs.aws.amazon.com/AmazonS3/latest/dev/cloudwatch-monitoring.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
-## Configuring request metrics for all the objects in an S3 bucket \(legacy Amazon S3 console experience\)<a name="configure-request-metrics"></a>
-
-**To configure request metrics on a bucket**
-
-1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
-
-1. In the **Bucket name** list, choose the name of the bucket that contains the objects you want request metrics for\.
-
-1. Choose the **Management** tab, and then choose **Metrics**\.
-
-1. Choose **Requests**\.
-
-1. Choose the edit icon next to the bucket icon\.
-
-1. To create request metrics configuration for all the objects in your bucket, select the **Request metrics** check box\. 
-
-1. Choose **Save**\.
-
-   After about 15 minutes, CloudWatch begins tracking these request metrics\. You can see graphs for the metrics on the Amazon S3 or CloudWatch console\. Request metrics are billed at the standard CloudWatch rate\. For more information, see [Amazon CloudWatch pricing](http://aws.amazon.com/cloudwatch/pricing/)\. 
-
-   You can also create a filter that limits the scope of replication metrics by prefixes or tags\. For more information, see [How do I create a request metrics filter that limits scope by object tag or prefix?](configure-metrics-filter.md)
-
-## Configuring request metrics for all the objects in an S3 bucket \(new Amazon S3 console experience\)<a name="configure-request-metrics-new"></a>
-
-**Note**  
-We are in the process of releasing a new Amazon S3 console experience to customers\. These instructions describe the new experience\. If you don't see the new console now, don't worry\. It will soon be available to all customers\. For instructions using the previous console experience, expand **Configuring request metrics for all the objects in an S3 bucket \(legacy Amazon S3 console experience\)** on this page\.
-
 **To create a request metrics filter**
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.

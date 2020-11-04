@@ -18,11 +18,7 @@ The list buckets view shows whether your bucket is publicly accessible\. Amazon 
 
 The access column shows the access status of the listed buckets\.
 
-![\[Console screenshot of list buckets view showing access status.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/bucket-access-status.png)
-
 You can also filter bucket searches by access type\. Choose an access type from the drop\-down list that is next to the **Search for buckets** bar\. 
-
-![\[Console screenshot showing how to search for S3 buckets by access type.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/search-by-access-type.png)
 
 ## More info<a name="block-public-access-moreinfo"></a>
 +  [How do I edit public access settings for S3 buckets?](block-public-access-bucket.md)

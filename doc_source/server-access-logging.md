@@ -15,23 +15,17 @@ There is no extra charge for enabling server access logging on an Amazon S3 buck
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
-1. In the **Bucket name** list, choose the name of the bucket that you want to enable server access logging for\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-bucket-name.png)
+1. In the **Buckets** list, choose the name of the bucket that you want to enable server access logging for\.
 
-1. Choose **Properties**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-properties-tab.png)
+1. Choose **Properties**\.
 
-1. Choose **Server access logging**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/bucket-logging-box.png)
+1. In the **Server access logging** section, choose **Edit**\.
 
-1. Choose **Enable Logging**\. For **Target**, choose the name of the bucket that you want to receive the log record objects\.  The target bucket must be in the same Region as the source bucket and must not have a default retention period configuration\.  
-![\[Create bucket wizard set permissions options page.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/enable-bucket-logging.png)
+1. Under **Server access logging**, select **Enable**\. For **Target bucket**, enter the name of the bucket that you want to receive the log record objects\. The target bucket must be in the same Region as the source bucket and must not have a default retention period configuration\.
 
-1. \(Optional\) For **Target prefix**, type a key name prefix for log objects, so that all of the log object names begin with the same string\.
+1. Choose **Save changes**\.
 
-1. Choose **Save**\.
-
-   You can view the logs in the target bucket\. If you specified a prefix, the prefix shows as a folder in the target bucket in the console\. After you enable server access logging, it might take a few hours before the logs are delivered to the target bucket\. For more information about how and when logs are delivered, see [Server Access Logging](https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html#how-logs-delivered) in the *Amazon Simple Storage Service Developer Guide*\.
+   You can view the logs in the target bucket\.  After you enable server access logging, it might take a few hours before the logs are delivered to the target bucket\. For more information about how and when logs are delivered, see [Server Access Logging](https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html#how-logs-delivered) in the *Amazon Simple Storage Service Developer Guide*\.
 
 **More Info**  
- [How do I view the properties for an S3 Bucket?](view-bucket-properties.md)
+ [How do I view the properties for an S3 bucket?](view-bucket-properties.md)

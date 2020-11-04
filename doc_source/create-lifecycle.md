@@ -1,79 +1,76 @@
-# How do I create a lifecycle policy for an S3 Bucket?<a name="create-lifecycle"></a>
+# How do I create a lifecycle rule for an S3 bucket?<a name="create-lifecycle"></a>
 
-You can use lifecycle policies to define actions that you want Amazon S3 to take during an object's lifetime \(for example, transition objects to another storage class, archive them, or delete them after a specified period of time\)\.
+You can use lifecycle rules to define actions that you want Amazon S3 to take during an object's lifetime \(for example, transition objects to another storage class, archive them, or delete them after a specified period of time\)\.
 
-You can define a lifecycle policy for all objects or a subset of objects in the bucket by using a shared prefix \(objects names that begin with a common string\) or a tag\. 
+You can define a lifecycle rules for all objects or a subset of objects in the bucket by using a shared prefix \(objects names that begin with a common string\) or a tag\. 
 
-Using a lifecycle policy, you can define actions specific to current and noncurrent object versions\. For more information, see [Object Lifecycle Management](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) and [Object Versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html) and [Using Versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) in the *Amazon Simple Storage Service Developer Guide*\.
+Using a lifecycle rule you can define actions specific to current and non\-current object versions\. For more information, see [Object Lifecycle Management](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) and [Object Versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html) and [Using Versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
-**To create a lifecycle policy**
+**To create a lifecycle rule**
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
-1. In the **Buckets** list, choose the name of the bucket that you want to create a lifecycle policy for\.
+1. In the **Buckets** list, choose the name of the bucket that you want to create a lifecycle rule for\.
 
-1. Choose the **Management** tab, and choose **Add lifecycle rule**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-lifecycle-tab.png)
+1. Choose the **Management** tab, and choose **Create lifecycle rule**\.
 
-1. In the **Lifecycle rule** dialog box, type a name for your rule\. 
+1. In **Lifecycle rule name**, enter a name for your rule\. 
 
    The name must be unique within the bucket\. 
 
-1. Choose the scope of the lifecycle rule: all objects with a specific prefix or tag or all the objects in the bucket\.
-   + To apply this lifecycle rule to *all objects with a specific prefix or tag*, choose **Limit the scope to specific prefixes or tags**\. In the **Add prefix or tag filter** box, type the prefix or tag name, and press **Enter**\.  For more information about object name prefixes, see [Object Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys) in the *Amazon Simple Storage Service Developer Guide*\.For more information about object tags, see [Object Tagging](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-tagging.html) in the *Amazon Simple Storage Service Developer Guide*\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/lifecycle-name-scope.png)
-   + To apply this lifecycle rule to *all objects in the bucket*, choose **Apply to *all* objects in the bucket**\.
+1. Choose the scope of the lifecycle rule: 
+   + To apply this lifecycle rule to *all objects with a specific prefix or tag*, choose **Limit the scope to specific prefixes or tags**\.
+     + To limit the scope by prefix, in **Prefix**, enter the prefix\. 
+     + To limit the scope by tag, choose **Add tag**, and enter the tag key and value\.
 
-1. Choose **Next**\.
+       For more information about object name prefixes, see [Object Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys) in the *Amazon Simple Storage Service Developer Guide*\. For more information about object tags, see [Object Tagging](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-tagging.html) in the *Amazon Simple Storage Service Developer Guide*\. 
+   + To apply this lifecycle rule to *all objects in the bucket*, choose **This rule applies to *all* objects in the bucket**, and choose **I acknowledge that this rule applies to all objects in the bucket**\.
 
-   The **Storage class transition** page opens\. When you configure your storage class transitions, you define the rules to transition objects to the Standard\-IA, One Zone\-IA, Glacier, and Deep Archive storage classes\. For more information, see [Storage Classes](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) in the *Amazon Simple Storage Service Developer Guide*\. You can define transitions for current or previous object versions or for both current and previous versions\. Versioning enables you to keep multiple versions of an object in one bucket\. For more information about versioning, see [How do I enable or suspend versioning for an S3 bucket?](enable-versioning.md)\.
+1. Under **Lifecycle rule actions**, choose the actions that you want your lifecycle rule to perform:
+   + Transition *current* versions of objects between storage classes
+   + Transition *previous* versions of objects between storage classes
+   + Expire *current* versions of objects
+   + Permanently delete *previous* versions of objects
+   + Delete expired delete markers or incomplete multipart uploads 
 
-1. Choose the versions for which you want to define transitions, current or noncurrent:
-   + To define transitions that are applied to the current verion of the object, choose **Current version**\. 
-   + To define transitions that are applied to all previous versions of the object, choose **Previous versions**\.
+   Depending on the actions that you choose, different options appear\.
 
-     In the screenshot below, **Current version** is chosen\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/lifecycle-transition-current-version.png)
+1. To transition *current* versions of objects between storage classes, under **Transition current versions of objects between storage classes**:
 
-1. To add a transition: 
+   1. In **Storage class transitions**, choose the storage class to transition to:
+      + Standard\-IA
+      + Intelligent\-Tiering
+      + One Zone\-IA
+      + Glacier
+      + Glacier Deep Archive
 
-   1. For a current version, under **For current object versions**, choose **Add transition**\.
+   1. In **Days after object creation**, enter the number of days after creation to transition the object\.
 
-   1. For a non\-current version, under **For non\-current object versions**, choose **Add transition**\.
-
-1. For each transition that you add, choose one of the following:
-   + **Transition to Standard\-IA after**\.
-   + **Transition to Intelligent\-Tiering after**\. 
-   + **Transition to One Zone\-IA after**\. 
-   + **Transition to Glacier after**\.
-   + **Transition to Glacier Deep Archive after**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/lifecycle-add-transition.png)
+   For more information about storage classes, see [Storage Classes](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) in the *Amazon Simple Storage Service Developer Guide*\. You can define transitions for current or previous object versions or for both current and previous versions\. Versioning enables you to keep multiple versions of an object in one bucket\. For more information about versioning, see [How do I enable or suspend versioning for an S3 bucket?](enable-versioning.md)\.
 **Important**  
 When you choose the Glacier or Glacier Deep Archive storage class, your objects remain in Amazon S3\. You cannot access them directly through the separate Amazon S3 Glacier service\. For more information, see [Transitioning Objects Using Amazon S3 Lifecycle](https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-considerations.html)\. 
 
-1. In the **Days after creation** box, enter the number of days after the creation of the object that you want the transition to be applied \(for example, 30 or 100 days\)\.
+1. To transition *non\-current* versions of objects between storage classes, under **Transition non\-current versions of objects between storage classes**:
 
-1. When you are done configuring transitions, choose **Next**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/lifecycle-config-transition.png)
+   1. In **Storage class transitions**, choose the storage class to transition to:
+      + Standard\-IA
+      + Intelligent\-Tiering
+      + One Zone\-IA
+      + Glacier
+      + Glacier Deep Archive
 
-1. Under **Configure expiration**, for this example, choose both **Current version** and **Previous versions**\. 
+   1. In **Days after object becomes non\-current**, enter the number of days after creation to transition the object\.
+
+1. To expire *current* versions of objects, under **Expire previous versions of objects**, in **Number of days after object creation**, enter the number of days\.
 **Important**  
 In a non\-versioned bucket the expiration action results in Amazon S3 permanently removing the object\. For more information about lifecycle actions, see [Elements to describe lifecycle actions](https://docs.aws.amazon.com/AmazonS3/latest/dev/intro-lifecycle-rules.html#intro-lifecycle-rules-actions) in the *Amazon Simple Storage Service Developer Guide*\.
 
-1. Choose **Expire current version of object**, and then enter the number of days after object creation to delete the object \(for example, 395 days\)\.
+1. To permanently delete previous versions of objects, under **Permanently delete previous versions of objects**, in **Number of days after objects become previous versions**, enter the number of days\.
 
-   If you choose this expire option, you cannot choose the option to clean up expired delete markers\. 
-
-1. Choose **Permanently delete previous versions**, and then enter the number of days after an object becomes a previous version to permanently delete the object \(for example, 465 days\)\.
-
-1. To clean up incomplete multipart uploads, we recommend that you choose **Clean up incomplete multipart uploads** and enter the number of days after the multipart upload initiation that you want to end and clean up incomplete multipart uploads\(for example, 7 days\)\. 
+1. Under **Delete expired delete markers or incomplete multipart uploads**, choose **Delete expired object delete markers** and **Delete incomplete multipart uploads**\. Then, enter the number of days after the multipart upload initiation that you want to end and clean up incomplete multipart uploads\.
 
    For more information about multipart uploads, see [Multipart Upload Overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html) in the Amazon Simple Storage Service Developer Guide\.
 
-1. Choose **Next**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/lifecycle-expirations.png)
+1. Choose **Create rule**\.
 
-1. For **Review**, verify the settings for your rule\. If you need to make changes, choose **Previous**\. Otherwise, choose **Save**\. 
-
-   If the rule does not contain any errors, it is enabled and you can see it on the **Lifecycle** page\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/lifecycle-rules-list.png)
+   If the rule does not contain any errors, Amazon S3 enables it, and you can see it on the **Management** tab under **Lifecycle rules**\.

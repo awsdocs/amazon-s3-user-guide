@@ -12,53 +12,41 @@ Each permission you grant for a user or a group adds an entry in the ACL that is
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
-1. In the **Bucket name** list, choose the name of the bucket that contains the object\.  
-![\[Screenshot showing bucket name list with "admin-created" bucket highlighted.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-bucket-name.png)
+1. In the **Buckets** list, choose the name of the bucket that contains the objects for which you want to set permissions\.
 
-1. In the **Name** list, choose the name of the object for which you want to set permissions\.  
-![\[Console screenshot showing choosing an object name.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-name-select.png)
+1. Choose the **Permissions** tab that appears in the list of tabs under the **Bucket overview** section\. 
 
-1. Choose **Permissions**\.
+1. To edit *Block Public Access settings*, choose **Edit** to block or allow public access to this bucket and its access points\. For more information, see [Blocking public access](block-public-access.md)\.
 
-1. You can manage object access permissions for the following: 
+1. To edit *Bucket policy*, choose **Edit** to edit the JSON bucket policy that provides access to objects stored in this bucket\. This policy only applies to objects owned by your account\.
 
-   1. 
+   Alternatively, if you have an existing bucket policy, you can choose **Delete** to delete an existing bucket policy\. For more information, see [Adding a bucket policy](add-bucket-policy.md)\.
 
-**Access for object owner**
+1. To edit *Object ownership*, choose **Edit** to assume ownership of new objects uploaded to this bucket\. For more information, see [](add-object-ownership.md)\.
 
-      The *owner* refers to the AWS account root user, and not an AWS Identity and Access Management \(IAM\) user\. For more information about the root user, see [The AWS Account Root User](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html) in the *IAM User Guide*\.
+1. To edit the *Access control list \(ACL\)*, choose **Edit** to update permissions \(list, read, and write\) to grantee groups such as *Bucket owner* \(your AWS account\), *Everyone*, *Authenticated users *\(anyone with an AWS account\), or *S3 log delivery group*\.
 
-      To change the owner's object access permissions, under **Access for object owner**, choose **Your AWS Account \(owner\)**\.
+   1. The *Bucket owner* refers to your AWS account, and not an AWS Identity and Access Management \(IAM\) user\. For more information about the root user, see [AWS Account Root User](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html) in the *IAM User Guide*\.
 
-      Select the check boxes for the permissions that you want to change, and then choose **Save**\.  
-![\[Screenshot showing permissions check boxes for account owner.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-permissions-owner.png)
-
-   1. 
-
-**Access for other AWS accounts**
-
-      To grant permissions to an AWS user from a different AWS account, under **Access for other AWS accounts**, choose **Add account**\. In the **Enter an ID** field, enter the canonical ID of the AWS user that you want to grant object permissions to\. For information about finding a canonical ID, see [AWS Account Identifiers](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html) in the *Amazon Web Services General Reference*\. You can add as many as 99 users\.
-
-      Select the check boxes for the permissions that you want to grant to the user, and then choose **Save**\. To display information about the permissions, choose the Help icons\.   
-![\[Console screenshot showing Help icon and tooltip.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-permissions-add-user.png)
-
-   1. 
-
-**Public access**
-
-      To grant access to your object to the general public \(everyone in the world\), under **Public access**, choose **Everyone**\. Granting public access permissions means that anyone in the world can access the object\.
-
-      Select the check boxes for the permissions that you want to grant, and then choose **Save**\.   
-![\[Screenshot showing that everyone will have access to the object.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/object-permissions-public.png)
-
+   1. To grant access to your object to *Everyone*, choose **Everyone**\. Granting public access permissions means that anyone in the world can access the object\.
 **Warning**  
 Use caution when granting the **Everyone** group anonymous access to your Amazon S3 objects\. When you grant access to this group, anyone in the world can access your object\. If you need to grant access to everyone, we highly recommend that you only grant permissions to **Read objects**\.
 We highly recommend that you *do not* grant the **Everyone** group write object permissions\. Doing so allows anyone to overwrite the ACL permissions for the object\.
 
+   1. To grant permissions to an AWS user from a different AWS account, enter the canonical ID of the AWS user that you want to grant object permissions to\. For information about finding a canonical ID, see [AWS Account Identifiers](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html) in the *Amazon Web Services General Reference*\. You can add as many as 99 users\.
+
+   1. To specify the *S3 log delivery group*, provide the name of the target bucket where you want Amazon S3 to save the access logs as objects\.
+
+   For more information, see [Setting ACL bucket permissions](set-bucket-permissions.md) and [How to enable server access logging](https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html#server-access-logging-overview) in the *Amazon Simple Storage Service Developer Guide*\.
+
+1. To edit *Cross\-origin resource sharing \(CORS\)*, choose **Edit** to create a CORS configuration, which is an XML document that defines how client web applications that are loaded in one domain interact with resources in a different domain\. For more information, see [Adding cross\-domain resource sharing with CORS](add-cors-configuration.md)\.
+
+1. After editing any of the settings in the previous steps, choose **Save changes** when you are finished\.
+
 **Note**  
 This action applies permissions to all specified objects\. When applying permissions to folders, wait for the save operation to finish before adding new objects\.
 
-You can also set object permissions when you upload objects\. For more information about setting permissions when uploading objects, see [How do I upload files and folders to an S3 bucket?](upload-objects.md)\. 
+You can also set object permissions when you upload objects\. For more information about setting permissions when uploading objects, see [Uploading S3 objects](upload-objects.md)\.
 
 ## More Info<a name="set-object-permissions-moreinfo"></a>
 +  [Setting bucket and object access permissions](set-permissions.md)

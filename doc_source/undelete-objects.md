@@ -12,13 +12,17 @@ The following steps describe how to recover deleted objects that are not folders
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
-1. In the **Bucket name** list, choose the name of the bucket that you want\.
+1. In the **Buckets** list, choose the name of the bucket that you want\.
 
-1. To see a list of the **versions** of the objects in the bucket, select **Show**\. You'll be able to see the delete markers for deleted objects\. 
+1. To see a list of the **versions** of the objects in the bucket, select the **List versions** switch\. You'll be able to see the delete markers for deleted objects\. 
 
-1. To undelete an object, you must delete the delete marker\. Select the check box next to the **delete marker** of the object to recover, and then choose **delete** from the **Actions** menu\.
+1. To undelete an object, you must delete the delete marker\. Select the check box next to the **delete marker** of the object to recover, and then choose **Delete**\.
 
-1. Then, choose **Hide** and you'll see the undeleted object listed\.
+1. Confirm the deletion on the **Delete objects** page\.
+
+   1. Enter **permanently delete** under **Pemanently delete objects?**
+
+   1. Choose **Delete objects**\.
 
 **Note**  
 You can't use the Amazon S3 console to undelete folders\. You must use the AWS CLI or SDK\. For examples, see [ How can I retrieve an Amazon S3 object that was deleted in a versioning\-enabled bucket?](http://aws.amazon.com/premiumsupport/knowledge-center/s3-undelete-configuration/) 

@@ -14,13 +14,13 @@ For more information about versioning support in Amazon S3, see [Object Versioni
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
-1. In the **Bucket name** list, choose the name of the bucket that contains the object\.  
-![\[Bucket name list with a bucket selected.\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-bucket-name.png)
+1. In the **Buckets** list, choose the name of the bucket that contains the object\.
 
-1. To see a list of the versions of the objects in the bucket, choose **Show**\. For each object version, the console shows a unique version ID, the date and time the object version was created, and other properties\. \(Objects stored in your bucket before you set the versioning state have a version ID of **null**\.\)
+1. To see a list of the versions of the objects in the bucket, choose the **List versions** switch\. 
 
-    To list the objects without the versions, choose **Hide**\.  
-![\[Hide and Show version buttons and list of object versions\]](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/images/choose-show-versions-list.png)
+   For each object version, the console shows a unique version ID, the date and time the object version was created, and other properties\. \(Objects stored in your bucket before you set the versioning state have a version ID of **null**\.\)
+
+   To list the objects without the versions, choose the **List versions** switch\.
 
 You also can view, download, and delete object versions in the object overview panel\. For more information, see [How do I see an overview of an object?](view-object-overview.md)\.
 
@@ -29,4 +29,4 @@ You can undelete an object only if it was deleted as the latest \(current\) vers
 
 ## More info<a name="view-object-versions-related-topics"></a>
 +  [How do I enable or suspend versioning for an S3 bucket?](enable-versioning.md)
-+ [How do I create a lifecycle policy for an S3 Bucket?](create-lifecycle.md)
++ [How do I create a lifecycle rule for an S3 bucket?](create-lifecycle.md)

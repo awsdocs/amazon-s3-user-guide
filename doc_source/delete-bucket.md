@@ -17,7 +17,7 @@ If you want to continue to use the same bucket name, don't delete the bucket\. W
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
-1. In the **Buckets** list, select the option next to the name of the bucket that you want to delete and then choose **Delete** at the top of the page\.
+1. In the **Buckets** list, select the option next to the name of the bucket that you want to delete, and then choose **Delete** at the top of the page\.
 
 1. On the **Delete bucket** page, confirm that you want to delete the bucket by entering the bucket name into the text field, and then choose **Delete bucket**\.
 **Note**  
@@ -25,4 +25,4 @@ If the bucket contains any objects, empty the bucket before deleting it by selec
 
 ## More info<a name="delete-bucket-moreinfo"></a>
 + [How do I empty an S3 Bucket?](empty-bucket.md)
-+ [How do I delete objects from an S3 bucket?](delete-objects.md)
++ [Deleting objects](delete-objects.md)
