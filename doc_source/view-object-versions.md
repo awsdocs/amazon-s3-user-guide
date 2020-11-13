@@ -20,7 +20,7 @@ For more information about versioning support in Amazon S3, see [Object Versioni
 
    For each object version, the console shows a unique version ID, the date and time the object version was created, and other properties\. \(Objects stored in your bucket before you set the versioning state have a version ID of **null**\.\)
 
-   To list the objects without the versions, choose the **List versions** switch\.
+1. To list the objects without the versions, choose the **List versions** switch\.
 
 You also can view, download, and delete object versions in the object overview panel\. For more information, see [How do I see an overview of an object?](view-object-overview.md)\.
 

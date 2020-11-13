@@ -74,7 +74,7 @@ Amazon's trademarks and trade dress may not be used in
    + [How do I set ACL bucket permissions?](set-bucket-permissions.md)
    + [How do I add an S3 Bucket policy?](add-bucket-policy.md)
    + [How do I add cross-domain resource sharing with CORS?](add-cors-configuration.md)
-   + [Setting S3 Object Ownership to bucket owner preferred in the AWS Management Console](add-object-ownership.md)
+   + [Setting S3 Object Ownership to bucket owner preferred in the console](add-object-ownership.md)
    + [Using Access Analyzer for S3](access-analyzer.md)
 + [Document history](document-history.md)
 + [AWS glossary](glossary.md)

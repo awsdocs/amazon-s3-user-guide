@@ -35,41 +35,53 @@ You can configure some, but not all, system metadata for an S3 object\. For a li
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
-1. Navigate to your Amazon S3 bucket or folder and select the check box to the left of the names of the objects with metadata you want to edit\.
+1. In the **Buckets** list, choose the name of the bucket that contains the objects with metadata that you want to edit\.
 
-1. Open the **Action** menu, go to the **Edit actions** section, and choose **Edit metadata**\.
+   You can also optionally navigate to a folder\.
 
-1. Review the objects listed and choose **Add metadata**\.
+1. In the **Objects** list, select the checkbox beside the object names\.
 
-1. For metadata **Type**, select **System\-defined**\.
+1. In the **Actions** menu, choose **Edit metadata**\.
+
+1. Review the objects listed, and choose **Add metadata**\.
+
+1. For metadata **Type**, choose **System\-defined**\.
 
 1. Specify a unique **Key** and the metadata **Value**\.
 
 1. To edit additional metadata, choose **Add metadata**\. You can also choose **Remove** to remove a set of Type\-Key\-Values\.
 
-1. When you are done, choose **Save changes** and Amazon S3 edits the metadata of the specified objects\.
+1. Choose **Save changes**\.
+
+   Amazon S3 edits the metadata of the specified objects\.
 
 ## Editing user\-defined metadata<a name="add-object-metadata-user-defined"></a>
 
-You can edit user\-defined metadata of an object by combining the metadata prefix, `x-amz-meta-`, and a name you choose to create a custom key\. For example, if you add the custom name `alt-name`, the metadata key would be `x-amz-meta-alt-name`\. User\-defined metadata can be as large as 2 KB\. Both keys and their values must conform to US\-ASCII standards\. For more information, see [User\-Defined Metadata](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#UserMetadata) in the *Amazon Simple Storage Service Developer Guide*\.
+You can edit user\-defined metadata of an object by combining the metadata prefix, `x-amz-meta-`, and a name you choose to create a custom key\. For example, if you add the custom name `alt-name`, the metadata key would be `x-amz-meta-alt-name`\. User\-defined metadata can be as large as 2 KB total\. To calculate the total size of user\-defined metadata, sum the number of bytes in the UTF\-8 encoding for each key and value\. Both keys and their values must conform to US\-ASCII standards\. For more information, see [User\-Defined Metadata](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#UserMetadata) in the *Amazon Simple Storage Service Developer Guide*\.
 
 **To edit user\-defined metadata of an object**
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
-1. Navigate to your Amazon S3 bucket or folder and select the check box to the left of the names of the objects with metadata you want to edit\.
+1. In the **Buckets** list, choose the name of the bucket with objects that you want to add metadata to\.
 
-1. Open the **Action** menu, go to the **Edit actions** section, and choose **Edit metadata**\.
+   You can also optionally navigate to a folder\.
 
-1. Review the objects listed and choose **Add metadata**\.
+1. In the **Objects** list, select the check box next to the names of the objects that you want to add metadata to\.
 
-1. For metadata **Type**, select **User\-defined**\.
+1. In the **Actions** menu, choose **Edit metadata**\.
+
+1. Review the objects listed, and choose **Add metadata**\.
+
+1. For metadata **Type**, choose **User\-defined**\.
 
 1. Enter a unique, custom **Key** following `x-amz-meta-`\. Also enter a metadata **Value**\.
 
 1. To add additional metadata, choose **Add metadata**\. You can also choose **Remove** to remove a set of Type\-Key\-Values\. 
 
-1. When you are done, choose **Save changes** and Amazon S3 edits the metadata of the specified objects\.
+1. Choose **Save changes**\.
+
+   Amazon S3 edits the metadata of the specified objects\.
 
 ### More info<a name="add-object-metadata-user-defined-moreinfo"></a>
 +  [How do I view the properties of an object?](view-object-properties.md)

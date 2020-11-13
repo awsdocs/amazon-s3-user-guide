@@ -13,14 +13,22 @@ For more information about object tags, see [Object Tagging](https://docs.aws.am
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
-1. Navigate to your Amazon S3 bucket or folder and select the check box to the left of the names of the objects that you want to add tags to\.
+1. In the **Buckets** list, choose the name of the bucket that contains the objects that you want to add tags to\.
 
-1. Open the **Action** menu, go to the **Edit actions** section, and choose **Edit Tags**\.
+   You can also optionally navigate to a folder\.
 
-1. Review the objects listed and choose **Add tags**\.
+1. In the **Objects** list, select the checkbox next to the names of the objects that you want to add tags to\.
 
-1. Each object tag is a key\-value pair\. Enter a **Key** and a **Value**\. To add another tag, choose **Add Tag**\. When you are done, choose **Save changes** and Amazon S3 adds the tags to the specified objects\.
+1. In the **Actions** menu, choose **Edit tags**\.
+
+1. Review the objects listed, and choose **Add tags**\.
+
+1. Each object tag is a key\-value pair\. Enter a **Key** and a **Value**\. To add another tag, choose **Add Tag**\. 
 
    You can enter up to 10 tags for an object\.
+
+1. Choose **Save changes**\.
+
+   Amazon S3 adds the tags to the specified objects\.
 
 For more information, see also [How do I view the properties of an object?](view-object-properties.md) and [Uploading, downloading, and managing objects](upload-download-objects.md) in this guide\. 

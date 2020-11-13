@@ -1,9 +1,6 @@
-# Setting S3 Object Ownership to bucket owner preferred in the AWS Management Console<a name="add-object-ownership"></a>
+# Setting S3 Object Ownership to bucket owner preferred in the console<a name="add-object-ownership"></a>
 
-****  
-***S3 Object Ownership is currently under preview and can be configured through the AWS Management Console, AWS Command Line Interface, AWS SDKs, or Amazon S3 REST APIs\. AWS CloudFormation support is planned for general availability\.***
-
-S3 Object Ownership enables you to take ownership of new objects that other AWS accounts upload to your bucket with the `bucket-owner-full-control` canned access control list \(ACL\)\. This section describes how to set Object Ownership using the console\.
+S3 Object Ownership enables you to take ownership of new objects that other AWS accounts upload to your bucket with the `bucket-owner-full-control` canned access control list \(ACL\)\. This section describes how to set Object Ownership using the AWS Management Console\.
 
 **Setting Object Ownership to bucket owner preferred on an S3 bucket**
 
@@ -19,4 +16,4 @@ S3 Object Ownership enables you to take ownership of new objects that other AWS 
 
 ## How do I ensure that I take ownership of new objects?<a name="add-object-ownership-moreinfo"></a>
 
-With the above steps Object Ownership will take ownership of any new objects that are written by other accounts with the `bucket-owner-full-control` canned ACL\. For more information about enforcing Object Ownership, see [How do I ensure that I take ownership of new objects?](https://docs.aws.amazon.com/AmazonS3/latest/dev/about-object-ownership.html#ensure-object-ownership) in the *Amazon Simple Storage Service Developer Guide*\.
+With the preceding steps, Object Ownership enables you to take ownership of any new objects that are written by other accounts with the `bucket-owner-full-control` canned ACL\. For information about enforcing Object Ownership, see [How do I ensure that I take ownership of new objects?](https://docs.aws.amazon.com/AmazonS3/latest/dev/about-object-ownership.html#ensure-object-ownership) in the *Amazon Simple Storage Service Developer Guide*\.

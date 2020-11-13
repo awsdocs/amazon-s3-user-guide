@@ -8,11 +8,11 @@ This section explains how to use the console to view the properties of an object
 
 1. In the **Buckets** list, choose the name of the bucket that contains the object\.
 
-1. In the **Name** list, choose the name of the object you want to view the properties for\.
+1. In the **Objects** list, choose the name of the object you want to view properties for\.
 
-1. Choose **Properties**\.
+   The **Object overview** for your object opens\. You can scroll down to view the object properties\.
 
-1. On the **Properties** page, you can configure the following properties for the object\.
+1. On the **Object overview** page, you can configure the following properties for the object\.
 **Note**  
 If you change the properties **Storage Class**, ** Enryption**, or **Metadata**, a new object is created to replace the old one\. If S3 Versioning is enabled, a new version of the object is created, and the existing object becomes an older version\. The role that changes the property also becomes the owner of the new object or \(object version\)\.
 
@@ -20,10 +20,10 @@ If you change the properties **Storage Class**, ** Enryption**, or **Metadata**,
 
       To change the storage class after you upload an object, choose **Storage class**\. Choose the storage class that you want, and then choose **Save**\.
 
-   1. **Encryption** – You can encrypt your S3 objects\. For more information, see [How do I add encryption to an S3 object?](add-object-encryption.md)\. 
+   1. **Server\-side encryption settings** – You can use server\-side encryption to encrypt your S3 objects\. For more information, see [How do I add encryption to an S3 object?](add-object-encryption.md)\. 
 
    1. **Metadata** – Each object in Amazon S3 has a set of name\-value pairs that represents its metadata\. For information on adding metadata to an S3 object, see [Editing object metadata](add-object-metadata.md)\.
 
    1. **Tags** – You can add tags to an S3 object\. For more information, see [Editing object tags](add-object-tags.md)\.
 
-   1. **Object lock** – You can prevent an object from being deleted\.
+   1. **Object lock legal hold and rentention** – You can prevent an object from being deleted\.

@@ -9,50 +9,39 @@ If you change an object's encryption, a new object is created to replace the old
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
-1. In the **Bucket** list, choose the name of the bucket that contains the object\.
+1. In the **Buckets** list, choose the name of the bucket that contains the object\.
 
-1. In the **Name** list, choose the name of the object that you want to add or change encryption for\.
+1. In the **Objects** list, choose the name of the object that you want to add or change encryption for\.
 
-1. Choose **Properties**, and then choose **Encryption**\.
+   The **Object overview** opens, displaying the properties for your object\.
 
-   The **Encryption** dialog box opens, giving you three choices for object encryption:
-   + **None**‐ No object encryption\.
-   + **AES\-256** ‐ Server\-side encryption with Amazon S3 managed keys \(SSE\-S3\)\.
-   + **AWS‐KMS** ‐ Server\-side encryption with AWS Key Management Service \(AWS KMS\) customer master keys \(SSE\-KMS\)\.
+1. Under **Server\-side encryption settings**, choose **Edit**\.
 
-1. If you want to remove encryption from an object that already has encryption settings, choose **None** and then choose **Save**\. 
+   The **Edit server\-side encryption** page opens
 
-1. If you want to encrypt your object using keys that are managed by Amazon S3, follow these steps:
+1. To enable server\-side encryption for your object, under **Server\-side encryption**, choose **Enable**\.
 
-   1. Choose **AES\-256**\. 
+1. To enable server\-side encryption using an Amazon S3\-managed key, under **Encryption key type**, choose **Amazon S3 key \(SSE\-S3\)**\.
 
-      For more information about using Amazon S3 server\-side encryption to encrypt your data, see [Protecting Data with Amazon S3\-Managed Encryption Keys Classes](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html) in the *Amazon Simple Storage Service Developer Guide*\.
+   For more information about using Amazon S3 server\-side encryption to encrypt your data, see [Protecting Data with Amazon S3\-Managed Encryption Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
-   1. Choose **Save**\.
+1. To enable server\-side encryption using an AWS KMS CMK, follow these steps:
 
-1. If you want to encrypt your object using AWS KMS, follow these steps:
-
-   1. Choose **AWS\-KMS**\.
-
-   1. Choose an AWS KMS customer master key \(CMK\)\.
-
-      The list shows [customer managed CMKs](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#customer-cmk) that you have created and your AWS managed CMK for Amazon S3\. For more information about creating a customer managed AWS KMS CMK, see [Creating Keys](https://docs.aws.amazon.com/kms/latest/developerguide/UsingServerSideEncryption.html) in the *AWS Key Management Service Developer Guide*\. 
+   1. Under **Encryption key type**, choose **AWS Key Management Service key \(SSE\-KMS\)**\.
 **Important**  
-The Amazon S3 console lists only 100 AWS KMS CMKs per AWS Region\. If you have more than 100 CMKs in the same Region, you can see only the first 100 CMKs in the S3 console\. To use a KMS CMK that is not listed in the console, choose **Custom KMS ARN**, and enter the KMS CMK ARN\.
+If you use the AWS KMS option for your default encryption configuration, you are subject to the RPS \(requests per second\) limits of AWS KMS\. For more information about AWS KMS limits and how to request a limit increase, see [AWS KMS limits](https://docs.aws.amazon.com/kms/latest/developerguide/limits.html)\. 
 
-   1. Choose **Save**\.
+   1. Under **AWS KMS key** choose one of the following:
+      + **AWS managed key \(aws/s3\)**
+      + **Choose from your KMS master keys**, and choose your **KMS master key**\.
+      + **Enter KMS master key ARN**, and enter your AWS KMS key ARN\.
 **Important**  
-To encrypt objects in the bucket, you can use only CMKs that are enabled in the same AWS Region as the bucket\. Amazon S3 only supports symmetric CMKs\. Amazon S3 does not support asymmetric CMKs\. For more information, see [Using Symmetric and Asymmetric Keys](https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html)\.
+You can only use KMS CMKs that are enabled in the same AWS Region as the bucket\. When you choose **Choose from your KMS master keys**, the S3 console only lists 100 KMS CMKs per Region\. If you have more than 100 CMKs in the same Region, you can only see the first 100 CMKs in the S3 console\. To use a KMS CMK that is not listed in the console, choose **Custom KMS ARN**, and enter the KMS CMK ARN\.  
+When you use an AWS KMS CMK for server\-side encryption in Amazon S3, you must choose a CMK that is enabled in the same Region as your bucket\. Additionally, Amazon S3 only supports symmetric CMKs and not asymmetric CMKs\. For more information, see [Using Symmetric and Asymmetric Keys](https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html) in the *AWS Key Management Service Developer Guide*\.
 
-1. To give an external account the ability to use an object that is protected by an AWS KMS CMK, follow these steps: 
+      For more information about creating an AWS KMS CMK, see [Creating Keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) in the *AWS Key Management Service Developer Guide*\. For more information about using AWS KMS with Amazon S3, see [Protecting Data with Keys Stored in AWS KMS](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
-   1. Choose **AWS\-KMS**\.
-
-   1. Enter the Amazon Resource Name \(ARN\) for the external account\.
-
-   1. Choose **Save**\.
-
-      Administrators of an external account that have usage permissions to an object protected by your AWS KMS CMK can further restrict access by creating a resource\-level AWS Identity and Access Management \(IAM\) policy\.
+1. Choose **Save changes**\.
 
 **Note**  
 This action applies encryption to all specified objects\. When encrypting folders, wait for the save operation to finish before adding new objects to the folder\.

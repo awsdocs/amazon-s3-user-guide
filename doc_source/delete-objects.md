@@ -12,13 +12,13 @@ For information about Amazon S3 features and pricing, see [Amazon S3](https://aw
 
 1. Select the check box to the left of the names of the objects that you want to delete\.
 
-1. Choose **Actions** and choose **Delete** from the list of options that appears\.
+1. Choose **Delete**\. 
 
-   Alternatively, choose **Delete** from the options in the upper right\. 
+1. To confirm object deletion, under **Delete objects?**, enter **delete**\.
 
-1. Enter **delete** if asked to confirm that you want to delete these objects\.
+1. Choose **Delete objects**\.
 
-1. Choose **Delete objects** in the bottom right and Amazon S3 deletes the specified objects\.
+   Amazon S3 deletes the specified objects\.
 
 **Warning**  
 Deleting the specified objects cannot be undone\.

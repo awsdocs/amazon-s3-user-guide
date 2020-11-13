@@ -6,7 +6,7 @@ For example, you can create a folder on the console named `photos` and store an 
 
 Here are two more examples: 
 + If you have three objects in your bucket—`logs/date1.txt`, `logs/date2.txt`, and `logs/date3.txt`—the console will show a folder named `logs`\. If you open the folder in the console, you will see three objects: `date1.txt`, `date2.txt`, and `date3.txt`\.
-+ If you have an object named `photos/2017/example.jpg`, the console will show you a folder named `photos` containing the folder `2017` and the object `example.jpg`\.
++ If you have an object named `photos/2017/example.jpg`, the console will show you a folder named `photos` containing the folder `2017`\. The folder `2017` will contain the object `example.jpg`\.
 
 **Topics**
 + [Creating a folder](create-folder.md)

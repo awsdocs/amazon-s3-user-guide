@@ -6,21 +6,39 @@ Before you lock any objects, you have to enable a bucket to use S3 Object Lock\.
 
 For information about creating a bucket with S3 Object Lock enabled, see [How do I create an S3 Bucket?](create-bucket.md)\.
 
-**To lock an Amazon S3 object**
+**To enable Object Lock legal hold**
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
 1. In the **Buckets** list, choose the name of the bucket that you want\.
 
-1. In the **Objects** list, choose the name of the object that you want to lock\.
+1. In the **Objects** list, choose the name of the object that you want to enable or disable legal hold for\.
 
-1. Choose **Properties**\.
+   The **Object overview** opens, displaying the properties for your object\.
 
-1. Choose **Object Lock**\. 
+1. Under **Object Lock legal hold**, choose **Edit**\. 
 
-1. Choose a retention mode\. You can change the **Retain until date**\. You can also choose to enable a **Legal hold**\. For more information, see [S3 Object Lock Overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html) in the *Amazon Simple Storage Service Developer Guide*\.
+1. Under **Legal hold**, choose **Enable** or **Disable**\.
 
-1. Choose **Save**\.
+   For more information, see [S3 Object Lock Overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html) in the *Amazon Simple Storage Service Developer Guide*\.
+
+1. Choose **Save changes**\.
+
+**To edit Object Lock retention settings**
+
+1. In the **Objects** list, choose the name of the object that you want to edit Object Lock retention settings for\.
+
+   The **Object overview** opens, displaying the properties for your object\.
+
+1. Under **Object Lock retention**, choose **Edit**\. 
+
+1. Under **Retention**, choose **Enable** or **Disable**\.
+
+1. Under **Retention mode**, choose **Governance mode** or **Compliance mode**\.
+
+1. In the **Retain until date** box, enter the date when the object is no longer protected by the chosen retention mode\.
+
+1. Choose **Save changes**\.
 
 ## More info<a name="object-lock-moreinfo"></a>
 +  [Setting bucket and object access permissions](set-permissions.md)
