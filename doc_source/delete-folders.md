@@ -4,6 +4,8 @@ This section explains how to use the Amazon S3 console to delete folders from an
 
 For information about Amazon S3 features and pricing, see [Amazon S3](https://aws.amazon.com/s3/)\.
 
+
+
 **To delete folders from an S3 bucket**
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.

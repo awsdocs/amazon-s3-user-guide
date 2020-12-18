@@ -15,7 +15,11 @@ The following procedure shows how to use the Amazon S3 console to enable a Cloud
 
 1. In the **Buckets** list, choose the name of the bucket\.
 
+    
+
 1. Choose **Properties**\.
+
+    
 
 1. Under **AWS CloudTrail data events**, choose **Configure in CloudTrail**\. For information about how to create trails in the CloudTrail console, see [ Creating a Trail with the Console](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-and-update-a-trail-by-using-the-console.html) in the *AWS CloudTrail User Guide*\. 
 

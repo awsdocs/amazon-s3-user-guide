@@ -19,6 +19,7 @@ The following topics explain how to use the Amazon S3 console to create, delete,
 + [Viewing bucket properties](view-bucket-properties.md)
 + [Enabling or disabling versioning](enable-versioning.md)
 + [Enabling default encryption](default-bucket-encryption.md)
++ [Configuring an S3 Bucket Key](enable-bucket-key.md)
 + [Enabling server access logging](server-access-logging.md)
 + [Enabling object\-level logging](enable-cloudtrail-events.md)
 + [Configuring static website hosting](static-website-hosting.md)

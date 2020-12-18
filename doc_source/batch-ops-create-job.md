@@ -1,6 +1,8 @@
 # Creating an S3 Batch Operations job<a name="batch-ops-create-job"></a>
 
-This section describes how to create a S3 Batch Operations job\. For information about performing Batch Operations using the AWS CLI, AWS SDKs, and the Amazon S3 REST APIs, see [Performing S3 Batch Operations](https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops.html) in the *Amazon Simple Storage Service Developer Guide*\.
+This section describes how to create a S3 Batch Operations job\. For more information about the details of creating a job request, see [Creating a job request](https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-create-job.html#batch-ops-create-job-request-elements) in the * Amazon Simple Storage Service Developer Guide*\.
+
+For information about performing Batch Operations using the AWS CLI, AWS SDKs, and the Amazon S3 REST APIs, see [Performing S3 Batch Operations](https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops.html)\.
 
 **To create a batch job**
 
@@ -16,7 +18,7 @@ This section describes how to create a S3 Batch Operations job\. For information
    + If you choose **S3 inventory report**, enter the path to the manifest\.json object that Amazon S3 generated as part of the CSV\-formatted Inventory report, and optionally the version ID for the manifest object if you want to use a version other than the most recent\.
    + If you choose **CSV**, enter the path to a CSV\-formatted manifest object\. The manifest object must follow the format described in the console\. You can optionally include the version ID for the manifest object if you want to use a version other than the most recent\.
 
-1. Choose **Next**
+1. Choose **Next**\.
 
 1. Under **Operation**, choose the operation that you want to perform on all objects listed in the manifest\. Fill out the information for the operation you chose and then choose **Next**\.
 
@@ -28,3 +30,4 @@ This section describes how to create a S3 Batch Operations job\. For information
 + [The Basics: S3 Batch Operations Jobs](https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html) in the *Amazon Simple Storage Service Developer Guide*
 + [Creating a S3 Batch Operations Job](https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-create-job.html) in the *Amazon Simple Storage Service Developer Guide*
 + [Operations](https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-operations.html) in the *Amazon Simple Storage Service Developer Guide*
+

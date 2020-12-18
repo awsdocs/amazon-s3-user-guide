@@ -1,23 +1,23 @@
 # How do I add a replication rule to an S3 bucket?<a name="enable-replication"></a>
 
-Replication is the automatic, asynchronous copying of objects across buckets in the same or different AWS Regions\. Replication copies newly created objects and object updates from a source bucket to a destination bucket\. For more information about replication concepts and how to use replication with the AWS CLI, AWS SDKs, and the Amazon S3 REST APIs, see [Replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.html) in the *Amazon Simple Storage Service Developer Guide*\. 
+Replication is the automatic, asynchronous copying of objects across buckets in the same or different AWS Regions\. Replication copies newly created objects and object updates from a source bucket to a destination bucket or buckets\. For more information about replication concepts and how to use replication with the AWS CLI, AWS SDKs, and the Amazon S3 REST APIs, see [Replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.html) in the *Amazon Simple Storage Service Developer Guide*\. 
 
 By default, replication only supports copying new Amazon S3 objects after it is enabled\. You can use replication to copy existing objects and clone them to a different bucket, but in order to do so, you must contact [AWS Support Center](https://console.aws.amazon.com/support/home#/)\. When you contact support, give your AWS Support case the subject “Replication for Existing Objects” and include the following information: 
 + Source bucket
-+ Destination bucket
++ Destination bucket or buckets
 + Estimated storage volume to replicate \(in terabytes\)
 + Estimated storage object count to replicate
 
-Replication requires versioning to be enabled on both the source and destination buckets\. To review the full list of requirements, see [Requirements for Replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.html#replication-requirements) in the *Amazon Simple Storage Service Developer Guide*\. For more information about versioning, see [How do I enable or suspend versioning for an S3 bucket?](enable-versioning.md)
+Replication requires versioning to be enabled on both the source and destination buckets\. To review the full list of requirements, see [Requirements for replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.html#replication-requirements) in the *Amazon Simple Storage Service Developer Guide*\. For more information about versioning, see [How do I enable or suspend versioning for an S3 bucket?](enable-versioning.md)
 
-The object replicas in the destination bucket are exact replicas of the objects in the source bucket\. They have the same key names and the same metadata—for example, creation time, owner, user\-defined metadata, version ID, access control list \(ACL\), and storage class\. Optionally, you can explicitly specify a different storage class for object replicas\. And regardless of who owns the source bucket or the source object, you can choose to change replica ownership to the AWS account that owns the destination bucket\. For more information, see [Changing the replica owner](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-change-owner.html) in the *Amazon Simple Storage Service Developer Guide*\. 
+The object replicas in destination buckets are exact replicas of the objects in the source bucket\. They have the same key names and the same metadata—for example, creation time, owner, user\-defined metadata, version ID, access control list \(ACL\), and storage class\. Optionally, you can explicitly specify a different storage class for object replicas\. And regardless of who owns the source bucket or the source object, you can choose to change replica ownership to the AWS account that owns the destination bucket\. For more information, see [Changing the replica owner](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-change-owner.html) in the *Amazon Simple Storage Service Developer Guide*\. 
 
 You can use S3 Replication Time Control \(S3 RTC\) to replicate your data in the same AWS Region or across different AWS Regions in a predictable timeframe\. S3 RTC replicates 99\.99 percent of new objects stored in Amazon S3 within 15 minutes and most objects within seconds\. For more information, see [Replicating Objects Using S3 Replication Time Control \(S3 RTC\)](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-time-control.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 **Note about replication and lifecycle rules**  
 Metadata for an object remains identical between original objects and replica objects\. Lifecycle rules abide by the creation time of the original object, and not by when the replicated object becomes available in the destination bucket\. However, lifecycle does not act on objects that are pending replication until replication is complete\.
 
-You use the Amazon S3 console to add replication rules to the source bucket\. Replication rules define which source bucket objects to replicate and the destination bucket where the replicated objects are stored\. You can create a rule to replicate all the objects in a bucket or a subset of objects with a specific key name prefix, one or more object tags, or both\. A destination bucket can be in the same AWS account as the source bucket, or it can be in a different account\.
+You use the Amazon S3 console to add replication rules to the source bucket\. Replication rules define which source bucket objects to replicate and the destination bucket or buckets where the replicated objects are stored\. You can create a rule to replicate all the objects in a bucket or a subset of objects with a specific key name prefix, one or more object tags, or both\. A destination bucket can be in the same AWS account as the source bucket, or it can be in a different account\.
 
 If you specify an object version ID to delete, Amazon S3 deletes that object version in the source bucket\. But it doesn't replicate the deletion in the destination bucket\. In other words, it doesn't delete the same object version from the destination bucket\. This protects data from malicious deletions\.
 
@@ -27,7 +27,7 @@ When you add a replication rule to a bucket, the rule is enabled by default, so 
 
 **Topics**
 + [Adding a replication rule](#enable-replication-add-rule)
-+ [Grant the source bucket owner permission to encrypt using the AWS KMS CMK](#enable-replication-kms-key-policy)
++ [Granting the source bucket owner permission to encrypt using the AWS KMS CMK](#enable-replication-kms-key-policy)
 + [More info](#enable-replication-moreinfo)
 
 ## Adding a replication rule<a name="enable-replication-add-rule"></a>
@@ -38,7 +38,9 @@ Follow these steps to configure a replication rule when the destination bucket i
 
 1. In the **Buckets** list, choose the name of the bucket that you want\.
 
-1. Choose **Management**, scroll down to **Replication rules**\. and then choose **Create replication rule**\.
+1. Choose **Management**, scroll down to **Replication rules**, and then choose **Create replication rule**\.
+
+    
 
 1. Under **Rule name**, enter a name for your rule to help identify the rule later\. The name is required and must be unique within the bucket\.
 
@@ -48,7 +50,7 @@ Follow these steps to configure a replication rule when the destination bucket i
    + We highly recommend that you choose **Create new role** to have Amazon S3 create a new IAM role for you\. When you save the rule, a new policy is generated for the IAM role that matches the source and destination buckets that you choose\. The name of the generated role is based on the bucket names and uses the following naming convention: **replication\_role\_for\_*source\-bucket*\_to\_*destination\-bucket***\.
    + You can choose to use an existing IAM role\. If you do, you must choose a role that grants Amazon S3 the necessary permissions for replication\. Replication fails if this role does not grant Amazon S3 sufficient permissions to follow your replication rule\.
 **Important**  
-When you add a replication rule to a bucket, you must have the `iam:PassRole` permission to be able to pass the IAM role that grants Amazon S3 replication permissions\. For more information, see [Granting a User Permissions to Pass a Role to an AWS Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_passrole.html) in the *IAM User Guide*\.
+When you add a replication rule to a bucket, you must have the `iam:PassRole` permission to be able to pass the IAM role that grants Amazon S3 replication permissions\. For more information, see [Granting a user permissions to pass a role to an AWS service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_passrole.html) in the *IAM User Guide*\.
 
 1. Under **Status**, see that **Enabled** is selected by default\. An enabled rule starts to work as soon as you save it\. If you want to enable the rule later, select **Disabled**\.
 
@@ -56,25 +58,28 @@ When you add a replication rule to a bucket, you must have the `iam:PassRole` pe
 
 1. In the **Replication rule configuration**, under **Source bucket**, you have the following options for setting the replication source:
    + To replicate the whole bucket, choose **This rule applies to all objects in the bucket**\. 
-   + To replicate all objects that have the same prefix, choose **Limit the scope of this rule using one or more filters**\. This will limit replication to all objects that have names that begin with the string \(for example `pictures`\)\. Enter a prefix in the box\. 
+   + To replicate all objects that have the same prefix, choose **Limit the scope of this rule using one or more filters**\. This limits replication to all objects that have names that begin with the string \(for example `pictures`\)\. Enter a prefix in the box\. 
 **Note**  
 If you enter a prefix that is the name of a folder, you must use **/** \(forward slash\) as the last character \(for example, `pictures/`\)\.
-   + To replicate all objects with one or more object tags, select **Add tag** and enter the key value pair in the boxes\. Repeat the procedure to add another tag\. You can combine a prefix and tags\. For more information about object tags, see [Object Tagging](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-tagging.html) in the *Amazon Simple Storage Service Developer Guide*\.
+   + To replicate all objects with one or more object tags, select **Add tag** and enter the key\-value pair in the boxes\. Repeat the procedure to add another tag\. You can combine a prefix and tags\. For more information about object tags, see [Object Tagging](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-tagging.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
-   The new schema supports prefix and tag filtering and the prioritization of rules\. For more information about the new schema, see [ Replication Configuration Backward Compatibility](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-add-config.html#replication-backward-compat-considerations) in the *Amazon Simple Storage Service Developer Guide*\. The developer guide describes the XML used with the Amazon S3 API that works behind the user interface\. In the developer guide, the new schema is described as *replication configuration XML V2*\.
+   The new schema supports prefix and tag filtering and the prioritization of rules\. For more information about the new schema, see [ Replication configuration backward compatibility](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-add-config.html#replication-backward-compat-considerations) in the *Amazon Simple Storage Service Developer Guide*\. The developer guide describes the XML used with the Amazon S3 API that works behind the user interface\. In the developer guide, the new schema is described as *replication configuration XML V2*\.
 
-1. Under **Destination**, you have the following options for setting the replication destination:
-   + To replicate to a bucket in your account, select **Choose a bucket in this account** and type or browse for your the destination bucket\. 
-   + To replicate to a bucket in a different AWS account, select **Choose a bucket in another account** and enter the destination bucket account ID and type your destination bucket name\. 
-
-     If the destination bucket is in a different account from the source bucket, you must add a bucket policy to the destination bucket to grant the owner of the source bucket account permission to replicate objects in the destination bucket\. For more information, see [Granting permissions when source and destination buckets are owned by different AWS accounts](https://docs.aws.amazon.com/AmazonS3/latest/dev/setting-repl-config-perm-overview.html#setting-repl-config-crossacct) in the *Amazon Simple Storage Service Developer Guide*\.
+1. Under **Destination**, select the bucket where you want Amazon S3 to replicate objects\.
 **Note**  
-If versioning is not enabled on the destination bucket, you will get a warning that contains an **Enable versioning** button\. Choose this button to enable versioning on the bucket\.
+ The number of destination buckets is limited to the number of AWS Regions in a given partition\. A partition is a grouping of Regions\. AWS currently has three partitions: `aws` \(Standard Regions\), `aws-cn` \(China Regions\), and `aws-us-gov` \(AWS GovCloud \[US\] Regions\)\. You can use [service quotas](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) to request an increase in your destination bucket limit\.
+   + To replicate to a bucket or buckets in your account, select **Choose a bucket in this account**, and enter or browse for the destination bucket names\. 
+   + To replicate to a bucket or buckets in a different AWS account, select **Choose a bucket in another account**, and enter the destination bucket account ID and name\. 
 
-1. Under **Destination**, you can also set the following options:
+     If the destination is in a different account from the source bucket, you must add a bucket policy to the destination buckets to grant the owner of the source bucket account permission to replicate objects\. For more information, see [Granting permissions when source and destination buckets are owned by different AWS accounts](https://docs.aws.amazon.com/AmazonS3/latest/dev/setting-repl-config-perm-overview.html#setting-repl-config-crossacct) in the *Amazon Simple Storage Service Developer Guide*\.
+**Note**  
+If versioning is not enabled on the destination bucket, you get a warning that contains an **Enable versioning** button\. Choose this button to enable versioning on the bucket\.
+
+1. You have the following additional options while setting the **Destination**:
    + If you want to enable **Object Ownership** to help standardize ownership of new objects in the destination bucket, choose **Change object ownership to the destination bucket owner**\. For more information about this option, see [Meet compliance requirements using S3 RTC](https://docs.aws.amazon.com/AmazonS3/latest/dev/about-object-ownership.html) in the *Amazon Simple Storage Service Developer Guide*\.
-   + If you want to replicate your data into a specific storage class in the destination bucket, choose **Change the storage class for the replicated objects**\. Then choose the storage class that you want to use for the replicated objects in the destination bucket\. If you don't select this option, the storage class for replicated objects is the same class as the original objects\. 
-   + If you want to enable delete marker replication in your replication configuration, select **delete marker replication**\. For more information see, [Keep source bucket deletes in sync with delete marker replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/delete-marker-replication.html)\.
+   + If you want to replicate your data into a specific storage class in the destination, choose **Change the storage class for the replicated objects**\. Then choose the storage class that you want to use for the replicated objects in the destination\. If you don't choose this option, the storage class for replicated objects is the same class as the original objects\. 
+   + If you want to enable delete marker replication in your replication configuration, select **Delete marker replication**\. For more information see, [Keep source bucket deletes in sync with delete marker replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/delete-marker-replication.html)\.
+   + If you want to enable Amazon S3 replica modification sync in your replication configuration, select **Replica modification sync**\. For more information see, [Replicating metadata changes with replica modification sync](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-for-metadata-changes.html)\.
    + If you want to enable S3 replication metrics in your replication configuration, select **Replication metrics and events**\. For more information see, [Monitor progress with S3 replication metrics](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-metrics.html)\.
    + If you want to enable S3 Replication Time Control \(S3 RTC\) in your replication configuration, select **S3 Replication Time Control**\. For more information about this option, see [Meet compliance requirements using S3 RTC](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-time-control.html) in the *Amazon Simple Storage Service Developer Guide*\.
 **Note**  
@@ -98,7 +103,7 @@ The Amazon S3 console lists only 100 AWS KMS CMKs per AWS Region\. If you have m
 
 1. After you save your rule, you can edit, enable, disable, or delete your rule by selecting your rule and choosing **Edit rule**\. 
 
-## Grant the source bucket owner permission to encrypt using the AWS KMS CMK<a name="enable-replication-kms-key-policy"></a>
+## Granting the source bucket owner permission to encrypt using the AWS KMS CMK<a name="enable-replication-kms-key-policy"></a>
 
 You must grant permissions to the account of the source bucket owner to encrypt using your AWS KMS CMK with a key policy\. The following procedure describes how to use the AWS Identity and Access Management \(IAM\) console to modify the key policy for the AWS KMS CMK that is being used to encrypt the replica objects in the destination bucket\.
 

@@ -4,6 +4,9 @@ You can host a static website on Amazon S3\. On a static website, individual web
 
 You can use the following quick procedures to configure an S3 bucket for static website hosting in the Amazon S3 console\. For more information, see [Hosting a Static Website on Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html) in the *Amazon Simple Storage Service Developer Guide*\. For information about configuring a static website with a custom domain, see [Configuring a static website using a custom domain registered with Route 53](https://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
+**Note**  
+Amazon S3 doesn't support HTTPS access for website endpoints\. If you want to use HTTPS, you can use CloudFront to serve a static website hosted on Amazon S3\. For more information, see [Speeding up your website with CloudFront](https://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-cloudfront-walkthrough.html) in the *Amazon Simple Storage Service Developer Guide*\.
+
 **Topics**
 + [Step 1: Configuring a bucket for static website hosting](#configure-bucket-website-hosting)
 + [Step 2: Editing S3 Block Public Access settings](#set-permissions-static-website-access)

@@ -23,6 +23,8 @@ If you want to continue to use the same bucket name, don't delete the bucket\. W
 **Note**  
 If the bucket contains any objects, empty the bucket before deleting it by selecting the *empty bucket configuration* link in the **This bucket is not empty** error alert and following the instructions on the **Empty bucket** page\. Then return to the **Delete bucket** page and delete the bucket\.
 
+   
+
 ## More info<a name="delete-bucket-moreinfo"></a>
 + [How do I empty an S3 Bucket?](empty-bucket.md)
 + [Deleting objects](delete-objects.md)

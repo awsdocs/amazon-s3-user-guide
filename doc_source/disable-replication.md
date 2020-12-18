@@ -2,7 +2,7 @@
 
 Replication is the automatic, asynchronous copying of objects across buckets in the same or different AWS Regions\. It replicates newly created objects and object updates from a source bucket to a specified destination bucket\. 
 
-You use the Amazon S3 console to add replication rules to the source bucket\. Replication rules define the source bucket objects to replicate and the destination bucket where the replicated objects are stored\. For more information about replication, see [Replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.htm) in the *Amazon Simple Storage Service Developer Guide*\.
+You use the Amazon S3 console to add replication rules to the source bucket\. Replication rules define the source bucket objects to replicate and the destination bucket or buckets where the replicated objects are stored\. For more information about replication, see [Replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.htm) in the *Amazon Simple Storage Service Developer Guide*\.
 
 You can manage replication rules on the **Replication** page\. You can add, view, enable, disable, delete, and change the priority of the replication rules\. For information about adding replication rules to a bucket, see [How do I add a replication rule to an S3 bucket?](enable-replication.md)\.
 
@@ -11,6 +11,8 @@ You can manage replication rules on the **Replication** page\. You can add, view
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
 1. In the **Buckets** list, choose the name of the bucket that you want\.
+
+    
 
 1. Choose **Management**, and then scroll down to **Replication rules**\.
 

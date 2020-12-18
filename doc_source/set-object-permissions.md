@@ -18,7 +18,7 @@ Each permission you grant for a user or a group adds an entry in the ACL that is
 
 1. Under **Access control list \(ACL\)**, choose **Edit**\.
 
-1. To update ACL permissions \(list, read, and write\) to grantee groups such as *Object owner*, *Everyone \(public access\)*, and *Authenticated users group *\(anyone with an AWS account\), under **Objects** and **Object ACL**, select the checkboxes for the **Read** and **Write** ACL permissions that you want to grant\.
+1. To update ACL permissions \(list, read, and write\) to grantee groups such as *Object owner*, *Everyone \(public access\)*, and *Authenticated users group *\(anyone with an AWS account\), under **Objects** and **Object ACL**, select the check boxes for the **Read** and **Write** ACL permissions that you want to grant\.
 **Warning**  
 Use caution when granting the **Everyone** group anonymous access to your Amazon S3 objects\. When you grant access to this group, anyone in the world can access your object\. If you need to grant access to everyone, we highly recommend that you only grant permissions to **Read** objects\.
 We highly recommend that you *do not* grant the **Everyone** group write object permissions\. Doing so allows anyone to overwrite the ACL permissions for the object\.
@@ -43,3 +43,4 @@ You can also set object permissions when you upload objects\. For more informati
 ## More Info<a name="set-object-permissions-moreinfo"></a>
 +  [Setting bucket and object access permissions](set-permissions.md)
 + [How do I set ACL bucket permissions?](set-bucket-permissions.md)
+

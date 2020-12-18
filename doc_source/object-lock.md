@@ -42,3 +42,4 @@ For information about creating a bucket with S3 Object Lock enabled, see [How do
 
 ## More info<a name="object-lock-moreinfo"></a>
 +  [Setting bucket and object access permissions](set-permissions.md)
+

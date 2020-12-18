@@ -14,12 +14,22 @@ You can download a single object per request using the Amazon S3 console\. To [d
 
 1. In the **Buckets** list, choose the name of the bucket that you want to download an object from\.
 
+    
+
 1. You can download an object from an S3 bucket in any of the following ways:
    + Choose the name of the object that you want to download\.
 
+      
+
      On the **Overview** page, choose **Download**\.
+
+      
    + Choose the name of the object that you want to download and then choose **Download** or **Download as** from the **Action** menu\.
+
+      
    + Choose the name of the object that you want to download\. Choose **Latest version** and then choose the download icon\.
+
+      
 
 ## Related topics<a name="download-objects-related-topics"></a>
 +  [How do I upload files and folders to an S3 bucket?](upload-objects.md)

@@ -2,6 +2,8 @@
 
 This section explains how to use the Amazon S3 console to view the object overview\. The object overview provides all the essential information for an object in one place\.
 
+
+
 **To see the overview panel for an object**
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.

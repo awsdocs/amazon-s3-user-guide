@@ -18,3 +18,4 @@ Amazon S3 block public access prevents the application of any settings that allo
 + [How do I block public access to S3 buckets?](block-public-access.md)
 + [How do I edit public access settings for S3 buckets?](block-public-access-bucket.md)
 + [Setting bucket and object access permissions](set-permissions.md)
+

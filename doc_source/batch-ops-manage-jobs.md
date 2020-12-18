@@ -8,3 +8,4 @@ Amazon S3 provides a set of tools to help you manage your S3 Batch Operations jo
 + [The Basics: S3 Batch Operations Jobs](https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html) in the *Amazon Simple Storage Service Developer Guide*
 + [Creating a S3 Batch Operations Job](https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-create-job.html) in the *Amazon Simple Storage Service Developer Guide*
 + [Operations](https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-operations.html) in the *Amazon Simple Storage Service Developer Guide*
+

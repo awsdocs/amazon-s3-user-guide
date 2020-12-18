@@ -2,7 +2,7 @@
 
 There are three types of Amazon CloudWatch metrics for Amazon S3: storage metrics, request metrics, and replication metrics\. *Replication* metrics are turned on automatically when you enable replication with S3 Replication Time Control \(S3 RTC\) using the AWS Management Console or the Amazon S3 API\. Replication metrics are available 15 minutes after you enable a replication rule with S3 Replication Time Control \(S3 RTC\) \(S3 RTC\)\.
 
-Replication metrics track the rule IDs of the replication configuration\. A replication rule ID can be specific to a prefix, a tag, or a combination of both\. For more information about S3 Replication Time Control \(S3 RTC\), see [Replicating Objects Using S3 Replication Time Control \(S3 RTC\)](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-time-control.html) in the *Amazon Simple Storage Service Developer Guide*\.
+Replication metrics track the rule IDs of the replication configuration\. A replication rule ID can be specific to a prefix, a tag, or a combination of both\. For more information about S3 Replication Time Control \(S3 RTC\), see [Replicating Objects Using S3 RTC](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-time-control.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 For more information about CloudWatch metrics for Amazon S3, see [Monitoring Metrics with Amazon CloudWatch](https://docs.aws.amazon.com/AmazonS3/latest/dev/cloudwatch-monitoring.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
